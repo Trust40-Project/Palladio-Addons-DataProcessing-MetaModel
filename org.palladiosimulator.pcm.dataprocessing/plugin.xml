@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dataprocessing -->
+      <package
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage"
+            genModel="model/dataprocessing.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dataprocessing -->
+      <package
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/repository/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.RepositoryPackage"
+            genModel="model/dataprocessing.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dataprocessing -->
+      <package
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/processing/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage"
+            genModel="model/dataprocessing.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dataprocessing -->
+      <package
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/characteristics/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage"
+            genModel="model/dataprocessing.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dataprocessing -->
+      <package
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/data/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataPackage"
+            genModel="model/dataprocessing.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dataprocessing -->
+      <package
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/seff/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffPackage"
+            genModel="model/dataprocessing.genmodel"/>
+   </extension>
+
+</plugin>

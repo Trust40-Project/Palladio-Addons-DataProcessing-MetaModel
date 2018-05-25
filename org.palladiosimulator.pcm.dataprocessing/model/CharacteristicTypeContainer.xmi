@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<characteristics:CharacteristicTypeContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:characteristics="http://www.palladiosimulator.org/pcm/dataprocessing/characteristics/0.1/"
+    xsi:schemaLocation="http://www.palladiosimulator.org/pcm/dataprocessing/characteristics/0.1/ dataprocessing.ecore#//characteristics"/>
