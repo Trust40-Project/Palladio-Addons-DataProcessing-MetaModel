@@ -24,7 +24,8 @@ import org.eclipse.emf.common.util.EList;
  * @extends CDOObject
  * @generated
  */
-public interface Characterizable extends CDOObject {
+public interface Characterizable extends CDOObject
+{
 	/**
 	 * Returns the value of the '<em><b>Characteristic Containers</b></em>' containment reference list.
 	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer}.
@@ -43,7 +44,7 @@ public interface Characterizable extends CDOObject {
 
 	/**
 	 * Returns the value of the '<em><b>Characteristics</b></em>' reference list.
-	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic}<code>&lt;org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicType&gt;</code>.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Characteristics</em>' reference list isn't clear,
@@ -52,11 +53,11 @@ public interface Characterizable extends CDOObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Characteristics</em>' reference list.
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage#getCharacterizable_Characteristics()
-	 * @model transient="true" changeable="false" volatile="true" derived="true" ordered="false"
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='self.characteristicContainers-&gt;collect(characteristics)'"
 	 *        annotation="http://www.eclipse.org/OCL/Collection nullFree='false'"
 	 * @generated
 	 */
-	EList<Characteristic<CharacteristicType>> getCharacteristics();
+	EList<Characteristic> getCharacteristics();
 
 } // Characterizable

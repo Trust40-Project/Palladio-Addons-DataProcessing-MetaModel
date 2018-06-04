@@ -20,7 +20,8 @@ import org.palladiosimulator.pcm.repository.Parameter;
  * @model
  * @generated
  */
-public interface DataParameterMapping extends DataMapping {
+public interface DataParameterMapping extends DataMapping
+{
 	/**
 	 * Returns the value of the '<em><b>Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->

@@ -23,7 +23,8 @@ import org.eclipse.emf.ecore.EReference;
  * @model kind="package"
  * @generated
  */
-public interface SeffPackage extends EPackage {
+public interface SeffPackage extends EPackage
+{
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -136,7 +137,8 @@ public interface SeffPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	interface Literals {
+	interface Literals
+	{
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.impl.DataSEFFSpecificationImpl <em>Data SEFF Specification</em>}' class.
 		 * <!-- begin-user-doc -->

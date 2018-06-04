@@ -20,7 +20,8 @@ import org.palladiosimulator.pcm.core.entity.Entity;
  * @model abstract="true"
  * @generated
  */
-public interface DataOperation extends Entity {
+public interface DataOperation extends Entity
+{
 	/**
 	 * Returns the value of the '<em><b>Container</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer#getOperations <em>Operations</em>}'.

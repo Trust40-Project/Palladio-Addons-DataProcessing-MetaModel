@@ -14,5 +14,6 @@ import org.palladiosimulator.pcm.core.entity.Entity;
  * @model abstract="true"
  * @generated
  */
-public interface CharacteristicType extends Entity {
+public interface CharacteristicType extends Entity
+{
 } // CharacteristicType

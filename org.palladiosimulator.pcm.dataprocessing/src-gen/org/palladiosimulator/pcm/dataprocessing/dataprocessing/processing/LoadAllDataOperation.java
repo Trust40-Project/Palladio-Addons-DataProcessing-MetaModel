@@ -14,5 +14,6 @@ package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot resultTypeMustBeCollection='self.resultingData.oclIsKindOf(repository_1::CollectionDataType)'"
  * @generated
  */
-public interface LoadAllDataOperation extends LoadDataOperation {
+public interface LoadAllDataOperation extends LoadDataOperation
+{
 } // LoadAllDataOperation

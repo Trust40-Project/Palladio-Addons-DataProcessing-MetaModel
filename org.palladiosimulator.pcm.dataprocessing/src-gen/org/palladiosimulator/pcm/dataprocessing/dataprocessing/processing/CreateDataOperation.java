@@ -20,7 +20,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
  * @model
  * @generated
  */
-public interface CreateDataOperation extends DataOperation {
+public interface CreateDataOperation extends DataOperation
+{
 	/**
 	 * Returns the value of the '<em><b>Resulting Data</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

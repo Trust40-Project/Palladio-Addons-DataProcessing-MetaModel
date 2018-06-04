@@ -27,7 +27,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.*
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage
  * @generated
  */
-public class CharacteristicsSwitch<T1> extends Switch<T1> {
+public class CharacteristicsSwitch<T> extends Switch<T>
+{
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -42,8 +43,10 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CharacteristicsSwitch() {
-		if (modelPackage == null) {
+	public CharacteristicsSwitch()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = CharacteristicsPackage.eINSTANCE;
 		}
 	}
@@ -57,7 +60,8 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	@Override
-	protected boolean isSwitchFor(EPackage ePackage) {
+	protected boolean isSwitchFor(EPackage ePackage)
+	{
 		return ePackage == modelPackage;
 	}
 
@@ -69,33 +73,39 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	@Override
-	protected T1 doSwitch(int classifierID, EObject theEObject) {
-		switch (classifierID) {
-			case CharacteristicsPackage.CHARACTERIZABLE: {
+	protected T doSwitch(int classifierID, EObject theEObject)
+	{
+		switch (classifierID)
+		{
+			case CharacteristicsPackage.CHARACTERIZABLE:
+			{
 				Characterizable characterizable = (Characterizable)theEObject;
-				T1 result = caseCharacterizable(characterizable);
+				T result = caseCharacterizable(characterizable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CharacteristicsPackage.CHARACTERISTIC_TYPE_CONTAINER: {
+			case CharacteristicsPackage.CHARACTERISTIC_TYPE_CONTAINER:
+			{
 				CharacteristicTypeContainer characteristicTypeContainer = (CharacteristicTypeContainer)theEObject;
-				T1 result = caseCharacteristicTypeContainer(characteristicTypeContainer);
+				T result = caseCharacteristicTypeContainer(characteristicTypeContainer);
 				if (result == null) result = caseIdentifier(characteristicTypeContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CharacteristicsPackage.CHARACTERISTIC_TYPE: {
+			case CharacteristicsPackage.CHARACTERISTIC_TYPE:
+			{
 				CharacteristicType characteristicType = (CharacteristicType)theEObject;
-				T1 result = caseCharacteristicType(characteristicType);
+				T result = caseCharacteristicType(characteristicType);
 				if (result == null) result = caseEntity(characteristicType);
 				if (result == null) result = caseIdentifier(characteristicType);
 				if (result == null) result = caseNamedElement(characteristicType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CharacteristicsPackage.ENUM_CHARACTERISTIC_TYPE: {
+			case CharacteristicsPackage.ENUM_CHARACTERISTIC_TYPE:
+			{
 				EnumCharacteristicType enumCharacteristicType = (EnumCharacteristicType)theEObject;
-				T1 result = caseEnumCharacteristicType(enumCharacteristicType);
+				T result = caseEnumCharacteristicType(enumCharacteristicType);
 				if (result == null) result = caseCharacteristicType(enumCharacteristicType);
 				if (result == null) result = caseEntity(enumCharacteristicType);
 				if (result == null) result = caseIdentifier(enumCharacteristicType);
@@ -103,43 +113,60 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CharacteristicsPackage.ENUM_CHARACTERISTIC_LITERAL: {
+			case CharacteristicsPackage.ENUM_CHARACTERISTIC_LITERAL:
+			{
 				EnumCharacteristicLiteral enumCharacteristicLiteral = (EnumCharacteristicLiteral)theEObject;
-				T1 result = caseEnumCharacteristicLiteral(enumCharacteristicLiteral);
+				T result = caseEnumCharacteristicLiteral(enumCharacteristicLiteral);
 				if (result == null) result = caseEntity(enumCharacteristicLiteral);
 				if (result == null) result = caseIdentifier(enumCharacteristicLiteral);
 				if (result == null) result = caseNamedElement(enumCharacteristicLiteral);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CharacteristicsPackage.CHARACTERISTIC_CONTAINER: {
+			case CharacteristicsPackage.CHARACTERISTIC_CONTAINER:
+			{
 				CharacteristicContainer characteristicContainer = (CharacteristicContainer)theEObject;
-				T1 result = caseCharacteristicContainer(characteristicContainer);
+				T result = caseCharacteristicContainer(characteristicContainer);
+				if (result == null) result = caseEntity(characteristicContainer);
 				if (result == null) result = caseIdentifier(characteristicContainer);
+				if (result == null) result = caseNamedElement(characteristicContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CharacteristicsPackage.CHARACTERISTIC: {
-				Characteristic<?> characteristic = (Characteristic<?>)theEObject;
-				T1 result = caseCharacteristic(characteristic);
+			case CharacteristicsPackage.CHARACTERISTIC:
+			{
+				Characteristic characteristic = (Characteristic)theEObject;
+				T result = caseCharacteristic(characteristic);
 				if (result == null) result = caseIdentifier(characteristic);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CharacteristicsPackage.ENUM_CHARACTERISTIC: {
+			case CharacteristicsPackage.ENUM_CHARACTERISTIC:
+			{
 				EnumCharacteristic enumCharacteristic = (EnumCharacteristic)theEObject;
-				T1 result = caseEnumCharacteristic(enumCharacteristic);
+				T result = caseEnumCharacteristic(enumCharacteristic);
 				if (result == null) result = caseCharacteristic(enumCharacteristic);
 				if (result == null) result = caseIdentifier(enumCharacteristic);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CharacteristicsPackage.ENUMERATION: {
+			case CharacteristicsPackage.ENUMERATION:
+			{
 				Enumeration enumeration = (Enumeration)theEObject;
-				T1 result = caseEnumeration(enumeration);
+				T result = caseEnumeration(enumeration);
 				if (result == null) result = caseEntity(enumeration);
 				if (result == null) result = caseIdentifier(enumeration);
 				if (result == null) result = caseNamedElement(enumeration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CharacteristicsPackage.RELATED_CHARACTERISTICS:
+			{
+				RelatedCharacteristics relatedCharacteristics = (RelatedCharacteristics)theEObject;
+				T result = caseRelatedCharacteristics(relatedCharacteristics);
+				if (result == null) result = caseEntity(relatedCharacteristics);
+				if (result == null) result = caseIdentifier(relatedCharacteristics);
+				if (result == null) result = caseNamedElement(relatedCharacteristics);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -158,7 +185,8 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseCharacterizable(Characterizable object) {
+	public T caseCharacterizable(Characterizable object)
+	{
 		return null;
 	}
 
@@ -173,7 +201,8 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseCharacteristicTypeContainer(CharacteristicTypeContainer object) {
+	public T caseCharacteristicTypeContainer(CharacteristicTypeContainer object)
+	{
 		return null;
 	}
 
@@ -188,7 +217,8 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseCharacteristicType(CharacteristicType object) {
+	public T caseCharacteristicType(CharacteristicType object)
+	{
 		return null;
 	}
 
@@ -203,7 +233,8 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseEnumCharacteristicType(EnumCharacteristicType object) {
+	public T caseEnumCharacteristicType(EnumCharacteristicType object)
+	{
 		return null;
 	}
 
@@ -218,7 +249,8 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseEnumCharacteristicLiteral(EnumCharacteristicLiteral object) {
+	public T caseEnumCharacteristicLiteral(EnumCharacteristicLiteral object)
+	{
 		return null;
 	}
 
@@ -233,7 +265,8 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseCharacteristicContainer(CharacteristicContainer object) {
+	public T caseCharacteristicContainer(CharacteristicContainer object)
+	{
 		return null;
 	}
 
@@ -248,7 +281,8 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends CharacteristicType> T1 caseCharacteristic(Characteristic<T> object) {
+	public T caseCharacteristic(Characteristic object)
+	{
 		return null;
 	}
 
@@ -263,7 +297,8 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseEnumCharacteristic(EnumCharacteristic object) {
+	public T caseEnumCharacteristic(EnumCharacteristic object)
+	{
 		return null;
 	}
 
@@ -278,7 +313,24 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseEnumeration(Enumeration object) {
+	public T caseEnumeration(Enumeration object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Related Characteristics</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Related Characteristics</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRelatedCharacteristics(RelatedCharacteristics object)
+	{
 		return null;
 	}
 
@@ -293,7 +345,8 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseIdentifier(Identifier object) {
+	public T caseIdentifier(Identifier object)
+	{
 		return null;
 	}
 
@@ -308,7 +361,8 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseNamedElement(NamedElement object) {
+	public T caseNamedElement(NamedElement object)
+	{
 		return null;
 	}
 
@@ -323,7 +377,8 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseEntity(Entity object) {
+	public T caseEntity(Entity object)
+	{
 		return null;
 	}
 
@@ -339,7 +394,8 @@ public class CharacteristicsSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	@Override
-	public T1 defaultCase(EObject object) {
+	public T defaultCase(EObject object)
+	{
 		return null;
 	}
 

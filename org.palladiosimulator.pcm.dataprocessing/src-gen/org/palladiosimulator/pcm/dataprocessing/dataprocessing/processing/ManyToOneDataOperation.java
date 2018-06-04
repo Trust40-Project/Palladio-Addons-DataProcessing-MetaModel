@@ -2,8 +2,6 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
@@ -23,10 +21,10 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getManyToOneDataOperation()
  * @model abstract="true"
- * @extends CDOObject
  * @generated
  */
-public interface ManyToOneDataOperation extends CDOObject {
+public interface ManyToOneDataOperation extends DataOperation
+{
 	/**
 	 * Returns the value of the '<em><b>Consumed Data</b></em>' reference list.
 	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data}.

@@ -12,7 +12,8 @@ import org.eclipse.emf.ecore.EFactory;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffPackage
  * @generated
  */
-public interface SeffFactory extends EFactory {
+public interface SeffFactory extends EFactory
+{
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->

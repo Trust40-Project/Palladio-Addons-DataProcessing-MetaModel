@@ -16,13 +16,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.E
  *
  * @generated
  */
-public class EnumCharacteristicLiteralImpl extends EntityImpl implements EnumCharacteristicLiteral {
+public class EnumCharacteristicLiteralImpl extends EntityImpl implements EnumCharacteristicLiteral
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EnumCharacteristicLiteralImpl() {
+	protected EnumCharacteristicLiteralImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class EnumCharacteristicLiteralImpl extends EntityImpl implements EnumCha
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return CharacteristicsPackage.Literals.ENUM_CHARACTERISTIC_LITERAL;
 	}
 

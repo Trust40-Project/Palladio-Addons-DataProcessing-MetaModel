@@ -25,7 +25,8 @@ import org.palladiosimulator.pcm.core.entity.EntityPackage;
  * @model kind="package"
  * @generated
  */
-public interface RepositoryPackage extends EPackage {
+public interface RepositoryPackage extends EPackage
+{
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -225,7 +226,8 @@ public interface RepositoryPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	interface Literals {
+	interface Literals
+	{
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.impl.StoreContainerImpl <em>Store Container</em>}' class.
 		 * <!-- begin-user-doc -->

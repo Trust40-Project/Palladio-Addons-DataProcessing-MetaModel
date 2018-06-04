@@ -26,13 +26,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffPackage;
  *
  * @generated
  */
-public class DataSEFFSpecificationImpl extends IdentifierImpl implements DataSEFFSpecification {
+public class DataSEFFSpecificationImpl extends IdentifierImpl implements DataSEFFSpecification
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataSEFFSpecificationImpl() {
+	protected DataSEFFSpecificationImpl()
+	{
 		super();
 	}
 
@@ -42,7 +44,8 @@ public class DataSEFFSpecificationImpl extends IdentifierImpl implements DataSEF
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return SeffPackage.Literals.DATA_SEFF_SPECIFICATION;
 	}
 
@@ -52,7 +55,8 @@ public class DataSEFFSpecificationImpl extends IdentifierImpl implements DataSEF
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<ParameterBasedData> getInputData() {
+	public EList<ParameterBasedData> getInputData()
+	{
 		return (EList<ParameterBasedData>)eGet(SeffPackage.Literals.DATA_SEFF_SPECIFICATION__INPUT_DATA, true);
 	}
 

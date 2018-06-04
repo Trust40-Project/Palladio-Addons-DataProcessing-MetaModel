@@ -18,21 +18,26 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.*
  * <!-- end-user-doc -->
  * @generated
  */
-public class CharacteristicsFactoryImpl extends EFactoryImpl implements CharacteristicsFactory {
+public class CharacteristicsFactoryImpl extends EFactoryImpl implements CharacteristicsFactory
+{
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static CharacteristicsFactory init() {
-		try {
+	public static CharacteristicsFactory init()
+	{
+		try
+		{
 			CharacteristicsFactory theCharacteristicsFactory = (CharacteristicsFactory)EPackage.Registry.INSTANCE.getEFactory(CharacteristicsPackage.eNS_URI);
-			if (theCharacteristicsFactory != null) {
+			if (theCharacteristicsFactory != null)
+			{
 				return theCharacteristicsFactory;
 			}
 		}
-		catch (Exception exception) {
+		catch (Exception exception)
+		{
 			EcorePlugin.INSTANCE.log(exception);
 		}
 		return new CharacteristicsFactoryImpl();
@@ -44,7 +49,8 @@ public class CharacteristicsFactoryImpl extends EFactoryImpl implements Characte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CharacteristicsFactoryImpl() {
+	public CharacteristicsFactoryImpl()
+	{
 		super();
 	}
 
@@ -54,14 +60,17 @@ public class CharacteristicsFactoryImpl extends EFactoryImpl implements Characte
 	 * @generated
 	 */
 	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
+	public EObject create(EClass eClass)
+	{
+		switch (eClass.getClassifierID())
+		{
 			case CharacteristicsPackage.CHARACTERISTIC_TYPE_CONTAINER: return (EObject)createCharacteristicTypeContainer();
 			case CharacteristicsPackage.ENUM_CHARACTERISTIC_TYPE: return (EObject)createEnumCharacteristicType();
 			case CharacteristicsPackage.ENUM_CHARACTERISTIC_LITERAL: return (EObject)createEnumCharacteristicLiteral();
 			case CharacteristicsPackage.CHARACTERISTIC_CONTAINER: return (EObject)createCharacteristicContainer();
 			case CharacteristicsPackage.ENUM_CHARACTERISTIC: return (EObject)createEnumCharacteristic();
 			case CharacteristicsPackage.ENUMERATION: return (EObject)createEnumeration();
+			case CharacteristicsPackage.RELATED_CHARACTERISTICS: return (EObject)createRelatedCharacteristics();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -72,7 +81,8 @@ public class CharacteristicsFactoryImpl extends EFactoryImpl implements Characte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CharacteristicTypeContainer createCharacteristicTypeContainer() {
+	public CharacteristicTypeContainer createCharacteristicTypeContainer()
+	{
 		CharacteristicTypeContainerImpl characteristicTypeContainer = new CharacteristicTypeContainerImpl();
 		return characteristicTypeContainer;
 	}
@@ -82,7 +92,8 @@ public class CharacteristicsFactoryImpl extends EFactoryImpl implements Characte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnumCharacteristicType createEnumCharacteristicType() {
+	public EnumCharacteristicType createEnumCharacteristicType()
+	{
 		EnumCharacteristicTypeImpl enumCharacteristicType = new EnumCharacteristicTypeImpl();
 		return enumCharacteristicType;
 	}
@@ -92,7 +103,8 @@ public class CharacteristicsFactoryImpl extends EFactoryImpl implements Characte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnumCharacteristicLiteral createEnumCharacteristicLiteral() {
+	public EnumCharacteristicLiteral createEnumCharacteristicLiteral()
+	{
 		EnumCharacteristicLiteralImpl enumCharacteristicLiteral = new EnumCharacteristicLiteralImpl();
 		return enumCharacteristicLiteral;
 	}
@@ -102,7 +114,8 @@ public class CharacteristicsFactoryImpl extends EFactoryImpl implements Characte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CharacteristicContainer createCharacteristicContainer() {
+	public CharacteristicContainer createCharacteristicContainer()
+	{
 		CharacteristicContainerImpl characteristicContainer = new CharacteristicContainerImpl();
 		return characteristicContainer;
 	}
@@ -112,7 +125,8 @@ public class CharacteristicsFactoryImpl extends EFactoryImpl implements Characte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnumCharacteristic createEnumCharacteristic() {
+	public EnumCharacteristic createEnumCharacteristic()
+	{
 		EnumCharacteristicImpl enumCharacteristic = new EnumCharacteristicImpl();
 		return enumCharacteristic;
 	}
@@ -122,7 +136,8 @@ public class CharacteristicsFactoryImpl extends EFactoryImpl implements Characte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Enumeration createEnumeration() {
+	public Enumeration createEnumeration()
+	{
 		EnumerationImpl enumeration = new EnumerationImpl();
 		return enumeration;
 	}
@@ -132,7 +147,19 @@ public class CharacteristicsFactoryImpl extends EFactoryImpl implements Characte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CharacteristicsPackage getCharacteristicsPackage() {
+	public RelatedCharacteristics createRelatedCharacteristics()
+	{
+		RelatedCharacteristicsImpl relatedCharacteristics = new RelatedCharacteristicsImpl();
+		return relatedCharacteristics;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CharacteristicsPackage getCharacteristicsPackage()
+	{
 		return (CharacteristicsPackage)getEPackage();
 	}
 
@@ -143,7 +170,8 @@ public class CharacteristicsFactoryImpl extends EFactoryImpl implements Characte
 	 * @generated
 	 */
 	@Deprecated
-	public static CharacteristicsPackage getPackage() {
+	public static CharacteristicsPackage getPackage()
+	{
 		return CharacteristicsPackage.eINSTANCE;
 	}
 

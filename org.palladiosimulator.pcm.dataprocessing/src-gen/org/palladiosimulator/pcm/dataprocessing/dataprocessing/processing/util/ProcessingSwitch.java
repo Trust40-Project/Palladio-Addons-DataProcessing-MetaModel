@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.util.Switch;
 import org.palladiosimulator.pcm.core.entity.Entity;
 import org.palladiosimulator.pcm.core.entity.NamedElement;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicType;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.*;
 
 /**
@@ -27,7 +29,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.*;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage
  * @generated
  */
-public class ProcessingSwitch<T> extends Switch<T> {
+public class ProcessingSwitch<T1> extends Switch<T1>
+{
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -42,8 +45,10 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessingSwitch() {
-		if (modelPackage == null) {
+	public ProcessingSwitch()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = ProcessingPackage.eINSTANCE;
 		}
 	}
@@ -57,7 +62,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected boolean isSwitchFor(EPackage ePackage) {
+	protected boolean isSwitchFor(EPackage ePackage)
+	{
 		return ePackage == modelPackage;
 	}
 
@@ -69,27 +75,34 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected T doSwitch(int classifierID, EObject theEObject) {
-		switch (classifierID) {
-			case ProcessingPackage.DATA_PROCESSING_CONTAINER: {
+	protected T1 doSwitch(int classifierID, EObject theEObject)
+	{
+		switch (classifierID)
+		{
+			case ProcessingPackage.DATA_PROCESSING_CONTAINER:
+			{
 				DataProcessingContainer dataProcessingContainer = (DataProcessingContainer)theEObject;
-				T result = caseDataProcessingContainer(dataProcessingContainer);
+				T1 result = caseDataProcessingContainer(dataProcessingContainer);
+				if (result == null) result = caseEntity(dataProcessingContainer);
 				if (result == null) result = caseIdentifier(dataProcessingContainer);
+				if (result == null) result = caseNamedElement(dataProcessingContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProcessingPackage.DATA_OPERATION: {
+			case ProcessingPackage.DATA_OPERATION:
+			{
 				DataOperation dataOperation = (DataOperation)theEObject;
-				T result = caseDataOperation(dataOperation);
+				T1 result = caseDataOperation(dataOperation);
 				if (result == null) result = caseEntity(dataOperation);
 				if (result == null) result = caseIdentifier(dataOperation);
 				if (result == null) result = caseNamedElement(dataOperation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProcessingPackage.CREATE_DATA_OPERATION: {
+			case ProcessingPackage.CREATE_DATA_OPERATION:
+			{
 				CreateDataOperation createDataOperation = (CreateDataOperation)theEObject;
-				T result = caseCreateDataOperation(createDataOperation);
+				T1 result = caseCreateDataOperation(createDataOperation);
 				if (result == null) result = caseDataOperation(createDataOperation);
 				if (result == null) result = caseEntity(createDataOperation);
 				if (result == null) result = caseIdentifier(createDataOperation);
@@ -97,9 +110,10 @@ public class ProcessingSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProcessingPackage.LOAD_DATA_OPERATION: {
+			case ProcessingPackage.LOAD_DATA_OPERATION:
+			{
 				LoadDataOperation loadDataOperation = (LoadDataOperation)theEObject;
-				T result = caseLoadDataOperation(loadDataOperation);
+				T1 result = caseLoadDataOperation(loadDataOperation);
 				if (result == null) result = caseCreateDataOperation(loadDataOperation);
 				if (result == null) result = caseDataOperation(loadDataOperation);
 				if (result == null) result = caseEntity(loadDataOperation);
@@ -108,9 +122,10 @@ public class ProcessingSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProcessingPackage.LOAD_ALL_DATA_OPERATION: {
+			case ProcessingPackage.LOAD_ALL_DATA_OPERATION:
+			{
 				LoadAllDataOperation loadAllDataOperation = (LoadAllDataOperation)theEObject;
-				T result = caseLoadAllDataOperation(loadAllDataOperation);
+				T1 result = caseLoadAllDataOperation(loadAllDataOperation);
 				if (result == null) result = caseLoadDataOperation(loadAllDataOperation);
 				if (result == null) result = caseCreateDataOperation(loadAllDataOperation);
 				if (result == null) result = caseDataOperation(loadAllDataOperation);
@@ -120,9 +135,10 @@ public class ProcessingSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProcessingPackage.PERFORM_DATA_TRANSMISSION_OPERATION: {
+			case ProcessingPackage.PERFORM_DATA_TRANSMISSION_OPERATION:
+			{
 				PerformDataTransmissionOperation performDataTransmissionOperation = (PerformDataTransmissionOperation)theEObject;
-				T result = casePerformDataTransmissionOperation(performDataTransmissionOperation);
+				T1 result = casePerformDataTransmissionOperation(performDataTransmissionOperation);
 				if (result == null) result = caseDataOperation(performDataTransmissionOperation);
 				if (result == null) result = caseEntity(performDataTransmissionOperation);
 				if (result == null) result = caseIdentifier(performDataTransmissionOperation);
@@ -130,9 +146,10 @@ public class ProcessingSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProcessingPackage.CONSUME_DATA_OPERATION: {
+			case ProcessingPackage.CONSUME_DATA_OPERATION:
+			{
 				ConsumeDataOperation consumeDataOperation = (ConsumeDataOperation)theEObject;
-				T result = caseConsumeDataOperation(consumeDataOperation);
+				T1 result = caseConsumeDataOperation(consumeDataOperation);
 				if (result == null) result = caseDataOperation(consumeDataOperation);
 				if (result == null) result = caseEntity(consumeDataOperation);
 				if (result == null) result = caseIdentifier(consumeDataOperation);
@@ -140,9 +157,10 @@ public class ProcessingSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProcessingPackage.STORE_DATA_OPERATION: {
+			case ProcessingPackage.STORE_DATA_OPERATION:
+			{
 				StoreDataOperation storeDataOperation = (StoreDataOperation)theEObject;
-				T result = caseStoreDataOperation(storeDataOperation);
+				T1 result = caseStoreDataOperation(storeDataOperation);
 				if (result == null) result = caseConsumeDataOperation(storeDataOperation);
 				if (result == null) result = caseDataOperation(storeDataOperation);
 				if (result == null) result = caseEntity(storeDataOperation);
@@ -151,46 +169,110 @@ public class ProcessingSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProcessingPackage.DATA_MAPPING: {
+			case ProcessingPackage.DATA_MAPPING:
+			{
 				DataMapping dataMapping = (DataMapping)theEObject;
-				T result = caseDataMapping(dataMapping);
+				T1 result = caseDataMapping(dataMapping);
 				if (result == null) result = caseIdentifier(dataMapping);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProcessingPackage.DATA_PARAMETER_MAPPING: {
+			case ProcessingPackage.DATA_PARAMETER_MAPPING:
+			{
 				DataParameterMapping dataParameterMapping = (DataParameterMapping)theEObject;
-				T result = caseDataParameterMapping(dataParameterMapping);
+				T1 result = caseDataParameterMapping(dataParameterMapping);
 				if (result == null) result = caseDataMapping(dataParameterMapping);
 				if (result == null) result = caseIdentifier(dataParameterMapping);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProcessingPackage.DATA_RESULT_MAPPING: {
+			case ProcessingPackage.DATA_RESULT_MAPPING:
+			{
 				DataResultMapping dataResultMapping = (DataResultMapping)theEObject;
-				T result = caseDataResultMapping(dataResultMapping);
+				T1 result = caseDataResultMapping(dataResultMapping);
 				if (result == null) result = caseDataMapping(dataResultMapping);
 				if (result == null) result = caseIdentifier(dataResultMapping);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProcessingPackage.MANY_TO_ONE_DATA_OPERATION: {
+			case ProcessingPackage.MANY_TO_ONE_DATA_OPERATION:
+			{
 				ManyToOneDataOperation manyToOneDataOperation = (ManyToOneDataOperation)theEObject;
-				T result = caseManyToOneDataOperation(manyToOneDataOperation);
+				T1 result = caseManyToOneDataOperation(manyToOneDataOperation);
+				if (result == null) result = caseDataOperation(manyToOneDataOperation);
+				if (result == null) result = caseEntity(manyToOneDataOperation);
+				if (result == null) result = caseIdentifier(manyToOneDataOperation);
+				if (result == null) result = caseNamedElement(manyToOneDataOperation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProcessingPackage.JOIN_DATA_OPERATION: {
+			case ProcessingPackage.JOIN_DATA_OPERATION:
+			{
 				JoinDataOperation joinDataOperation = (JoinDataOperation)theEObject;
-				T result = caseJoinDataOperation(joinDataOperation);
+				T1 result = caseJoinDataOperation(joinDataOperation);
 				if (result == null) result = caseManyToOneDataOperation(joinDataOperation);
+				if (result == null) result = caseDataOperation(joinDataOperation);
+				if (result == null) result = caseEntity(joinDataOperation);
+				if (result == null) result = caseIdentifier(joinDataOperation);
+				if (result == null) result = caseNamedElement(joinDataOperation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProcessingPackage.UNION_DATA_OPERATION: {
+			case ProcessingPackage.UNION_DATA_OPERATION:
+			{
 				UnionDataOperation unionDataOperation = (UnionDataOperation)theEObject;
-				T result = caseUnionDataOperation(unionDataOperation);
+				T1 result = caseUnionDataOperation(unionDataOperation);
 				if (result == null) result = caseManyToOneDataOperation(unionDataOperation);
+				if (result == null) result = caseDataOperation(unionDataOperation);
+				if (result == null) result = caseEntity(unionDataOperation);
+				if (result == null) result = caseIdentifier(unionDataOperation);
+				if (result == null) result = caseNamedElement(unionDataOperation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ProcessingPackage.TRANSFORM_DATA_OPERATION:
+			{
+				TransformDataOperation transformDataOperation = (TransformDataOperation)theEObject;
+				T1 result = caseTransformDataOperation(transformDataOperation);
+				if (result == null) result = caseDataOperation(transformDataOperation);
+				if (result == null) result = caseEntity(transformDataOperation);
+				if (result == null) result = caseIdentifier(transformDataOperation);
+				if (result == null) result = caseNamedElement(transformDataOperation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ProcessingPackage.PROJECTION_DATA_OPERATION:
+			{
+				ProjectionDataOperation projectionDataOperation = (ProjectionDataOperation)theEObject;
+				T1 result = caseProjectionDataOperation(projectionDataOperation);
+				if (result == null) result = caseTransformDataOperation(projectionDataOperation);
+				if (result == null) result = caseDataOperation(projectionDataOperation);
+				if (result == null) result = caseEntity(projectionDataOperation);
+				if (result == null) result = caseIdentifier(projectionDataOperation);
+				if (result == null) result = caseNamedElement(projectionDataOperation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ProcessingPackage.SELECTION_DATA_OPERATION:
+			{
+				SelectionDataOperation selectionDataOperation = (SelectionDataOperation)theEObject;
+				T1 result = caseSelectionDataOperation(selectionDataOperation);
+				if (result == null) result = caseTransformDataOperation(selectionDataOperation);
+				if (result == null) result = caseDataOperation(selectionDataOperation);
+				if (result == null) result = caseEntity(selectionDataOperation);
+				if (result == null) result = caseIdentifier(selectionDataOperation);
+				if (result == null) result = caseNamedElement(selectionDataOperation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ProcessingPackage.CHARACTERISTIC_CHANGING_DATA_OPERATION:
+			{
+				CharacteristicChangingDataOperation<?> characteristicChangingDataOperation = (CharacteristicChangingDataOperation<?>)theEObject;
+				T1 result = caseCharacteristicChangingDataOperation(characteristicChangingDataOperation);
+				if (result == null) result = caseDataOperation(characteristicChangingDataOperation);
+				if (result == null) result = caseEntity(characteristicChangingDataOperation);
+				if (result == null) result = caseIdentifier(characteristicChangingDataOperation);
+				if (result == null) result = caseNamedElement(characteristicChangingDataOperation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -209,7 +291,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDataProcessingContainer(DataProcessingContainer object) {
+	public T1 caseDataProcessingContainer(DataProcessingContainer object)
+	{
 		return null;
 	}
 
@@ -224,7 +307,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDataOperation(DataOperation object) {
+	public T1 caseDataOperation(DataOperation object)
+	{
 		return null;
 	}
 
@@ -239,7 +323,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCreateDataOperation(CreateDataOperation object) {
+	public T1 caseCreateDataOperation(CreateDataOperation object)
+	{
 		return null;
 	}
 
@@ -254,7 +339,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLoadDataOperation(LoadDataOperation object) {
+	public T1 caseLoadDataOperation(LoadDataOperation object)
+	{
 		return null;
 	}
 
@@ -269,7 +355,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLoadAllDataOperation(LoadAllDataOperation object) {
+	public T1 caseLoadAllDataOperation(LoadAllDataOperation object)
+	{
 		return null;
 	}
 
@@ -284,7 +371,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePerformDataTransmissionOperation(PerformDataTransmissionOperation object) {
+	public T1 casePerformDataTransmissionOperation(PerformDataTransmissionOperation object)
+	{
 		return null;
 	}
 
@@ -299,7 +387,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConsumeDataOperation(ConsumeDataOperation object) {
+	public T1 caseConsumeDataOperation(ConsumeDataOperation object)
+	{
 		return null;
 	}
 
@@ -314,7 +403,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStoreDataOperation(StoreDataOperation object) {
+	public T1 caseStoreDataOperation(StoreDataOperation object)
+	{
 		return null;
 	}
 
@@ -329,7 +419,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDataMapping(DataMapping object) {
+	public T1 caseDataMapping(DataMapping object)
+	{
 		return null;
 	}
 
@@ -344,7 +435,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDataParameterMapping(DataParameterMapping object) {
+	public T1 caseDataParameterMapping(DataParameterMapping object)
+	{
 		return null;
 	}
 
@@ -359,7 +451,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDataResultMapping(DataResultMapping object) {
+	public T1 caseDataResultMapping(DataResultMapping object)
+	{
 		return null;
 	}
 
@@ -374,7 +467,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseManyToOneDataOperation(ManyToOneDataOperation object) {
+	public T1 caseManyToOneDataOperation(ManyToOneDataOperation object)
+	{
 		return null;
 	}
 
@@ -389,7 +483,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseJoinDataOperation(JoinDataOperation object) {
+	public T1 caseJoinDataOperation(JoinDataOperation object)
+	{
 		return null;
 	}
 
@@ -404,7 +499,72 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseUnionDataOperation(UnionDataOperation object) {
+	public T1 caseUnionDataOperation(UnionDataOperation object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Transform Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Transform Data Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseTransformDataOperation(TransformDataOperation object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Projection Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Projection Data Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseProjectionDataOperation(ProjectionDataOperation object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Selection Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Selection Data Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseSelectionDataOperation(SelectionDataOperation object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Characteristic Changing Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Characteristic Changing Data Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public <T extends CharacteristicType> T1 caseCharacteristicChangingDataOperation(CharacteristicChangingDataOperation<T> object)
+	{
 		return null;
 	}
 
@@ -419,7 +579,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIdentifier(Identifier object) {
+	public T1 caseIdentifier(Identifier object)
+	{
 		return null;
 	}
 
@@ -434,7 +595,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNamedElement(NamedElement object) {
+	public T1 caseNamedElement(NamedElement object)
+	{
 		return null;
 	}
 
@@ -449,7 +611,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEntity(Entity object) {
+	public T1 caseEntity(Entity object)
+	{
 		return null;
 	}
 
@@ -465,7 +628,8 @@ public class ProcessingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	public T defaultCase(EObject object) {
+	public T1 defaultCase(EObject object)
+	{
 		return null;
 	}
 

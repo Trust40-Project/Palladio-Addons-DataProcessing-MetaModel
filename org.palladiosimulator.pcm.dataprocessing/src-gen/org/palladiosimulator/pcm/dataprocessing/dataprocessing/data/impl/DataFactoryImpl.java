@@ -18,21 +18,26 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DataFactoryImpl extends EFactoryImpl implements DataFactory {
+public class DataFactoryImpl extends EFactoryImpl implements DataFactory
+{
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static DataFactory init() {
-		try {
+	public static DataFactory init()
+	{
+		try
+		{
 			DataFactory theDataFactory = (DataFactory)EPackage.Registry.INSTANCE.getEFactory(DataPackage.eNS_URI);
-			if (theDataFactory != null) {
+			if (theDataFactory != null)
+			{
 				return theDataFactory;
 			}
 		}
-		catch (Exception exception) {
+		catch (Exception exception)
+		{
 			EcorePlugin.INSTANCE.log(exception);
 		}
 		return new DataFactoryImpl();
@@ -44,7 +49,8 @@ public class DataFactoryImpl extends EFactoryImpl implements DataFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataFactoryImpl() {
+	public DataFactoryImpl()
+	{
 		super();
 	}
 
@@ -54,8 +60,10 @@ public class DataFactoryImpl extends EFactoryImpl implements DataFactory {
 	 * @generated
 	 */
 	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
+	public EObject create(EClass eClass)
+	{
+		switch (eClass.getClassifierID())
+		{
 			case DataPackage.ORIGINAL_DATA: return (EObject)createOriginalData();
 			case DataPackage.PARAMETER_BASED_DATA: return (EObject)createParameterBasedData();
 			case DataPackage.RESULT_BASED_DATA: return (EObject)createResultBasedData();
@@ -69,7 +77,8 @@ public class DataFactoryImpl extends EFactoryImpl implements DataFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OriginalData createOriginalData() {
+	public OriginalData createOriginalData()
+	{
 		OriginalDataImpl originalData = new OriginalDataImpl();
 		return originalData;
 	}
@@ -79,7 +88,8 @@ public class DataFactoryImpl extends EFactoryImpl implements DataFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterBasedData createParameterBasedData() {
+	public ParameterBasedData createParameterBasedData()
+	{
 		ParameterBasedDataImpl parameterBasedData = new ParameterBasedDataImpl();
 		return parameterBasedData;
 	}
@@ -89,7 +99,8 @@ public class DataFactoryImpl extends EFactoryImpl implements DataFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResultBasedData createResultBasedData() {
+	public ResultBasedData createResultBasedData()
+	{
 		ResultBasedDataImpl resultBasedData = new ResultBasedDataImpl();
 		return resultBasedData;
 	}
@@ -99,7 +110,8 @@ public class DataFactoryImpl extends EFactoryImpl implements DataFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataPackage getDataPackage() {
+	public DataPackage getDataPackage()
+	{
 		return (DataPackage)getEPackage();
 	}
 
@@ -110,7 +122,8 @@ public class DataFactoryImpl extends EFactoryImpl implements DataFactory {
 	 * @generated
 	 */
 	@Deprecated
-	public static DataPackage getPackage() {
+	public static DataPackage getPackage()
+	{
 		return DataPackage.eINSTANCE;
 	}
 

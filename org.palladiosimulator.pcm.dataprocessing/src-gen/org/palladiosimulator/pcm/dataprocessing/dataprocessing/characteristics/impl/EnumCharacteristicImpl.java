@@ -19,18 +19,21 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.E
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.EnumCharacteristicImpl#getValues <em>Values</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.EnumCharacteristicImpl#getLiterals <em>Literals</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.EnumCharacteristicImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EnumCharacteristicImpl extends CharacteristicImpl<EnumCharacteristicType> implements EnumCharacteristic {
+public class EnumCharacteristicImpl extends CharacteristicImpl implements EnumCharacteristic
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EnumCharacteristicImpl() {
+	protected EnumCharacteristicImpl()
+	{
 		super();
 	}
 
@@ -40,19 +43,9 @@ public class EnumCharacteristicImpl extends CharacteristicImpl<EnumCharacteristi
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return CharacteristicsPackage.Literals.ENUM_CHARACTERISTIC;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * This is specialized for the more specific type known in this context.
-	 * @generated
-	 */
-	@Override
-	public void setType(EnumCharacteristicType newType) {
-		super.setType(newType);
 	}
 
 	/**
@@ -61,8 +54,29 @@ public class EnumCharacteristicImpl extends CharacteristicImpl<EnumCharacteristi
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<EnumCharacteristicLiteral> getValues() {
-		return (EList<EnumCharacteristicLiteral>)eGet(CharacteristicsPackage.Literals.ENUM_CHARACTERISTIC__VALUES, true);
+	public EList<EnumCharacteristicLiteral> getLiterals()
+	{
+		return (EList<EnumCharacteristicLiteral>)eGet(CharacteristicsPackage.Literals.ENUM_CHARACTERISTIC__LITERALS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EnumCharacteristicType getType()
+	{
+		return (EnumCharacteristicType)eGet(CharacteristicsPackage.Literals.ENUM_CHARACTERISTIC__TYPE, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(EnumCharacteristicType newType)
+	{
+		eSet(CharacteristicsPackage.Literals.ENUM_CHARACTERISTIC__TYPE, newType);
 	}
 
 } //EnumCharacteristicImpl

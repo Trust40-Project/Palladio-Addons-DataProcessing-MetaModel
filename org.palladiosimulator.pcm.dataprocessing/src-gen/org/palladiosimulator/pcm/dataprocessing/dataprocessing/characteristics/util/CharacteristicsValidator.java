@@ -22,7 +22,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.*
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage
  * @generated
  */
-public class CharacteristicsValidator extends EObjectValidator {
+public class CharacteristicsValidator extends EObjectValidator
+{
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -63,7 +64,8 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CharacteristicsValidator() {
+	public CharacteristicsValidator()
+	{
 		super();
 	}
 
@@ -74,7 +76,8 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * @generated
 	 */
 	@Override
-	protected EPackage getEPackage() {
+	protected EPackage getEPackage()
+	{
 	  return CharacteristicsPackage.eINSTANCE;
 	}
 
@@ -85,8 +88,10 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * @generated
 	 */
 	@Override
-	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		switch (classifierID) {
+	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		switch (classifierID)
+		{
 			case CharacteristicsPackage.CHARACTERIZABLE:
 				return validateCharacterizable((Characterizable)value, diagnostics, context);
 			case CharacteristicsPackage.CHARACTERISTIC_TYPE_CONTAINER:
@@ -100,11 +105,13 @@ public class CharacteristicsValidator extends EObjectValidator {
 			case CharacteristicsPackage.CHARACTERISTIC_CONTAINER:
 				return validateCharacteristicContainer((CharacteristicContainer)value, diagnostics, context);
 			case CharacteristicsPackage.CHARACTERISTIC:
-				return validateCharacteristic((Characteristic<?>)value, diagnostics, context);
+				return validateCharacteristic((Characteristic)value, diagnostics, context);
 			case CharacteristicsPackage.ENUM_CHARACTERISTIC:
 				return validateEnumCharacteristic((EnumCharacteristic)value, diagnostics, context);
 			case CharacteristicsPackage.ENUMERATION:
 				return validateEnumeration((Enumeration)value, diagnostics, context);
+			case CharacteristicsPackage.RELATED_CHARACTERISTICS:
+				return validateRelatedCharacteristics((RelatedCharacteristics)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -115,7 +122,8 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCharacterizable(Characterizable characterizable, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateCharacterizable(Characterizable characterizable, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)characterizable, diagnostics, context);
 	}
 
@@ -124,7 +132,8 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCharacteristicTypeContainer(CharacteristicTypeContainer characteristicTypeContainer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateCharacteristicTypeContainer(CharacteristicTypeContainer characteristicTypeContainer, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)characteristicTypeContainer, diagnostics, context);
 	}
 
@@ -133,7 +142,8 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCharacteristicType(CharacteristicType characteristicType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateCharacteristicType(CharacteristicType characteristicType, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)characteristicType, diagnostics, context);
 	}
 
@@ -142,7 +152,8 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateEnumCharacteristicType(EnumCharacteristicType enumCharacteristicType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateEnumCharacteristicType(EnumCharacteristicType enumCharacteristicType, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)enumCharacteristicType, diagnostics, context);
 	}
 
@@ -151,7 +162,8 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateEnumCharacteristicLiteral(EnumCharacteristicLiteral enumCharacteristicLiteral, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateEnumCharacteristicLiteral(EnumCharacteristicLiteral enumCharacteristicLiteral, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)enumCharacteristicLiteral, diagnostics, context);
 	}
 
@@ -160,7 +172,8 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCharacteristicContainer(CharacteristicContainer characteristicContainer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateCharacteristicContainer(CharacteristicContainer characteristicContainer, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)characteristicContainer, diagnostics, context);
 	}
 
@@ -169,7 +182,8 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCharacteristic(Characteristic<?> characteristic, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateCharacteristic(Characteristic characteristic, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)characteristic, diagnostics, context);
 	}
 
@@ -178,7 +192,8 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateEnumCharacteristic(EnumCharacteristic enumCharacteristic, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateEnumCharacteristic(EnumCharacteristic enumCharacteristic, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		if (!validate_NoCircularContainment((EObject)enumCharacteristic, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms((EObject)enumCharacteristic, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)enumCharacteristic, diagnostics, context);
@@ -199,7 +214,7 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String ENUM_CHARACTERISTIC__VALUE_COUNT_MUST_MATCH_TYPE_RESTRICTION__EEXPRESSION = "self.values->size() < 2 or self.type.oclAsType(EnumCharacteristicType).multipleChoice";
+	protected static final String ENUM_CHARACTERISTIC__VALUE_COUNT_MUST_MATCH_TYPE_RESTRICTION__EEXPRESSION = "self.literals->size() < 2 or self.type.multipleChoice";
 
 	/**
 	 * Validates the valueCountMustMatchTypeRestriction constraint of '<em>Enum Characteristic</em>'.
@@ -207,7 +222,8 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateEnumCharacteristic_valueCountMustMatchTypeRestriction(EnumCharacteristic enumCharacteristic, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateEnumCharacteristic_valueCountMustMatchTypeRestriction(EnumCharacteristic enumCharacteristic, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return
 			validate
 				(CharacteristicsPackage.Literals.ENUM_CHARACTERISTIC,
@@ -228,7 +244,7 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String ENUM_CHARACTERISTIC__LITERALS_MUST_BELONG_TO_CORRECT_ENUM__EEXPRESSION = "self.type.oclAsType(EnumCharacteristicType).enum.literals->includesAll(self.values)";
+	protected static final String ENUM_CHARACTERISTIC__LITERALS_MUST_BELONG_TO_CORRECT_ENUM__EEXPRESSION = "self.type.enum.literals->includesAll(self.literals)";
 
 	/**
 	 * Validates the literalsMustBelongToCorrectEnum constraint of '<em>Enum Characteristic</em>'.
@@ -236,7 +252,8 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateEnumCharacteristic_literalsMustBelongToCorrectEnum(EnumCharacteristic enumCharacteristic, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateEnumCharacteristic_literalsMustBelongToCorrectEnum(EnumCharacteristic enumCharacteristic, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return
 			validate
 				(CharacteristicsPackage.Literals.ENUM_CHARACTERISTIC,
@@ -256,8 +273,19 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateEnumeration(Enumeration enumeration, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateEnumeration(Enumeration enumeration, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)enumeration, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRelatedCharacteristics(RelatedCharacteristics relatedCharacteristics, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return validate_EveryDefaultConstraint((EObject)relatedCharacteristics, diagnostics, context);
 	}
 
 	/**
@@ -267,7 +295,8 @@ public class CharacteristicsValidator extends EObjectValidator {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		// TODO
 		// Specialize this to return a resource locator for messages specific to this validator.
 		// Ensure that you remove @generated or mark it @generated NOT

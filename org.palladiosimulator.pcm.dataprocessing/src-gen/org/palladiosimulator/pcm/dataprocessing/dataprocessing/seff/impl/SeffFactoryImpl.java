@@ -18,21 +18,26 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SeffFactoryImpl extends EFactoryImpl implements SeffFactory {
+public class SeffFactoryImpl extends EFactoryImpl implements SeffFactory
+{
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static SeffFactory init() {
-		try {
+	public static SeffFactory init()
+	{
+		try
+		{
 			SeffFactory theSeffFactory = (SeffFactory)EPackage.Registry.INSTANCE.getEFactory(SeffPackage.eNS_URI);
-			if (theSeffFactory != null) {
+			if (theSeffFactory != null)
+			{
 				return theSeffFactory;
 			}
 		}
-		catch (Exception exception) {
+		catch (Exception exception)
+		{
 			EcorePlugin.INSTANCE.log(exception);
 		}
 		return new SeffFactoryImpl();
@@ -44,7 +49,8 @@ public class SeffFactoryImpl extends EFactoryImpl implements SeffFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SeffFactoryImpl() {
+	public SeffFactoryImpl()
+	{
 		super();
 	}
 
@@ -54,8 +60,10 @@ public class SeffFactoryImpl extends EFactoryImpl implements SeffFactory {
 	 * @generated
 	 */
 	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
+	public EObject create(EClass eClass)
+	{
+		switch (eClass.getClassifierID())
+		{
 			case SeffPackage.DATA_SEFF_SPECIFICATION: return (EObject)createDataSEFFSpecification();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -67,7 +75,8 @@ public class SeffFactoryImpl extends EFactoryImpl implements SeffFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataSEFFSpecification createDataSEFFSpecification() {
+	public DataSEFFSpecification createDataSEFFSpecification()
+	{
 		DataSEFFSpecificationImpl dataSEFFSpecification = new DataSEFFSpecificationImpl();
 		return dataSEFFSpecification;
 	}
@@ -77,7 +86,8 @@ public class SeffFactoryImpl extends EFactoryImpl implements SeffFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SeffPackage getSeffPackage() {
+	public SeffPackage getSeffPackage()
+	{
 		return (SeffPackage)getEPackage();
 	}
 
@@ -88,7 +98,8 @@ public class SeffFactoryImpl extends EFactoryImpl implements SeffFactory {
 	 * @generated
 	 */
 	@Deprecated
-	public static SeffPackage getPackage() {
+	public static SeffPackage getPackage()
+	{
 		return SeffPackage.eINSTANCE;
 	}
 

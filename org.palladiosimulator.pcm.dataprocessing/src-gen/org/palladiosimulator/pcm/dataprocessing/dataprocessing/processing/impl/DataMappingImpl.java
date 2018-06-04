@@ -24,13 +24,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Proces
  *
  * @generated
  */
-public abstract class DataMappingImpl extends IdentifierImpl implements DataMapping {
+public abstract class DataMappingImpl extends IdentifierImpl implements DataMapping
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataMappingImpl() {
+	protected DataMappingImpl()
+	{
 		super();
 	}
 
@@ -40,7 +42,8 @@ public abstract class DataMappingImpl extends IdentifierImpl implements DataMapp
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return ProcessingPackage.Literals.DATA_MAPPING;
 	}
 
@@ -49,7 +52,8 @@ public abstract class DataMappingImpl extends IdentifierImpl implements DataMapp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Data getData() {
+	public Data getData()
+	{
 		return (Data)eGet(ProcessingPackage.Literals.DATA_MAPPING__DATA, true);
 	}
 
@@ -58,7 +62,8 @@ public abstract class DataMappingImpl extends IdentifierImpl implements DataMapp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setData(Data newData) {
+	public void setData(Data newData)
+	{
 		eSet(ProcessingPackage.Literals.DATA_MAPPING__DATA, newData);
 	}
 

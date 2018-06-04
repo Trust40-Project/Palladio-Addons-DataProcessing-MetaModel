@@ -22,13 +22,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Proces
  *
  * @generated
  */
-public abstract class ConsumeDataOperationImpl extends DataOperationImpl implements ConsumeDataOperation {
+public abstract class ConsumeDataOperationImpl extends DataOperationImpl implements ConsumeDataOperation
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConsumeDataOperationImpl() {
+	protected ConsumeDataOperationImpl()
+	{
 		super();
 	}
 
@@ -38,7 +40,8 @@ public abstract class ConsumeDataOperationImpl extends DataOperationImpl impleme
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return ProcessingPackage.Literals.CONSUME_DATA_OPERATION;
 	}
 
@@ -47,7 +50,8 @@ public abstract class ConsumeDataOperationImpl extends DataOperationImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Data getConsumedData() {
+	public Data getConsumedData()
+	{
 		return (Data)eGet(ProcessingPackage.Literals.CONSUME_DATA_OPERATION__CONSUMED_DATA, true);
 	}
 
@@ -56,7 +60,8 @@ public abstract class ConsumeDataOperationImpl extends DataOperationImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConsumedData(Data newConsumedData) {
+	public void setConsumedData(Data newConsumedData)
+	{
 		eSet(ProcessingPackage.Literals.CONSUME_DATA_OPERATION__CONSUMED_DATA, newConsumedData);
 	}
 

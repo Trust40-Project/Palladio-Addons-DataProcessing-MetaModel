@@ -22,7 +22,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.*;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage
  * @generated
  */
-public class DataprocessingSwitch<T> extends Switch<T> {
+public class DataprocessingSwitch<T> extends Switch<T>
+{
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -37,8 +38,10 @@ public class DataprocessingSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataprocessingSwitch() {
-		if (modelPackage == null) {
+	public DataprocessingSwitch()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = DataprocessingPackage.eINSTANCE;
 		}
 	}
@@ -52,7 +55,8 @@ public class DataprocessingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected boolean isSwitchFor(EPackage ePackage) {
+	protected boolean isSwitchFor(EPackage ePackage)
+	{
 		return ePackage == modelPackage;
 	}
 
@@ -64,9 +68,12 @@ public class DataprocessingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected T doSwitch(int classifierID, EObject theEObject) {
-		switch (classifierID) {
-			case DataprocessingPackage.DATA_SPECIFICATION: {
+	protected T doSwitch(int classifierID, EObject theEObject)
+	{
+		switch (classifierID)
+		{
+			case DataprocessingPackage.DATA_SPECIFICATION:
+			{
 				DataSpecification dataSpecification = (DataSpecification)theEObject;
 				T result = caseDataSpecification(dataSpecification);
 				if (result == null) result = defaultCase(theEObject);
@@ -87,7 +94,8 @@ public class DataprocessingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDataSpecification(DataSpecification object) {
+	public T caseDataSpecification(DataSpecification object)
+	{
 		return null;
 	}
 
@@ -103,7 +111,8 @@ public class DataprocessingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	public T defaultCase(EObject object) {
+	public T defaultCase(EObject object)
+	{
 		return null;
 	}
 

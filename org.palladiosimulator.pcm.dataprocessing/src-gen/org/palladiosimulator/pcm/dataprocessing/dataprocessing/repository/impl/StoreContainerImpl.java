@@ -25,13 +25,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.StoreC
  *
  * @generated
  */
-public class StoreContainerImpl extends IdentifierImpl implements StoreContainer {
+public class StoreContainerImpl extends IdentifierImpl implements StoreContainer
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StoreContainerImpl() {
+	protected StoreContainerImpl()
+	{
 		super();
 	}
 
@@ -41,7 +43,8 @@ public class StoreContainerImpl extends IdentifierImpl implements StoreContainer
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RepositoryPackage.Literals.STORE_CONTAINER;
 	}
 
@@ -51,7 +54,8 @@ public class StoreContainerImpl extends IdentifierImpl implements StoreContainer
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Store> getStores() {
+	public EList<Store> getStores()
+	{
 		return (EList<Store>)eGet(RepositoryPackage.Literals.STORE_CONTAINER__STORES, true);
 	}
 

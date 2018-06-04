@@ -18,21 +18,26 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DataprocessingFactoryImpl extends EFactoryImpl implements DataprocessingFactory {
+public class DataprocessingFactoryImpl extends EFactoryImpl implements DataprocessingFactory
+{
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static DataprocessingFactory init() {
-		try {
+	public static DataprocessingFactory init()
+	{
+		try
+		{
 			DataprocessingFactory theDataprocessingFactory = (DataprocessingFactory)EPackage.Registry.INSTANCE.getEFactory(DataprocessingPackage.eNS_URI);
-			if (theDataprocessingFactory != null) {
+			if (theDataprocessingFactory != null)
+			{
 				return theDataprocessingFactory;
 			}
 		}
-		catch (Exception exception) {
+		catch (Exception exception)
+		{
 			EcorePlugin.INSTANCE.log(exception);
 		}
 		return new DataprocessingFactoryImpl();
@@ -44,7 +49,8 @@ public class DataprocessingFactoryImpl extends EFactoryImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataprocessingFactoryImpl() {
+	public DataprocessingFactoryImpl()
+	{
 		super();
 	}
 
@@ -54,8 +60,10 @@ public class DataprocessingFactoryImpl extends EFactoryImpl implements Dataproce
 	 * @generated
 	 */
 	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
+	public EObject create(EClass eClass)
+	{
+		switch (eClass.getClassifierID())
+		{
 			case DataprocessingPackage.DATA_SPECIFICATION: return (EObject)createDataSpecification();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -67,7 +75,8 @@ public class DataprocessingFactoryImpl extends EFactoryImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataSpecification createDataSpecification() {
+	public DataSpecification createDataSpecification()
+	{
 		DataSpecificationImpl dataSpecification = new DataSpecificationImpl();
 		return dataSpecification;
 	}
@@ -77,7 +86,8 @@ public class DataprocessingFactoryImpl extends EFactoryImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataprocessingPackage getDataprocessingPackage() {
+	public DataprocessingPackage getDataprocessingPackage()
+	{
 		return (DataprocessingPackage)getEPackage();
 	}
 
@@ -88,7 +98,8 @@ public class DataprocessingFactoryImpl extends EFactoryImpl implements Dataproce
 	 * @generated
 	 */
 	@Deprecated
-	public static DataprocessingPackage getPackage() {
+	public static DataprocessingPackage getPackage()
+	{
 		return DataprocessingPackage.eINSTANCE;
 	}
 

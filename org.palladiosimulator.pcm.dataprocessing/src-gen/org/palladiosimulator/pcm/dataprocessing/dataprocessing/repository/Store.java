@@ -23,7 +23,8 @@ import org.palladiosimulator.pcm.repository.DataType;
  * @model
  * @generated
  */
-public interface Store extends Entity {
+public interface Store extends Entity
+{
 	/**
 	 * Returns the value of the '<em><b>Container</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.StoreContainer#getStores <em>Stores</em>}'.

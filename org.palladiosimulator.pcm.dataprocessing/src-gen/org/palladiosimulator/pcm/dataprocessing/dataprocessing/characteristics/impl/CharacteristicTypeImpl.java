@@ -16,13 +16,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.C
  *
  * @generated
  */
-public abstract class CharacteristicTypeImpl extends EntityImpl implements CharacteristicType {
+public abstract class CharacteristicTypeImpl extends EntityImpl implements CharacteristicType
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CharacteristicTypeImpl() {
+	protected CharacteristicTypeImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public abstract class CharacteristicTypeImpl extends EntityImpl implements Chara
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return CharacteristicsPackage.Literals.CHARACTERISTIC_TYPE;
 	}
 

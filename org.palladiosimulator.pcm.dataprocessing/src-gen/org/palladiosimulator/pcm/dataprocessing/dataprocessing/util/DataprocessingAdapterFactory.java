@@ -19,7 +19,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.*;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage
  * @generated
  */
-public class DataprocessingAdapterFactory extends AdapterFactoryImpl {
+public class DataprocessingAdapterFactory extends AdapterFactoryImpl
+{
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
@@ -34,8 +35,10 @@ public class DataprocessingAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataprocessingAdapterFactory() {
-		if (modelPackage == null) {
+	public DataprocessingAdapterFactory()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = DataprocessingPackage.eINSTANCE;
 		}
 	}
@@ -49,11 +52,14 @@ public class DataprocessingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public boolean isFactoryForType(Object object) {
-		if (object == modelPackage) {
+	public boolean isFactoryForType(Object object)
+	{
+		if (object == modelPackage)
+		{
 			return true;
 		}
-		if (object instanceof EObject) {
+		if (object instanceof EObject)
+		{
 			return ((EObject)object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
@@ -66,13 +72,16 @@ public class DataprocessingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	protected DataprocessingSwitch<Adapter> modelSwitch =
-		new DataprocessingSwitch<Adapter>() {
+		new DataprocessingSwitch<Adapter>()
+		{
 			@Override
-			public Adapter caseDataSpecification(DataSpecification object) {
+			public Adapter caseDataSpecification(DataSpecification object)
+			{
 				return createDataSpecificationAdapter();
 			}
 			@Override
-			public Adapter defaultCase(EObject object) {
+			public Adapter defaultCase(EObject object)
+			{
 				return createEObjectAdapter();
 			}
 		};
@@ -86,7 +95,8 @@ public class DataprocessingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public Adapter createAdapter(Notifier target) {
+	public Adapter createAdapter(Notifier target)
+	{
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
@@ -101,7 +111,8 @@ public class DataprocessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification
 	 * @generated
 	 */
-	public Adapter createDataSpecificationAdapter() {
+	public Adapter createDataSpecificationAdapter()
+	{
 		return null;
 	}
 
@@ -113,7 +124,8 @@ public class DataprocessingAdapterFactory extends AdapterFactoryImpl {
 	 * @return the new adapter.
 	 * @generated
 	 */
-	public Adapter createEObjectAdapter() {
+	public Adapter createEObjectAdapter()
+	{
 		return null;
 	}
 

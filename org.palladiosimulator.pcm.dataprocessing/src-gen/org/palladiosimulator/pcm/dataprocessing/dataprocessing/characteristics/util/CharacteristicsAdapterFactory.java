@@ -24,7 +24,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.*
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage
  * @generated
  */
-public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
+public class CharacteristicsAdapterFactory extends AdapterFactoryImpl
+{
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
@@ -39,8 +40,10 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CharacteristicsAdapterFactory() {
-		if (modelPackage == null) {
+	public CharacteristicsAdapterFactory()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = CharacteristicsPackage.eINSTANCE;
 		}
 	}
@@ -54,11 +57,14 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public boolean isFactoryForType(Object object) {
-		if (object == modelPackage) {
+	public boolean isFactoryForType(Object object)
+	{
+		if (object == modelPackage)
+		{
 			return true;
 		}
-		if (object instanceof EObject) {
+		if (object instanceof EObject)
+		{
 			return ((EObject)object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
@@ -71,57 +77,76 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	protected CharacteristicsSwitch<Adapter> modelSwitch =
-		new CharacteristicsSwitch<Adapter>() {
+		new CharacteristicsSwitch<Adapter>()
+		{
 			@Override
-			public Adapter caseCharacterizable(Characterizable object) {
+			public Adapter caseCharacterizable(Characterizable object)
+			{
 				return createCharacterizableAdapter();
 			}
 			@Override
-			public Adapter caseCharacteristicTypeContainer(CharacteristicTypeContainer object) {
+			public Adapter caseCharacteristicTypeContainer(CharacteristicTypeContainer object)
+			{
 				return createCharacteristicTypeContainerAdapter();
 			}
 			@Override
-			public Adapter caseCharacteristicType(CharacteristicType object) {
+			public Adapter caseCharacteristicType(CharacteristicType object)
+			{
 				return createCharacteristicTypeAdapter();
 			}
 			@Override
-			public Adapter caseEnumCharacteristicType(EnumCharacteristicType object) {
+			public Adapter caseEnumCharacteristicType(EnumCharacteristicType object)
+			{
 				return createEnumCharacteristicTypeAdapter();
 			}
 			@Override
-			public Adapter caseEnumCharacteristicLiteral(EnumCharacteristicLiteral object) {
+			public Adapter caseEnumCharacteristicLiteral(EnumCharacteristicLiteral object)
+			{
 				return createEnumCharacteristicLiteralAdapter();
 			}
 			@Override
-			public Adapter caseCharacteristicContainer(CharacteristicContainer object) {
+			public Adapter caseCharacteristicContainer(CharacteristicContainer object)
+			{
 				return createCharacteristicContainerAdapter();
 			}
 			@Override
-			public <T extends CharacteristicType> Adapter caseCharacteristic(Characteristic<T> object) {
+			public Adapter caseCharacteristic(Characteristic object)
+			{
 				return createCharacteristicAdapter();
 			}
 			@Override
-			public Adapter caseEnumCharacteristic(EnumCharacteristic object) {
+			public Adapter caseEnumCharacteristic(EnumCharacteristic object)
+			{
 				return createEnumCharacteristicAdapter();
 			}
 			@Override
-			public Adapter caseEnumeration(Enumeration object) {
+			public Adapter caseEnumeration(Enumeration object)
+			{
 				return createEnumerationAdapter();
 			}
 			@Override
-			public Adapter caseIdentifier(Identifier object) {
+			public Adapter caseRelatedCharacteristics(RelatedCharacteristics object)
+			{
+				return createRelatedCharacteristicsAdapter();
+			}
+			@Override
+			public Adapter caseIdentifier(Identifier object)
+			{
 				return createIdentifierAdapter();
 			}
 			@Override
-			public Adapter caseNamedElement(NamedElement object) {
+			public Adapter caseNamedElement(NamedElement object)
+			{
 				return createNamedElementAdapter();
 			}
 			@Override
-			public Adapter caseEntity(Entity object) {
+			public Adapter caseEntity(Entity object)
+			{
 				return createEntityAdapter();
 			}
 			@Override
-			public Adapter defaultCase(EObject object) {
+			public Adapter defaultCase(EObject object)
+			{
 				return createEObjectAdapter();
 			}
 		};
@@ -135,7 +160,8 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public Adapter createAdapter(Notifier target) {
+	public Adapter createAdapter(Notifier target)
+	{
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
@@ -150,7 +176,8 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characterizable
 	 * @generated
 	 */
-	public Adapter createCharacterizableAdapter() {
+	public Adapter createCharacterizableAdapter()
+	{
 		return null;
 	}
 
@@ -164,7 +191,8 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicTypeContainer
 	 * @generated
 	 */
-	public Adapter createCharacteristicTypeContainerAdapter() {
+	public Adapter createCharacteristicTypeContainerAdapter()
+	{
 		return null;
 	}
 
@@ -178,7 +206,8 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicType
 	 * @generated
 	 */
-	public Adapter createCharacteristicTypeAdapter() {
+	public Adapter createCharacteristicTypeAdapter()
+	{
 		return null;
 	}
 
@@ -192,7 +221,8 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.EnumCharacteristicType
 	 * @generated
 	 */
-	public Adapter createEnumCharacteristicTypeAdapter() {
+	public Adapter createEnumCharacteristicTypeAdapter()
+	{
 		return null;
 	}
 
@@ -206,7 +236,8 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.EnumCharacteristicLiteral
 	 * @generated
 	 */
-	public Adapter createEnumCharacteristicLiteralAdapter() {
+	public Adapter createEnumCharacteristicLiteralAdapter()
+	{
 		return null;
 	}
 
@@ -220,7 +251,8 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer
 	 * @generated
 	 */
-	public Adapter createCharacteristicContainerAdapter() {
+	public Adapter createCharacteristicContainerAdapter()
+	{
 		return null;
 	}
 
@@ -234,7 +266,8 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic
 	 * @generated
 	 */
-	public Adapter createCharacteristicAdapter() {
+	public Adapter createCharacteristicAdapter()
+	{
 		return null;
 	}
 
@@ -248,7 +281,8 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.EnumCharacteristic
 	 * @generated
 	 */
-	public Adapter createEnumCharacteristicAdapter() {
+	public Adapter createEnumCharacteristicAdapter()
+	{
 		return null;
 	}
 
@@ -262,7 +296,23 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Enumeration
 	 * @generated
 	 */
-	public Adapter createEnumerationAdapter() {
+	public Adapter createEnumerationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.RelatedCharacteristics <em>Related Characteristics</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.RelatedCharacteristics
+	 * @generated
+	 */
+	public Adapter createRelatedCharacteristicsAdapter()
+	{
 		return null;
 	}
 
@@ -276,7 +326,8 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @see de.uka.ipd.sdq.identifier.Identifier
 	 * @generated
 	 */
-	public Adapter createIdentifierAdapter() {
+	public Adapter createIdentifierAdapter()
+	{
 		return null;
 	}
 
@@ -290,7 +341,8 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.core.entity.NamedElement
 	 * @generated
 	 */
-	public Adapter createNamedElementAdapter() {
+	public Adapter createNamedElementAdapter()
+	{
 		return null;
 	}
 
@@ -304,7 +356,8 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.core.entity.Entity
 	 * @generated
 	 */
-	public Adapter createEntityAdapter() {
+	public Adapter createEntityAdapter()
+	{
 		return null;
 	}
 
@@ -316,7 +369,8 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl {
 	 * @return the new adapter.
 	 * @generated
 	 */
-	public Adapter createEObjectAdapter() {
+	public Adapter createEObjectAdapter()
+	{
 		return null;
 	}
 

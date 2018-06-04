@@ -22,7 +22,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.*;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage
  * @generated
  */
-public class ProcessingValidator extends EObjectValidator {
+public class ProcessingValidator extends EObjectValidator
+{
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -63,7 +64,8 @@ public class ProcessingValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessingValidator() {
+	public ProcessingValidator()
+	{
 		super();
 	}
 
@@ -74,7 +76,8 @@ public class ProcessingValidator extends EObjectValidator {
 	 * @generated
 	 */
 	@Override
-	protected EPackage getEPackage() {
+	protected EPackage getEPackage()
+	{
 	  return ProcessingPackage.eINSTANCE;
 	}
 
@@ -85,8 +88,10 @@ public class ProcessingValidator extends EObjectValidator {
 	 * @generated
 	 */
 	@Override
-	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		switch (classifierID) {
+	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		switch (classifierID)
+		{
 			case ProcessingPackage.DATA_PROCESSING_CONTAINER:
 				return validateDataProcessingContainer((DataProcessingContainer)value, diagnostics, context);
 			case ProcessingPackage.DATA_OPERATION:
@@ -115,6 +120,16 @@ public class ProcessingValidator extends EObjectValidator {
 				return validateJoinDataOperation((JoinDataOperation)value, diagnostics, context);
 			case ProcessingPackage.UNION_DATA_OPERATION:
 				return validateUnionDataOperation((UnionDataOperation)value, diagnostics, context);
+			case ProcessingPackage.TRANSFORM_DATA_OPERATION:
+				return validateTransformDataOperation((TransformDataOperation)value, diagnostics, context);
+			case ProcessingPackage.PROJECTION_DATA_OPERATION:
+				return validateProjectionDataOperation((ProjectionDataOperation)value, diagnostics, context);
+			case ProcessingPackage.SELECTION_DATA_OPERATION:
+				return validateSelectionDataOperation((SelectionDataOperation)value, diagnostics, context);
+			case ProcessingPackage.CHARACTERISTIC_CHANGING_DATA_OPERATION:
+				return validateCharacteristicChangingDataOperation((CharacteristicChangingDataOperation<?>)value, diagnostics, context);
+			case ProcessingPackage.CHARACTERISTIC_CHANGE_OPERATION:
+				return validateCharacteristicChangeOperation((CharacteristicChangeOperation)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -125,7 +140,8 @@ public class ProcessingValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateDataProcessingContainer(DataProcessingContainer dataProcessingContainer, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateDataProcessingContainer(DataProcessingContainer dataProcessingContainer, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)dataProcessingContainer, diagnostics, context);
 	}
 
@@ -134,7 +150,8 @@ public class ProcessingValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateDataOperation(DataOperation dataOperation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateDataOperation(DataOperation dataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)dataOperation, diagnostics, context);
 	}
 
@@ -143,7 +160,8 @@ public class ProcessingValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCreateDataOperation(CreateDataOperation createDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateCreateDataOperation(CreateDataOperation createDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)createDataOperation, diagnostics, context);
 	}
 
@@ -152,7 +170,8 @@ public class ProcessingValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateLoadDataOperation(LoadDataOperation loadDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateLoadDataOperation(LoadDataOperation loadDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)loadDataOperation, diagnostics, context);
 	}
 
@@ -161,7 +180,8 @@ public class ProcessingValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateLoadAllDataOperation(LoadAllDataOperation loadAllDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateLoadAllDataOperation(LoadAllDataOperation loadAllDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		if (!validate_NoCircularContainment((EObject)loadAllDataOperation, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms((EObject)loadAllDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)loadAllDataOperation, diagnostics, context);
@@ -189,7 +209,8 @@ public class ProcessingValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateLoadAllDataOperation_resultTypeMustBeCollection(LoadAllDataOperation loadAllDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateLoadAllDataOperation_resultTypeMustBeCollection(LoadAllDataOperation loadAllDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return
 			validate
 				(ProcessingPackage.Literals.LOAD_ALL_DATA_OPERATION,
@@ -209,7 +230,8 @@ public class ProcessingValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validatePerformDataTransmissionOperation(PerformDataTransmissionOperation performDataTransmissionOperation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validatePerformDataTransmissionOperation(PerformDataTransmissionOperation performDataTransmissionOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)performDataTransmissionOperation, diagnostics, context);
 	}
 
@@ -218,7 +240,8 @@ public class ProcessingValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateConsumeDataOperation(ConsumeDataOperation consumeDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateConsumeDataOperation(ConsumeDataOperation consumeDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)consumeDataOperation, diagnostics, context);
 	}
 
@@ -227,7 +250,8 @@ public class ProcessingValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateStoreDataOperation(StoreDataOperation storeDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateStoreDataOperation(StoreDataOperation storeDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)storeDataOperation, diagnostics, context);
 	}
 
@@ -236,7 +260,8 @@ public class ProcessingValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateDataMapping(DataMapping dataMapping, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateDataMapping(DataMapping dataMapping, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)dataMapping, diagnostics, context);
 	}
 
@@ -245,7 +270,8 @@ public class ProcessingValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateDataParameterMapping(DataParameterMapping dataParameterMapping, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateDataParameterMapping(DataParameterMapping dataParameterMapping, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return validate_EveryDefaultConstraint((EObject)dataParameterMapping, diagnostics, context);
 	}
 
@@ -254,66 +280,46 @@ public class ProcessingValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateDataResultMapping(DataResultMapping dataResultMapping, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)dataResultMapping, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateManyToOneDataOperation(ManyToOneDataOperation manyToOneDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)manyToOneDataOperation, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateJoinDataOperation(JoinDataOperation joinDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment((EObject)joinDataOperation, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)joinDataOperation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)joinDataOperation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)joinDataOperation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)joinDataOperation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)joinDataOperation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)joinDataOperation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)joinDataOperation, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)joinDataOperation, diagnostics, context);
-		if (result || diagnostics != null) result &= validateJoinDataOperation_resultMustBeComposite(joinDataOperation, diagnostics, context);
+	public boolean validateDataResultMapping(DataResultMapping dataResultMapping, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		if (!validate_NoCircularContainment((EObject)dataResultMapping, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)dataResultMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)dataResultMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)dataResultMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)dataResultMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)dataResultMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)dataResultMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)dataResultMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)dataResultMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validateDataResultMapping_mappedDataMustBeInReceivedData(dataResultMapping, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * The cached validation expression for the resultMustBeComposite constraint of '<em>Join Data Operation</em>'.
+	 * The cached validation expression for the mappedDataMustBeInReceivedData constraint of '<em>Data Result Mapping</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String JOIN_DATA_OPERATION__RESULT_MUST_BE_COMPOSITE__EEXPRESSION = "\n" +
-		"\t\t\t\tlet resultType = self.resultingData.oclAsType(repository_1::CompositeDataType) in\n" +
-		"\t\t\t\t\tlet requiredDataTypes = resultType->closure(c | c.parentType_CompositeDataType)->including(resultType)->collect(innerDeclaration_CompositeDataType).datatype_InnerDeclaration in\n" +
-		"\t\t\t\t\t\t/*requiredDataTypes->size() = self.consumedData and requiredDataTypes->includesAll();*/\n" +
-		"\t\t\t\t\t\ttrue";
+	protected static final String DATA_RESULT_MAPPING__MAPPED_DATA_MUST_BE_IN_RECEIVED_DATA__EEXPRESSION = "self.receivedData->includes(self.data)";
 
 	/**
-	 * Validates the resultMustBeComposite constraint of '<em>Join Data Operation</em>'.
+	 * Validates the mappedDataMustBeInReceivedData constraint of '<em>Data Result Mapping</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateJoinDataOperation_resultMustBeComposite(JoinDataOperation joinDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateDataResultMapping_mappedDataMustBeInReceivedData(DataResultMapping dataResultMapping, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
 		return
 			validate
-				(ProcessingPackage.Literals.JOIN_DATA_OPERATION,
-				 (EObject)joinDataOperation,
+				(ProcessingPackage.Literals.DATA_RESULT_MAPPING,
+				 (EObject)dataResultMapping,
 				 diagnostics,
 				 context,
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-				 "resultMustBeComposite",
-				 JOIN_DATA_OPERATION__RESULT_MUST_BE_COMPOSITE__EEXPRESSION,
+				 "mappedDataMustBeInReceivedData",
+				 DATA_RESULT_MAPPING__MAPPED_DATA_MUST_BE_IN_RECEIVED_DATA__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);
@@ -324,8 +330,306 @@ public class ProcessingValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateUnionDataOperation(UnionDataOperation unionDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint((EObject)unionDataOperation, diagnostics, context);
+	public boolean validateManyToOneDataOperation(ManyToOneDataOperation manyToOneDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return validate_EveryDefaultConstraint((EObject)manyToOneDataOperation, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateJoinDataOperation(JoinDataOperation joinDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		if (!validate_NoCircularContainment((EObject)joinDataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)joinDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)joinDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)joinDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)joinDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)joinDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)joinDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)joinDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)joinDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateJoinDataOperation_resultMustBeCompositeOfInputs(joinDataOperation, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the resultMustBeCompositeOfInputs constraint of '<em>Join Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String JOIN_DATA_OPERATION__RESULT_MUST_BE_COMPOSITE_OF_INPUTS__EEXPRESSION = "\n" +
+		"\t\t\t\tlet resultInnerDeclarations = self.resultingData.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType in\n" +
+		"\t\t\t\t\tresultInnerDeclarations.datatype_InnerDeclaration = self.consumedData.type";
+
+	/**
+	 * Validates the resultMustBeCompositeOfInputs constraint of '<em>Join Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateJoinDataOperation_resultMustBeCompositeOfInputs(JoinDataOperation joinDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return
+			validate
+				(ProcessingPackage.Literals.JOIN_DATA_OPERATION,
+				 (EObject)joinDataOperation,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "resultMustBeCompositeOfInputs",
+				 JOIN_DATA_OPERATION__RESULT_MUST_BE_COMPOSITE_OF_INPUTS__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUnionDataOperation(UnionDataOperation unionDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		if (!validate_NoCircularContainment((EObject)unionDataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)unionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)unionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)unionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)unionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)unionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)unionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)unionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)unionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateUnionDataOperation_inputsMustBeResultTypeOrResultEntityType(unionDataOperation, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the inputsMustBeResultTypeOrResultEntityType constraint of '<em>Union Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String UNION_DATA_OPERATION__INPUTS_MUST_BE_RESULT_TYPE_OR_RESULT_ENTITY_TYPE__EEXPRESSION = "\n" +
+		"\t\t\t\tlet entityType = self.resultingData.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType in\n" +
+		"\t\t\t\t\tself.consumedData.type->forAll(t |\n" +
+		"\t\t\t\t\t\tt = entityType or t.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType = entityType)";
+
+	/**
+	 * Validates the inputsMustBeResultTypeOrResultEntityType constraint of '<em>Union Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUnionDataOperation_inputsMustBeResultTypeOrResultEntityType(UnionDataOperation unionDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return
+			validate
+				(ProcessingPackage.Literals.UNION_DATA_OPERATION,
+				 (EObject)unionDataOperation,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "inputsMustBeResultTypeOrResultEntityType",
+				 UNION_DATA_OPERATION__INPUTS_MUST_BE_RESULT_TYPE_OR_RESULT_ENTITY_TYPE__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTransformDataOperation(TransformDataOperation transformDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return validate_EveryDefaultConstraint((EObject)transformDataOperation, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateProjectionDataOperation(ProjectionDataOperation projectionDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		if (!validate_NoCircularContainment((EObject)projectionDataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)projectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)projectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)projectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)projectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)projectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)projectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)projectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)projectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateProjectionDataOperation_noParameters(projectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateProjectionDataOperation_outputIsComposedInInput(projectionDataOperation, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the noParameters constraint of '<em>Projection Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String PROJECTION_DATA_OPERATION__NO_PARAMETERS__EEXPRESSION = "self.parameterData->isEmpty()";
+
+	/**
+	 * Validates the noParameters constraint of '<em>Projection Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateProjectionDataOperation_noParameters(ProjectionDataOperation projectionDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return
+			validate
+				(ProcessingPackage.Literals.PROJECTION_DATA_OPERATION,
+				 (EObject)projectionDataOperation,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "noParameters",
+				 PROJECTION_DATA_OPERATION__NO_PARAMETERS__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the outputIsComposedInInput constraint of '<em>Projection Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String PROJECTION_DATA_OPERATION__OUTPUT_IS_COMPOSED_IN_INPUT__EEXPRESSION = "self.inputData.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.outputData.type)";
+
+	/**
+	 * Validates the outputIsComposedInInput constraint of '<em>Projection Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateProjectionDataOperation_outputIsComposedInInput(ProjectionDataOperation projectionDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return
+			validate
+				(ProcessingPackage.Literals.PROJECTION_DATA_OPERATION,
+				 (EObject)projectionDataOperation,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "outputIsComposedInInput",
+				 PROJECTION_DATA_OPERATION__OUTPUT_IS_COMPOSED_IN_INPUT__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSelectionDataOperation(SelectionDataOperation selectionDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		if (!validate_NoCircularContainment((EObject)selectionDataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)selectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)selectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)selectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)selectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)selectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)selectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)selectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)selectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSelectionDataOperation_parametersExist(selectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSelectionDataOperation_inputAndOutputHaveSameEntityType(selectionDataOperation, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the parametersExist constraint of '<em>Selection Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String SELECTION_DATA_OPERATION__PARAMETERS_EXIST__EEXPRESSION = "self.parameterData->notEmpty()";
+
+	/**
+	 * Validates the parametersExist constraint of '<em>Selection Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSelectionDataOperation_parametersExist(SelectionDataOperation selectionDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return
+			validate
+				(ProcessingPackage.Literals.SELECTION_DATA_OPERATION,
+				 (EObject)selectionDataOperation,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "parametersExist",
+				 SELECTION_DATA_OPERATION__PARAMETERS_EXIST__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the inputAndOutputHaveSameEntityType constraint of '<em>Selection Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String SELECTION_DATA_OPERATION__INPUT_AND_OUTPUT_HAVE_SAME_ENTITY_TYPE__EEXPRESSION = "self.inputData.type = self.outputData.type or self.inputData.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType = self.outputData.type";
+
+	/**
+	 * Validates the inputAndOutputHaveSameEntityType constraint of '<em>Selection Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSelectionDataOperation_inputAndOutputHaveSameEntityType(SelectionDataOperation selectionDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return
+			validate
+				(ProcessingPackage.Literals.SELECTION_DATA_OPERATION,
+				 (EObject)selectionDataOperation,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "inputAndOutputHaveSameEntityType",
+				 SELECTION_DATA_OPERATION__INPUT_AND_OUTPUT_HAVE_SAME_ENTITY_TYPE__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCharacteristicChangingDataOperation(CharacteristicChangingDataOperation<?> characteristicChangingDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return validate_EveryDefaultConstraint((EObject)characteristicChangingDataOperation, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCharacteristicChangeOperation(CharacteristicChangeOperation characteristicChangeOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return true;
 	}
 
 	/**
@@ -335,7 +639,8 @@ public class ProcessingValidator extends EObjectValidator {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		// TODO
 		// Specialize this to return a resource locator for messages specific to this validator.
 		// Ensure that you remove @generated or mark it @generated NOT

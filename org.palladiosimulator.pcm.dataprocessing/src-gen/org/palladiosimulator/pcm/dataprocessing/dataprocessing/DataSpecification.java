@@ -8,6 +8,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicTypeContainer;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.RelatedCharacteristics;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer;
 
@@ -29,6 +30,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.DataSEFFSpec
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getDataSEFFSpecifications <em>Data SEFF Specifications</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getStoreContainers <em>Store Containers</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getCharacteristicContainer <em>Characteristic Container</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getRelatedCharacteristics <em>Related Characteristics</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage#getDataSpecification()
@@ -36,7 +38,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.DataSEFFSpec
  * @extends CDOObject
  * @generated
  */
-public interface DataSpecification extends CDOObject {
+public interface DataSpecification extends CDOObject
+{
 	/**
 	 * Returns the value of the '<em><b>Data Processing Containers</b></em>' containment reference list.
 	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer}.
@@ -116,5 +119,21 @@ public interface DataSpecification extends CDOObject {
 	 * @generated
 	 */
 	EList<CharacteristicContainer> getCharacteristicContainer();
+
+	/**
+	 * Returns the value of the '<em><b>Related Characteristics</b></em>' containment reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.RelatedCharacteristics}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Related Characteristics</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Related Characteristics</em>' containment reference list.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage#getDataSpecification_RelatedCharacteristics()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<RelatedCharacteristics> getRelatedCharacteristics();
 
 } // DataSpecification

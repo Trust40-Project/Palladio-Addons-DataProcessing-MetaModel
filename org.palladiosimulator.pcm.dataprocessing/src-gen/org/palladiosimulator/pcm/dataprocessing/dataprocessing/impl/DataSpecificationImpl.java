@@ -13,6 +13,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPac
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicTypeContainer;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.RelatedCharacteristics;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer;
 
@@ -33,17 +34,20 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.DataSEFFSpec
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getDataSEFFSpecifications <em>Data SEFF Specifications</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getStoreContainers <em>Store Containers</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getCharacteristicContainer <em>Characteristic Container</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getRelatedCharacteristics <em>Related Characteristics</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DataSpecificationImpl extends CDOObjectImpl implements DataSpecification {
+public class DataSpecificationImpl extends CDOObjectImpl implements DataSpecification
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataSpecificationImpl() {
+	protected DataSpecificationImpl()
+	{
 		super();
 	}
 
@@ -53,7 +57,8 @@ public class DataSpecificationImpl extends CDOObjectImpl implements DataSpecific
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return DataprocessingPackage.Literals.DATA_SPECIFICATION;
 	}
 
@@ -63,7 +68,8 @@ public class DataSpecificationImpl extends CDOObjectImpl implements DataSpecific
 	 * @generated
 	 */
 	@Override
-	protected int eStaticFeatureCount() {
+	protected int eStaticFeatureCount()
+	{
 		return 0;
 	}
 
@@ -73,7 +79,8 @@ public class DataSpecificationImpl extends CDOObjectImpl implements DataSpecific
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<DataProcessingContainer> getDataProcessingContainers() {
+	public EList<DataProcessingContainer> getDataProcessingContainers()
+	{
 		return (EList<DataProcessingContainer>)eGet(DataprocessingPackage.Literals.DATA_SPECIFICATION__DATA_PROCESSING_CONTAINERS, true);
 	}
 
@@ -83,7 +90,8 @@ public class DataSpecificationImpl extends CDOObjectImpl implements DataSpecific
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<CharacteristicTypeContainer> getCharacteristicTypeContainers() {
+	public EList<CharacteristicTypeContainer> getCharacteristicTypeContainers()
+	{
 		return (EList<CharacteristicTypeContainer>)eGet(DataprocessingPackage.Literals.DATA_SPECIFICATION__CHARACTERISTIC_TYPE_CONTAINERS, true);
 	}
 
@@ -93,7 +101,8 @@ public class DataSpecificationImpl extends CDOObjectImpl implements DataSpecific
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<DataSEFFSpecification> getDataSEFFSpecifications() {
+	public EList<DataSEFFSpecification> getDataSEFFSpecifications()
+	{
 		return (EList<DataSEFFSpecification>)eGet(DataprocessingPackage.Literals.DATA_SPECIFICATION__DATA_SEFF_SPECIFICATIONS, true);
 	}
 
@@ -103,7 +112,8 @@ public class DataSpecificationImpl extends CDOObjectImpl implements DataSpecific
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<StoreContainer> getStoreContainers() {
+	public EList<StoreContainer> getStoreContainers()
+	{
 		return (EList<StoreContainer>)eGet(DataprocessingPackage.Literals.DATA_SPECIFICATION__STORE_CONTAINERS, true);
 	}
 
@@ -113,8 +123,20 @@ public class DataSpecificationImpl extends CDOObjectImpl implements DataSpecific
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<CharacteristicContainer> getCharacteristicContainer() {
+	public EList<CharacteristicContainer> getCharacteristicContainer()
+	{
 		return (EList<CharacteristicContainer>)eGet(DataprocessingPackage.Literals.DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<RelatedCharacteristics> getRelatedCharacteristics()
+	{
+		return (EList<RelatedCharacteristics>)eGet(DataprocessingPackage.Literals.DATA_SPECIFICATION__RELATED_CHARACTERISTICS, true);
 	}
 
 } //DataSpecificationImpl

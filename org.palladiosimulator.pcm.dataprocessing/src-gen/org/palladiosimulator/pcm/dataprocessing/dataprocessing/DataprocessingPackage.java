@@ -22,7 +22,8 @@ import org.eclipse.emf.ecore.EReference;
  *        annotation="http://www.eclipse.org/OCL/Import entity='../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity' identifier='../../de.uka.ipd.sdq.identifier/model/identifier.ecore#/' repository_1='../../org.palladiosimulator.pcm/model/pcm.ecore#//repository' seff_1='../../org.palladiosimulator.pcm/model/pcm.ecore#//seff'"
  * @generated
  */
-public interface DataprocessingPackage extends EPackage {
+public interface DataprocessingPackage extends EPackage
+{
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -111,13 +112,22 @@ public interface DataprocessingPackage extends EPackage {
 	int DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER = 4;
 
 	/**
+	 * The feature id for the '<em><b>Related Characteristics</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SPECIFICATION__RELATED_CHARACTERISTICS = 5;
+
+	/**
 	 * The number of structural features of the '<em>Data Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION_FEATURE_COUNT = 5;
+	int DATA_SPECIFICATION_FEATURE_COUNT = 6;
 
 
 	/**
@@ -186,6 +196,17 @@ public interface DataprocessingPackage extends EPackage {
 	EReference getDataSpecification_CharacteristicContainer();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getRelatedCharacteristics <em>Related Characteristics</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Related Characteristics</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getRelatedCharacteristics()
+	 * @see #getDataSpecification()
+	 * @generated
+	 */
+	EReference getDataSpecification_RelatedCharacteristics();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -206,7 +227,8 @@ public interface DataprocessingPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	interface Literals {
+	interface Literals
+	{
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl <em>Data Specification</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -256,6 +278,14 @@ public interface DataprocessingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER = eINSTANCE.getDataSpecification_CharacteristicContainer();
+
+		/**
+		 * The meta object literal for the '<em><b>Related Characteristics</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_SPECIFICATION__RELATED_CHARACTERISTICS = eINSTANCE.getDataSpecification_RelatedCharacteristics();
 
 	}
 

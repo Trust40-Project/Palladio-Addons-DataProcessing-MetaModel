@@ -20,7 +20,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
  * @model abstract="true"
  * @generated
  */
-public interface ConsumeDataOperation extends DataOperation {
+public interface ConsumeDataOperation extends DataOperation
+{
 	/**
 	 * Returns the value of the '<em><b>Consumed Data</b></em>' reference.
 	 * <!-- begin-user-doc -->

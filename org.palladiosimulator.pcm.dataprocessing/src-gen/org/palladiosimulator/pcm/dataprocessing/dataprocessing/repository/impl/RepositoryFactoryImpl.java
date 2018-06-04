@@ -18,21 +18,26 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class RepositoryFactoryImpl extends EFactoryImpl implements RepositoryFactory {
+public class RepositoryFactoryImpl extends EFactoryImpl implements RepositoryFactory
+{
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static RepositoryFactory init() {
-		try {
+	public static RepositoryFactory init()
+	{
+		try
+		{
 			RepositoryFactory theRepositoryFactory = (RepositoryFactory)EPackage.Registry.INSTANCE.getEFactory(RepositoryPackage.eNS_URI);
-			if (theRepositoryFactory != null) {
+			if (theRepositoryFactory != null)
+			{
 				return theRepositoryFactory;
 			}
 		}
-		catch (Exception exception) {
+		catch (Exception exception)
+		{
 			EcorePlugin.INSTANCE.log(exception);
 		}
 		return new RepositoryFactoryImpl();
@@ -44,7 +49,8 @@ public class RepositoryFactoryImpl extends EFactoryImpl implements RepositoryFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RepositoryFactoryImpl() {
+	public RepositoryFactoryImpl()
+	{
 		super();
 	}
 
@@ -54,8 +60,10 @@ public class RepositoryFactoryImpl extends EFactoryImpl implements RepositoryFac
 	 * @generated
 	 */
 	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
+	public EObject create(EClass eClass)
+	{
+		switch (eClass.getClassifierID())
+		{
 			case RepositoryPackage.STORE_CONTAINER: return (EObject)createStoreContainer();
 			case RepositoryPackage.STORE: return (EObject)createStore();
 			default:
@@ -68,7 +76,8 @@ public class RepositoryFactoryImpl extends EFactoryImpl implements RepositoryFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StoreContainer createStoreContainer() {
+	public StoreContainer createStoreContainer()
+	{
 		StoreContainerImpl storeContainer = new StoreContainerImpl();
 		return storeContainer;
 	}
@@ -78,7 +87,8 @@ public class RepositoryFactoryImpl extends EFactoryImpl implements RepositoryFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Store createStore() {
+	public Store createStore()
+	{
 		StoreImpl store = new StoreImpl();
 		return store;
 	}
@@ -88,7 +98,8 @@ public class RepositoryFactoryImpl extends EFactoryImpl implements RepositoryFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RepositoryPackage getRepositoryPackage() {
+	public RepositoryPackage getRepositoryPackage()
+	{
 		return (RepositoryPackage)getEPackage();
 	}
 
@@ -99,7 +110,8 @@ public class RepositoryFactoryImpl extends EFactoryImpl implements RepositoryFac
 	 * @generated
 	 */
 	@Deprecated
-	public static RepositoryPackage getPackage() {
+	public static RepositoryPackage getPackage()
+	{
 		return RepositoryPackage.eINSTANCE;
 	}
 

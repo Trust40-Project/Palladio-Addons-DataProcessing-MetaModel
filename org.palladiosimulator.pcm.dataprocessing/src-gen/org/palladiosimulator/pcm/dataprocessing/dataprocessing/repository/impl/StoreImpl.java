@@ -26,13 +26,15 @@ import org.palladiosimulator.pcm.repository.DataType;
  *
  * @generated
  */
-public class StoreImpl extends EntityImpl implements Store {
+public class StoreImpl extends EntityImpl implements Store
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StoreImpl() {
+	protected StoreImpl()
+	{
 		super();
 	}
 
@@ -42,7 +44,8 @@ public class StoreImpl extends EntityImpl implements Store {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RepositoryPackage.Literals.STORE;
 	}
 
@@ -51,7 +54,8 @@ public class StoreImpl extends EntityImpl implements Store {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StoreContainer getContainer() {
+	public StoreContainer getContainer()
+	{
 		return (StoreContainer)eGet(RepositoryPackage.Literals.STORE__CONTAINER, true);
 	}
 
@@ -60,7 +64,8 @@ public class StoreImpl extends EntityImpl implements Store {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setContainer(StoreContainer newContainer) {
+	public void setContainer(StoreContainer newContainer)
+	{
 		eSet(RepositoryPackage.Literals.STORE__CONTAINER, newContainer);
 	}
 
@@ -69,7 +74,8 @@ public class StoreImpl extends EntityImpl implements Store {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataType getDataType() {
+	public DataType getDataType()
+	{
 		return (DataType)eGet(RepositoryPackage.Literals.STORE__DATA_TYPE, true);
 	}
 
@@ -78,7 +84,8 @@ public class StoreImpl extends EntityImpl implements Store {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDataType(DataType newDataType) {
+	public void setDataType(DataType newDataType)
+	{
 		eSet(RepositoryPackage.Literals.STORE__DATA_TYPE, newDataType);
 	}
 

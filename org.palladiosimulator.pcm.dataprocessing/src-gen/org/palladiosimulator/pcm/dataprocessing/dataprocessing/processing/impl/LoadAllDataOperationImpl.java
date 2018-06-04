@@ -14,13 +14,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Proces
  *
  * @generated
  */
-public class LoadAllDataOperationImpl extends LoadDataOperationImpl implements LoadAllDataOperation {
+public class LoadAllDataOperationImpl extends LoadDataOperationImpl implements LoadAllDataOperation
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LoadAllDataOperationImpl() {
+	protected LoadAllDataOperationImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class LoadAllDataOperationImpl extends LoadDataOperationImpl implements L
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return ProcessingPackage.Literals.LOAD_ALL_DATA_OPERATION;
 	}
 

@@ -2,7 +2,11 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataResultMapping;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
@@ -18,17 +22,20 @@ import org.palladiosimulator.pcm.repository.OperationSignature;
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.DataResultMappingImpl#getOperation <em>Operation</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.DataResultMappingImpl#getReceivedData <em>Received Data</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DataResultMappingImpl extends DataMappingImpl implements DataResultMapping {
+public class DataResultMappingImpl extends DataMappingImpl implements DataResultMapping
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataResultMappingImpl() {
+	protected DataResultMappingImpl()
+	{
 		super();
 	}
 
@@ -38,7 +45,8 @@ public class DataResultMappingImpl extends DataMappingImpl implements DataResult
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return ProcessingPackage.Literals.DATA_RESULT_MAPPING;
 	}
 
@@ -47,7 +55,8 @@ public class DataResultMappingImpl extends DataMappingImpl implements DataResult
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OperationSignature getOperation() {
+	public OperationSignature getOperation()
+	{
 		return (OperationSignature)eGet(ProcessingPackage.Literals.DATA_RESULT_MAPPING__OPERATION, true);
 	}
 
@@ -56,8 +65,20 @@ public class DataResultMappingImpl extends DataMappingImpl implements DataResult
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOperation(OperationSignature newOperation) {
+	public void setOperation(OperationSignature newOperation)
+	{
 		eSet(ProcessingPackage.Literals.DATA_RESULT_MAPPING__OPERATION, newOperation);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Data> getReceivedData()
+	{
+		return (EList<Data>)eGet(ProcessingPackage.Literals.DATA_RESULT_MAPPING__RECEIVED_DATA, true);
 	}
 
 } //DataResultMappingImpl

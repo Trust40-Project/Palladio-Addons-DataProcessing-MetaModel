@@ -48,7 +48,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SeffPackageImpl extends EPackageImpl implements SeffPackage {
+public class SeffPackageImpl extends EPackageImpl implements SeffPackage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -71,7 +72,8 @@ public class SeffPackageImpl extends EPackageImpl implements SeffPackage {
 	 * @see #init()
 	 * @generated
 	 */
-	private SeffPackageImpl() {
+	private SeffPackageImpl()
+	{
 		super(eNS_URI, SeffFactory.eINSTANCE);
 	}
 
@@ -94,7 +96,8 @@ public class SeffPackageImpl extends EPackageImpl implements SeffPackage {
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static SeffPackage init() {
+	public static SeffPackage init()
+	{
 		if (isInited) return (SeffPackage)EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI);
 
 		// Obtain or create and register package
@@ -146,7 +149,8 @@ public class SeffPackageImpl extends EPackageImpl implements SeffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDataSEFFSpecification() {
+	public EClass getDataSEFFSpecification()
+	{
 		return dataSEFFSpecificationEClass;
 	}
 
@@ -155,7 +159,8 @@ public class SeffPackageImpl extends EPackageImpl implements SeffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataSEFFSpecification_InputData() {
+	public EReference getDataSEFFSpecification_InputData()
+	{
 		return (EReference)dataSEFFSpecificationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -164,7 +169,8 @@ public class SeffPackageImpl extends EPackageImpl implements SeffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SeffFactory getSeffFactory() {
+	public SeffFactory getSeffFactory()
+	{
 		return (SeffFactory)getEFactoryInstance();
 	}
 
@@ -182,7 +188,8 @@ public class SeffPackageImpl extends EPackageImpl implements SeffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void createPackageContents() {
+	public void createPackageContents()
+	{
 		if (isCreated) return;
 		isCreated = true;
 
@@ -205,7 +212,8 @@ public class SeffPackageImpl extends EPackageImpl implements SeffPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void initializePackageContents() {
+	public void initializePackageContents()
+	{
 		if (isInitialized) return;
 		isInitialized = true;
 

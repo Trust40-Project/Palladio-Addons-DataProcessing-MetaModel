@@ -12,7 +12,8 @@ import org.eclipse.emf.ecore.EFactory;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage
  * @generated
  */
-public interface DataprocessingFactory extends EFactory {
+public interface DataprocessingFactory extends EFactory
+{
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->

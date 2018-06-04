@@ -20,7 +20,8 @@ import org.palladiosimulator.pcm.repository.DataType;
  * @model
  * @generated
  */
-public interface OriginalData extends Data {
+public interface OriginalData extends Data
+{
 	/**
 	 * Returns the value of the '<em><b>Original Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

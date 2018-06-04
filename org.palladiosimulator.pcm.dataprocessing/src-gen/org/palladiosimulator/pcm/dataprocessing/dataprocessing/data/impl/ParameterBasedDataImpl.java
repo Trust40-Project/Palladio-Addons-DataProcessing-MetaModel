@@ -28,13 +28,15 @@ import org.palladiosimulator.pcm.repository.Parameter;
  *
  * @generated
  */
-public class ParameterBasedDataImpl extends DataImpl implements ParameterBasedData {
+public class ParameterBasedDataImpl extends DataImpl implements ParameterBasedData
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterBasedDataImpl() {
+	protected ParameterBasedDataImpl()
+	{
 		super();
 	}
 
@@ -44,7 +46,8 @@ public class ParameterBasedDataImpl extends DataImpl implements ParameterBasedDa
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return DataPackage.Literals.PARAMETER_BASED_DATA;
 	}
 
@@ -53,7 +56,8 @@ public class ParameterBasedDataImpl extends DataImpl implements ParameterBasedDa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parameter getParameter() {
+	public Parameter getParameter()
+	{
 		return (Parameter)eGet(DataPackage.Literals.PARAMETER_BASED_DATA__PARAMETER, true);
 	}
 
@@ -62,7 +66,8 @@ public class ParameterBasedDataImpl extends DataImpl implements ParameterBasedDa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParameter(Parameter newParameter) {
+	public void setParameter(Parameter newParameter)
+	{
 		eSet(DataPackage.Literals.PARAMETER_BASED_DATA__PARAMETER, newParameter);
 	}
 
@@ -81,11 +86,14 @@ public class ParameterBasedDataImpl extends DataImpl implements ParameterBasedDa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataType determineDataType() {
-		try {
+	public DataType determineDataType()
+	{
+		try
+		{
 			return (DataType)DETERMINE_DATA_TYPE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
 		}
-		catch (InvocationTargetException ite) {
+		catch (InvocationTargetException ite)
+		{
 			throw new WrappedException(ite);
 		}
 	}

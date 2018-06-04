@@ -22,7 +22,8 @@ import org.palladiosimulator.pcm.repository.DataType;
  * @model abstract="true"
  * @generated
  */
-public interface Data extends Entity {
+public interface Data extends Entity
+{
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -54,7 +55,7 @@ public interface Data extends Entity {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='OclInvalid'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='null'"
 	 * @generated
 	 */
 	DataType determineDataType();

@@ -2,9 +2,9 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics;
 
-import de.uka.ipd.sdq.identifier.Identifier;
-
 import org.eclipse.emf.common.util.EList;
+
+import org.palladiosimulator.pcm.core.entity.Entity;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,28 +15,29 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer#getCharacteristics <em>Characteristics</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer#getOwnedCharacteristics <em>Owned Characteristics</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage#getCharacteristicContainer()
  * @model
  * @generated
  */
-public interface CharacteristicContainer extends Identifier {
+public interface CharacteristicContainer extends Entity
+{
 	/**
-	 * Returns the value of the '<em><b>Characteristics</b></em>' reference list.
-	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic}<code>&lt;org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicType&gt;</code>.
+	 * Returns the value of the '<em><b>Owned Characteristics</b></em>' containment reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Characteristics</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Owned Characteristics</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Characteristics</em>' reference list.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage#getCharacteristicContainer_Characteristics()
-	 * @model
+	 * @return the value of the '<em>Owned Characteristics</em>' containment reference list.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage#getCharacteristicContainer_OwnedCharacteristics()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Characteristic<CharacteristicType>> getCharacteristics();
+	EList<Characteristic> getOwnedCharacteristics();
 
 } // CharacteristicContainer

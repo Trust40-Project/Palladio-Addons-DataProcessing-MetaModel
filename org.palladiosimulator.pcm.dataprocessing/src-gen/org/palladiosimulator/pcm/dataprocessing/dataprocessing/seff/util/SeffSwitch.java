@@ -24,7 +24,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.*;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffPackage
  * @generated
  */
-public class SeffSwitch<T> extends Switch<T> {
+public class SeffSwitch<T> extends Switch<T>
+{
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -39,8 +40,10 @@ public class SeffSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SeffSwitch() {
-		if (modelPackage == null) {
+	public SeffSwitch()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = SeffPackage.eINSTANCE;
 		}
 	}
@@ -54,7 +57,8 @@ public class SeffSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected boolean isSwitchFor(EPackage ePackage) {
+	protected boolean isSwitchFor(EPackage ePackage)
+	{
 		return ePackage == modelPackage;
 	}
 
@@ -66,9 +70,12 @@ public class SeffSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected T doSwitch(int classifierID, EObject theEObject) {
-		switch (classifierID) {
-			case SeffPackage.DATA_SEFF_SPECIFICATION: {
+	protected T doSwitch(int classifierID, EObject theEObject)
+	{
+		switch (classifierID)
+		{
+			case SeffPackage.DATA_SEFF_SPECIFICATION:
+			{
 				DataSEFFSpecification dataSEFFSpecification = (DataSEFFSpecification)theEObject;
 				T result = caseDataSEFFSpecification(dataSEFFSpecification);
 				if (result == null) result = caseIdentifier(dataSEFFSpecification);
@@ -90,7 +97,8 @@ public class SeffSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDataSEFFSpecification(DataSEFFSpecification object) {
+	public T caseDataSEFFSpecification(DataSEFFSpecification object)
+	{
 		return null;
 	}
 
@@ -105,7 +113,8 @@ public class SeffSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIdentifier(Identifier object) {
+	public T caseIdentifier(Identifier object)
+	{
 		return null;
 	}
 
@@ -121,7 +130,8 @@ public class SeffSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	public T defaultCase(EObject object) {
+	public T defaultCase(EObject object)
+	{
 		return null;
 	}
 

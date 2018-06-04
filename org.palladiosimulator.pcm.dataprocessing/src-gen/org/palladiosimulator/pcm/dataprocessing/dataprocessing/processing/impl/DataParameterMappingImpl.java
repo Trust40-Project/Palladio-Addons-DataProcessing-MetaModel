@@ -22,13 +22,15 @@ import org.palladiosimulator.pcm.repository.Parameter;
  *
  * @generated
  */
-public class DataParameterMappingImpl extends DataMappingImpl implements DataParameterMapping {
+public class DataParameterMappingImpl extends DataMappingImpl implements DataParameterMapping
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataParameterMappingImpl() {
+	protected DataParameterMappingImpl()
+	{
 		super();
 	}
 
@@ -38,7 +40,8 @@ public class DataParameterMappingImpl extends DataMappingImpl implements DataPar
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return ProcessingPackage.Literals.DATA_PARAMETER_MAPPING;
 	}
 
@@ -47,7 +50,8 @@ public class DataParameterMappingImpl extends DataMappingImpl implements DataPar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parameter getParameter() {
+	public Parameter getParameter()
+	{
 		return (Parameter)eGet(ProcessingPackage.Literals.DATA_PARAMETER_MAPPING__PARAMETER, true);
 	}
 
@@ -56,7 +60,8 @@ public class DataParameterMappingImpl extends DataMappingImpl implements DataPar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParameter(Parameter newParameter) {
+	public void setParameter(Parameter newParameter)
+	{
 		eSet(ProcessingPackage.Literals.DATA_PARAMETER_MAPPING__PARAMETER, newParameter);
 	}
 

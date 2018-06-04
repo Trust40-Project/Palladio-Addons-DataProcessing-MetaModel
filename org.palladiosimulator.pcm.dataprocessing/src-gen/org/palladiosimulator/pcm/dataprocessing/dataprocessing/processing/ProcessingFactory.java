@@ -4,6 +4,8 @@ package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
 
 import org.eclipse.emf.ecore.EFactory;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicType;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Factory</b> for the model.
@@ -12,7 +14,8 @@ import org.eclipse.emf.ecore.EFactory;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage
  * @generated
  */
-public interface ProcessingFactory extends EFactory {
+public interface ProcessingFactory extends EFactory
+{
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
@@ -110,6 +113,33 @@ public interface ProcessingFactory extends EFactory {
 	 * @generated
 	 */
 	UnionDataOperation createUnionDataOperation();
+
+	/**
+	 * Returns a new object of class '<em>Projection Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Projection Data Operation</em>'.
+	 * @generated
+	 */
+	ProjectionDataOperation createProjectionDataOperation();
+
+	/**
+	 * Returns a new object of class '<em>Selection Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Selection Data Operation</em>'.
+	 * @generated
+	 */
+	SelectionDataOperation createSelectionDataOperation();
+
+	/**
+	 * Returns a new object of class '<em>Characteristic Changing Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Characteristic Changing Data Operation</em>'.
+	 * @generated
+	 */
+	<T extends CharacteristicType> CharacteristicChangingDataOperation<T> createCharacteristicChangingDataOperation();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -22,7 +22,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
  * @model abstract="true"
  * @generated
  */
-public interface DataMapping extends Identifier {
+public interface DataMapping extends Identifier
+{
 	/**
 	 * Returns the value of the '<em><b>Data</b></em>' reference.
 	 * <!-- begin-user-doc -->

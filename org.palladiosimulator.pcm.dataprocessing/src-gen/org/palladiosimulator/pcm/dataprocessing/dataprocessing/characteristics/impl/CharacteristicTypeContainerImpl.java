@@ -27,13 +27,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.E
  *
  * @generated
  */
-public class CharacteristicTypeContainerImpl extends IdentifierImpl implements CharacteristicTypeContainer {
+public class CharacteristicTypeContainerImpl extends IdentifierImpl implements CharacteristicTypeContainer
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CharacteristicTypeContainerImpl() {
+	protected CharacteristicTypeContainerImpl()
+	{
 		super();
 	}
 
@@ -43,7 +45,8 @@ public class CharacteristicTypeContainerImpl extends IdentifierImpl implements C
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return CharacteristicsPackage.Literals.CHARACTERISTIC_TYPE_CONTAINER;
 	}
 
@@ -53,7 +56,8 @@ public class CharacteristicTypeContainerImpl extends IdentifierImpl implements C
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<CharacteristicType> getCharacteristicTypes() {
+	public EList<CharacteristicType> getCharacteristicTypes()
+	{
 		return (EList<CharacteristicType>)eGet(CharacteristicsPackage.Literals.CHARACTERISTIC_TYPE_CONTAINER__CHARACTERISTIC_TYPES, true);
 	}
 
@@ -63,7 +67,8 @@ public class CharacteristicTypeContainerImpl extends IdentifierImpl implements C
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Enumeration> getEnumerations() {
+	public EList<Enumeration> getEnumerations()
+	{
 		return (EList<Enumeration>)eGet(CharacteristicsPackage.Literals.CHARACTERISTIC_TYPE_CONTAINER__ENUMERATIONS, true);
 	}
 

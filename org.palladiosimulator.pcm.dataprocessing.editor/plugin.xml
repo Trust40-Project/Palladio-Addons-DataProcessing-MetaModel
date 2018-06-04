@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dataprocessing -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.presentation.DataprocessingModelWizardID"
+            name="%_UI_DataprocessingModelWizard_label"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.presentation.DataprocessingModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DataprocessingModelFile.gif">
+         <description>%_UI_DataprocessingModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dataprocessing -->
+      <editor
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.presentation.DataprocessingEditorID"
+            name="%_UI_DataprocessingEditor_label"
+            icon="icons/full/obj16/DataprocessingModelFile.gif"
+            extensions="dataprocessing"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.presentation.DataprocessingEditor"
+            contributorClass="org.palladiosimulator.pcm.dataprocessing.dataprocessing.presentation.DataprocessingActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dataprocessing -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.presentation.RepositoryModelWizardID"
+            name="%_UI_RepositoryModelWizard_label"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.presentation.RepositoryModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RepositoryModelFile.gif">
+         <description>%_UI_RepositoryModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dataprocessing -->
+      <editor
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.presentation.RepositoryEditorID"
+            name="%_UI_RepositoryEditor_label"
+            icon="icons/full/obj16/RepositoryModelFile.gif"
+            extensions="repository"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.presentation.RepositoryEditor"
+            contributorClass="org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.presentation.RepositoryActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dataprocessing -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.presentation.ProcessingModelWizardID"
+            name="%_UI_ProcessingModelWizard_label"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.presentation.ProcessingModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ProcessingModelFile.gif">
+         <description>%_UI_ProcessingModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dataprocessing -->
+      <editor
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.presentation.ProcessingEditorID"
+            name="%_UI_ProcessingEditor_label"
+            icon="icons/full/obj16/ProcessingModelFile.gif"
+            extensions="processing"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.presentation.ProcessingEditor"
+            contributorClass="org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.presentation.ProcessingActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dataprocessing -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.presentation.CharacteristicsModelWizardID"
+            name="%_UI_CharacteristicsModelWizard_label"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.presentation.CharacteristicsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CharacteristicsModelFile.gif">
+         <description>%_UI_CharacteristicsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dataprocessing -->
+      <editor
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.presentation.CharacteristicsEditorID"
+            name="%_UI_CharacteristicsEditor_label"
+            icon="icons/full/obj16/CharacteristicsModelFile.gif"
+            extensions="characteristics"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.presentation.CharacteristicsEditor"
+            contributorClass="org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.presentation.CharacteristicsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dataprocessing -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.presentation.DataModelWizardID"
+            name="%_UI_DataModelWizard_label"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.presentation.DataModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DataModelFile.gif">
+         <description>%_UI_DataModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dataprocessing -->
+      <editor
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.presentation.DataEditorID"
+            name="%_UI_DataEditor_label"
+            icon="icons/full/obj16/DataModelFile.gif"
+            extensions="data"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.presentation.DataEditor"
+            contributorClass="org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.presentation.DataActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dataprocessing -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.presentation.SeffModelWizardID"
+            name="%_UI_SeffModelWizard_label"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.presentation.SeffModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SeffModelFile.gif">
+         <description>%_UI_SeffModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dataprocessing -->
+      <editor
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.presentation.SeffEditorID"
+            name="%_UI_SeffEditor_label"
+            icon="icons/full/obj16/SeffModelFile.gif"
+            extensions="seff"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.presentation.SeffEditor"
+            contributorClass="org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.presentation.SeffActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -2,11 +2,11 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl;
 
-import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+
+import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer;
@@ -25,13 +25,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Proces
  *
  * @generated
  */
-public class DataProcessingContainerImpl extends IdentifierImpl implements DataProcessingContainer {
+public class DataProcessingContainerImpl extends EntityImpl implements DataProcessingContainer
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataProcessingContainerImpl() {
+	protected DataProcessingContainerImpl()
+	{
 		super();
 	}
 
@@ -41,7 +43,8 @@ public class DataProcessingContainerImpl extends IdentifierImpl implements DataP
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return ProcessingPackage.Literals.DATA_PROCESSING_CONTAINER;
 	}
 
@@ -51,7 +54,8 @@ public class DataProcessingContainerImpl extends IdentifierImpl implements DataP
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<DataOperation> getOperations() {
+	public EList<DataOperation> getOperations()
+	{
 		return (EList<DataOperation>)eGet(ProcessingPackage.Literals.DATA_PROCESSING_CONTAINER__OPERATIONS, true);
 	}
 

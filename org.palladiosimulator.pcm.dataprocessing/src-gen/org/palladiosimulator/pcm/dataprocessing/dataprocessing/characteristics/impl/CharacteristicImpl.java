@@ -18,18 +18,20 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.C
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacteristicImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacteristicImpl#getCharacteristicType <em>Characteristic Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class CharacteristicImpl<T extends CharacteristicType> extends IdentifierImpl implements Characteristic<T> {
+public abstract class CharacteristicImpl extends IdentifierImpl implements Characteristic
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CharacteristicImpl() {
+	protected CharacteristicImpl()
+	{
 		super();
 	}
 
@@ -39,7 +41,8 @@ public abstract class CharacteristicImpl<T extends CharacteristicType> extends I
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return CharacteristicsPackage.Literals.CHARACTERISTIC;
 	}
 
@@ -48,9 +51,9 @@ public abstract class CharacteristicImpl<T extends CharacteristicType> extends I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	public T getType() {
-		return (T)eGet(CharacteristicsPackage.Literals.CHARACTERISTIC__TYPE, true);
+	public CharacteristicType getCharacteristicType()
+	{
+		return (CharacteristicType)eGet(CharacteristicsPackage.Literals.CHARACTERISTIC__CHARACTERISTIC_TYPE, true);
 	}
 
 	/**
@@ -58,8 +61,9 @@ public abstract class CharacteristicImpl<T extends CharacteristicType> extends I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(T newType) {
-		eSet(CharacteristicsPackage.Literals.CHARACTERISTIC__TYPE, newType);
+	public void setCharacteristicType(CharacteristicType newCharacteristicType)
+	{
+		eSet(CharacteristicsPackage.Literals.CHARACTERISTIC__CHARACTERISTIC_TYPE, newCharacteristicType);
 	}
 
 } //CharacteristicImpl

@@ -24,7 +24,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ParameterBas
  * @model
  * @generated
  */
-public interface DataSEFFSpecification extends Identifier {
+public interface DataSEFFSpecification extends Identifier
+{
 	/**
 	 * Returns the value of the '<em><b>Input Data</b></em>' containment reference list.
 	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ParameterBasedData}.

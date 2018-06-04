@@ -2,6 +2,10 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
 
+import org.eclipse.emf.common.util.EList;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
+
 import org.palladiosimulator.pcm.repository.OperationSignature;
 
 /**
@@ -14,13 +18,16 @@ import org.palladiosimulator.pcm.repository.OperationSignature;
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataResultMapping#getOperation <em>Operation</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataResultMapping#getReceivedData <em>Received Data</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getDataResultMapping()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='mappedDataMustBeInReceivedData'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot mappedDataMustBeInReceivedData='self.receivedData-&gt;includes(self.data)'"
  * @generated
  */
-public interface DataResultMapping extends DataMapping {
+public interface DataResultMapping extends DataMapping
+{
 	/**
 	 * Returns the value of the '<em><b>Operation</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -46,5 +53,21 @@ public interface DataResultMapping extends DataMapping {
 	 * @generated
 	 */
 	void setOperation(OperationSignature value);
+
+	/**
+	 * Returns the value of the '<em><b>Received Data</b></em>' containment reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Received Data</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Received Data</em>' containment reference list.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getDataResultMapping_ReceivedData()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Data> getReceivedData();
 
 } // DataResultMapping

@@ -24,7 +24,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.*;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataPackage
  * @generated
  */
-public class DataAdapterFactory extends AdapterFactoryImpl {
+public class DataAdapterFactory extends AdapterFactoryImpl
+{
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
@@ -39,8 +40,10 @@ public class DataAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataAdapterFactory() {
-		if (modelPackage == null) {
+	public DataAdapterFactory()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = DataPackage.eINSTANCE;
 		}
 	}
@@ -54,11 +57,14 @@ public class DataAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public boolean isFactoryForType(Object object) {
-		if (object == modelPackage) {
+	public boolean isFactoryForType(Object object)
+	{
+		if (object == modelPackage)
+		{
 			return true;
 		}
-		if (object instanceof EObject) {
+		if (object instanceof EObject)
+		{
 			return ((EObject)object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
@@ -71,37 +77,46 @@ public class DataAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	protected DataSwitch<Adapter> modelSwitch =
-		new DataSwitch<Adapter>() {
+		new DataSwitch<Adapter>()
+		{
 			@Override
-			public Adapter caseData(Data object) {
+			public Adapter caseData(Data object)
+			{
 				return createDataAdapter();
 			}
 			@Override
-			public Adapter caseOriginalData(OriginalData object) {
+			public Adapter caseOriginalData(OriginalData object)
+			{
 				return createOriginalDataAdapter();
 			}
 			@Override
-			public Adapter caseParameterBasedData(ParameterBasedData object) {
+			public Adapter caseParameterBasedData(ParameterBasedData object)
+			{
 				return createParameterBasedDataAdapter();
 			}
 			@Override
-			public Adapter caseResultBasedData(ResultBasedData object) {
+			public Adapter caseResultBasedData(ResultBasedData object)
+			{
 				return createResultBasedDataAdapter();
 			}
 			@Override
-			public Adapter caseIdentifier(Identifier object) {
+			public Adapter caseIdentifier(Identifier object)
+			{
 				return createIdentifierAdapter();
 			}
 			@Override
-			public Adapter caseNamedElement(NamedElement object) {
+			public Adapter caseNamedElement(NamedElement object)
+			{
 				return createNamedElementAdapter();
 			}
 			@Override
-			public Adapter caseEntity(Entity object) {
+			public Adapter caseEntity(Entity object)
+			{
 				return createEntityAdapter();
 			}
 			@Override
-			public Adapter defaultCase(EObject object) {
+			public Adapter defaultCase(EObject object)
+			{
 				return createEObjectAdapter();
 			}
 		};
@@ -115,7 +130,8 @@ public class DataAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public Adapter createAdapter(Notifier target) {
+	public Adapter createAdapter(Notifier target)
+	{
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
@@ -130,7 +146,8 @@ public class DataAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data
 	 * @generated
 	 */
-	public Adapter createDataAdapter() {
+	public Adapter createDataAdapter()
+	{
 		return null;
 	}
 
@@ -144,7 +161,8 @@ public class DataAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.OriginalData
 	 * @generated
 	 */
-	public Adapter createOriginalDataAdapter() {
+	public Adapter createOriginalDataAdapter()
+	{
 		return null;
 	}
 
@@ -158,7 +176,8 @@ public class DataAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ParameterBasedData
 	 * @generated
 	 */
-	public Adapter createParameterBasedDataAdapter() {
+	public Adapter createParameterBasedDataAdapter()
+	{
 		return null;
 	}
 
@@ -172,7 +191,8 @@ public class DataAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ResultBasedData
 	 * @generated
 	 */
-	public Adapter createResultBasedDataAdapter() {
+	public Adapter createResultBasedDataAdapter()
+	{
 		return null;
 	}
 
@@ -186,7 +206,8 @@ public class DataAdapterFactory extends AdapterFactoryImpl {
 	 * @see de.uka.ipd.sdq.identifier.Identifier
 	 * @generated
 	 */
-	public Adapter createIdentifierAdapter() {
+	public Adapter createIdentifierAdapter()
+	{
 		return null;
 	}
 
@@ -200,7 +221,8 @@ public class DataAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.core.entity.NamedElement
 	 * @generated
 	 */
-	public Adapter createNamedElementAdapter() {
+	public Adapter createNamedElementAdapter()
+	{
 		return null;
 	}
 
@@ -214,7 +236,8 @@ public class DataAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.core.entity.Entity
 	 * @generated
 	 */
-	public Adapter createEntityAdapter() {
+	public Adapter createEntityAdapter()
+	{
 		return null;
 	}
 
@@ -226,7 +249,8 @@ public class DataAdapterFactory extends AdapterFactoryImpl {
 	 * @return the new adapter.
 	 * @generated
 	 */
-	public Adapter createEObjectAdapter() {
+	public Adapter createEObjectAdapter()
+	{
 		return null;
 	}
 

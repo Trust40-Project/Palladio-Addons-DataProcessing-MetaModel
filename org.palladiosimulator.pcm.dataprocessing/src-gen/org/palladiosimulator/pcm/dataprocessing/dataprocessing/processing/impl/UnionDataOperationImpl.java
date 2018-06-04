@@ -14,13 +14,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.UnionD
  *
  * @generated
  */
-public class UnionDataOperationImpl extends ManyToOneDataOperationImpl implements UnionDataOperation {
+public class UnionDataOperationImpl extends ManyToOneDataOperationImpl implements UnionDataOperation
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UnionDataOperationImpl() {
+	protected UnionDataOperationImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class UnionDataOperationImpl extends ManyToOneDataOperationImpl implement
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return ProcessingPackage.Literals.UNION_DATA_OPERATION;
 	}
 

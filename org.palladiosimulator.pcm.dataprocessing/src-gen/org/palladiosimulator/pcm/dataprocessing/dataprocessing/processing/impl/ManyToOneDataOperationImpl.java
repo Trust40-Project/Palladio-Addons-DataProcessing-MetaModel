@@ -6,8 +6,6 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ManyToOneDataOperation;
@@ -27,13 +25,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Proces
  *
  * @generated
  */
-public abstract class ManyToOneDataOperationImpl extends CDOObjectImpl implements ManyToOneDataOperation {
+public abstract class ManyToOneDataOperationImpl extends DataOperationImpl implements ManyToOneDataOperation
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ManyToOneDataOperationImpl() {
+	protected ManyToOneDataOperationImpl()
+	{
 		super();
 	}
 
@@ -43,7 +43,8 @@ public abstract class ManyToOneDataOperationImpl extends CDOObjectImpl implement
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return ProcessingPackage.Literals.MANY_TO_ONE_DATA_OPERATION;
 	}
 
@@ -52,18 +53,9 @@ public abstract class ManyToOneDataOperationImpl extends CDOObjectImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
-	public EList<Data> getConsumedData() {
+	public EList<Data> getConsumedData()
+	{
 		return (EList<Data>)eGet(ProcessingPackage.Literals.MANY_TO_ONE_DATA_OPERATION__CONSUMED_DATA, true);
 	}
 
@@ -72,7 +64,8 @@ public abstract class ManyToOneDataOperationImpl extends CDOObjectImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Data getResultingData() {
+	public Data getResultingData()
+	{
 		return (Data)eGet(ProcessingPackage.Literals.MANY_TO_ONE_DATA_OPERATION__RESULTING_DATA, true);
 	}
 
@@ -81,7 +74,8 @@ public abstract class ManyToOneDataOperationImpl extends CDOObjectImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setResultingData(Data newResultingData) {
+	public void setResultingData(Data newResultingData)
+	{
 		eSet(ProcessingPackage.Literals.MANY_TO_ONE_DATA_OPERATION__RESULTING_DATA, newResultingData);
 	}
 

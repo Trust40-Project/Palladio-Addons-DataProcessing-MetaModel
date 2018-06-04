@@ -21,7 +21,8 @@ import org.palladiosimulator.pcm.repository.OperationSignature;
  * @model
  * @generated
  */
-public interface ResultBasedData extends Data {
+public interface ResultBasedData extends Data
+{
 	/**
 	 * Returns the value of the '<em><b>Operation</b></em>' reference.
 	 * <!-- begin-user-doc -->

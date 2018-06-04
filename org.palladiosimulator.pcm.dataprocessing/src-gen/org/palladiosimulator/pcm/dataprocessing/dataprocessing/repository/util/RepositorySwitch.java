@@ -27,7 +27,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.*;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.RepositoryPackage
  * @generated
  */
-public class RepositorySwitch<T> extends Switch<T> {
+public class RepositorySwitch<T> extends Switch<T>
+{
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -42,8 +43,10 @@ public class RepositorySwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RepositorySwitch() {
-		if (modelPackage == null) {
+	public RepositorySwitch()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = RepositoryPackage.eINSTANCE;
 		}
 	}
@@ -57,7 +60,8 @@ public class RepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected boolean isSwitchFor(EPackage ePackage) {
+	protected boolean isSwitchFor(EPackage ePackage)
+	{
 		return ePackage == modelPackage;
 	}
 
@@ -69,16 +73,20 @@ public class RepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected T doSwitch(int classifierID, EObject theEObject) {
-		switch (classifierID) {
-			case RepositoryPackage.STORE_CONTAINER: {
+	protected T doSwitch(int classifierID, EObject theEObject)
+	{
+		switch (classifierID)
+		{
+			case RepositoryPackage.STORE_CONTAINER:
+			{
 				StoreContainer storeContainer = (StoreContainer)theEObject;
 				T result = caseStoreContainer(storeContainer);
 				if (result == null) result = caseIdentifier(storeContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RepositoryPackage.STORE: {
+			case RepositoryPackage.STORE:
+			{
 				Store store = (Store)theEObject;
 				T result = caseStore(store);
 				if (result == null) result = caseEntity(store);
@@ -102,7 +110,8 @@ public class RepositorySwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStoreContainer(StoreContainer object) {
+	public T caseStoreContainer(StoreContainer object)
+	{
 		return null;
 	}
 
@@ -117,7 +126,8 @@ public class RepositorySwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStore(Store object) {
+	public T caseStore(Store object)
+	{
 		return null;
 	}
 
@@ -132,7 +142,8 @@ public class RepositorySwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIdentifier(Identifier object) {
+	public T caseIdentifier(Identifier object)
+	{
 		return null;
 	}
 
@@ -147,7 +158,8 @@ public class RepositorySwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNamedElement(NamedElement object) {
+	public T caseNamedElement(NamedElement object)
+	{
 		return null;
 	}
 
@@ -162,7 +174,8 @@ public class RepositorySwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEntity(Entity object) {
+	public T caseEntity(Entity object)
+	{
 		return null;
 	}
 
@@ -178,7 +191,8 @@ public class RepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	public T defaultCase(EObject object) {
+	public T defaultCase(EObject object)
+	{
 		return null;
 	}
 

@@ -14,5 +14,6 @@ import org.palladiosimulator.pcm.core.entity.Entity;
  * @model
  * @generated
  */
-public interface EnumCharacteristicLiteral extends Entity {
+public interface EnumCharacteristicLiteral extends Entity
+{
 } // EnumCharacteristicLiteral

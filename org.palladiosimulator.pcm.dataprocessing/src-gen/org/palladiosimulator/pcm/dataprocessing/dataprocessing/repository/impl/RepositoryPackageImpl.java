@@ -51,7 +51,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.impl.SeffPac
  * <!-- end-user-doc -->
  * @generated
  */
-public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPackage {
+public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPackage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -81,7 +82,8 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * @see #init()
 	 * @generated
 	 */
-	private RepositoryPackageImpl() {
+	private RepositoryPackageImpl()
+	{
 		super(eNS_URI, RepositoryFactory.eINSTANCE);
 	}
 
@@ -104,7 +106,8 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static RepositoryPackage init() {
+	public static RepositoryPackage init()
+	{
 		if (isInited) return (RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
 
 		// Obtain or create and register package
@@ -156,7 +159,8 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getStoreContainer() {
+	public EClass getStoreContainer()
+	{
 		return storeContainerEClass;
 	}
 
@@ -165,7 +169,8 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStoreContainer_Stores() {
+	public EReference getStoreContainer_Stores()
+	{
 		return (EReference)storeContainerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -174,7 +179,8 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getStore() {
+	public EClass getStore()
+	{
 		return storeEClass;
 	}
 
@@ -183,7 +189,8 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStore_Container() {
+	public EReference getStore_Container()
+	{
 		return (EReference)storeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -192,7 +199,8 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStore_DataType() {
+	public EReference getStore_DataType()
+	{
 		return (EReference)storeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -201,7 +209,8 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RepositoryFactory getRepositoryFactory() {
+	public RepositoryFactory getRepositoryFactory()
+	{
 		return (RepositoryFactory)getEFactoryInstance();
 	}
 
@@ -219,7 +228,8 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void createPackageContents() {
+	public void createPackageContents()
+	{
 		if (isCreated) return;
 		isCreated = true;
 
@@ -246,7 +256,8 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void initializePackageContents() {
+	public void initializePackageContents()
+	{
 		if (isInitialized) return;
 		isInitialized = true;
 

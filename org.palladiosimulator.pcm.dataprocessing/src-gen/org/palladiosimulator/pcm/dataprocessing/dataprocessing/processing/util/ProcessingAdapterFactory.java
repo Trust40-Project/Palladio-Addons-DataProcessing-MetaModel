@@ -14,6 +14,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.pcm.core.entity.Entity;
 import org.palladiosimulator.pcm.core.entity.NamedElement;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicType;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.*;
 
 /**
@@ -24,7 +26,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.*;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage
  * @generated
  */
-public class ProcessingAdapterFactory extends AdapterFactoryImpl {
+public class ProcessingAdapterFactory extends AdapterFactoryImpl
+{
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
@@ -39,8 +42,10 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessingAdapterFactory() {
-		if (modelPackage == null) {
+	public ProcessingAdapterFactory()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = ProcessingPackage.eINSTANCE;
 		}
 	}
@@ -54,11 +59,14 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public boolean isFactoryForType(Object object) {
-		if (object == modelPackage) {
+	public boolean isFactoryForType(Object object)
+	{
+		if (object == modelPackage)
+		{
 			return true;
 		}
-		if (object instanceof EObject) {
+		if (object instanceof EObject)
+		{
 			return ((EObject)object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
@@ -71,77 +79,116 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	protected ProcessingSwitch<Adapter> modelSwitch =
-		new ProcessingSwitch<Adapter>() {
+		new ProcessingSwitch<Adapter>()
+		{
 			@Override
-			public Adapter caseDataProcessingContainer(DataProcessingContainer object) {
+			public Adapter caseDataProcessingContainer(DataProcessingContainer object)
+			{
 				return createDataProcessingContainerAdapter();
 			}
 			@Override
-			public Adapter caseDataOperation(DataOperation object) {
+			public Adapter caseDataOperation(DataOperation object)
+			{
 				return createDataOperationAdapter();
 			}
 			@Override
-			public Adapter caseCreateDataOperation(CreateDataOperation object) {
+			public Adapter caseCreateDataOperation(CreateDataOperation object)
+			{
 				return createCreateDataOperationAdapter();
 			}
 			@Override
-			public Adapter caseLoadDataOperation(LoadDataOperation object) {
+			public Adapter caseLoadDataOperation(LoadDataOperation object)
+			{
 				return createLoadDataOperationAdapter();
 			}
 			@Override
-			public Adapter caseLoadAllDataOperation(LoadAllDataOperation object) {
+			public Adapter caseLoadAllDataOperation(LoadAllDataOperation object)
+			{
 				return createLoadAllDataOperationAdapter();
 			}
 			@Override
-			public Adapter casePerformDataTransmissionOperation(PerformDataTransmissionOperation object) {
+			public Adapter casePerformDataTransmissionOperation(PerformDataTransmissionOperation object)
+			{
 				return createPerformDataTransmissionOperationAdapter();
 			}
 			@Override
-			public Adapter caseConsumeDataOperation(ConsumeDataOperation object) {
+			public Adapter caseConsumeDataOperation(ConsumeDataOperation object)
+			{
 				return createConsumeDataOperationAdapter();
 			}
 			@Override
-			public Adapter caseStoreDataOperation(StoreDataOperation object) {
+			public Adapter caseStoreDataOperation(StoreDataOperation object)
+			{
 				return createStoreDataOperationAdapter();
 			}
 			@Override
-			public Adapter caseDataMapping(DataMapping object) {
+			public Adapter caseDataMapping(DataMapping object)
+			{
 				return createDataMappingAdapter();
 			}
 			@Override
-			public Adapter caseDataParameterMapping(DataParameterMapping object) {
+			public Adapter caseDataParameterMapping(DataParameterMapping object)
+			{
 				return createDataParameterMappingAdapter();
 			}
 			@Override
-			public Adapter caseDataResultMapping(DataResultMapping object) {
+			public Adapter caseDataResultMapping(DataResultMapping object)
+			{
 				return createDataResultMappingAdapter();
 			}
 			@Override
-			public Adapter caseManyToOneDataOperation(ManyToOneDataOperation object) {
+			public Adapter caseManyToOneDataOperation(ManyToOneDataOperation object)
+			{
 				return createManyToOneDataOperationAdapter();
 			}
 			@Override
-			public Adapter caseJoinDataOperation(JoinDataOperation object) {
+			public Adapter caseJoinDataOperation(JoinDataOperation object)
+			{
 				return createJoinDataOperationAdapter();
 			}
 			@Override
-			public Adapter caseUnionDataOperation(UnionDataOperation object) {
+			public Adapter caseUnionDataOperation(UnionDataOperation object)
+			{
 				return createUnionDataOperationAdapter();
 			}
 			@Override
-			public Adapter caseIdentifier(Identifier object) {
+			public Adapter caseTransformDataOperation(TransformDataOperation object)
+			{
+				return createTransformDataOperationAdapter();
+			}
+			@Override
+			public Adapter caseProjectionDataOperation(ProjectionDataOperation object)
+			{
+				return createProjectionDataOperationAdapter();
+			}
+			@Override
+			public Adapter caseSelectionDataOperation(SelectionDataOperation object)
+			{
+				return createSelectionDataOperationAdapter();
+			}
+			@Override
+			public <T extends CharacteristicType> Adapter caseCharacteristicChangingDataOperation(CharacteristicChangingDataOperation<T> object)
+			{
+				return createCharacteristicChangingDataOperationAdapter();
+			}
+			@Override
+			public Adapter caseIdentifier(Identifier object)
+			{
 				return createIdentifierAdapter();
 			}
 			@Override
-			public Adapter caseNamedElement(NamedElement object) {
+			public Adapter caseNamedElement(NamedElement object)
+			{
 				return createNamedElementAdapter();
 			}
 			@Override
-			public Adapter caseEntity(Entity object) {
+			public Adapter caseEntity(Entity object)
+			{
 				return createEntityAdapter();
 			}
 			@Override
-			public Adapter defaultCase(EObject object) {
+			public Adapter defaultCase(EObject object)
+			{
 				return createEObjectAdapter();
 			}
 		};
@@ -155,7 +202,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public Adapter createAdapter(Notifier target) {
+	public Adapter createAdapter(Notifier target)
+	{
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
@@ -170,7 +218,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer
 	 * @generated
 	 */
-	public Adapter createDataProcessingContainerAdapter() {
+	public Adapter createDataProcessingContainerAdapter()
+	{
 		return null;
 	}
 
@@ -184,7 +233,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation
 	 * @generated
 	 */
-	public Adapter createDataOperationAdapter() {
+	public Adapter createDataOperationAdapter()
+	{
 		return null;
 	}
 
@@ -198,7 +248,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CreateDataOperation
 	 * @generated
 	 */
-	public Adapter createCreateDataOperationAdapter() {
+	public Adapter createCreateDataOperationAdapter()
+	{
 		return null;
 	}
 
@@ -212,7 +263,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.LoadDataOperation
 	 * @generated
 	 */
-	public Adapter createLoadDataOperationAdapter() {
+	public Adapter createLoadDataOperationAdapter()
+	{
 		return null;
 	}
 
@@ -226,7 +278,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.LoadAllDataOperation
 	 * @generated
 	 */
-	public Adapter createLoadAllDataOperationAdapter() {
+	public Adapter createLoadAllDataOperationAdapter()
+	{
 		return null;
 	}
 
@@ -240,7 +293,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.PerformDataTransmissionOperation
 	 * @generated
 	 */
-	public Adapter createPerformDataTransmissionOperationAdapter() {
+	public Adapter createPerformDataTransmissionOperationAdapter()
+	{
 		return null;
 	}
 
@@ -254,7 +308,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ConsumeDataOperation
 	 * @generated
 	 */
-	public Adapter createConsumeDataOperationAdapter() {
+	public Adapter createConsumeDataOperationAdapter()
+	{
 		return null;
 	}
 
@@ -268,7 +323,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.StoreDataOperation
 	 * @generated
 	 */
-	public Adapter createStoreDataOperationAdapter() {
+	public Adapter createStoreDataOperationAdapter()
+	{
 		return null;
 	}
 
@@ -282,7 +338,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataMapping
 	 * @generated
 	 */
-	public Adapter createDataMappingAdapter() {
+	public Adapter createDataMappingAdapter()
+	{
 		return null;
 	}
 
@@ -296,7 +353,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataParameterMapping
 	 * @generated
 	 */
-	public Adapter createDataParameterMappingAdapter() {
+	public Adapter createDataParameterMappingAdapter()
+	{
 		return null;
 	}
 
@@ -310,7 +368,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataResultMapping
 	 * @generated
 	 */
-	public Adapter createDataResultMappingAdapter() {
+	public Adapter createDataResultMappingAdapter()
+	{
 		return null;
 	}
 
@@ -324,7 +383,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ManyToOneDataOperation
 	 * @generated
 	 */
-	public Adapter createManyToOneDataOperationAdapter() {
+	public Adapter createManyToOneDataOperationAdapter()
+	{
 		return null;
 	}
 
@@ -338,7 +398,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.JoinDataOperation
 	 * @generated
 	 */
-	public Adapter createJoinDataOperationAdapter() {
+	public Adapter createJoinDataOperationAdapter()
+	{
 		return null;
 	}
 
@@ -352,7 +413,68 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.UnionDataOperation
 	 * @generated
 	 */
-	public Adapter createUnionDataOperationAdapter() {
+	public Adapter createUnionDataOperationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation <em>Transform Data Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation
+	 * @generated
+	 */
+	public Adapter createTransformDataOperationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProjectionDataOperation <em>Projection Data Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProjectionDataOperation
+	 * @generated
+	 */
+	public Adapter createProjectionDataOperationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.SelectionDataOperation <em>Selection Data Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.SelectionDataOperation
+	 * @generated
+	 */
+	public Adapter createSelectionDataOperationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CharacteristicChangingDataOperation <em>Characteristic Changing Data Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CharacteristicChangingDataOperation
+	 * @generated
+	 */
+	public Adapter createCharacteristicChangingDataOperationAdapter()
+	{
 		return null;
 	}
 
@@ -366,7 +488,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see de.uka.ipd.sdq.identifier.Identifier
 	 * @generated
 	 */
-	public Adapter createIdentifierAdapter() {
+	public Adapter createIdentifierAdapter()
+	{
 		return null;
 	}
 
@@ -380,7 +503,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.core.entity.NamedElement
 	 * @generated
 	 */
-	public Adapter createNamedElementAdapter() {
+	public Adapter createNamedElementAdapter()
+	{
 		return null;
 	}
 
@@ -394,7 +518,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.core.entity.Entity
 	 * @generated
 	 */
-	public Adapter createEntityAdapter() {
+	public Adapter createEntityAdapter()
+	{
 		return null;
 	}
 
@@ -406,7 +531,8 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl {
 	 * @return the new adapter.
 	 * @generated
 	 */
-	public Adapter createEObjectAdapter() {
+	public Adapter createEObjectAdapter()
+	{
 		return null;
 	}
 

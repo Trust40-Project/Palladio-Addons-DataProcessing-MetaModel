@@ -29,13 +29,15 @@ import org.palladiosimulator.pcm.repository.DataType;
  *
  * @generated
  */
-public abstract class DataImpl extends EntityImpl implements Data {
+public abstract class DataImpl extends EntityImpl implements Data
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataImpl() {
+	protected DataImpl()
+	{
 		super();
 	}
 
@@ -45,7 +47,8 @@ public abstract class DataImpl extends EntityImpl implements Data {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return DataPackage.Literals.DATA;
 	}
 
@@ -54,7 +57,8 @@ public abstract class DataImpl extends EntityImpl implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataType getType() {
+	public DataType getType()
+	{
 		return (DataType)eGet(DataPackage.Literals.DATA__TYPE, true);
 	}
 
@@ -63,7 +67,8 @@ public abstract class DataImpl extends EntityImpl implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(DataType newType) {
+	public void setType(DataType newType)
+	{
 		eSet(DataPackage.Literals.DATA__TYPE, newType);
 	}
 
@@ -82,11 +87,14 @@ public abstract class DataImpl extends EntityImpl implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataType determineDataType() {
-		try {
+	public DataType determineDataType()
+	{
+		try
+		{
 			return (DataType)DETERMINE_DATA_TYPE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
 		}
-		catch (InvocationTargetException ite) {
+		catch (InvocationTargetException ite)
+		{
 			throw new WrappedException(ite);
 		}
 	}

@@ -22,13 +22,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.E
  *
  * @generated
  */
-public class EnumCharacteristicTypeImpl extends CharacteristicTypeImpl implements EnumCharacteristicType {
+public class EnumCharacteristicTypeImpl extends CharacteristicTypeImpl implements EnumCharacteristicType
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EnumCharacteristicTypeImpl() {
+	protected EnumCharacteristicTypeImpl()
+	{
 		super();
 	}
 
@@ -38,7 +40,8 @@ public class EnumCharacteristicTypeImpl extends CharacteristicTypeImpl implement
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return CharacteristicsPackage.Literals.ENUM_CHARACTERISTIC_TYPE;
 	}
 
@@ -47,7 +50,8 @@ public class EnumCharacteristicTypeImpl extends CharacteristicTypeImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isMultipleChoice() {
+	public boolean isMultipleChoice()
+	{
 		return (Boolean)eGet(CharacteristicsPackage.Literals.ENUM_CHARACTERISTIC_TYPE__MULTIPLE_CHOICE, true);
 	}
 
@@ -56,7 +60,8 @@ public class EnumCharacteristicTypeImpl extends CharacteristicTypeImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMultipleChoice(boolean newMultipleChoice) {
+	public void setMultipleChoice(boolean newMultipleChoice)
+	{
 		eSet(CharacteristicsPackage.Literals.ENUM_CHARACTERISTIC_TYPE__MULTIPLE_CHOICE, newMultipleChoice);
 	}
 
@@ -65,7 +70,8 @@ public class EnumCharacteristicTypeImpl extends CharacteristicTypeImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Enumeration getEnum() {
+	public Enumeration getEnum()
+	{
 		return (Enumeration)eGet(CharacteristicsPackage.Literals.ENUM_CHARACTERISTIC_TYPE__ENUM, true);
 	}
 
@@ -74,7 +80,8 @@ public class EnumCharacteristicTypeImpl extends CharacteristicTypeImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEnum(Enumeration newEnum) {
+	public void setEnum(Enumeration newEnum)
+	{
 		eSet(CharacteristicsPackage.Literals.ENUM_CHARACTERISTIC_TYPE__ENUM, newEnum);
 	}
 

@@ -14,13 +14,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Proces
  *
  * @generated
  */
-public class JoinDataOperationImpl extends ManyToOneDataOperationImpl implements JoinDataOperation {
+public class JoinDataOperationImpl extends ManyToOneDataOperationImpl implements JoinDataOperation
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected JoinDataOperationImpl() {
+	protected JoinDataOperationImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class JoinDataOperationImpl extends ManyToOneDataOperationImpl implements
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return ProcessingPackage.Literals.JOIN_DATA_OPERATION;
 	}
 

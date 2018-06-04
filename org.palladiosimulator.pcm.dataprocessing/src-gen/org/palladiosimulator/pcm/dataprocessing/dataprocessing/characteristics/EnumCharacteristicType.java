@@ -20,7 +20,8 @@ package org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics;
  * @model
  * @generated
  */
-public interface EnumCharacteristicType extends CharacteristicType {
+public interface EnumCharacteristicType extends CharacteristicType
+{
 	/**
 	 * Returns the value of the '<em><b>Multiple Choice</b></em>' attribute.
 	 * The default value is <code>"false"</code>.

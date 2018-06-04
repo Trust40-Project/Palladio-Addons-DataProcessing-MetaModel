@@ -48,7 +48,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.impl.SeffPac
  * <!-- end-user-doc -->
  * @generated
  */
-public class DataprocessingPackageImpl extends EPackageImpl implements DataprocessingPackage {
+public class DataprocessingPackageImpl extends EPackageImpl implements DataprocessingPackage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -71,7 +72,8 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * @see #init()
 	 * @generated
 	 */
-	private DataprocessingPackageImpl() {
+	private DataprocessingPackageImpl()
+	{
 		super(eNS_URI, DataprocessingFactory.eINSTANCE);
 	}
 
@@ -94,7 +96,8 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static DataprocessingPackage init() {
+	public static DataprocessingPackage init()
+	{
 		if (isInited) return (DataprocessingPackage)EPackage.Registry.INSTANCE.getEPackage(DataprocessingPackage.eNS_URI);
 
 		// Obtain or create and register package
@@ -146,7 +149,8 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDataSpecification() {
+	public EClass getDataSpecification()
+	{
 		return dataSpecificationEClass;
 	}
 
@@ -155,7 +159,8 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataSpecification_DataProcessingContainers() {
+	public EReference getDataSpecification_DataProcessingContainers()
+	{
 		return (EReference)dataSpecificationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -164,7 +169,8 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataSpecification_CharacteristicTypeContainers() {
+	public EReference getDataSpecification_CharacteristicTypeContainers()
+	{
 		return (EReference)dataSpecificationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -173,7 +179,8 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataSpecification_DataSEFFSpecifications() {
+	public EReference getDataSpecification_DataSEFFSpecifications()
+	{
 		return (EReference)dataSpecificationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -182,7 +189,8 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataSpecification_StoreContainers() {
+	public EReference getDataSpecification_StoreContainers()
+	{
 		return (EReference)dataSpecificationEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -191,7 +199,8 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataSpecification_CharacteristicContainer() {
+	public EReference getDataSpecification_CharacteristicContainer()
+	{
 		return (EReference)dataSpecificationEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -200,7 +209,18 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataprocessingFactory getDataprocessingFactory() {
+	public EReference getDataSpecification_RelatedCharacteristics()
+	{
+		return (EReference)dataSpecificationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataprocessingFactory getDataprocessingFactory()
+	{
 		return (DataprocessingFactory)getEFactoryInstance();
 	}
 
@@ -218,7 +238,8 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void createPackageContents() {
+	public void createPackageContents()
+	{
 		if (isCreated) return;
 		isCreated = true;
 
@@ -229,6 +250,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__DATA_SEFF_SPECIFICATIONS);
 		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__STORE_CONTAINERS);
 		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER);
+		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__RELATED_CHARACTERISTICS);
 	}
 
 	/**
@@ -245,7 +267,8 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void initializePackageContents() {
+	public void initializePackageContents()
+	{
 		if (isInitialized) return;
 		isInitialized = true;
 
@@ -281,6 +304,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		initEReference(getDataSpecification_DataSEFFSpecifications(), theSeffPackage.getDataSEFFSpecification(), null, "dataSEFFSpecifications", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSpecification_StoreContainers(), theRepositoryPackage.getStoreContainer(), null, "storeContainers", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSpecification_CharacteristicContainer(), theCharacteristicsPackage.getCharacteristicContainer(), null, "characteristicContainer", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataSpecification_RelatedCharacteristics(), theCharacteristicsPackage.getRelatedCharacteristics(), null, "relatedCharacteristics", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -296,12 +320,14 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createImportAnnotations() {
+	protected void createImportAnnotations()
+	{
 		String source = "http://www.eclipse.org/OCL/Import";	
 		addAnnotation
 		  (this, 
 		   source, 
-		   new String[] {
+		   new String[] 
+		   {
 			 "entity", "../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity",
 			 "identifier", "../../de.uka.ipd.sdq.identifier/model/identifier.ecore#/",
 			 "repository_1", "../../org.palladiosimulator.pcm/model/pcm.ecore#//repository",

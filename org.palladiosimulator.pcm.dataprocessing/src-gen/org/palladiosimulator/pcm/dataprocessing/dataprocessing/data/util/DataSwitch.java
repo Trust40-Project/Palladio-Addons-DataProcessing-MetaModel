@@ -27,7 +27,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.*;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataPackage
  * @generated
  */
-public class DataSwitch<T> extends Switch<T> {
+public class DataSwitch<T> extends Switch<T>
+{
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -42,8 +43,10 @@ public class DataSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataSwitch() {
-		if (modelPackage == null) {
+	public DataSwitch()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = DataPackage.eINSTANCE;
 		}
 	}
@@ -57,7 +60,8 @@ public class DataSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected boolean isSwitchFor(EPackage ePackage) {
+	protected boolean isSwitchFor(EPackage ePackage)
+	{
 		return ePackage == modelPackage;
 	}
 
@@ -69,9 +73,12 @@ public class DataSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected T doSwitch(int classifierID, EObject theEObject) {
-		switch (classifierID) {
-			case DataPackage.DATA: {
+	protected T doSwitch(int classifierID, EObject theEObject)
+	{
+		switch (classifierID)
+		{
+			case DataPackage.DATA:
+			{
 				Data data = (Data)theEObject;
 				T result = caseData(data);
 				if (result == null) result = caseEntity(data);
@@ -80,7 +87,8 @@ public class DataSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case DataPackage.ORIGINAL_DATA: {
+			case DataPackage.ORIGINAL_DATA:
+			{
 				OriginalData originalData = (OriginalData)theEObject;
 				T result = caseOriginalData(originalData);
 				if (result == null) result = caseData(originalData);
@@ -90,7 +98,8 @@ public class DataSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case DataPackage.PARAMETER_BASED_DATA: {
+			case DataPackage.PARAMETER_BASED_DATA:
+			{
 				ParameterBasedData parameterBasedData = (ParameterBasedData)theEObject;
 				T result = caseParameterBasedData(parameterBasedData);
 				if (result == null) result = caseData(parameterBasedData);
@@ -100,7 +109,8 @@ public class DataSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case DataPackage.RESULT_BASED_DATA: {
+			case DataPackage.RESULT_BASED_DATA:
+			{
 				ResultBasedData resultBasedData = (ResultBasedData)theEObject;
 				T result = caseResultBasedData(resultBasedData);
 				if (result == null) result = caseData(resultBasedData);
@@ -125,7 +135,8 @@ public class DataSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseData(Data object) {
+	public T caseData(Data object)
+	{
 		return null;
 	}
 
@@ -140,7 +151,8 @@ public class DataSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOriginalData(OriginalData object) {
+	public T caseOriginalData(OriginalData object)
+	{
 		return null;
 	}
 
@@ -155,7 +167,8 @@ public class DataSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterBasedData(ParameterBasedData object) {
+	public T caseParameterBasedData(ParameterBasedData object)
+	{
 		return null;
 	}
 
@@ -170,7 +183,8 @@ public class DataSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResultBasedData(ResultBasedData object) {
+	public T caseResultBasedData(ResultBasedData object)
+	{
 		return null;
 	}
 
@@ -185,7 +199,8 @@ public class DataSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIdentifier(Identifier object) {
+	public T caseIdentifier(Identifier object)
+	{
 		return null;
 	}
 
@@ -200,7 +215,8 @@ public class DataSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNamedElement(NamedElement object) {
+	public T caseNamedElement(NamedElement object)
+	{
 		return null;
 	}
 
@@ -215,7 +231,8 @@ public class DataSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEntity(Entity object) {
+	public T caseEntity(Entity object)
+	{
 		return null;
 	}
 
@@ -231,7 +248,8 @@ public class DataSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	public T defaultCase(EObject object) {
+	public T defaultCase(EObject object)
+	{
 		return null;
 	}
 

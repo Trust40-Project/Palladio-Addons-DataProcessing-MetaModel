@@ -22,13 +22,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Proces
  *
  * @generated
  */
-public class CreateDataOperationImpl extends DataOperationImpl implements CreateDataOperation {
+public class CreateDataOperationImpl extends DataOperationImpl implements CreateDataOperation
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CreateDataOperationImpl() {
+	protected CreateDataOperationImpl()
+	{
 		super();
 	}
 
@@ -38,7 +40,8 @@ public class CreateDataOperationImpl extends DataOperationImpl implements Create
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return ProcessingPackage.Literals.CREATE_DATA_OPERATION;
 	}
 
@@ -47,7 +50,8 @@ public class CreateDataOperationImpl extends DataOperationImpl implements Create
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Data getResultingData() {
+	public Data getResultingData()
+	{
 		return (Data)eGet(ProcessingPackage.Literals.CREATE_DATA_OPERATION__RESULTING_DATA, true);
 	}
 
@@ -56,7 +60,8 @@ public class CreateDataOperationImpl extends DataOperationImpl implements Create
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setResultingData(Data newResultingData) {
+	public void setResultingData(Data newResultingData)
+	{
 		eSet(ProcessingPackage.Literals.CREATE_DATA_OPERATION__RESULTING_DATA, newResultingData);
 	}
 

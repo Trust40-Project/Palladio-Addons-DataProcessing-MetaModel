@@ -23,13 +23,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Proces
  *
  * @generated
  */
-public abstract class DataOperationImpl extends EntityImpl implements DataOperation {
+public abstract class DataOperationImpl extends EntityImpl implements DataOperation
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataOperationImpl() {
+	protected DataOperationImpl()
+	{
 		super();
 	}
 
@@ -39,7 +41,8 @@ public abstract class DataOperationImpl extends EntityImpl implements DataOperat
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return ProcessingPackage.Literals.DATA_OPERATION;
 	}
 
@@ -48,7 +51,8 @@ public abstract class DataOperationImpl extends EntityImpl implements DataOperat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataProcessingContainer getContainer() {
+	public DataProcessingContainer getContainer()
+	{
 		return (DataProcessingContainer)eGet(ProcessingPackage.Literals.DATA_OPERATION__CONTAINER, true);
 	}
 
@@ -57,7 +61,8 @@ public abstract class DataOperationImpl extends EntityImpl implements DataOperat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setContainer(DataProcessingContainer newContainer) {
+	public void setContainer(DataProcessingContainer newContainer)
+	{
 		eSet(ProcessingPackage.Literals.DATA_OPERATION__CONTAINER, newContainer);
 	}
 

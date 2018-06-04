@@ -27,13 +27,15 @@ import org.palladiosimulator.pcm.repository.DataType;
  *
  * @generated
  */
-public class OriginalDataImpl extends DataImpl implements OriginalData {
+public class OriginalDataImpl extends DataImpl implements OriginalData
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OriginalDataImpl() {
+	protected OriginalDataImpl()
+	{
 		super();
 	}
 
@@ -43,7 +45,8 @@ public class OriginalDataImpl extends DataImpl implements OriginalData {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return DataPackage.Literals.ORIGINAL_DATA;
 	}
 
@@ -52,7 +55,8 @@ public class OriginalDataImpl extends DataImpl implements OriginalData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataType getOriginalType() {
+	public DataType getOriginalType()
+	{
 		return (DataType)eGet(DataPackage.Literals.ORIGINAL_DATA__ORIGINAL_TYPE, true);
 	}
 
@@ -61,7 +65,8 @@ public class OriginalDataImpl extends DataImpl implements OriginalData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOriginalType(DataType newOriginalType) {
+	public void setOriginalType(DataType newOriginalType)
+	{
 		eSet(DataPackage.Literals.ORIGINAL_DATA__ORIGINAL_TYPE, newOriginalType);
 	}
 
@@ -80,11 +85,14 @@ public class OriginalDataImpl extends DataImpl implements OriginalData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataType determineDataType() {
-		try {
+	public DataType determineDataType()
+	{
+		try
+		{
 			return (DataType)DETERMINE_DATA_TYPE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
 		}
-		catch (InvocationTargetException ite) {
+		catch (InvocationTargetException ite)
+		{
 			throw new WrappedException(ite);
 		}
 	}

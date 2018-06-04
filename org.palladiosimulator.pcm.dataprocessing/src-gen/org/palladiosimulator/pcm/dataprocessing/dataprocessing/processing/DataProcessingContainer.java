@@ -2,9 +2,9 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
 
-import de.uka.ipd.sdq.identifier.Identifier;
-
 import org.eclipse.emf.common.util.EList;
+
+import org.palladiosimulator.pcm.core.entity.Entity;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface DataProcessingContainer extends Identifier {
+public interface DataProcessingContainer extends Entity
+{
 	/**
 	 * Returns the value of the '<em><b>Operations</b></em>' containment reference list.
 	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation}.

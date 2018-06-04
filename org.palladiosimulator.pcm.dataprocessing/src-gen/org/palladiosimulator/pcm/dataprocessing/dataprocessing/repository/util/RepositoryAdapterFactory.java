@@ -24,7 +24,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.*;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.RepositoryPackage
  * @generated
  */
-public class RepositoryAdapterFactory extends AdapterFactoryImpl {
+public class RepositoryAdapterFactory extends AdapterFactoryImpl
+{
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
@@ -39,8 +40,10 @@ public class RepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RepositoryAdapterFactory() {
-		if (modelPackage == null) {
+	public RepositoryAdapterFactory()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = RepositoryPackage.eINSTANCE;
 		}
 	}
@@ -54,11 +57,14 @@ public class RepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public boolean isFactoryForType(Object object) {
-		if (object == modelPackage) {
+	public boolean isFactoryForType(Object object)
+	{
+		if (object == modelPackage)
+		{
 			return true;
 		}
-		if (object instanceof EObject) {
+		if (object instanceof EObject)
+		{
 			return ((EObject)object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
@@ -71,29 +77,36 @@ public class RepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	protected RepositorySwitch<Adapter> modelSwitch =
-		new RepositorySwitch<Adapter>() {
+		new RepositorySwitch<Adapter>()
+		{
 			@Override
-			public Adapter caseStoreContainer(StoreContainer object) {
+			public Adapter caseStoreContainer(StoreContainer object)
+			{
 				return createStoreContainerAdapter();
 			}
 			@Override
-			public Adapter caseStore(Store object) {
+			public Adapter caseStore(Store object)
+			{
 				return createStoreAdapter();
 			}
 			@Override
-			public Adapter caseIdentifier(Identifier object) {
+			public Adapter caseIdentifier(Identifier object)
+			{
 				return createIdentifierAdapter();
 			}
 			@Override
-			public Adapter caseNamedElement(NamedElement object) {
+			public Adapter caseNamedElement(NamedElement object)
+			{
 				return createNamedElementAdapter();
 			}
 			@Override
-			public Adapter caseEntity(Entity object) {
+			public Adapter caseEntity(Entity object)
+			{
 				return createEntityAdapter();
 			}
 			@Override
-			public Adapter defaultCase(EObject object) {
+			public Adapter defaultCase(EObject object)
+			{
 				return createEObjectAdapter();
 			}
 		};
@@ -107,7 +120,8 @@ public class RepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public Adapter createAdapter(Notifier target) {
+	public Adapter createAdapter(Notifier target)
+	{
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
@@ -122,7 +136,8 @@ public class RepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.StoreContainer
 	 * @generated
 	 */
-	public Adapter createStoreContainerAdapter() {
+	public Adapter createStoreContainerAdapter()
+	{
 		return null;
 	}
 
@@ -136,7 +151,8 @@ public class RepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.Store
 	 * @generated
 	 */
-	public Adapter createStoreAdapter() {
+	public Adapter createStoreAdapter()
+	{
 		return null;
 	}
 
@@ -150,7 +166,8 @@ public class RepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @see de.uka.ipd.sdq.identifier.Identifier
 	 * @generated
 	 */
-	public Adapter createIdentifierAdapter() {
+	public Adapter createIdentifierAdapter()
+	{
 		return null;
 	}
 
@@ -164,7 +181,8 @@ public class RepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.core.entity.NamedElement
 	 * @generated
 	 */
-	public Adapter createNamedElementAdapter() {
+	public Adapter createNamedElementAdapter()
+	{
 		return null;
 	}
 
@@ -178,7 +196,8 @@ public class RepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.core.entity.Entity
 	 * @generated
 	 */
-	public Adapter createEntityAdapter() {
+	public Adapter createEntityAdapter()
+	{
 		return null;
 	}
 
@@ -190,7 +209,8 @@ public class RepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @return the new adapter.
 	 * @generated
 	 */
-	public Adapter createEObjectAdapter() {
+	public Adapter createEObjectAdapter()
+	{
 		return null;
 	}
 

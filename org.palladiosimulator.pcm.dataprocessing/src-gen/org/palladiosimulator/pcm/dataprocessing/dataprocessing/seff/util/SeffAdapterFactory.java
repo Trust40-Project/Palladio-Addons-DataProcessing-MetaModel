@@ -21,7 +21,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.*;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffPackage
  * @generated
  */
-public class SeffAdapterFactory extends AdapterFactoryImpl {
+public class SeffAdapterFactory extends AdapterFactoryImpl
+{
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
@@ -36,8 +37,10 @@ public class SeffAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SeffAdapterFactory() {
-		if (modelPackage == null) {
+	public SeffAdapterFactory()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = SeffPackage.eINSTANCE;
 		}
 	}
@@ -51,11 +54,14 @@ public class SeffAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public boolean isFactoryForType(Object object) {
-		if (object == modelPackage) {
+	public boolean isFactoryForType(Object object)
+	{
+		if (object == modelPackage)
+		{
 			return true;
 		}
-		if (object instanceof EObject) {
+		if (object instanceof EObject)
+		{
 			return ((EObject)object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
@@ -68,17 +74,21 @@ public class SeffAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	protected SeffSwitch<Adapter> modelSwitch =
-		new SeffSwitch<Adapter>() {
+		new SeffSwitch<Adapter>()
+		{
 			@Override
-			public Adapter caseDataSEFFSpecification(DataSEFFSpecification object) {
+			public Adapter caseDataSEFFSpecification(DataSEFFSpecification object)
+			{
 				return createDataSEFFSpecificationAdapter();
 			}
 			@Override
-			public Adapter caseIdentifier(Identifier object) {
+			public Adapter caseIdentifier(Identifier object)
+			{
 				return createIdentifierAdapter();
 			}
 			@Override
-			public Adapter defaultCase(EObject object) {
+			public Adapter defaultCase(EObject object)
+			{
 				return createEObjectAdapter();
 			}
 		};
@@ -92,7 +102,8 @@ public class SeffAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public Adapter createAdapter(Notifier target) {
+	public Adapter createAdapter(Notifier target)
+	{
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
@@ -107,7 +118,8 @@ public class SeffAdapterFactory extends AdapterFactoryImpl {
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.DataSEFFSpecification
 	 * @generated
 	 */
-	public Adapter createDataSEFFSpecificationAdapter() {
+	public Adapter createDataSEFFSpecificationAdapter()
+	{
 		return null;
 	}
 
@@ -121,7 +133,8 @@ public class SeffAdapterFactory extends AdapterFactoryImpl {
 	 * @see de.uka.ipd.sdq.identifier.Identifier
 	 * @generated
 	 */
-	public Adapter createIdentifierAdapter() {
+	public Adapter createIdentifierAdapter()
+	{
 		return null;
 	}
 
@@ -133,7 +146,8 @@ public class SeffAdapterFactory extends AdapterFactoryImpl {
 	 * @return the new adapter.
 	 * @generated
 	 */
-	public Adapter createEObjectAdapter() {
+	public Adapter createEObjectAdapter()
+	{
 		return null;
 	}
 

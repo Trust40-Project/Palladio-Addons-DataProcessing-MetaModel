@@ -53,7 +53,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.impl.SeffPac
  * <!-- end-user-doc -->
  * @generated
  */
-public class DataPackageImpl extends EPackageImpl implements DataPackage {
+public class DataPackageImpl extends EPackageImpl implements DataPackage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -97,7 +98,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * @see #init()
 	 * @generated
 	 */
-	private DataPackageImpl() {
+	private DataPackageImpl()
+	{
 		super(eNS_URI, DataFactory.eINSTANCE);
 	}
 
@@ -120,7 +122,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static DataPackage init() {
+	public static DataPackage init()
+	{
 		if (isInited) return (DataPackage)EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
 
 		// Obtain or create and register package
@@ -172,7 +175,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getData() {
+	public EClass getData()
+	{
 		return dataEClass;
 	}
 
@@ -181,7 +185,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getData_Type() {
+	public EReference getData_Type()
+	{
 		return (EReference)dataEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -190,7 +195,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getOriginalData() {
+	public EClass getOriginalData()
+	{
 		return originalDataEClass;
 	}
 
@@ -199,7 +205,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOriginalData_OriginalType() {
+	public EReference getOriginalData_OriginalType()
+	{
 		return (EReference)originalDataEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -208,7 +215,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getParameterBasedData() {
+	public EClass getParameterBasedData()
+	{
 		return parameterBasedDataEClass;
 	}
 
@@ -217,7 +225,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getParameterBasedData_Parameter() {
+	public EReference getParameterBasedData_Parameter()
+	{
 		return (EReference)parameterBasedDataEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -226,7 +235,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResultBasedData() {
+	public EClass getResultBasedData()
+	{
 		return resultBasedDataEClass;
 	}
 
@@ -235,7 +245,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResultBasedData_Operation() {
+	public EReference getResultBasedData_Operation()
+	{
 		return (EReference)resultBasedDataEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -244,7 +255,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataFactory getDataFactory() {
+	public DataFactory getDataFactory()
+	{
 		return (DataFactory)getEFactoryInstance();
 	}
 
@@ -262,7 +274,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void createPackageContents() {
+	public void createPackageContents()
+	{
 		if (isCreated) return;
 		isCreated = true;
 
@@ -294,7 +307,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void initializePackageContents() {
+	public void initializePackageContents()
+	{
 		if (isInitialized) return;
 		isInitialized = true;
 
@@ -351,12 +365,14 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createEcoreAnnotations() {
+	protected void createEcoreAnnotations()
+	{
 		String source = "http://www.eclipse.org/emf/2002/Ecore";	
 		addAnnotation
 		  (this, 
 		   source, 
-		   new String[] {
+		   new String[] 
+		   {
 			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
@@ -369,36 +385,42 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createPivotAnnotations() {
+	protected void createPivotAnnotations()
+	{
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
 		addAnnotation
 		  (dataEClass.getEOperations().get(0), 
 		   source, 
-		   new String[] {
-			 "body", "OclInvalid"
+		   new String[] 
+		   {
+			 "body", "null"
 		   });	
 		addAnnotation
 		  (getData_Type(), 
 		   source, 
-		   new String[] {
+		   new String[] 
+		   {
 			 "derivation", "determineDataType()"
 		   });	
 		addAnnotation
 		  (originalDataEClass.getEOperations().get(0), 
 		   source, 
-		   new String[] {
+		   new String[] 
+		   {
 			 "body", "originalType"
 		   });	
 		addAnnotation
 		  (parameterBasedDataEClass.getEOperations().get(0), 
 		   source, 
-		   new String[] {
+		   new String[] 
+		   {
 			 "body", "parameter.dataType__Parameter"
 		   });	
 		addAnnotation
 		  (resultBasedDataEClass.getEOperations().get(0), 
 		   source, 
-		   new String[] {
+		   new String[] 
+		   {
 			 "body", "operation.returnType__OperationSignature"
 		   });
 	}

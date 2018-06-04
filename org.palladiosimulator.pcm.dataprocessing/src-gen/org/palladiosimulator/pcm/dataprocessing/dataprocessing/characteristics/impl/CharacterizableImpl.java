@@ -10,7 +10,6 @@ import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer;
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicType;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characterizable;
 
@@ -28,13 +27,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.C
  *
  * @generated
  */
-public abstract class CharacterizableImpl extends CDOObjectImpl implements Characterizable {
+public abstract class CharacterizableImpl extends CDOObjectImpl implements Characterizable
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CharacterizableImpl() {
+	protected CharacterizableImpl()
+	{
 		super();
 	}
 
@@ -44,7 +45,8 @@ public abstract class CharacterizableImpl extends CDOObjectImpl implements Chara
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return CharacteristicsPackage.Literals.CHARACTERIZABLE;
 	}
 
@@ -54,7 +56,8 @@ public abstract class CharacterizableImpl extends CDOObjectImpl implements Chara
 	 * @generated
 	 */
 	@Override
-	protected int eStaticFeatureCount() {
+	protected int eStaticFeatureCount()
+	{
 		return 0;
 	}
 
@@ -64,7 +67,8 @@ public abstract class CharacterizableImpl extends CDOObjectImpl implements Chara
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<CharacteristicContainer> getCharacteristicContainers() {
+	public EList<CharacteristicContainer> getCharacteristicContainers()
+	{
 		return (EList<CharacteristicContainer>)eGet(CharacteristicsPackage.Literals.CHARACTERIZABLE__CHARACTERISTIC_CONTAINERS, true);
 	}
 
@@ -74,8 +78,9 @@ public abstract class CharacterizableImpl extends CDOObjectImpl implements Chara
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Characteristic<CharacteristicType>> getCharacteristics() {
-		return (EList<Characteristic<CharacteristicType>>)eGet(CharacteristicsPackage.Literals.CHARACTERIZABLE__CHARACTERISTICS, true);
+	public EList<Characteristic> getCharacteristics()
+	{
+		return (EList<Characteristic>)eGet(CharacteristicsPackage.Literals.CHARACTERIZABLE__CHARACTERISTICS, true);
 	}
 
 } //CharacterizableImpl

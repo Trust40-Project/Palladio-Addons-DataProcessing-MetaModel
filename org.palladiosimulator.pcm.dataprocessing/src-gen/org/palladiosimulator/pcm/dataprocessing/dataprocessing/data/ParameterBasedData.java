@@ -21,7 +21,8 @@ import org.palladiosimulator.pcm.repository.Parameter;
  * @model
  * @generated
  */
-public interface ParameterBasedData extends Data {
+public interface ParameterBasedData extends Data
+{
 	/**
 	 * Returns the value of the '<em><b>Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->

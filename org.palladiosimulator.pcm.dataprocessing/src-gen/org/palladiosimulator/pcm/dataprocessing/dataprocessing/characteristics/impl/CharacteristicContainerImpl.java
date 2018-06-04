@@ -2,15 +2,14 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl;
 
-import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer;
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicType;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage;
 
 /**
@@ -21,18 +20,20 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.C
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacteristicContainerImpl#getCharacteristics <em>Characteristics</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacteristicContainerImpl#getOwnedCharacteristics <em>Owned Characteristics</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CharacteristicContainerImpl extends IdentifierImpl implements CharacteristicContainer {
+public class CharacteristicContainerImpl extends EntityImpl implements CharacteristicContainer
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CharacteristicContainerImpl() {
+	protected CharacteristicContainerImpl()
+	{
 		super();
 	}
 
@@ -42,7 +43,8 @@ public class CharacteristicContainerImpl extends IdentifierImpl implements Chara
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return CharacteristicsPackage.Literals.CHARACTERISTIC_CONTAINER;
 	}
 
@@ -52,8 +54,9 @@ public class CharacteristicContainerImpl extends IdentifierImpl implements Chara
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Characteristic<CharacteristicType>> getCharacteristics() {
-		return (EList<Characteristic<CharacteristicType>>)eGet(CharacteristicsPackage.Literals.CHARACTERISTIC_CONTAINER__CHARACTERISTICS, true);
+	public EList<Characteristic> getOwnedCharacteristics()
+	{
+		return (EList<Characteristic>)eGet(CharacteristicsPackage.Literals.CHARACTERISTIC_CONTAINER__OWNED_CHARACTERISTICS, true);
 	}
 
 } //CharacteristicContainerImpl

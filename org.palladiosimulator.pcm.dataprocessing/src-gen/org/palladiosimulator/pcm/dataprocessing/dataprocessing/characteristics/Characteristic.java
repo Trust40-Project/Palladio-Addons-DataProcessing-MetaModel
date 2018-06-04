@@ -13,38 +13,39 @@ import de.uka.ipd.sdq.identifier.Identifier;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic#getType <em>Type</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic#getCharacteristicType <em>Characteristic Type</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage#getCharacteristic()
  * @model abstract="true"
  * @generated
  */
-public interface Characteristic<T extends CharacteristicType> extends Identifier {
+public interface Characteristic extends Identifier
+{
 	/**
-	 * Returns the value of the '<em><b>Type</b></em>' reference.
+	 * Returns the value of the '<em><b>Characteristic Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Type</em>' reference isn't clear,
+	 * If the meaning of the '<em>Characteristic Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' reference.
-	 * @see #setType(CharacteristicType)
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage#getCharacteristic_Type()
+	 * @return the value of the '<em>Characteristic Type</em>' reference.
+	 * @see #setCharacteristicType(CharacteristicType)
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage#getCharacteristic_CharacteristicType()
 	 * @model required="true"
 	 * @generated
 	 */
-	T getType();
+	CharacteristicType getCharacteristicType();
 
 	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic#getType <em>Type</em>}' reference.
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic#getCharacteristicType <em>Characteristic Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' reference.
-	 * @see #getType()
+	 * @param value the new value of the '<em>Characteristic Type</em>' reference.
+	 * @see #getCharacteristicType()
 	 * @generated
 	 */
-	void setType(T value);
+	void setCharacteristicType(CharacteristicType value);
 
 } // Characteristic

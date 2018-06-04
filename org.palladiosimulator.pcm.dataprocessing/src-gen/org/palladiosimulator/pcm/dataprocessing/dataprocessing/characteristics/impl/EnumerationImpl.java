@@ -25,13 +25,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.E
  *
  * @generated
  */
-public class EnumerationImpl extends EntityImpl implements Enumeration {
+public class EnumerationImpl extends EntityImpl implements Enumeration
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EnumerationImpl() {
+	protected EnumerationImpl()
+	{
 		super();
 	}
 
@@ -41,7 +43,8 @@ public class EnumerationImpl extends EntityImpl implements Enumeration {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return CharacteristicsPackage.Literals.ENUMERATION;
 	}
 
@@ -51,7 +54,8 @@ public class EnumerationImpl extends EntityImpl implements Enumeration {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<EnumCharacteristicLiteral> getLiterals() {
+	public EList<EnumCharacteristicLiteral> getLiterals()
+	{
 		return (EList<EnumCharacteristicLiteral>)eGet(CharacteristicsPackage.Literals.ENUMERATION__LITERALS, true);
 	}
 

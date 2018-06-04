@@ -23,7 +23,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface CharacteristicTypeContainer extends Identifier {
+public interface CharacteristicTypeContainer extends Identifier
+{
 	/**
 	 * Returns the value of the '<em><b>Characteristic Types</b></em>' containment reference list.
 	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicType}.

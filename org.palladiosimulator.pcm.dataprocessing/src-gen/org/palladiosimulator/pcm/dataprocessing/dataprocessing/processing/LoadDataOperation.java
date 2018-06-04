@@ -20,7 +20,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.Store;
  * @model
  * @generated
  */
-public interface LoadDataOperation extends CreateDataOperation {
+public interface LoadDataOperation extends CreateDataOperation
+{
 	/**
 	 * Returns the value of the '<em><b>Store</b></em>' reference.
 	 * <!-- begin-user-doc -->

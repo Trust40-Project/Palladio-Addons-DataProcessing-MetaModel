@@ -27,7 +27,8 @@ import org.palladiosimulator.pcm.core.entity.EntityPackage;
  *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
  * @generated
  */
-public interface CharacteristicsPackage extends EPackage {
+public interface CharacteristicsPackage extends EPackage
+{
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -289,16 +290,25 @@ public interface CharacteristicsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHARACTERISTIC_CONTAINER__ID = IdentifierPackage.IDENTIFIER__ID;
+	int CHARACTERISTIC_CONTAINER__ID = EntityPackage.ENTITY__ID;
 
 	/**
-	 * The feature id for the '<em><b>Characteristics</b></em>' reference list.
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHARACTERISTIC_CONTAINER__CHARACTERISTICS = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+	int CHARACTERISTIC_CONTAINER__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owned Characteristics</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHARACTERISTIC_CONTAINER__OWNED_CHARACTERISTICS = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Characteristic Container</em>' class.
@@ -307,7 +317,7 @@ public interface CharacteristicsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHARACTERISTIC_CONTAINER_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+	int CHARACTERISTIC_CONTAINER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacteristicImpl <em>Characteristic</em>}' class.
@@ -329,13 +339,13 @@ public interface CharacteristicsPackage extends EPackage {
 	int CHARACTERISTIC__ID = IdentifierPackage.IDENTIFIER__ID;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * The feature id for the '<em><b>Characteristic Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHARACTERISTIC__TYPE = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+	int CHARACTERISTIC__CHARACTERISTIC_TYPE = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Characteristic</em>' class.
@@ -366,22 +376,31 @@ public interface CharacteristicsPackage extends EPackage {
 	int ENUM_CHARACTERISTIC__ID = CHARACTERISTIC__ID;
 
 	/**
+	 * The feature id for the '<em><b>Characteristic Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_CHARACTERISTIC__CHARACTERISTIC_TYPE = CHARACTERISTIC__CHARACTERISTIC_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Literals</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_CHARACTERISTIC__LITERALS = CHARACTERISTIC_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM_CHARACTERISTIC__TYPE = CHARACTERISTIC__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Values</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUM_CHARACTERISTIC__VALUES = CHARACTERISTIC_FEATURE_COUNT + 0;
+	int ENUM_CHARACTERISTIC__TYPE = CHARACTERISTIC_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Enum Characteristic</em>' class.
@@ -390,7 +409,7 @@ public interface CharacteristicsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM_CHARACTERISTIC_FEATURE_COUNT = CHARACTERISTIC_FEATURE_COUNT + 1;
+	int ENUM_CHARACTERISTIC_FEATURE_COUNT = CHARACTERISTIC_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.EnumerationImpl <em>Enumeration</em>}' class.
@@ -437,6 +456,61 @@ public interface CharacteristicsPackage extends EPackage {
 	 * @ordered
 	 */
 	int ENUMERATION_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.RelatedCharacteristicsImpl <em>Related Characteristics</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.RelatedCharacteristicsImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacteristicsPackageImpl#getRelatedCharacteristics()
+	 * @generated
+	 */
+	int RELATED_CHARACTERISTICS = 9;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATED_CHARACTERISTICS__ID = EntityPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATED_CHARACTERISTICS__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Characteristics</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATED_CHARACTERISTICS__CHARACTERISTICS = EntityPackage.ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Related Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATED_CHARACTERISTICS__RELATED_ENTITY = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Related Characteristics</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATED_CHARACTERISTICS_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 2;
 
 
 	/**
@@ -566,15 +640,15 @@ public interface CharacteristicsPackage extends EPackage {
 	EClass getCharacteristicContainer();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer#getCharacteristics <em>Characteristics</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer#getOwnedCharacteristics <em>Owned Characteristics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Characteristics</em>'.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer#getCharacteristics()
+	 * @return the meta object for the containment reference list '<em>Owned Characteristics</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer#getOwnedCharacteristics()
 	 * @see #getCharacteristicContainer()
 	 * @generated
 	 */
-	EReference getCharacteristicContainer_Characteristics();
+	EReference getCharacteristicContainer_OwnedCharacteristics();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic <em>Characteristic</em>}'.
@@ -587,15 +661,15 @@ public interface CharacteristicsPackage extends EPackage {
 	EClass getCharacteristic();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic#getType <em>Type</em>}'.
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic#getCharacteristicType <em>Characteristic Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic#getType()
+	 * @return the meta object for the reference '<em>Characteristic Type</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic#getCharacteristicType()
 	 * @see #getCharacteristic()
 	 * @generated
 	 */
-	EReference getCharacteristic_Type();
+	EReference getCharacteristic_CharacteristicType();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.EnumCharacteristic <em>Enum Characteristic</em>}'.
@@ -608,15 +682,26 @@ public interface CharacteristicsPackage extends EPackage {
 	EClass getEnumCharacteristic();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.EnumCharacteristic#getValues <em>Values</em>}'.
+	 * Returns the meta object for the reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.EnumCharacteristic#getLiterals <em>Literals</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Values</em>'.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.EnumCharacteristic#getValues()
+	 * @return the meta object for the reference list '<em>Literals</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.EnumCharacteristic#getLiterals()
 	 * @see #getEnumCharacteristic()
 	 * @generated
 	 */
-	EReference getEnumCharacteristic_Values();
+	EReference getEnumCharacteristic_Literals();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.EnumCharacteristic#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.EnumCharacteristic#getType()
+	 * @see #getEnumCharacteristic()
+	 * @generated
+	 */
+	EReference getEnumCharacteristic_Type();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Enumeration <em>Enumeration</em>}'.
@@ -640,6 +725,38 @@ public interface CharacteristicsPackage extends EPackage {
 	EReference getEnumeration_Literals();
 
 	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.RelatedCharacteristics <em>Related Characteristics</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Related Characteristics</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.RelatedCharacteristics
+	 * @generated
+	 */
+	EClass getRelatedCharacteristics();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.RelatedCharacteristics#getCharacteristics <em>Characteristics</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Characteristics</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.RelatedCharacteristics#getCharacteristics()
+	 * @see #getRelatedCharacteristics()
+	 * @generated
+	 */
+	EReference getRelatedCharacteristics_Characteristics();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.RelatedCharacteristics#getRelatedEntity <em>Related Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Related Entity</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.RelatedCharacteristics#getRelatedEntity()
+	 * @see #getRelatedCharacteristics()
+	 * @generated
+	 */
+	EReference getRelatedCharacteristics_RelatedEntity();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -660,7 +777,8 @@ public interface CharacteristicsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	interface Literals {
+	interface Literals
+	{
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacterizableImpl <em>Characterizable</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -770,12 +888,12 @@ public interface CharacteristicsPackage extends EPackage {
 		EClass CHARACTERISTIC_CONTAINER = eINSTANCE.getCharacteristicContainer();
 
 		/**
-		 * The meta object literal for the '<em><b>Characteristics</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Owned Characteristics</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CHARACTERISTIC_CONTAINER__CHARACTERISTICS = eINSTANCE.getCharacteristicContainer_Characteristics();
+		EReference CHARACTERISTIC_CONTAINER__OWNED_CHARACTERISTICS = eINSTANCE.getCharacteristicContainer_OwnedCharacteristics();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacteristicImpl <em>Characteristic</em>}' class.
@@ -788,12 +906,12 @@ public interface CharacteristicsPackage extends EPackage {
 		EClass CHARACTERISTIC = eINSTANCE.getCharacteristic();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Characteristic Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CHARACTERISTIC__TYPE = eINSTANCE.getCharacteristic_Type();
+		EReference CHARACTERISTIC__CHARACTERISTIC_TYPE = eINSTANCE.getCharacteristic_CharacteristicType();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.EnumCharacteristicImpl <em>Enum Characteristic</em>}' class.
@@ -806,12 +924,20 @@ public interface CharacteristicsPackage extends EPackage {
 		EClass ENUM_CHARACTERISTIC = eINSTANCE.getEnumCharacteristic();
 
 		/**
-		 * The meta object literal for the '<em><b>Values</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Literals</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENUM_CHARACTERISTIC__VALUES = eINSTANCE.getEnumCharacteristic_Values();
+		EReference ENUM_CHARACTERISTIC__LITERALS = eINSTANCE.getEnumCharacteristic_Literals();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENUM_CHARACTERISTIC__TYPE = eINSTANCE.getEnumCharacteristic_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.EnumerationImpl <em>Enumeration</em>}' class.
@@ -830,6 +956,32 @@ public interface CharacteristicsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ENUMERATION__LITERALS = eINSTANCE.getEnumeration_Literals();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.RelatedCharacteristicsImpl <em>Related Characteristics</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.RelatedCharacteristicsImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacteristicsPackageImpl#getRelatedCharacteristics()
+		 * @generated
+		 */
+		EClass RELATED_CHARACTERISTICS = eINSTANCE.getRelatedCharacteristics();
+
+		/**
+		 * The meta object literal for the '<em><b>Characteristics</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RELATED_CHARACTERISTICS__CHARACTERISTICS = eINSTANCE.getRelatedCharacteristics_Characteristics();
+
+		/**
+		 * The meta object literal for the '<em><b>Related Entity</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RELATED_CHARACTERISTICS__RELATED_ENTITY = eINSTANCE.getRelatedCharacteristics_RelatedEntity();
 
 	}
 

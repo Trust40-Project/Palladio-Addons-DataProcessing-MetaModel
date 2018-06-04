@@ -22,7 +22,8 @@ import org.palladiosimulator.pcm.core.entity.Entity;
  * @model
  * @generated
  */
-public interface Enumeration extends Entity {
+public interface Enumeration extends Entity
+{
 	/**
 	 * Returns the value of the '<em><b>Literals</b></em>' containment reference list.
 	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.EnumCharacteristicLiteral}.

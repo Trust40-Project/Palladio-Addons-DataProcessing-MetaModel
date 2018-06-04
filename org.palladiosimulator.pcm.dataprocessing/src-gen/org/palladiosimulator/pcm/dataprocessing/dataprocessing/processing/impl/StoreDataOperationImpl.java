@@ -22,13 +22,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.Store;
  *
  * @generated
  */
-public class StoreDataOperationImpl extends ConsumeDataOperationImpl implements StoreDataOperation {
+public class StoreDataOperationImpl extends ConsumeDataOperationImpl implements StoreDataOperation
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StoreDataOperationImpl() {
+	protected StoreDataOperationImpl()
+	{
 		super();
 	}
 
@@ -38,7 +40,8 @@ public class StoreDataOperationImpl extends ConsumeDataOperationImpl implements 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return ProcessingPackage.Literals.STORE_DATA_OPERATION;
 	}
 
@@ -47,7 +50,8 @@ public class StoreDataOperationImpl extends ConsumeDataOperationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Store getStore() {
+	public Store getStore()
+	{
 		return (Store)eGet(ProcessingPackage.Literals.STORE_DATA_OPERATION__STORE, true);
 	}
 
@@ -56,7 +60,8 @@ public class StoreDataOperationImpl extends ConsumeDataOperationImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStore(Store newStore) {
+	public void setStore(Store newStore)
+	{
 		eSet(ProcessingPackage.Literals.STORE_DATA_OPERATION__STORE, newStore);
 	}
 

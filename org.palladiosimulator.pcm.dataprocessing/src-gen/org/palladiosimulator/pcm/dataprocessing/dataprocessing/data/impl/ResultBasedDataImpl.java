@@ -28,13 +28,15 @@ import org.palladiosimulator.pcm.repository.OperationSignature;
  *
  * @generated
  */
-public class ResultBasedDataImpl extends DataImpl implements ResultBasedData {
+public class ResultBasedDataImpl extends DataImpl implements ResultBasedData
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResultBasedDataImpl() {
+	protected ResultBasedDataImpl()
+	{
 		super();
 	}
 
@@ -44,7 +46,8 @@ public class ResultBasedDataImpl extends DataImpl implements ResultBasedData {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return DataPackage.Literals.RESULT_BASED_DATA;
 	}
 
@@ -53,7 +56,8 @@ public class ResultBasedDataImpl extends DataImpl implements ResultBasedData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OperationSignature getOperation() {
+	public OperationSignature getOperation()
+	{
 		return (OperationSignature)eGet(DataPackage.Literals.RESULT_BASED_DATA__OPERATION, true);
 	}
 
@@ -62,7 +66,8 @@ public class ResultBasedDataImpl extends DataImpl implements ResultBasedData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOperation(OperationSignature newOperation) {
+	public void setOperation(OperationSignature newOperation)
+	{
 		eSet(DataPackage.Literals.RESULT_BASED_DATA__OPERATION, newOperation);
 	}
 
@@ -81,11 +86,14 @@ public class ResultBasedDataImpl extends DataImpl implements ResultBasedData {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataType determineDataType() {
-		try {
+	public DataType determineDataType()
+	{
+		try
+		{
 			return (DataType)DETERMINE_DATA_TYPE__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
 		}
-		catch (InvocationTargetException ite) {
+		catch (InvocationTargetException ite)
+		{
 			throw new WrappedException(ite);
 		}
 	}

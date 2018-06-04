@@ -12,7 +12,8 @@ import org.eclipse.emf.ecore.EFactory;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage
  * @generated
  */
-public interface CharacteristicsFactory extends EFactory {
+public interface CharacteristicsFactory extends EFactory
+{
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
@@ -74,6 +75,15 @@ public interface CharacteristicsFactory extends EFactory {
 	 * @generated
 	 */
 	Enumeration createEnumeration();
+
+	/**
+	 * Returns a new object of class '<em>Related Characteristics</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Related Characteristics</em>'.
+	 * @generated
+	 */
+	RelatedCharacteristics createRelatedCharacteristics();
 
 	/**
 	 * Returns the package supported by this factory.
