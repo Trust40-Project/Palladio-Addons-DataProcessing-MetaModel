@@ -54,6 +54,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Perfor
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingFactory;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProjectionDataOperation;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ReturnDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.SelectionDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.StoreDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation;
@@ -132,6 +133,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * @generated
 	 */
 	private EClass storeDataOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass returnDataOperationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -473,6 +481,16 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getReturnDataOperation()
+	{
+		return returnDataOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDataMapping()
 	{
 		return dataMappingEClass;
@@ -603,7 +621,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTransformDataOperation_InputData()
+	public EReference getTransformDataOperation_Inputs()
 	{
 		return (EReference)transformDataOperationEClass.getEStructuralFeatures().get(0);
 	}
@@ -613,7 +631,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTransformDataOperation_OutputData()
+	public EReference getTransformDataOperation_Output()
 	{
 		return (EReference)transformDataOperationEClass.getEStructuralFeatures().get(1);
 	}
@@ -752,6 +770,8 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		storeDataOperationEClass = createEClass(STORE_DATA_OPERATION);
 		createEReference(storeDataOperationEClass, STORE_DATA_OPERATION__STORE);
 
+		returnDataOperationEClass = createEClass(RETURN_DATA_OPERATION);
+
 		dataMappingEClass = createEClass(DATA_MAPPING);
 		createEReference(dataMappingEClass, DATA_MAPPING__DATA);
 
@@ -771,8 +791,8 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		unionDataOperationEClass = createEClass(UNION_DATA_OPERATION);
 
 		transformDataOperationEClass = createEClass(TRANSFORM_DATA_OPERATION);
-		createEReference(transformDataOperationEClass, TRANSFORM_DATA_OPERATION__INPUT_DATA);
-		createEReference(transformDataOperationEClass, TRANSFORM_DATA_OPERATION__OUTPUT_DATA);
+		createEReference(transformDataOperationEClass, TRANSFORM_DATA_OPERATION__INPUTS);
+		createEReference(transformDataOperationEClass, TRANSFORM_DATA_OPERATION__OUTPUT);
 		createEReference(transformDataOperationEClass, TRANSFORM_DATA_OPERATION__PARAMETER_DATA);
 
 		projectionDataOperationEClass = createEClass(PROJECTION_DATA_OPERATION);
@@ -836,6 +856,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		performDataTransmissionOperationEClass.getESuperTypes().add(this.getDataOperation());
 		consumeDataOperationEClass.getESuperTypes().add(this.getDataOperation());
 		storeDataOperationEClass.getESuperTypes().add(this.getConsumeDataOperation());
+		returnDataOperationEClass.getESuperTypes().add(this.getConsumeDataOperation());
 		dataMappingEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 		dataParameterMappingEClass.getESuperTypes().add(this.getDataMapping());
 		dataResultMappingEClass.getESuperTypes().add(this.getDataMapping());
@@ -872,6 +893,8 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		initEClass(storeDataOperationEClass, StoreDataOperation.class, "StoreDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStoreDataOperation_Store(), theRepositoryPackage.getStore(), null, "store", null, 1, 1, StoreDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(returnDataOperationEClass, ReturnDataOperation.class, "ReturnDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(dataMappingEClass, DataMapping.class, "DataMapping", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDataMapping_Data(), theDataPackage.getData(), null, "data", null, 1, 1, DataMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -880,19 +903,19 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 
 		initEClass(dataResultMappingEClass, DataResultMapping.class, "DataResultMapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDataResultMapping_Operation(), theRepositoryPackage_1.getOperationSignature(), null, "operation", null, 1, 1, DataResultMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataResultMapping_ReceivedData(), theDataPackage.getData(), null, "receivedData", null, 0, -1, DataResultMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataResultMapping_ReceivedData(), theDataPackage.getData(), null, "receivedData", null, 1, 1, DataResultMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(manyToOneDataOperationEClass, ManyToOneDataOperation.class, "ManyToOneDataOperation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getManyToOneDataOperation_ConsumedData(), theDataPackage.getData(), null, "consumedData", null, 2, -1, ManyToOneDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getManyToOneDataOperation_ResultingData(), theDataPackage.getData(), null, "resultingData", null, 1, 1, ManyToOneDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getManyToOneDataOperation_ResultingData(), theDataPackage.getData(), null, "resultingData", null, 1, 1, ManyToOneDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(joinDataOperationEClass, JoinDataOperation.class, "JoinDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(unionDataOperationEClass, UnionDataOperation.class, "UnionDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(transformDataOperationEClass, TransformDataOperation.class, "TransformDataOperation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTransformDataOperation_InputData(), theDataPackage.getData(), null, "inputData", null, 1, 1, TransformDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTransformDataOperation_OutputData(), theDataPackage.getData(), null, "outputData", null, 1, 1, TransformDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransformDataOperation_Inputs(), theDataPackage.getData(), null, "inputs", null, 1, 1, TransformDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransformDataOperation_Output(), theDataPackage.getData(), null, "output", null, 1, 1, TransformDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransformDataOperation_ParameterData(), theDataPackage.getData(), null, "parameterData", null, 0, -1, TransformDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(projectionDataOperationEClass, ProjectionDataOperation.class, "ProjectionDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -975,7 +998,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   source, 
 		   new String[] 
 		   {
-			 "constraints", "parametersExist inputAndOutputHaveSameEntityType"
+			 "constraints", "inputAndOutputHaveSameEntityType"
 		   });
 	}
 
@@ -1022,15 +1045,14 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   new String[] 
 		   {
 			 "noParameters", "self.parameterData->isEmpty()",
-			 "outputIsComposedInInput", "self.inputData.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.outputData.type)"
+			 "outputIsComposedInInput", "self.inputs.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)"
 		   });	
 		addAnnotation
 		  (selectionDataOperationEClass, 
 		   source, 
 		   new String[] 
 		   {
-			 "parametersExist", "self.parameterData->notEmpty()",
-			 "inputAndOutputHaveSameEntityType", "self.inputData.type = self.outputData.type or self.inputData.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType = self.outputData.type"
+			 "inputAndOutputHaveSameEntityType", "self.inputs.type->oclAsSet() = self.output.type->oclAsSet() or self.inputs.type.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()"
 		   });
 	}
 

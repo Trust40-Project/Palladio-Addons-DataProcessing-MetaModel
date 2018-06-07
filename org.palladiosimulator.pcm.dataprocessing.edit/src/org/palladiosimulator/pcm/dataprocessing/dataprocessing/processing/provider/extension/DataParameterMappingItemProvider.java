@@ -1,17 +1,14 @@
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.provider.extension;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer;
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.EcoreUtils;
+import org.palladiosimulator.pcm.core.entity.Entity;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataParameterMapping;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.ItemPropertyDescriptorWrapper;
 import org.palladiosimulator.pcm.repository.OperationSignature;
 import org.palladiosimulator.pcm.repository.Parameter;
@@ -29,37 +26,35 @@ public class DataParameterMappingItemProvider extends
 	protected void addParameterPropertyDescriptor(Object object) {
 		super.addParameterPropertyDescriptor(object);
 		IItemPropertyDescriptor originalDescriptor = itemPropertyDescriptors.remove(itemPropertyDescriptors.size() - 1);
-		ItemPropertyDescriptorWrapper descriptor = new ItemPropertyDescriptorWrapper(originalDescriptor) {
+		ItemPropertyDescriptorWrapper descriptor = new ParameterChoiceItePropertyDescriptorWrapper(originalDescriptor) {
+
 			@Override
-			public Collection<?> getChoiceOfValues(Object object) {
-				if (object instanceof EObject) {
-					EObject eobject = (EObject) object;
-					Collection<EObject> stereotypedElements = EcoreUtils
-							.findParent(eobject, DataProcessingContainer.class)
-							.map(c -> EcoreUtils.getStereotypedElements("DataProcessingSpecification", c))
-							.orElse(Collections.emptyList());
-					List<Parameter> choiceOfValues = stereotypedElements.stream().map(this::findMatchingParameters).flatMap(Collection::stream).collect(Collectors.toList());
-					if (!choiceOfValues.isEmpty()) {
-						return choiceOfValues;
-					}
-				}
-				return super.getChoiceOfValues(object);
-			}
-			
-			private Collection<Parameter> findMatchingParameters(EObject pcmElement) {
+			protected Collection<Object> processStereotypedElement(EObject pcmElement) {
 				OperationSignature signature = null;
 				if (pcmElement instanceof EntryLevelSystemCall) {
 					signature = ((EntryLevelSystemCall) pcmElement).getOperationSignature__EntryLevelSystemCall();
 				} else if (pcmElement instanceof ExternalCallAction) {
 					signature = ((ExternalCallAction) pcmElement).getCalledService_ExternalService();
 				}
-				return Optional.ofNullable(signature).map(OperationSignature::getParameters__OperationSignature).map(l -> (Collection<Parameter>)l).orElse(Collections.emptyList());
+				if (signature == null) {
+					return Collections.emptyList();
+				}
+				return Collections.unmodifiableCollection(signature.getParameters__OperationSignature());
 			}
-
 		};
 		itemPropertyDescriptors.add(descriptor);
 	}
 	
-	
+	@Override
+	public String getText(Object object) {
+		if (object instanceof DataParameterMapping) {
+			DataParameterMapping mapping = (DataParameterMapping) object;
+			return String.format("%s %s -> %s (%s)", getString("_UI_DataParameterMapping_type"),
+					Optional.ofNullable(mapping.getParameter()).map(Parameter::getParameterName).orElse(""),
+					Optional.ofNullable(mapping.getData()).map(Entity::getEntityName).orElse(""),
+					mapping.getId());
+		}
+		return super.getText(object);
+	}
 
 }

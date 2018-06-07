@@ -2,9 +2,9 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository;
 
-import de.uka.ipd.sdq.identifier.Identifier;
-
 import org.eclipse.emf.common.util.EList;
+
+import org.palladiosimulator.pcm.core.entity.Entity;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface StoreContainer extends Identifier
+public interface StoreContainer extends Entity
 {
 	/**
 	 * Returns the value of the '<em><b>Stores</b></em>' containment reference list.

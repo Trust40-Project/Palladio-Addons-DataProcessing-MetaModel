@@ -79,6 +79,15 @@ public interface ProcessingFactory extends EFactory
 	StoreDataOperation createStoreDataOperation();
 
 	/**
+	 * Returns a new object of class '<em>Return Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Return Data Operation</em>'.
+	 * @generated
+	 */
+	ReturnDataOperation createReturnDataOperation();
+
+	/**
 	 * Returns a new object of class '<em>Data Parameter Mapping</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

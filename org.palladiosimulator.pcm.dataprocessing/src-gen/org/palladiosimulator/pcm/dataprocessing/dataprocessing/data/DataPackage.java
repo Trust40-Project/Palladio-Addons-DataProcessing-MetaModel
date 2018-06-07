@@ -269,6 +269,70 @@ public interface DataPackage extends EPackage
 	 */
 	int RESULT_BASED_DATA_FEATURE_COUNT = DATA_FEATURE_COUNT + 1;
 
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DerivedDataImpl <em>Derived Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DerivedDataImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DataPackageImpl#getDerivedData()
+	 * @generated
+	 */
+	int DERIVED_DATA = 4;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DERIVED_DATA__ID = DATA__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DERIVED_DATA__ENTITY_NAME = DATA__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DERIVED_DATA__TYPE = DATA__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Sources</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DERIVED_DATA__SOURCES = DATA_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Resulting Data Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DERIVED_DATA__RESULTING_DATA_TYPE = DATA_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Derived Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DERIVED_DATA_FEATURE_COUNT = DATA_FEATURE_COUNT + 2;
+
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data <em>Data</em>}'.
@@ -353,6 +417,38 @@ public interface DataPackage extends EPackage
 	 * @generated
 	 */
 	EReference getResultBasedData_Operation();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DerivedData <em>Derived Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Derived Data</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DerivedData
+	 * @generated
+	 */
+	EClass getDerivedData();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DerivedData#getSources <em>Sources</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Sources</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DerivedData#getSources()
+	 * @see #getDerivedData()
+	 * @generated
+	 */
+	EReference getDerivedData_Sources();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DerivedData#getResultingDataType <em>Resulting Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Resulting Data Type</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DerivedData#getResultingDataType()
+	 * @see #getDerivedData()
+	 * @generated
+	 */
+	EReference getDerivedData_ResultingDataType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -448,6 +544,32 @@ public interface DataPackage extends EPackage
 		 * @generated
 		 */
 		EReference RESULT_BASED_DATA__OPERATION = eINSTANCE.getResultBasedData_Operation();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DerivedDataImpl <em>Derived Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DerivedDataImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DataPackageImpl#getDerivedData()
+		 * @generated
+		 */
+		EClass DERIVED_DATA = eINSTANCE.getDerivedData();
+
+		/**
+		 * The meta object literal for the '<em><b>Sources</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DERIVED_DATA__SOURCES = eINSTANCE.getDerivedData_Sources();
+
+		/**
+		 * The meta object literal for the '<em><b>Resulting Data Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DERIVED_DATA__RESULTING_DATA_TYPE = eINSTANCE.getDerivedData_ResultingDataType();
 
 	}
 

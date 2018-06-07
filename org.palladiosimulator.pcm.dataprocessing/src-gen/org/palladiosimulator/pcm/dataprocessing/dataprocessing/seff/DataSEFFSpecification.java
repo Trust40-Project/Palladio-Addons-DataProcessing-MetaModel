@@ -2,9 +2,9 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff;
 
-import de.uka.ipd.sdq.identifier.Identifier;
-
 import org.eclipse.emf.common.util.EList;
+
+import org.palladiosimulator.pcm.core.entity.Entity;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ParameterBasedData;
 
@@ -24,7 +24,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ParameterBas
  * @model
  * @generated
  */
-public interface DataSEFFSpecification extends Identifier
+public interface DataSEFFSpecification extends Entity
 {
 	/**
 	 * Returns the value of the '<em><b>Input Data</b></em>' containment reference list.

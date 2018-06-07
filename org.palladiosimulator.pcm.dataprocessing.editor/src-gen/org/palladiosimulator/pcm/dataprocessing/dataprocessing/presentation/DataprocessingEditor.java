@@ -182,7 +182,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.provid
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.provider.extension.RepositoryItemProviderAdapterFactory;
 
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.provider.SeffItemProviderAdapterFactory;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.provider.extension.SeffItemProviderAdapterFactory;
 
 import org.palladiosimulator.pcm.parameter.provider.ParameterItemProviderAdapterFactory;
 

@@ -2,8 +2,6 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 
 import org.palladiosimulator.pcm.repository.OperationSignature;
@@ -55,19 +53,29 @@ public interface DataResultMapping extends DataMapping
 	void setOperation(OperationSignature value);
 
 	/**
-	 * Returns the value of the '<em><b>Received Data</b></em>' containment reference list.
-	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data}.
+	 * Returns the value of the '<em><b>Received Data</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Received Data</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Received Data</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Received Data</em>' containment reference list.
+	 * @return the value of the '<em>Received Data</em>' containment reference.
+	 * @see #setReceivedData(Data)
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getDataResultMapping_ReceivedData()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Data> getReceivedData();
+	Data getReceivedData();
+
+	/**
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataResultMapping#getReceivedData <em>Received Data</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Received Data</em>' containment reference.
+	 * @see #getReceivedData()
+	 * @generated
+	 */
+	void setReceivedData(Data value);
 
 } // DataResultMapping

@@ -154,7 +154,7 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.provider.SeffItemProviderAdapterFactory;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.provider.extension.SeffItemProviderAdapterFactory;
 
 import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
 

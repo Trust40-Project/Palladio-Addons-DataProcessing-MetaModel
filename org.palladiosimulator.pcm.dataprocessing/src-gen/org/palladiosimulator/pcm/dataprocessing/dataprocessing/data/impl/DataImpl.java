@@ -63,16 +63,6 @@ public abstract class DataImpl extends EntityImpl implements Data
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(DataType newType)
-	{
-		eSet(DataPackage.Literals.DATA__TYPE, newType);
-	}
-
-	/**
 	 * The cached invocation delegate for the '{@link #determineDataType() <em>Determine Data Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -267,7 +267,6 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
 		EntityPackage theEntityPackage = (EntityPackage)EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
 		org.palladiosimulator.pcm.repository.RepositoryPackage theRepositoryPackage_1 = (org.palladiosimulator.pcm.repository.RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(org.palladiosimulator.pcm.repository.RepositoryPackage.eNS_URI);
 
@@ -276,7 +275,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		storeContainerEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
+		storeContainerEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		storeEClass.getESuperTypes().add(theEntityPackage.getEntity());
 
 		// Initialize classes and features; add operations and parameters

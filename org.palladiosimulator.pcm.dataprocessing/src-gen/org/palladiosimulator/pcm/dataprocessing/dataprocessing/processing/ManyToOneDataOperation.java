@@ -42,26 +42,26 @@ public interface ManyToOneDataOperation extends DataOperation
 	EList<Data> getConsumedData();
 
 	/**
-	 * Returns the value of the '<em><b>Resulting Data</b></em>' reference.
+	 * Returns the value of the '<em><b>Resulting Data</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Resulting Data</em>' reference isn't clear,
+	 * If the meaning of the '<em>Resulting Data</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resulting Data</em>' reference.
+	 * @return the value of the '<em>Resulting Data</em>' containment reference.
 	 * @see #setResultingData(Data)
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getManyToOneDataOperation_ResultingData()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Data getResultingData();
 
 	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ManyToOneDataOperation#getResultingData <em>Resulting Data</em>}' reference.
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ManyToOneDataOperation#getResultingData <em>Resulting Data</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Resulting Data</em>' reference.
+	 * @param value the new value of the '<em>Resulting Data</em>' containment reference.
 	 * @see #getResultingData()
 	 * @generated
 	 */

@@ -19,8 +19,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Transf
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.TransformDataOperationImpl#getInputData <em>Input Data</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.TransformDataOperationImpl#getOutputData <em>Output Data</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.TransformDataOperationImpl#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.TransformDataOperationImpl#getOutput <em>Output</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.TransformDataOperationImpl#getParameterData <em>Parameter Data</em>}</li>
  * </ul>
  *
@@ -54,9 +54,9 @@ public abstract class TransformDataOperationImpl extends DataOperationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Data getInputData()
+	public Data getInputs()
 	{
-		return (Data)eGet(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__INPUT_DATA, true);
+		return (Data)eGet(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__INPUTS, true);
 	}
 
 	/**
@@ -64,9 +64,9 @@ public abstract class TransformDataOperationImpl extends DataOperationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputData(Data newInputData)
+	public void setInputs(Data newInputs)
 	{
-		eSet(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__INPUT_DATA, newInputData);
+		eSet(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__INPUTS, newInputs);
 	}
 
 	/**
@@ -74,9 +74,9 @@ public abstract class TransformDataOperationImpl extends DataOperationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Data getOutputData()
+	public Data getOutput()
 	{
-		return (Data)eGet(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__OUTPUT_DATA, true);
+		return (Data)eGet(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__OUTPUT, true);
 	}
 
 	/**
@@ -84,9 +84,9 @@ public abstract class TransformDataOperationImpl extends DataOperationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOutputData(Data newOutputData)
+	public void setOutput(Data newOutput)
 	{
-		eSet(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__OUTPUT_DATA, newOutputData);
+		eSet(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__OUTPUT, newOutput);
 	}
 
 	/**

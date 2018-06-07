@@ -10,8 +10,8 @@ package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
  *
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getSelectionDataOperation()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='parametersExist inputAndOutputHaveSameEntityType'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot parametersExist='self.parameterData-&gt;notEmpty()' inputAndOutputHaveSameEntityType='self.inputData.type = self.outputData.type or self.inputData.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType = self.outputData.type'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='inputAndOutputHaveSameEntityType'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot inputAndOutputHaveSameEntityType='self.inputs.type-&gt;oclAsSet() = self.output.type-&gt;oclAsSet() or self.inputs.type.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType-&gt;oclAsSet() = self.output.type-&gt;oclAsSet()'"
  * @generated
  */
 public interface SelectionDataOperation extends TransformDataOperation

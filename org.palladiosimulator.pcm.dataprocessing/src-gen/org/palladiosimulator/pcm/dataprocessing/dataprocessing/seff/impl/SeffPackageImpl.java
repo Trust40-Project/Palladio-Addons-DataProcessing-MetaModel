@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.palladiosimulator.pcm.PcmPackage;
 
+import org.palladiosimulator.pcm.core.entity.EntityPackage;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage;
@@ -223,7 +225,7 @@ public class SeffPackageImpl extends EPackageImpl implements SeffPackage
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
+		EntityPackage theEntityPackage = (EntityPackage)EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
 		DataPackage theDataPackage = (DataPackage)EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
 
 		// Create type parameters
@@ -231,7 +233,7 @@ public class SeffPackageImpl extends EPackageImpl implements SeffPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		dataSEFFSpecificationEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
+		dataSEFFSpecificationEClass.getESuperTypes().add(theEntityPackage.getEntity());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(dataSEFFSpecificationEClass, DataSEFFSpecification.class, "DataSEFFSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

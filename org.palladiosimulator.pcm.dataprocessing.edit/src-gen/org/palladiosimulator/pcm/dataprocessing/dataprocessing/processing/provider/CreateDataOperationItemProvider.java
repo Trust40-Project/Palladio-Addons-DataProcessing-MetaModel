@@ -163,6 +163,11 @@ public class CreateDataOperationItemProvider extends DataOperationItemProvider
 			(createChildParameter
 				(ProcessingPackage.Literals.CREATE_DATA_OPERATION__RESULTING_DATA,
 				 DataFactory.eINSTANCE.createResultBasedData()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.CREATE_DATA_OPERATION__RESULTING_DATA,
+				 DataFactory.eINSTANCE.createDerivedData()));
 	}
 
 }

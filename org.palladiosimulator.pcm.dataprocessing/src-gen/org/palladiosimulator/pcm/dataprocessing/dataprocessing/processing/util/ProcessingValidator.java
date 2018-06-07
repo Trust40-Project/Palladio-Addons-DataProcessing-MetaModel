@@ -108,6 +108,8 @@ public class ProcessingValidator extends EObjectValidator
 				return validateConsumeDataOperation((ConsumeDataOperation)value, diagnostics, context);
 			case ProcessingPackage.STORE_DATA_OPERATION:
 				return validateStoreDataOperation((StoreDataOperation)value, diagnostics, context);
+			case ProcessingPackage.RETURN_DATA_OPERATION:
+				return validateReturnDataOperation((ReturnDataOperation)value, diagnostics, context);
 			case ProcessingPackage.DATA_MAPPING:
 				return validateDataMapping((DataMapping)value, diagnostics, context);
 			case ProcessingPackage.DATA_PARAMETER_MAPPING:
@@ -253,6 +255,16 @@ public class ProcessingValidator extends EObjectValidator
 	public boolean validateStoreDataOperation(StoreDataOperation storeDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
 		return validate_EveryDefaultConstraint((EObject)storeDataOperation, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateReturnDataOperation(ReturnDataOperation returnDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return validate_EveryDefaultConstraint((EObject)returnDataOperation, diagnostics, context);
 	}
 
 	/**
@@ -507,7 +519,7 @@ public class ProcessingValidator extends EObjectValidator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String PROJECTION_DATA_OPERATION__OUTPUT_IS_COMPOSED_IN_INPUT__EEXPRESSION = "self.inputData.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.outputData.type)";
+	protected static final String PROJECTION_DATA_OPERATION__OUTPUT_IS_COMPOSED_IN_INPUT__EEXPRESSION = "self.inputs.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)";
 
 	/**
 	 * Validates the outputIsComposedInInput constraint of '<em>Projection Data Operation</em>'.
@@ -547,39 +559,8 @@ public class ProcessingValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_UniqueID((EObject)selectionDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)selectionDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)selectionDataOperation, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSelectionDataOperation_parametersExist(selectionDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateSelectionDataOperation_inputAndOutputHaveSameEntityType(selectionDataOperation, diagnostics, context);
 		return result;
-	}
-
-	/**
-	 * The cached validation expression for the parametersExist constraint of '<em>Selection Data Operation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected static final String SELECTION_DATA_OPERATION__PARAMETERS_EXIST__EEXPRESSION = "self.parameterData->notEmpty()";
-
-	/**
-	 * Validates the parametersExist constraint of '<em>Selection Data Operation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateSelectionDataOperation_parametersExist(SelectionDataOperation selectionDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
-	{
-		return
-			validate
-				(ProcessingPackage.Literals.SELECTION_DATA_OPERATION,
-				 (EObject)selectionDataOperation,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-				 "parametersExist",
-				 SELECTION_DATA_OPERATION__PARAMETERS_EXIST__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 DIAGNOSTIC_SOURCE,
-				 0);
 	}
 
 	/**
@@ -588,7 +569,7 @@ public class ProcessingValidator extends EObjectValidator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String SELECTION_DATA_OPERATION__INPUT_AND_OUTPUT_HAVE_SAME_ENTITY_TYPE__EEXPRESSION = "self.inputData.type = self.outputData.type or self.inputData.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType = self.outputData.type";
+	protected static final String SELECTION_DATA_OPERATION__INPUT_AND_OUTPUT_HAVE_SAME_ENTITY_TYPE__EEXPRESSION = "self.inputs.type->oclAsSet() = self.output.type->oclAsSet() or self.inputs.type.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()";
 
 	/**
 	 * Validates the inputAndOutputHaveSameEntityType constraint of '<em>Selection Data Operation</em>'.

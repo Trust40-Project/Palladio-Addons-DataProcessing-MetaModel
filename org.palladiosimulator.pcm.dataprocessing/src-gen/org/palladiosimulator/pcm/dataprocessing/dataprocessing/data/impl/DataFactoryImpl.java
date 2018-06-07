@@ -67,6 +67,7 @@ public class DataFactoryImpl extends EFactoryImpl implements DataFactory
 			case DataPackage.ORIGINAL_DATA: return (EObject)createOriginalData();
 			case DataPackage.PARAMETER_BASED_DATA: return (EObject)createParameterBasedData();
 			case DataPackage.RESULT_BASED_DATA: return (EObject)createResultBasedData();
+			case DataPackage.DERIVED_DATA: return (EObject)createDerivedData();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -103,6 +104,17 @@ public class DataFactoryImpl extends EFactoryImpl implements DataFactory
 	{
 		ResultBasedDataImpl resultBasedData = new ResultBasedDataImpl();
 		return resultBasedData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DerivedData createDerivedData()
+	{
+		DerivedDataImpl derivedData = new DerivedDataImpl();
+		return derivedData;
 	}
 
 	/**

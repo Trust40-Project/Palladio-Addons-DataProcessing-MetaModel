@@ -21,4 +21,44 @@ public class ProcessingItemProviderAdapterFactory extends
 		return dataParameterMappingItemProvider;
 	}
 
+	@Override
+	public Adapter createDataResultMappingAdapter() {
+		if (dataResultMappingItemProvider == null) {
+			dataResultMappingItemProvider = new DataResultMappingItemProvider(this);
+		}
+		return dataResultMappingItemProvider;
+	}
+
+	@Override
+	public Adapter createSelectionDataOperationAdapter() {
+		if (selectionDataOperationItemProvider == null) {
+			selectionDataOperationItemProvider = new SelectionDataOperationItemProvider(this);
+		}
+		return selectionDataOperationItemProvider;
+	}
+
+	@Override
+	public Adapter createCreateDataOperationAdapter() {
+		if (createDataOperationItemProvider == null) {
+			createDataOperationItemProvider = new CreateDataOperationItemProvider(this);
+		}
+		return createDataOperationItemProvider;
+	}
+
+	@Override
+	public Adapter createPerformDataTransmissionOperationAdapter() {
+		if (performDataTransmissionOperationItemProvider == null) {
+			performDataTransmissionOperationItemProvider = new PerformDataTransmissionOperationItemProvider(this);
+		}
+		return performDataTransmissionOperationItemProvider;
+	}
+
+	@Override
+	public Adapter createReturnDataOperationAdapter() {
+		if (returnDataOperationItemProvider == null) {
+			returnDataOperationItemProvider = new ReturnDataOperationItemProvider(this);
+		}
+		return returnDataOperationItemProvider;
+	}
+
 }

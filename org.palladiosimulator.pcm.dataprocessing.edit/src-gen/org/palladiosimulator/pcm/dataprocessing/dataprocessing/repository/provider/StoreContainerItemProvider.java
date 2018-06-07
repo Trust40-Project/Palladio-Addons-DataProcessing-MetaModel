@@ -3,21 +3,18 @@
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.provider;
 
 
-import de.uka.ipd.sdq.identifier.provider.IdentifierItemProvider;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.RepositoryFactory;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.RepositoryPackage;
@@ -29,7 +26,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.StoreC
  * <!-- end-user-doc -->
  * @generated
  */
-public class StoreContainerItemProvider extends IdentifierItemProvider
+public class StoreContainerItemProvider extends EntityItemProvider
 {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -157,18 +154,6 @@ public class StoreContainerItemProvider extends IdentifierItemProvider
 			(createChildParameter
 				(RepositoryPackage.Literals.STORE_CONTAINER__STORES,
 				 RepositoryFactory.eINSTANCE.createStore()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator()
-	{
-		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
 }

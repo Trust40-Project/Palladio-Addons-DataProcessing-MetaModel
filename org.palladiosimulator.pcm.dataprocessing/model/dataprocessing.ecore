@@ -24,7 +24,7 @@
   </eClassifiers>
   <eSubpackages name="repository" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/repository/0.1/"
       nsPrefix="repository">
-    <eClassifiers xsi:type="ecore:EClass" name="StoreContainer" eSuperTypes="../../de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eClassifiers xsi:type="ecore:EClass" name="StoreContainer" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eStructuralFeatures xsi:type="ecore:EReference" name="stores" upperBound="-1"
           eType="#//repository/Store" containment="true" eOpposite="#//repository/Store/container"/>
     </eClassifiers>
@@ -82,6 +82,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="store" lowerBound="1"
           eType="#//repository/Store"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ReturnDataOperation" eSuperTypes="#//processing/ConsumeDataOperation"/>
     <eClassifiers xsi:type="ecore:EClass" name="DataMapping" abstract="true" eSuperTypes="../../de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
       <eStructuralFeatures xsi:type="ecore:EReference" name="data" lowerBound="1"
           eType="#//data/Data"/>
@@ -99,7 +100,7 @@
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="operation" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationSignature"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="receivedData" upperBound="-1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="receivedData" lowerBound="1"
           eType="#//data/Data" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ManyToOneDataOperation" abstract="true"
@@ -107,7 +108,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="consumedData" lowerBound="2"
           upperBound="-1" eType="#//data/Data"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="resultingData" lowerBound="1"
-          eType="#//data/Data"/>
+          eType="#//data/Data" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="JoinDataOperation" eSuperTypes="#//processing/ManyToOneDataOperation">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -127,10 +128,10 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TransformDataOperation" abstract="true"
         eSuperTypes="#//processing/DataOperation">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="inputData" lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" lowerBound="1"
           eType="#//data/Data"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="outputData" lowerBound="1"
-          eType="#//data/Data"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"
+          eType="#//data/Data" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parameterData" upperBound="-1"
           eType="#//data/Data"/>
     </eClassifiers>
@@ -140,16 +141,15 @@
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
         <details key="noParameters" value="self.parameterData->isEmpty()"/>
-        <details key="outputIsComposedInInput" value="self.inputData.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.outputData.type)"/>
+        <details key="outputIsComposedInInput" value="self.inputs.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SelectionDataOperation" eSuperTypes="#//processing/TransformDataOperation">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="parametersExist inputAndOutputHaveSameEntityType"/>
+        <details key="constraints" value="inputAndOutputHaveSameEntityType"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="parametersExist" value="self.parameterData->notEmpty()"/>
-        <details key="inputAndOutputHaveSameEntityType" value="self.inputData.type = self.outputData.type or self.inputData.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType = self.outputData.type"/>
+        <details key="inputAndOutputHaveSameEntityType" value="self.inputs.type->oclAsSet() = self.output.type->oclAsSet() or self.inputs.type.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CharacteristicChangingDataOperation"
@@ -259,7 +259,7 @@
       </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"
-          volatile="true" transient="true" derived="true">
+          changeable="false" volatile="true" transient="true" derived="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
           <details key="derivation" value="determineDataType()"/>
         </eAnnotations>
@@ -292,10 +292,21 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="operation" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationSignature"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DerivedData" eSuperTypes="#//data/Data">
+      <eOperations name="determineDataType" lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="body" value="resultingDataType"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sources" lowerBound="1"
+          upperBound="-1" eType="#//data/Data"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resultingDataType" lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="seff" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/seff/0.1/"
       nsPrefix="seff">
-    <eClassifiers xsi:type="ecore:EClass" name="DataSEFFSpecification" eSuperTypes="../../de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eClassifiers xsi:type="ecore:EClass" name="DataSEFFSpecification" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eStructuralFeatures xsi:type="ecore:EReference" name="inputData" upperBound="-1"
           eType="#//data/ParameterBasedData" containment="true"/>
     </eClassifiers>

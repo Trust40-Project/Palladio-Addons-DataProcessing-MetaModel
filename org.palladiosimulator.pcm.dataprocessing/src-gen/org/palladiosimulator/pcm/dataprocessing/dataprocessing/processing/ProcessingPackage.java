@@ -521,6 +521,61 @@ public interface ProcessingPackage extends EPackage
 	int STORE_DATA_OPERATION_FEATURE_COUNT = CONSUME_DATA_OPERATION_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ReturnDataOperationImpl <em>Return Data Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ReturnDataOperationImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getReturnDataOperation()
+	 * @generated
+	 */
+	int RETURN_DATA_OPERATION = 8;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_DATA_OPERATION__ID = CONSUME_DATA_OPERATION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_DATA_OPERATION__ENTITY_NAME = CONSUME_DATA_OPERATION__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Container</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_DATA_OPERATION__CONTAINER = CONSUME_DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Consumed Data</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_DATA_OPERATION__CONSUMED_DATA = CONSUME_DATA_OPERATION__CONSUMED_DATA;
+
+	/**
+	 * The number of structural features of the '<em>Return Data Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_DATA_OPERATION_FEATURE_COUNT = CONSUME_DATA_OPERATION_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.DataMappingImpl <em>Data Mapping</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -528,7 +583,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getDataMapping()
 	 * @generated
 	 */
-	int DATA_MAPPING = 8;
+	int DATA_MAPPING = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -565,7 +620,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getDataParameterMapping()
 	 * @generated
 	 */
-	int DATA_PARAMETER_MAPPING = 9;
+	int DATA_PARAMETER_MAPPING = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -611,7 +666,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getDataResultMapping()
 	 * @generated
 	 */
-	int DATA_RESULT_MAPPING = 10;
+	int DATA_RESULT_MAPPING = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -641,7 +696,7 @@ public interface ProcessingPackage extends EPackage
 	int DATA_RESULT_MAPPING__OPERATION = DATA_MAPPING_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Received Data</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Received Data</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -666,7 +721,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getManyToOneDataOperation()
 	 * @generated
 	 */
-	int MANY_TO_ONE_DATA_OPERATION = 11;
+	int MANY_TO_ONE_DATA_OPERATION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -705,7 +760,7 @@ public interface ProcessingPackage extends EPackage
 	int MANY_TO_ONE_DATA_OPERATION__CONSUMED_DATA = DATA_OPERATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Resulting Data</b></em>' reference.
+	 * The feature id for the '<em><b>Resulting Data</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -730,7 +785,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getJoinDataOperation()
 	 * @generated
 	 */
-	int JOIN_DATA_OPERATION = 12;
+	int JOIN_DATA_OPERATION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -769,7 +824,7 @@ public interface ProcessingPackage extends EPackage
 	int JOIN_DATA_OPERATION__CONSUMED_DATA = MANY_TO_ONE_DATA_OPERATION__CONSUMED_DATA;
 
 	/**
-	 * The feature id for the '<em><b>Resulting Data</b></em>' reference.
+	 * The feature id for the '<em><b>Resulting Data</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -794,7 +849,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getUnionDataOperation()
 	 * @generated
 	 */
-	int UNION_DATA_OPERATION = 13;
+	int UNION_DATA_OPERATION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -833,7 +888,7 @@ public interface ProcessingPackage extends EPackage
 	int UNION_DATA_OPERATION__CONSUMED_DATA = MANY_TO_ONE_DATA_OPERATION__CONSUMED_DATA;
 
 	/**
-	 * The feature id for the '<em><b>Resulting Data</b></em>' reference.
+	 * The feature id for the '<em><b>Resulting Data</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -858,7 +913,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getTransformDataOperation()
 	 * @generated
 	 */
-	int TRANSFORM_DATA_OPERATION = 14;
+	int TRANSFORM_DATA_OPERATION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -888,22 +943,22 @@ public interface ProcessingPackage extends EPackage
 	int TRANSFORM_DATA_OPERATION__CONTAINER = DATA_OPERATION__CONTAINER;
 
 	/**
-	 * The feature id for the '<em><b>Input Data</b></em>' reference.
+	 * The feature id for the '<em><b>Inputs</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSFORM_DATA_OPERATION__INPUT_DATA = DATA_OPERATION_FEATURE_COUNT + 0;
+	int TRANSFORM_DATA_OPERATION__INPUTS = DATA_OPERATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Output Data</b></em>' reference.
+	 * The feature id for the '<em><b>Output</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSFORM_DATA_OPERATION__OUTPUT_DATA = DATA_OPERATION_FEATURE_COUNT + 1;
+	int TRANSFORM_DATA_OPERATION__OUTPUT = DATA_OPERATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Parameter Data</b></em>' reference list.
@@ -931,7 +986,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getProjectionDataOperation()
 	 * @generated
 	 */
-	int PROJECTION_DATA_OPERATION = 15;
+	int PROJECTION_DATA_OPERATION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -961,22 +1016,22 @@ public interface ProcessingPackage extends EPackage
 	int PROJECTION_DATA_OPERATION__CONTAINER = TRANSFORM_DATA_OPERATION__CONTAINER;
 
 	/**
-	 * The feature id for the '<em><b>Input Data</b></em>' reference.
+	 * The feature id for the '<em><b>Inputs</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECTION_DATA_OPERATION__INPUT_DATA = TRANSFORM_DATA_OPERATION__INPUT_DATA;
+	int PROJECTION_DATA_OPERATION__INPUTS = TRANSFORM_DATA_OPERATION__INPUTS;
 
 	/**
-	 * The feature id for the '<em><b>Output Data</b></em>' reference.
+	 * The feature id for the '<em><b>Output</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECTION_DATA_OPERATION__OUTPUT_DATA = TRANSFORM_DATA_OPERATION__OUTPUT_DATA;
+	int PROJECTION_DATA_OPERATION__OUTPUT = TRANSFORM_DATA_OPERATION__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Parameter Data</b></em>' reference list.
@@ -1004,7 +1059,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getSelectionDataOperation()
 	 * @generated
 	 */
-	int SELECTION_DATA_OPERATION = 16;
+	int SELECTION_DATA_OPERATION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1034,22 +1089,22 @@ public interface ProcessingPackage extends EPackage
 	int SELECTION_DATA_OPERATION__CONTAINER = TRANSFORM_DATA_OPERATION__CONTAINER;
 
 	/**
-	 * The feature id for the '<em><b>Input Data</b></em>' reference.
+	 * The feature id for the '<em><b>Inputs</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION_DATA_OPERATION__INPUT_DATA = TRANSFORM_DATA_OPERATION__INPUT_DATA;
+	int SELECTION_DATA_OPERATION__INPUTS = TRANSFORM_DATA_OPERATION__INPUTS;
 
 	/**
-	 * The feature id for the '<em><b>Output Data</b></em>' reference.
+	 * The feature id for the '<em><b>Output</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION_DATA_OPERATION__OUTPUT_DATA = TRANSFORM_DATA_OPERATION__OUTPUT_DATA;
+	int SELECTION_DATA_OPERATION__OUTPUT = TRANSFORM_DATA_OPERATION__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Parameter Data</b></em>' reference list.
@@ -1077,7 +1132,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getCharacteristicChangingDataOperation()
 	 * @generated
 	 */
-	int CHARACTERISTIC_CHANGING_DATA_OPERATION = 17;
+	int CHARACTERISTIC_CHANGING_DATA_OPERATION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1150,7 +1205,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getCharacteristicChangeOperation()
 	 * @generated
 	 */
-	int CHARACTERISTIC_CHANGE_OPERATION = 18;
+	int CHARACTERISTIC_CHANGE_OPERATION = 19;
 
 
 	/**
@@ -1322,6 +1377,16 @@ public interface ProcessingPackage extends EPackage
 	EReference getStoreDataOperation_Store();
 
 	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ReturnDataOperation <em>Return Data Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Return Data Operation</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ReturnDataOperation
+	 * @generated
+	 */
+	EClass getReturnDataOperation();
+
+	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataMapping <em>Data Mapping</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1385,10 +1450,10 @@ public interface ProcessingPackage extends EPackage
 	EReference getDataResultMapping_Operation();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataResultMapping#getReceivedData <em>Received Data</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataResultMapping#getReceivedData <em>Received Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Received Data</em>'.
+	 * @return the meta object for the containment reference '<em>Received Data</em>'.
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataResultMapping#getReceivedData()
 	 * @see #getDataResultMapping()
 	 * @generated
@@ -1417,10 +1482,10 @@ public interface ProcessingPackage extends EPackage
 	EReference getManyToOneDataOperation_ConsumedData();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ManyToOneDataOperation#getResultingData <em>Resulting Data</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ManyToOneDataOperation#getResultingData <em>Resulting Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Resulting Data</em>'.
+	 * @return the meta object for the containment reference '<em>Resulting Data</em>'.
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ManyToOneDataOperation#getResultingData()
 	 * @see #getManyToOneDataOperation()
 	 * @generated
@@ -1458,26 +1523,26 @@ public interface ProcessingPackage extends EPackage
 	EClass getTransformDataOperation();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getInputData <em>Input Data</em>}'.
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getInputs <em>Inputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Input Data</em>'.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getInputData()
+	 * @return the meta object for the reference '<em>Inputs</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getInputs()
 	 * @see #getTransformDataOperation()
 	 * @generated
 	 */
-	EReference getTransformDataOperation_InputData();
+	EReference getTransformDataOperation_Inputs();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getOutputData <em>Output Data</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getOutput <em>Output</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Output Data</em>'.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getOutputData()
+	 * @return the meta object for the containment reference '<em>Output</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getOutput()
 	 * @see #getTransformDataOperation()
 	 * @generated
 	 */
-	EReference getTransformDataOperation_OutputData();
+	EReference getTransformDataOperation_Output();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getParameterData <em>Parameter Data</em>}'.
@@ -1731,6 +1796,16 @@ public interface ProcessingPackage extends EPackage
 		EReference STORE_DATA_OPERATION__STORE = eINSTANCE.getStoreDataOperation_Store();
 
 		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ReturnDataOperationImpl <em>Return Data Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ReturnDataOperationImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getReturnDataOperation()
+		 * @generated
+		 */
+		EClass RETURN_DATA_OPERATION = eINSTANCE.getReturnDataOperation();
+
+		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.DataMappingImpl <em>Data Mapping</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1785,7 +1860,7 @@ public interface ProcessingPackage extends EPackage
 		EReference DATA_RESULT_MAPPING__OPERATION = eINSTANCE.getDataResultMapping_Operation();
 
 		/**
-		 * The meta object literal for the '<em><b>Received Data</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Received Data</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1811,7 +1886,7 @@ public interface ProcessingPackage extends EPackage
 		EReference MANY_TO_ONE_DATA_OPERATION__CONSUMED_DATA = eINSTANCE.getManyToOneDataOperation_ConsumedData();
 
 		/**
-		 * The meta object literal for the '<em><b>Resulting Data</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Resulting Data</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1849,20 +1924,20 @@ public interface ProcessingPackage extends EPackage
 		EClass TRANSFORM_DATA_OPERATION = eINSTANCE.getTransformDataOperation();
 
 		/**
-		 * The meta object literal for the '<em><b>Input Data</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Inputs</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRANSFORM_DATA_OPERATION__INPUT_DATA = eINSTANCE.getTransformDataOperation_InputData();
+		EReference TRANSFORM_DATA_OPERATION__INPUTS = eINSTANCE.getTransformDataOperation_Inputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Output Data</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Output</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRANSFORM_DATA_OPERATION__OUTPUT_DATA = eINSTANCE.getTransformDataOperation_OutputData();
+		EReference TRANSFORM_DATA_OPERATION__OUTPUT = eINSTANCE.getTransformDataOperation_Output();
 
 		/**
 		 * The meta object literal for the '<em><b>Parameter Data</b></em>' reference list feature.

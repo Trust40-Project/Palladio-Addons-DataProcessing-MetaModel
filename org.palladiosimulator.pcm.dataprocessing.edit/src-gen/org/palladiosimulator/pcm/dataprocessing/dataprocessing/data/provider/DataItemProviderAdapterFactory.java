@@ -168,6 +168,31 @@ public class DataItemProviderAdapterFactory extends DataAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DerivedData} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DerivedDataItemProvider derivedDataItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DerivedData}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDerivedDataAdapter()
+	{
+		if (derivedDataItemProvider == null)
+		{
+			derivedDataItemProvider = new DerivedDataItemProvider(this);
+		}
+
+		return derivedDataItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -311,6 +336,7 @@ public class DataItemProviderAdapterFactory extends DataAdapterFactory implement
 		if (originalDataItemProvider != null) originalDataItemProvider.dispose();
 		if (parameterBasedDataItemProvider != null) parameterBasedDataItemProvider.dispose();
 		if (resultBasedDataItemProvider != null) resultBasedDataItemProvider.dispose();
+		if (derivedDataItemProvider != null) derivedDataItemProvider.dispose();
 	}
 
 }

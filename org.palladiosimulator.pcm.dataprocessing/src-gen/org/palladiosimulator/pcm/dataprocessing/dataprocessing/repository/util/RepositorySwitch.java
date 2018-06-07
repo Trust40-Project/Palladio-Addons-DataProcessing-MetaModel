@@ -81,7 +81,9 @@ public class RepositorySwitch<T> extends Switch<T>
 			{
 				StoreContainer storeContainer = (StoreContainer)theEObject;
 				T result = caseStoreContainer(storeContainer);
+				if (result == null) result = caseEntity(storeContainer);
 				if (result == null) result = caseIdentifier(storeContainer);
+				if (result == null) result = caseNamedElement(storeContainer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

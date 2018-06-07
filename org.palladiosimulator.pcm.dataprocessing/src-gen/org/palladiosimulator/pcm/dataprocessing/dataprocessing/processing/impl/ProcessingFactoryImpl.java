@@ -73,6 +73,7 @@ public class ProcessingFactoryImpl extends EFactoryImpl implements ProcessingFac
 			case ProcessingPackage.LOAD_ALL_DATA_OPERATION: return (EObject)createLoadAllDataOperation();
 			case ProcessingPackage.PERFORM_DATA_TRANSMISSION_OPERATION: return (EObject)createPerformDataTransmissionOperation();
 			case ProcessingPackage.STORE_DATA_OPERATION: return (EObject)createStoreDataOperation();
+			case ProcessingPackage.RETURN_DATA_OPERATION: return (EObject)createReturnDataOperation();
 			case ProcessingPackage.DATA_PARAMETER_MAPPING: return (EObject)createDataParameterMapping();
 			case ProcessingPackage.DATA_RESULT_MAPPING: return (EObject)createDataResultMapping();
 			case ProcessingPackage.JOIN_DATA_OPERATION: return (EObject)createJoinDataOperation();
@@ -183,6 +184,17 @@ public class ProcessingFactoryImpl extends EFactoryImpl implements ProcessingFac
 	{
 		StoreDataOperationImpl storeDataOperation = new StoreDataOperationImpl();
 		return storeDataOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ReturnDataOperation createReturnDataOperation()
+	{
+		ReturnDataOperationImpl returnDataOperation = new ReturnDataOperationImpl();
+		return returnDataOperation;
 	}
 
 	/**

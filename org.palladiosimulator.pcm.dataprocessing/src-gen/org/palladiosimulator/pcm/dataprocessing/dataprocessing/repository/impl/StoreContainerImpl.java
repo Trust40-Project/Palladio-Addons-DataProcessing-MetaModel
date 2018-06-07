@@ -2,11 +2,11 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.impl;
 
-import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+
+import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.RepositoryPackage;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.Store;
@@ -25,7 +25,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.StoreC
  *
  * @generated
  */
-public class StoreContainerImpl extends IdentifierImpl implements StoreContainer
+public class StoreContainerImpl extends EntityImpl implements StoreContainer
 {
 	/**
 	 * <!-- begin-user-doc -->

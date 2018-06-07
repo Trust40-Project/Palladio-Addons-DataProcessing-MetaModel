@@ -29,4 +29,12 @@ public class DataItemProviderAdapterFactory
 		return resultBasedDataItemProvider;
 	}
 
+	@Override
+	public Adapter createDerivedDataAdapter() {
+		if (derivedDataItemProvider == null) {
+			derivedDataItemProvider = new DerivedDataItemProvider(this);
+		}
+		return derivedDataItemProvider;
+	}
+
 }

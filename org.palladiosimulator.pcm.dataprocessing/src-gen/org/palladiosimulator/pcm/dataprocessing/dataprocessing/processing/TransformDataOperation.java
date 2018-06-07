@@ -15,8 +15,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getInputData <em>Input Data</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getOutputData <em>Output Data</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getOutput <em>Output</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getParameterData <em>Parameter Data</em>}</li>
  * </ul>
  *
@@ -27,56 +27,56 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 public interface TransformDataOperation extends DataOperation
 {
 	/**
-	 * Returns the value of the '<em><b>Input Data</b></em>' reference.
+	 * Returns the value of the '<em><b>Inputs</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Input Data</em>' reference isn't clear,
+	 * If the meaning of the '<em>Inputs</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Data</em>' reference.
-	 * @see #setInputData(Data)
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getTransformDataOperation_InputData()
+	 * @return the value of the '<em>Inputs</em>' reference.
+	 * @see #setInputs(Data)
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getTransformDataOperation_Inputs()
 	 * @model required="true"
 	 * @generated
 	 */
-	Data getInputData();
+	Data getInputs();
 
 	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getInputData <em>Input Data</em>}' reference.
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getInputs <em>Inputs</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Data</em>' reference.
-	 * @see #getInputData()
+	 * @param value the new value of the '<em>Inputs</em>' reference.
+	 * @see #getInputs()
 	 * @generated
 	 */
-	void setInputData(Data value);
+	void setInputs(Data value);
 
 	/**
-	 * Returns the value of the '<em><b>Output Data</b></em>' reference.
+	 * Returns the value of the '<em><b>Output</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Output Data</em>' reference isn't clear,
+	 * If the meaning of the '<em>Output</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Output Data</em>' reference.
-	 * @see #setOutputData(Data)
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getTransformDataOperation_OutputData()
-	 * @model required="true"
+	 * @return the value of the '<em>Output</em>' containment reference.
+	 * @see #setOutput(Data)
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getTransformDataOperation_Output()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Data getOutputData();
+	Data getOutput();
 
 	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getOutputData <em>Output Data</em>}' reference.
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getOutput <em>Output</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Output Data</em>' reference.
-	 * @see #getOutputData()
+	 * @param value the new value of the '<em>Output</em>' containment reference.
+	 * @see #getOutput()
 	 * @generated
 	 */
-	void setOutputData(Data value);
+	void setOutput(Data value);
 
 	/**
 	 * Returns the value of the '<em><b>Parameter Data</b></em>' reference list.

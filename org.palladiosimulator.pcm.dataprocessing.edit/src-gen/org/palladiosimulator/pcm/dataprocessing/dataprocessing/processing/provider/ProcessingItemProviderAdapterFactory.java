@@ -243,6 +243,31 @@ public class ProcessingItemProviderAdapterFactory extends ProcessingAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ReturnDataOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ReturnDataOperationItemProvider returnDataOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ReturnDataOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createReturnDataOperationAdapter()
+	{
+		if (returnDataOperationItemProvider == null)
+		{
+			returnDataOperationItemProvider = new ReturnDataOperationItemProvider(this);
+		}
+
+		return returnDataOperationItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataParameterMapping} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -564,6 +589,7 @@ public class ProcessingItemProviderAdapterFactory extends ProcessingAdapterFacto
 		if (loadAllDataOperationItemProvider != null) loadAllDataOperationItemProvider.dispose();
 		if (performDataTransmissionOperationItemProvider != null) performDataTransmissionOperationItemProvider.dispose();
 		if (storeDataOperationItemProvider != null) storeDataOperationItemProvider.dispose();
+		if (returnDataOperationItemProvider != null) returnDataOperationItemProvider.dispose();
 		if (dataParameterMappingItemProvider != null) dataParameterMappingItemProvider.dispose();
 		if (dataResultMappingItemProvider != null) dataResultMappingItemProvider.dispose();
 		if (joinDataOperationItemProvider != null) joinDataOperationItemProvider.dispose();

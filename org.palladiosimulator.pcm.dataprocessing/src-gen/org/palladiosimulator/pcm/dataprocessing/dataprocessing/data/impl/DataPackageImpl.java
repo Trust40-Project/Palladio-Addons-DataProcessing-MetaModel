@@ -29,6 +29,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.i
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataFactory;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataPackage;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DerivedData;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.OriginalData;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ParameterBasedData;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ResultBasedData;
@@ -82,6 +83,13 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 	 * @generated
 	 */
 	private EClass resultBasedDataEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass derivedDataEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -255,6 +263,36 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getDerivedData()
+	{
+		return derivedDataEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDerivedData_Sources()
+	{
+		return (EReference)derivedDataEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDerivedData_ResultingDataType()
+	{
+		return (EReference)derivedDataEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public DataFactory getDataFactory()
 	{
 		return (DataFactory)getEFactoryInstance();
@@ -291,6 +329,10 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 
 		resultBasedDataEClass = createEClass(RESULT_BASED_DATA);
 		createEReference(resultBasedDataEClass, RESULT_BASED_DATA__OPERATION);
+
+		derivedDataEClass = createEClass(DERIVED_DATA);
+		createEReference(derivedDataEClass, DERIVED_DATA__SOURCES);
+		createEReference(derivedDataEClass, DERIVED_DATA__RESULTING_DATA_TYPE);
 	}
 
 	/**
@@ -330,10 +372,11 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		originalDataEClass.getESuperTypes().add(this.getData());
 		parameterBasedDataEClass.getESuperTypes().add(this.getData());
 		resultBasedDataEClass.getESuperTypes().add(this.getData());
+		derivedDataEClass.getESuperTypes().add(this.getData());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(dataEClass, Data.class, "Data", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getData_Type(), theRepositoryPackage_1.getDataType(), null, "type", null, 1, 1, Data.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getData_Type(), theRepositoryPackage_1.getDataType(), null, "type", null, 1, 1, Data.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		addEOperation(dataEClass, theRepositoryPackage_1.getDataType(), "determineDataType", 1, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -351,6 +394,12 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		initEReference(getResultBasedData_Operation(), theRepositoryPackage_1.getOperationSignature(), null, "operation", null, 1, 1, ResultBasedData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(resultBasedDataEClass, theRepositoryPackage_1.getDataType(), "determineDataType", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(derivedDataEClass, DerivedData.class, "DerivedData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDerivedData_Sources(), this.getData(), null, "sources", null, 1, -1, DerivedData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDerivedData_ResultingDataType(), theRepositoryPackage_1.getDataType(), null, "resultingDataType", null, 1, 1, DerivedData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(derivedDataEClass, theRepositoryPackage_1.getDataType(), "determineDataType", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore
@@ -422,6 +471,13 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		   new String[] 
 		   {
 			 "body", "operation.returnType__OperationSignature"
+		   });	
+		addAnnotation
+		  (derivedDataEClass.getEOperations().get(0), 
+		   source, 
+		   new String[] 
+		   {
+			 "body", "resultingDataType"
 		   });
 	}
 

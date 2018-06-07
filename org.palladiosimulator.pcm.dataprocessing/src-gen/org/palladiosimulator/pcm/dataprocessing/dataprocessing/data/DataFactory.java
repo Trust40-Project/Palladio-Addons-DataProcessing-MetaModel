@@ -50,6 +50,15 @@ public interface DataFactory extends EFactory
 	ResultBasedData createResultBasedData();
 
 	/**
+	 * Returns a new object of class '<em>Derived Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Derived Data</em>'.
+	 * @generated
+	 */
+	DerivedData createDerivedData();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

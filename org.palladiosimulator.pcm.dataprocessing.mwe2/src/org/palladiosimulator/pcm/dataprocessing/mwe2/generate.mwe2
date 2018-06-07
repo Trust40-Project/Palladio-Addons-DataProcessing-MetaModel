@@ -176,5 +176,21 @@ Workflow {
 			}
 		}
 		
+		// SEFF
+		replacement = {
+			filename =  "${pluginEditDir}/plugin.xml"
+			mapping = {
+				from = "${projectName}.dataprocessing.seff.provider.SeffItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.seff.provider.extension.SeffItemProviderAdapterFactory"
+			}
+		}
+		replacement = {
+			filename = "${pluginEditorDir}/src-gen/**/*Editor.java"
+			mapping = {
+				from = "${projectName}.dataprocessing.seff.provider.SeffItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.seff.provider.extension.SeffItemProviderAdapterFactory"
+			}
+		}
+		
 	}
 }

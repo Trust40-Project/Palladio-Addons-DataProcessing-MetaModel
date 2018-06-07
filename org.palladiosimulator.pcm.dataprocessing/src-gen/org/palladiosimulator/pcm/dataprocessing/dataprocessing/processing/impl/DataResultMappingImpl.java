@@ -2,8 +2,6 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
@@ -75,10 +73,19 @@ public class DataResultMappingImpl extends DataMappingImpl implements DataResult
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	public EList<Data> getReceivedData()
+	public Data getReceivedData()
 	{
-		return (EList<Data>)eGet(ProcessingPackage.Literals.DATA_RESULT_MAPPING__RECEIVED_DATA, true);
+		return (Data)eGet(ProcessingPackage.Literals.DATA_RESULT_MAPPING__RECEIVED_DATA, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReceivedData(Data newReceivedData)
+	{
+		eSet(ProcessingPackage.Literals.DATA_RESULT_MAPPING__RECEIVED_DATA, newReceivedData);
 	}
 
 } //DataResultMappingImpl

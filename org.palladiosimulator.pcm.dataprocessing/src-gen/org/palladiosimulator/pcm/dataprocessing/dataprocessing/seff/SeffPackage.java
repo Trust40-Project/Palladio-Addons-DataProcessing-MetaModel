@@ -2,11 +2,11 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff;
 
-import de.uka.ipd.sdq.identifier.IdentifierPackage;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
+import org.palladiosimulator.pcm.core.entity.EntityPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -74,7 +74,16 @@ public interface SeffPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SEFF_SPECIFICATION__ID = IdentifierPackage.IDENTIFIER__ID;
+	int DATA_SEFF_SPECIFICATION__ID = EntityPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SEFF_SPECIFICATION__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Input Data</b></em>' containment reference list.
@@ -83,7 +92,7 @@ public interface SeffPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SEFF_SPECIFICATION__INPUT_DATA = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+	int DATA_SEFF_SPECIFICATION__INPUT_DATA = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Data SEFF Specification</em>' class.
@@ -92,7 +101,7 @@ public interface SeffPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SEFF_SPECIFICATION_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+	int DATA_SEFF_SPECIFICATION_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
 
 	/**

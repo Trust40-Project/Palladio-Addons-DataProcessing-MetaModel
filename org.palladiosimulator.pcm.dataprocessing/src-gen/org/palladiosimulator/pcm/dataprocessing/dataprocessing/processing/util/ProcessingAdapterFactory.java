@@ -122,6 +122,11 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl
 				return createStoreDataOperationAdapter();
 			}
 			@Override
+			public Adapter caseReturnDataOperation(ReturnDataOperation object)
+			{
+				return createReturnDataOperationAdapter();
+			}
+			@Override
 			public Adapter caseDataMapping(DataMapping object)
 			{
 				return createDataMappingAdapter();
@@ -324,6 +329,21 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createStoreDataOperationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ReturnDataOperation <em>Return Data Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ReturnDataOperation
+	 * @generated
+	 */
+	public Adapter createReturnDataOperationAdapter()
 	{
 		return null;
 	}

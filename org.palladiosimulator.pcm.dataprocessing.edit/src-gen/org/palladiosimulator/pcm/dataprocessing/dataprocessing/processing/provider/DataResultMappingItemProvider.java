@@ -188,6 +188,11 @@ public class DataResultMappingItemProvider extends DataMappingItemProvider
 			(createChildParameter
 				(ProcessingPackage.Literals.DATA_RESULT_MAPPING__RECEIVED_DATA,
 				 DataFactory.eINSTANCE.createResultBasedData()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.DATA_RESULT_MAPPING__RECEIVED_DATA,
+				 DataFactory.eINSTANCE.createDerivedData()));
 	}
 
 }

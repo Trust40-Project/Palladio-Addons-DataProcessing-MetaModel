@@ -3,21 +3,18 @@
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.provider;
 
 
-import de.uka.ipd.sdq.identifier.provider.IdentifierItemProvider;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataFactory;
 
@@ -30,7 +27,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DataSEFFSpecificationItemProvider extends IdentifierItemProvider
+public class DataSEFFSpecificationItemProvider extends EntityItemProvider
 {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -158,18 +155,6 @@ public class DataSEFFSpecificationItemProvider extends IdentifierItemProvider
 			(createChildParameter
 				(SeffPackage.Literals.DATA_SEFF_SPECIFICATION__INPUT_DATA,
 				 DataFactory.eINSTANCE.createParameterBasedData()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator()
-	{
-		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
 }

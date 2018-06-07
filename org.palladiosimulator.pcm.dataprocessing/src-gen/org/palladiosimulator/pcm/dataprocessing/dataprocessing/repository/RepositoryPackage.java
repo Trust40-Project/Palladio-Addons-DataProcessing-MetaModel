@@ -2,8 +2,6 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository;
 
-import de.uka.ipd.sdq.identifier.IdentifierPackage;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -76,7 +74,16 @@ public interface RepositoryPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int STORE_CONTAINER__ID = IdentifierPackage.IDENTIFIER__ID;
+	int STORE_CONTAINER__ID = EntityPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORE_CONTAINER__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Stores</b></em>' containment reference list.
@@ -85,7 +92,7 @@ public interface RepositoryPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int STORE_CONTAINER__STORES = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+	int STORE_CONTAINER__STORES = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Store Container</em>' class.
@@ -94,7 +101,7 @@ public interface RepositoryPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int STORE_CONTAINER_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+	int STORE_CONTAINER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.impl.StoreImpl <em>Store</em>}' class.

@@ -2,11 +2,11 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.impl;
 
-import de.uka.ipd.sdq.identifier.impl.IdentifierImpl;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+
+import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ParameterBasedData;
 
@@ -26,7 +26,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffPackage;
  *
  * @generated
  */
-public class DataSEFFSpecificationImpl extends IdentifierImpl implements DataSEFFSpecification
+public class DataSEFFSpecificationImpl extends EntityImpl implements DataSEFFSpecification
 {
 	/**
 	 * <!-- begin-user-doc -->
