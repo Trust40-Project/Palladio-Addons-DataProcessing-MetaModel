@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/OCL/Import entity='../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity' identifier='../../de.uka.ipd.sdq.identifier/model/identifier.ecore#/' repository_1='../../org.palladiosimulator.pcm/model/pcm.ecore#//repository' seff_1='../../org.palladiosimulator.pcm/model/pcm.ecore#//seff'"
+ *        annotation="http://www.eclipse.org/OCL/Import entity='../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity' identifier='../../../plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/' repository_1='../../org.palladiosimulator.pcm/model/pcm.ecore#//repository' seff_1='../../org.palladiosimulator.pcm/model/pcm.ecore#//seff'"
  * @generated
  */
 public interface DataprocessingPackage extends EPackage

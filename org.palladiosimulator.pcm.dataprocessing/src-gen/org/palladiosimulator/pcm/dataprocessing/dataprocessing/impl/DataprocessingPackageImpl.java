@@ -329,7 +329,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		   new String[] 
 		   {
 			 "entity", "../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity",
-			 "identifier", "../../de.uka.ipd.sdq.identifier/model/identifier.ecore#/",
+			 "identifier", "../../../plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/",
 			 "repository_1", "../../org.palladiosimulator.pcm/model/pcm.ecore#//repository",
 			 "seff_1", "../../org.palladiosimulator.pcm/model/pcm.ecore#//seff"
 		   });

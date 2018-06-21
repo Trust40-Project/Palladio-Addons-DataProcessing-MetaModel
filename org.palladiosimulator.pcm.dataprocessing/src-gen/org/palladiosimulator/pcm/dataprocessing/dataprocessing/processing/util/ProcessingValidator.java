@@ -203,7 +203,7 @@ public class ProcessingValidator extends EObjectValidator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String LOAD_ALL_DATA_OPERATION__RESULT_TYPE_MUST_BE_COLLECTION__EEXPRESSION = "self.resultingData.oclIsKindOf(repository_1::CollectionDataType)";
+	protected static final String LOAD_ALL_DATA_OPERATION__RESULT_TYPE_MUST_BE_COLLECTION__EEXPRESSION = "self.resultingData.type.oclIsKindOf(repository_1::CollectionDataType)";
 
 	/**
 	 * Validates the resultTypeMustBeCollection constraint of '<em>Load All Data Operation</em>'.

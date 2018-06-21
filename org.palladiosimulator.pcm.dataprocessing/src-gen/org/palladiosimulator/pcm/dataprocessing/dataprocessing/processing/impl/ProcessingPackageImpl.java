@@ -1016,7 +1016,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   source, 
 		   new String[] 
 		   {
-			 "resultTypeMustBeCollection", "self.resultingData.oclIsKindOf(repository_1::CollectionDataType)"
+			 "resultTypeMustBeCollection", "self.resultingData.type.oclIsKindOf(repository_1::CollectionDataType)"
 		   });	
 		addAnnotation
 		  (dataResultMappingEClass, 
