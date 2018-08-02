@@ -110,6 +110,8 @@ public class ProcessingValidator extends EObjectValidator
 				return validateStoreDataOperation((StoreDataOperation)value, diagnostics, context);
 			case ProcessingPackage.RETURN_DATA_OPERATION:
 				return validateReturnDataOperation((ReturnDataOperation)value, diagnostics, context);
+			case ProcessingPackage.USER_READ_DATA:
+				return validateUserReadData((UserReadData)value, diagnostics, context);
 			case ProcessingPackage.DATA_MAPPING:
 				return validateDataMapping((DataMapping)value, diagnostics, context);
 			case ProcessingPackage.DATA_PARAMETER_MAPPING:
@@ -265,6 +267,16 @@ public class ProcessingValidator extends EObjectValidator
 	public boolean validateReturnDataOperation(ReturnDataOperation returnDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
 		return validate_EveryDefaultConstraint((EObject)returnDataOperation, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUserReadData(UserReadData userReadData, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return validate_EveryDefaultConstraint((EObject)userReadData, diagnostics, context);
 	}
 
 	/**

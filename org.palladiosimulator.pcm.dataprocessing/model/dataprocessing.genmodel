@@ -20,6 +20,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//DataSpecification/dataSEFFSpecifications"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//DataSpecification/storeContainers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//DataSpecification/characteristicContainer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//DataSpecification/relatedCharacteristics"/>
     </genClasses>
     <nestedGenPackages prefix="Repository" disposableProviderFactory="true" extensibleProviderFactory="true"
         childCreationExtenders="true" ecorePackage="dataprocessing.ecore#//repository">
@@ -44,9 +45,14 @@
       </genClasses>
       <genClasses image="false" ecoreClass="dataprocessing.ecore#//processing/DataOperation">
         <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/DataOperation/container"/>
+        <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/DataOperation/incomingData"/>
+        <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/DataOperation/outgoingData"/>
+        <genOperations ecoreOperation="dataprocessing.ecore#//processing/DataOperation/determineIncomingData"/>
+        <genOperations ecoreOperation="dataprocessing.ecore#//processing/DataOperation/determineOutgoingData"/>
       </genClasses>
       <genClasses ecoreClass="dataprocessing.ecore#//processing/CreateDataOperation">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/CreateDataOperation/resultingData"/>
+        <genOperations ecoreOperation="dataprocessing.ecore#//processing/CreateDataOperation/determineOutgoingData"/>
       </genClasses>
       <genClasses ecoreClass="dataprocessing.ecore#//processing/LoadDataOperation">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -56,15 +62,20 @@
       <genClasses ecoreClass="dataprocessing.ecore#//processing/PerformDataTransmissionOperation">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/PerformDataTransmissionOperation/inputMappings"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/PerformDataTransmissionOperation/outputMappings"/>
+        <genOperations ecoreOperation="dataprocessing.ecore#//processing/PerformDataTransmissionOperation/determineOutgoingData"/>
+        <genOperations ecoreOperation="dataprocessing.ecore#//processing/PerformDataTransmissionOperation/determineIncomingData"/>
       </genClasses>
       <genClasses ecoreClass="dataprocessing.ecore#//processing/ConsumeDataOperation">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/ConsumeDataOperation/consumedData"/>
+        <genOperations ecoreOperation="dataprocessing.ecore#//processing/ConsumeDataOperation/determineIncomingData"/>
       </genClasses>
       <genClasses ecoreClass="dataprocessing.ecore#//processing/StoreDataOperation">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/StoreDataOperation/store"/>
       </genClasses>
+      <genClasses ecoreClass="dataprocessing.ecore#//processing/ReturnDataOperation"/>
+      <genClasses ecoreClass="dataprocessing.ecore#//processing/UserReadData"/>
       <genClasses image="false" ecoreClass="dataprocessing.ecore#//processing/DataMapping">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/DataMapping/data"/>
@@ -83,16 +94,19 @@
             ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/ManyToOneDataOperation/consumedData"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/ManyToOneDataOperation/resultingData"/>
+        <genOperations ecoreOperation="dataprocessing.ecore#//processing/ManyToOneDataOperation/determineIncomingData"/>
+        <genOperations ecoreOperation="dataprocessing.ecore#//processing/ManyToOneDataOperation/determineOutgoingData"/>
       </genClasses>
       <genClasses ecoreClass="dataprocessing.ecore#//processing/JoinDataOperation"/>
       <genClasses ecoreClass="dataprocessing.ecore#//processing/UnionDataOperation"/>
       <genClasses image="false" ecoreClass="dataprocessing.ecore#//processing/TransformDataOperation">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/TransformDataOperation/inputData"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/TransformDataOperation/outputData"/>
+            ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/TransformDataOperation/inputs"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/TransformDataOperation/output"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/TransformDataOperation/parameterData"/>
+        <genOperations ecoreOperation="dataprocessing.ecore#//processing/TransformDataOperation/determineIncomingData"/>
+        <genOperations ecoreOperation="dataprocessing.ecore#//processing/TransformDataOperation/determineOutgoingData"/>
       </genClasses>
       <genClasses ecoreClass="dataprocessing.ecore#//processing/ProjectionDataOperation"/>
       <genClasses ecoreClass="dataprocessing.ecore#//processing/SelectionDataOperation"/>
@@ -102,6 +116,8 @@
             ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/CharacteristicChangingDataOperation/data"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dataprocessing.ecore#//processing/CharacteristicChangingDataOperation/operation"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/CharacteristicChangingDataOperation/characteristic"/>
+        <genOperations ecoreOperation="dataprocessing.ecore#//processing/CharacteristicChangingDataOperation/determineIncomingData"/>
+        <genOperations ecoreOperation="dataprocessing.ecore#//processing/CharacteristicChangingDataOperation/determineOutgoingData"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Characteristics" disposableProviderFactory="true" extensibleProviderFactory="true"
@@ -125,16 +141,23 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//characteristics/CharacteristicContainer/ownedCharacteristics"/>
       </genClasses>
       <genClasses image="false" ecoreClass="dataprocessing.ecore#//characteristics/Characteristic">
-        <genTypeParameters ecoreTypeParameter="dataprocessing.ecore#//characteristics/Characteristic/T"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference dataprocessing.ecore#//characteristics/Characteristic/type"/>
+            ecoreFeature="ecore:EReference dataprocessing.ecore#//characteristics/Characteristic/characteristicType"/>
       </genClasses>
       <genClasses ecoreClass="dataprocessing.ecore#//characteristics/EnumCharacteristic">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dataprocessing.ecore#//characteristics/EnumCharacteristic/literals"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dataprocessing.ecore#//characteristics/EnumCharacteristic/type"/>
       </genClasses>
       <genClasses ecoreClass="dataprocessing.ecore#//characteristics/Enumeration">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//characteristics/Enumeration/literals"/>
+      </genClasses>
+      <genClasses ecoreClass="dataprocessing.ecore#//characteristics/RelatedCharacteristics">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dataprocessing.ecore#//characteristics/RelatedCharacteristics/characteristics"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dataprocessing.ecore#//characteristics/RelatedCharacteristics/relatedEntity"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Data" disposableProviderFactory="true" extensibleProviderFactory="true"
@@ -158,6 +181,13 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dataprocessing.ecore#//data/ResultBasedData/operation"/>
         <genOperations ecoreOperation="dataprocessing.ecore#//data/ResultBasedData/determineDataType"/>
+      </genClasses>
+      <genClasses ecoreClass="dataprocessing.ecore#//data/DerivedData">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dataprocessing.ecore#//data/DerivedData/sources"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dataprocessing.ecore#//data/DerivedData/resultingDataType"/>
+        <genOperations ecoreOperation="dataprocessing.ecore#//data/DerivedData/determineDataType"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Seff" disposableProviderFactory="true" extensibleProviderFactory="true"

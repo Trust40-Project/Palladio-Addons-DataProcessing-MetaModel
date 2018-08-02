@@ -181,6 +181,18 @@ public class ProcessingSwitch<T1> extends Switch<T1>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ProcessingPackage.USER_READ_DATA:
+			{
+				UserReadData userReadData = (UserReadData)theEObject;
+				T1 result = caseUserReadData(userReadData);
+				if (result == null) result = caseConsumeDataOperation(userReadData);
+				if (result == null) result = caseDataOperation(userReadData);
+				if (result == null) result = caseEntity(userReadData);
+				if (result == null) result = caseIdentifier(userReadData);
+				if (result == null) result = caseNamedElement(userReadData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ProcessingPackage.DATA_MAPPING:
 			{
 				DataMapping dataMapping = (DataMapping)theEObject;
@@ -432,6 +444,22 @@ public class ProcessingSwitch<T1> extends Switch<T1>
 	 * @generated
 	 */
 	public T1 caseReturnDataOperation(ReturnDataOperation object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>User Read Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>User Read Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseUserReadData(UserReadData object)
 	{
 		return null;
 	}

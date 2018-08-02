@@ -2,7 +2,13 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl;
 
+import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.WrappedException;
+
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 
@@ -63,6 +69,34 @@ public abstract class ConsumeDataOperationImpl extends DataOperationImpl impleme
 	public void setConsumedData(Data newConsumedData)
 	{
 		eSet(ProcessingPackage.Literals.CONSUME_DATA_OPERATION__CONSUMED_DATA, newConsumedData);
+	}
+
+	/**
+	 * The cached invocation delegate for the '{@link #determineIncomingData() <em>Determine Incoming Data</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #determineIncomingData()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate DETERMINE_INCOMING_DATA__EINVOCATION_DELEGATE = ((EOperation.Internal)ProcessingPackage.Literals.CONSUME_DATA_OPERATION.getEOperations().get(0)).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Data> determineIncomingData()
+	{
+		try
+		{
+			return (EList<Data>)DETERMINE_INCOMING_DATA__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
+		}
+		catch (InvocationTargetException ite)
+		{
+			throw new WrappedException(ite);
+		}
 	}
 
 } //ConsumeDataOperationImpl

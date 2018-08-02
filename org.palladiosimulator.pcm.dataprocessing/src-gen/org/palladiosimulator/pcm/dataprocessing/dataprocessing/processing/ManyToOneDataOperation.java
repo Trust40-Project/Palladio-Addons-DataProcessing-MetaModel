@@ -67,4 +67,22 @@ public interface ManyToOneDataOperation extends DataOperation
 	 */
 	void setResultingData(Data value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.consumedData-&gt;asSet()'"
+	 * @generated
+	 */
+	EList<Data> determineIncomingData();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.resultingData-&gt;asSet()'"
+	 * @generated
+	 */
+	EList<Data> determineOutgoingData();
+
 } // ManyToOneDataOperation

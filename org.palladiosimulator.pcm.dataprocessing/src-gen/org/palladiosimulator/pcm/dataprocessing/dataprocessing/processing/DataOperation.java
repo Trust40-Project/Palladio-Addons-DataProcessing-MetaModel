@@ -2,7 +2,11 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.palladiosimulator.pcm.core.entity.Entity;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +18,8 @@ import org.palladiosimulator.pcm.core.entity.Entity;
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation#getContainer <em>Container</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation#getIncomingData <em>Incoming Data</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation#getOutgoingData <em>Outgoing Data</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getDataOperation()
@@ -49,5 +55,57 @@ public interface DataOperation extends Entity
 	 * @generated
 	 */
 	void setContainer(DataProcessingContainer value);
+
+	/**
+	 * Returns the value of the '<em><b>Incoming Data</b></em>' reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Incoming Data</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Incoming Data</em>' reference list.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getDataOperation_IncomingData()
+	 * @model transient="true" changeable="false" volatile="true" derived="true" ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='determineIncomingData()'"
+	 * @generated
+	 */
+	EList<Data> getIncomingData();
+
+	/**
+	 * Returns the value of the '<em><b>Outgoing Data</b></em>' reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Outgoing Data</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Outgoing Data</em>' reference list.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getDataOperation_OutgoingData()
+	 * @model transient="true" changeable="false" volatile="true" derived="true" ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='determineOutgoingData()'"
+	 * @generated
+	 */
+	EList<Data> getOutgoingData();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.oclAsSet()-&gt;selectByType(dataprocessing::data::Data)'"
+	 * @generated
+	 */
+	EList<Data> determineIncomingData();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.oclAsSet()-&gt;selectByType(dataprocessing::data::Data)'"
+	 * @generated
+	 */
+	EList<Data> determineOutgoingData();
 
 } // DataOperation

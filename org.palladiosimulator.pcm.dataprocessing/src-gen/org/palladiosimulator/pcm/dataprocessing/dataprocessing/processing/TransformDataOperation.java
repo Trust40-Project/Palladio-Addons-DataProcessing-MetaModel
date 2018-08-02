@@ -94,4 +94,22 @@ public interface TransformDataOperation extends DataOperation
 	 */
 	EList<Data> getParameterData();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.inputs-&gt;asSet()-&gt;union(self.parameterData)'"
+	 * @generated
+	 */
+	EList<Data> determineIncomingData();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.output-&gt;asSet()'"
+	 * @generated
+	 */
+	EList<Data> determineOutgoingData();
+
 } // TransformDataOperation

@@ -2,7 +2,13 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl;
 
+import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.WrappedException;
+
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 
@@ -63,6 +69,34 @@ public class CreateDataOperationImpl extends DataOperationImpl implements Create
 	public void setResultingData(Data newResultingData)
 	{
 		eSet(ProcessingPackage.Literals.CREATE_DATA_OPERATION__RESULTING_DATA, newResultingData);
+	}
+
+	/**
+	 * The cached invocation delegate for the '{@link #determineOutgoingData() <em>Determine Outgoing Data</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #determineOutgoingData()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate DETERMINE_OUTGOING_DATA__EINVOCATION_DELEGATE = ((EOperation.Internal)ProcessingPackage.Literals.CREATE_DATA_OPERATION.getEOperations().get(0)).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Data> determineOutgoingData()
+	{
+		try
+		{
+			return (EList<Data>)DETERMINE_OUTGOING_DATA__EINVOCATION_DELEGATE.dynamicInvoke(this, null);
+		}
+		catch (InvocationTargetException ite)
+		{
+			throw new WrappedException(ite);
+		}
 	}
 
 } //CreateDataOperationImpl

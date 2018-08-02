@@ -2,6 +2,8 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 
 /**
@@ -47,5 +49,14 @@ public interface ConsumeDataOperation extends DataOperation
 	 * @generated
 	 */
 	void setConsumedData(Data value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.consumedData-&gt;asSet()'"
+	 * @generated
+	 */
+	EList<Data> determineIncomingData();
 
 } // ConsumeDataOperation

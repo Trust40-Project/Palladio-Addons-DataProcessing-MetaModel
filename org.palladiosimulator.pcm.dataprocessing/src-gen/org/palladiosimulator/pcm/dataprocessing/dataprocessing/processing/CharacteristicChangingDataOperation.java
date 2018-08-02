@@ -2,6 +2,8 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicType;
 
@@ -107,5 +109,23 @@ public interface CharacteristicChangingDataOperation<T extends CharacteristicTyp
 	 * @generated
 	 */
 	void setCharacteristic(Characteristic value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.data.oclAsSet()'"
+	 * @generated
+	 */
+	EList<Data> determineIncomingData();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.determineIncomingData()'"
+	 * @generated
+	 */
+	EList<Data> determineOutgoingData();
 
 } // CharacteristicChangingDataOperation

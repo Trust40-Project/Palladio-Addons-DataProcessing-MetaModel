@@ -146,13 +146,31 @@ public interface ProcessingPackage extends EPackage
 	int DATA_OPERATION__CONTAINER = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_OPERATION__INCOMING_DATA = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_OPERATION__OUTGOING_DATA = EntityPackage.ENTITY_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Data Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_OPERATION_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+	int DATA_OPERATION_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.CreateDataOperationImpl <em>Create Data Operation</em>}' class.
@@ -190,6 +208,24 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int CREATE_DATA_OPERATION__CONTAINER = DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_DATA_OPERATION__INCOMING_DATA = DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_DATA_OPERATION__OUTGOING_DATA = DATA_OPERATION__OUTGOING_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Resulting Data</b></em>' containment reference.
@@ -245,6 +281,24 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int LOAD_DATA_OPERATION__CONTAINER = CREATE_DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOAD_DATA_OPERATION__INCOMING_DATA = CREATE_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOAD_DATA_OPERATION__OUTGOING_DATA = CREATE_DATA_OPERATION__OUTGOING_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Resulting Data</b></em>' containment reference.
@@ -311,6 +365,24 @@ public interface ProcessingPackage extends EPackage
 	int LOAD_ALL_DATA_OPERATION__CONTAINER = LOAD_DATA_OPERATION__CONTAINER;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOAD_ALL_DATA_OPERATION__INCOMING_DATA = LOAD_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOAD_ALL_DATA_OPERATION__OUTGOING_DATA = LOAD_DATA_OPERATION__OUTGOING_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Resulting Data</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -373,6 +445,24 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int PERFORM_DATA_TRANSMISSION_OPERATION__CONTAINER = DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORM_DATA_TRANSMISSION_OPERATION__INCOMING_DATA = DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORM_DATA_TRANSMISSION_OPERATION__OUTGOING_DATA = DATA_OPERATION__OUTGOING_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Input Mappings</b></em>' containment reference list.
@@ -439,6 +529,24 @@ public interface ProcessingPackage extends EPackage
 	int CONSUME_DATA_OPERATION__CONTAINER = DATA_OPERATION__CONTAINER;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUME_DATA_OPERATION__INCOMING_DATA = DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUME_DATA_OPERATION__OUTGOING_DATA = DATA_OPERATION__OUTGOING_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Consumed Data</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -492,6 +600,24 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int STORE_DATA_OPERATION__CONTAINER = CONSUME_DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORE_DATA_OPERATION__INCOMING_DATA = CONSUME_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORE_DATA_OPERATION__OUTGOING_DATA = CONSUME_DATA_OPERATION__OUTGOING_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Consumed Data</b></em>' reference.
@@ -558,6 +684,24 @@ public interface ProcessingPackage extends EPackage
 	int RETURN_DATA_OPERATION__CONTAINER = CONSUME_DATA_OPERATION__CONTAINER;
 
 	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_DATA_OPERATION__INCOMING_DATA = CONSUME_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_DATA_OPERATION__OUTGOING_DATA = CONSUME_DATA_OPERATION__OUTGOING_DATA;
+
+	/**
 	 * The feature id for the '<em><b>Consumed Data</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -576,6 +720,79 @@ public interface ProcessingPackage extends EPackage
 	int RETURN_DATA_OPERATION_FEATURE_COUNT = CONSUME_DATA_OPERATION_FEATURE_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.UserReadDataImpl <em>User Read Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.UserReadDataImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getUserReadData()
+	 * @generated
+	 */
+	int USER_READ_DATA = 9;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_READ_DATA__ID = CONSUME_DATA_OPERATION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_READ_DATA__ENTITY_NAME = CONSUME_DATA_OPERATION__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Container</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_READ_DATA__CONTAINER = CONSUME_DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_READ_DATA__INCOMING_DATA = CONSUME_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_READ_DATA__OUTGOING_DATA = CONSUME_DATA_OPERATION__OUTGOING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Consumed Data</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_READ_DATA__CONSUMED_DATA = CONSUME_DATA_OPERATION__CONSUMED_DATA;
+
+	/**
+	 * The number of structural features of the '<em>User Read Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_READ_DATA_FEATURE_COUNT = CONSUME_DATA_OPERATION_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.DataMappingImpl <em>Data Mapping</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -583,7 +800,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getDataMapping()
 	 * @generated
 	 */
-	int DATA_MAPPING = 9;
+	int DATA_MAPPING = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -620,7 +837,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getDataParameterMapping()
 	 * @generated
 	 */
-	int DATA_PARAMETER_MAPPING = 10;
+	int DATA_PARAMETER_MAPPING = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -666,7 +883,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getDataResultMapping()
 	 * @generated
 	 */
-	int DATA_RESULT_MAPPING = 11;
+	int DATA_RESULT_MAPPING = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -721,7 +938,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getManyToOneDataOperation()
 	 * @generated
 	 */
-	int MANY_TO_ONE_DATA_OPERATION = 12;
+	int MANY_TO_ONE_DATA_OPERATION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -749,6 +966,24 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int MANY_TO_ONE_DATA_OPERATION__CONTAINER = DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_ONE_DATA_OPERATION__INCOMING_DATA = DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_ONE_DATA_OPERATION__OUTGOING_DATA = DATA_OPERATION__OUTGOING_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Consumed Data</b></em>' reference list.
@@ -785,7 +1020,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getJoinDataOperation()
 	 * @generated
 	 */
-	int JOIN_DATA_OPERATION = 13;
+	int JOIN_DATA_OPERATION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -813,6 +1048,24 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int JOIN_DATA_OPERATION__CONTAINER = MANY_TO_ONE_DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JOIN_DATA_OPERATION__INCOMING_DATA = MANY_TO_ONE_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JOIN_DATA_OPERATION__OUTGOING_DATA = MANY_TO_ONE_DATA_OPERATION__OUTGOING_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Consumed Data</b></em>' reference list.
@@ -849,7 +1102,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getUnionDataOperation()
 	 * @generated
 	 */
-	int UNION_DATA_OPERATION = 14;
+	int UNION_DATA_OPERATION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -877,6 +1130,24 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int UNION_DATA_OPERATION__CONTAINER = MANY_TO_ONE_DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_DATA_OPERATION__INCOMING_DATA = MANY_TO_ONE_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_DATA_OPERATION__OUTGOING_DATA = MANY_TO_ONE_DATA_OPERATION__OUTGOING_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Consumed Data</b></em>' reference list.
@@ -913,7 +1184,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getTransformDataOperation()
 	 * @generated
 	 */
-	int TRANSFORM_DATA_OPERATION = 15;
+	int TRANSFORM_DATA_OPERATION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -941,6 +1212,24 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int TRANSFORM_DATA_OPERATION__CONTAINER = DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFORM_DATA_OPERATION__INCOMING_DATA = DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFORM_DATA_OPERATION__OUTGOING_DATA = DATA_OPERATION__OUTGOING_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Inputs</b></em>' reference.
@@ -986,7 +1275,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getProjectionDataOperation()
 	 * @generated
 	 */
-	int PROJECTION_DATA_OPERATION = 16;
+	int PROJECTION_DATA_OPERATION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1014,6 +1303,24 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int PROJECTION_DATA_OPERATION__CONTAINER = TRANSFORM_DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECTION_DATA_OPERATION__INCOMING_DATA = TRANSFORM_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECTION_DATA_OPERATION__OUTGOING_DATA = TRANSFORM_DATA_OPERATION__OUTGOING_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Inputs</b></em>' reference.
@@ -1059,7 +1366,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getSelectionDataOperation()
 	 * @generated
 	 */
-	int SELECTION_DATA_OPERATION = 17;
+	int SELECTION_DATA_OPERATION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1087,6 +1394,24 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int SELECTION_DATA_OPERATION__CONTAINER = TRANSFORM_DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_DATA_OPERATION__INCOMING_DATA = TRANSFORM_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_DATA_OPERATION__OUTGOING_DATA = TRANSFORM_DATA_OPERATION__OUTGOING_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Inputs</b></em>' reference.
@@ -1132,7 +1457,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getCharacteristicChangingDataOperation()
 	 * @generated
 	 */
-	int CHARACTERISTIC_CHANGING_DATA_OPERATION = 18;
+	int CHARACTERISTIC_CHANGING_DATA_OPERATION = 19;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1160,6 +1485,24 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int CHARACTERISTIC_CHANGING_DATA_OPERATION__CONTAINER = DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHARACTERISTIC_CHANGING_DATA_OPERATION__INCOMING_DATA = DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHARACTERISTIC_CHANGING_DATA_OPERATION__OUTGOING_DATA = DATA_OPERATION__OUTGOING_DATA;
 
 	/**
 	 * The feature id for the '<em><b>Data</b></em>' reference.
@@ -1205,7 +1548,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getCharacteristicChangeOperation()
 	 * @generated
 	 */
-	int CHARACTERISTIC_CHANGE_OPERATION = 19;
+	int CHARACTERISTIC_CHANGE_OPERATION = 20;
 
 
 	/**
@@ -1249,6 +1592,28 @@ public interface ProcessingPackage extends EPackage
 	 * @generated
 	 */
 	EReference getDataOperation_Container();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation#getIncomingData <em>Incoming Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Incoming Data</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation#getIncomingData()
+	 * @see #getDataOperation()
+	 * @generated
+	 */
+	EReference getDataOperation_IncomingData();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation#getOutgoingData <em>Outgoing Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Outgoing Data</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation#getOutgoingData()
+	 * @see #getDataOperation()
+	 * @generated
+	 */
+	EReference getDataOperation_OutgoingData();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CreateDataOperation <em>Create Data Operation</em>}'.
@@ -1385,6 +1750,16 @@ public interface ProcessingPackage extends EPackage
 	 * @generated
 	 */
 	EClass getReturnDataOperation();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.UserReadData <em>User Read Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>User Read Data</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.UserReadData
+	 * @generated
+	 */
+	EClass getUserReadData();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataMapping <em>Data Mapping</em>}'.
@@ -1688,6 +2063,22 @@ public interface ProcessingPackage extends EPackage
 		EReference DATA_OPERATION__CONTAINER = eINSTANCE.getDataOperation_Container();
 
 		/**
+		 * The meta object literal for the '<em><b>Incoming Data</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_OPERATION__INCOMING_DATA = eINSTANCE.getDataOperation_IncomingData();
+
+		/**
+		 * The meta object literal for the '<em><b>Outgoing Data</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_OPERATION__OUTGOING_DATA = eINSTANCE.getDataOperation_OutgoingData();
+
+		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.CreateDataOperationImpl <em>Create Data Operation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1804,6 +2195,16 @@ public interface ProcessingPackage extends EPackage
 		 * @generated
 		 */
 		EClass RETURN_DATA_OPERATION = eINSTANCE.getReturnDataOperation();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.UserReadDataImpl <em>User Read Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.UserReadDataImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getUserReadData()
+		 * @generated
+		 */
+		EClass USER_READ_DATA = eINSTANCE.getUserReadData();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.DataMappingImpl <em>Data Mapping</em>}' class.

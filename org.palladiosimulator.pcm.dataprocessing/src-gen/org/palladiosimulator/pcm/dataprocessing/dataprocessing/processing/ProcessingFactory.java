@@ -88,6 +88,15 @@ public interface ProcessingFactory extends EFactory
 	ReturnDataOperation createReturnDataOperation();
 
 	/**
+	 * Returns a new object of class '<em>User Read Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>User Read Data</em>'.
+	 * @generated
+	 */
+	UserReadData createUserReadData();
+
+	/**
 	 * Returns a new object of class '<em>Data Parameter Mapping</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

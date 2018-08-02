@@ -59,6 +59,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Select
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.StoreDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.UnionDataOperation;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.UserReadData;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.util.ProcessingValidator;
 
@@ -140,6 +141,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * @generated
 	 */
 	private EClass returnDataOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass userReadDataEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -361,6 +369,26 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDataOperation_IncomingData()
+	{
+		return (EReference)dataOperationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDataOperation_OutgoingData()
+	{
+		return (EReference)dataOperationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCreateDataOperation()
 	{
 		return createDataOperationEClass;
@@ -484,6 +512,16 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	public EClass getReturnDataOperation()
 	{
 		return returnDataOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUserReadData()
+	{
+		return userReadDataEClass;
 	}
 
 	/**
@@ -751,6 +789,8 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 
 		dataOperationEClass = createEClass(DATA_OPERATION);
 		createEReference(dataOperationEClass, DATA_OPERATION__CONTAINER);
+		createEReference(dataOperationEClass, DATA_OPERATION__INCOMING_DATA);
+		createEReference(dataOperationEClass, DATA_OPERATION__OUTGOING_DATA);
 
 		createDataOperationEClass = createEClass(CREATE_DATA_OPERATION);
 		createEReference(createDataOperationEClass, CREATE_DATA_OPERATION__RESULTING_DATA);
@@ -771,6 +811,8 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		createEReference(storeDataOperationEClass, STORE_DATA_OPERATION__STORE);
 
 		returnDataOperationEClass = createEClass(RETURN_DATA_OPERATION);
+
+		userReadDataEClass = createEClass(USER_READ_DATA);
 
 		dataMappingEClass = createEClass(DATA_MAPPING);
 		createEReference(dataMappingEClass, DATA_MAPPING__DATA);
@@ -857,6 +899,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		consumeDataOperationEClass.getESuperTypes().add(this.getDataOperation());
 		storeDataOperationEClass.getESuperTypes().add(this.getConsumeDataOperation());
 		returnDataOperationEClass.getESuperTypes().add(this.getConsumeDataOperation());
+		userReadDataEClass.getESuperTypes().add(this.getConsumeDataOperation());
 		dataMappingEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 		dataParameterMappingEClass.getESuperTypes().add(this.getDataMapping());
 		dataResultMappingEClass.getESuperTypes().add(this.getDataMapping());
@@ -874,9 +917,17 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 
 		initEClass(dataOperationEClass, DataOperation.class, "DataOperation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDataOperation_Container(), this.getDataProcessingContainer(), this.getDataProcessingContainer_Operations(), "container", null, 0, 1, DataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataOperation_IncomingData(), theDataPackage.getData(), null, "incomingData", null, 0, -1, DataOperation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getDataOperation_OutgoingData(), theDataPackage.getData(), null, "outgoingData", null, 0, -1, DataOperation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+
+		addEOperation(dataOperationEClass, theDataPackage.getData(), "determineIncomingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		addEOperation(dataOperationEClass, theDataPackage.getData(), "determineOutgoingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(createDataOperationEClass, CreateDataOperation.class, "CreateDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCreateDataOperation_ResultingData(), theDataPackage.getData(), null, "resultingData", null, 1, 1, CreateDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(createDataOperationEClass, theDataPackage.getData(), "determineOutgoingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(loadDataOperationEClass, LoadDataOperation.class, "LoadDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLoadDataOperation_Store(), theRepositoryPackage.getStore(), null, "store", null, 1, 1, LoadDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -887,13 +938,21 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		initEReference(getPerformDataTransmissionOperation_InputMappings(), this.getDataMapping(), null, "inputMappings", null, 0, -1, PerformDataTransmissionOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPerformDataTransmissionOperation_OutputMappings(), this.getDataMapping(), null, "outputMappings", null, 0, -1, PerformDataTransmissionOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		addEOperation(performDataTransmissionOperationEClass, theDataPackage.getData(), "determineOutgoingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		addEOperation(performDataTransmissionOperationEClass, theDataPackage.getData(), "determineIncomingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(consumeDataOperationEClass, ConsumeDataOperation.class, "ConsumeDataOperation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConsumeDataOperation_ConsumedData(), theDataPackage.getData(), null, "consumedData", null, 1, 1, ConsumeDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(consumeDataOperationEClass, theDataPackage.getData(), "determineIncomingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(storeDataOperationEClass, StoreDataOperation.class, "StoreDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStoreDataOperation_Store(), theRepositoryPackage.getStore(), null, "store", null, 1, 1, StoreDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(returnDataOperationEClass, ReturnDataOperation.class, "ReturnDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(userReadDataEClass, UserReadData.class, "UserReadData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(dataMappingEClass, DataMapping.class, "DataMapping", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDataMapping_Data(), theDataPackage.getData(), null, "data", null, 1, 1, DataMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -909,6 +968,10 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		initEReference(getManyToOneDataOperation_ConsumedData(), theDataPackage.getData(), null, "consumedData", null, 2, -1, ManyToOneDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getManyToOneDataOperation_ResultingData(), theDataPackage.getData(), null, "resultingData", null, 1, 1, ManyToOneDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		addEOperation(manyToOneDataOperationEClass, theDataPackage.getData(), "determineIncomingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		addEOperation(manyToOneDataOperationEClass, theDataPackage.getData(), "determineOutgoingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(joinDataOperationEClass, JoinDataOperation.class, "JoinDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(unionDataOperationEClass, UnionDataOperation.class, "UnionDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -918,6 +981,10 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		initEReference(getTransformDataOperation_Output(), theDataPackage.getData(), null, "output", null, 1, 1, TransformDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransformDataOperation_ParameterData(), theDataPackage.getData(), null, "parameterData", null, 0, -1, TransformDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		addEOperation(transformDataOperationEClass, theDataPackage.getData(), "determineIncomingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		addEOperation(transformDataOperationEClass, theDataPackage.getData(), "determineOutgoingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(projectionDataOperationEClass, ProjectionDataOperation.class, "ProjectionDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(selectionDataOperationEClass, SelectionDataOperation.class, "SelectionDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -926,6 +993,10 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		initEReference(getCharacteristicChangingDataOperation_Data(), theDataPackage.getData(), null, "data", null, 1, 1, CharacteristicChangingDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCharacteristicChangingDataOperation_Operation(), this.getCharacteristicChangeOperation(), "operation", null, 1, 1, CharacteristicChangingDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCharacteristicChangingDataOperation_Characteristic(), theCharacteristicsPackage.getCharacteristic(), null, "characteristic", null, 1, 1, CharacteristicChangingDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(characteristicChangingDataOperationEClass, theDataPackage.getData(), "determineIncomingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		addEOperation(characteristicChangingDataOperationEClass, theDataPackage.getData(), "determineOutgoingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(characteristicChangeOperationEEnum, CharacteristicChangeOperation.class, "CharacteristicChangeOperation");
@@ -1012,6 +1083,41 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	{
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
 		addAnnotation
+		  (dataOperationEClass.getEOperations().get(0), 
+		   source, 
+		   new String[] 
+		   {
+			 "body", "self.oclAsSet()->selectByType(dataprocessing::data::Data)"
+		   });	
+		addAnnotation
+		  (dataOperationEClass.getEOperations().get(1), 
+		   source, 
+		   new String[] 
+		   {
+			 "body", "self.oclAsSet()->selectByType(dataprocessing::data::Data)"
+		   });	
+		addAnnotation
+		  (getDataOperation_IncomingData(), 
+		   source, 
+		   new String[] 
+		   {
+			 "derivation", "determineIncomingData()"
+		   });	
+		addAnnotation
+		  (getDataOperation_OutgoingData(), 
+		   source, 
+		   new String[] 
+		   {
+			 "derivation", "determineOutgoingData()"
+		   });	
+		addAnnotation
+		  (createDataOperationEClass.getEOperations().get(0), 
+		   source, 
+		   new String[] 
+		   {
+			 "body", "self.resultingData.oclAsSet()"
+		   });	
+		addAnnotation
 		  (loadAllDataOperationEClass, 
 		   source, 
 		   new String[] 
@@ -1019,11 +1125,46 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 			 "resultTypeMustBeCollection", "self.resultingData.type.oclIsKindOf(repository_1::CollectionDataType)"
 		   });	
 		addAnnotation
+		  (performDataTransmissionOperationEClass.getEOperations().get(0), 
+		   source, 
+		   new String[] 
+		   {
+			 "body", "self.outputMappings.data->asSet()"
+		   });	
+		addAnnotation
+		  (performDataTransmissionOperationEClass.getEOperations().get(1), 
+		   source, 
+		   new String[] 
+		   {
+			 "body", "self.inputMappings.data->asSet()"
+		   });	
+		addAnnotation
+		  (consumeDataOperationEClass.getEOperations().get(0), 
+		   source, 
+		   new String[] 
+		   {
+			 "body", "self.consumedData->asSet()"
+		   });	
+		addAnnotation
 		  (dataResultMappingEClass, 
 		   source, 
 		   new String[] 
 		   {
 			 "mappedDataMustBeInReceivedData", "self.receivedData->includes(self.data)"
+		   });	
+		addAnnotation
+		  (manyToOneDataOperationEClass.getEOperations().get(0), 
+		   source, 
+		   new String[] 
+		   {
+			 "body", "self.consumedData->asSet()"
+		   });	
+		addAnnotation
+		  (manyToOneDataOperationEClass.getEOperations().get(1), 
+		   source, 
+		   new String[] 
+		   {
+			 "body", "self.resultingData->asSet()"
 		   });	
 		addAnnotation
 		  (joinDataOperationEClass, 
@@ -1040,6 +1181,20 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 			 "inputsMustBeResultTypeOrResultEntityType", "\n\t\t\t\tlet entityType = self.resultingData.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType in\n\t\t\t\t\tself.consumedData.type->forAll(t |\n\t\t\t\t\t\tt = entityType or t.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType = entityType)"
 		   });	
 		addAnnotation
+		  (transformDataOperationEClass.getEOperations().get(0), 
+		   source, 
+		   new String[] 
+		   {
+			 "body", "self.inputs->asSet()->union(self.parameterData)"
+		   });	
+		addAnnotation
+		  (transformDataOperationEClass.getEOperations().get(1), 
+		   source, 
+		   new String[] 
+		   {
+			 "body", "self.output->asSet()"
+		   });	
+		addAnnotation
 		  (projectionDataOperationEClass, 
 		   source, 
 		   new String[] 
@@ -1053,6 +1208,20 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   new String[] 
 		   {
 			 "inputAndOutputHaveSameEntityType", "self.inputs.type->oclAsSet() = self.output.type->oclAsSet() or self.inputs.type.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()"
+		   });	
+		addAnnotation
+		  (characteristicChangingDataOperationEClass.getEOperations().get(0), 
+		   source, 
+		   new String[] 
+		   {
+			 "body", "self.data.oclAsSet()"
+		   });	
+		addAnnotation
+		  (characteristicChangingDataOperationEClass.getEOperations().get(1), 
+		   source, 
+		   new String[] 
+		   {
+			 "body", "self.determineIncomingData()"
 		   });
 	}
 

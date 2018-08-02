@@ -4,6 +4,8 @@ package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Perform Data Transmission Operation</b></em>'.
@@ -54,5 +56,23 @@ public interface PerformDataTransmissionOperation extends DataOperation
 	 * @generated
 	 */
 	EList<DataMapping> getOutputMappings();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.outputMappings.data-&gt;asSet()'"
+	 * @generated
+	 */
+	EList<Data> determineOutgoingData();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.inputMappings.data-&gt;asSet()'"
+	 * @generated
+	 */
+	EList<Data> determineIncomingData();
 
 } // PerformDataTransmissionOperation

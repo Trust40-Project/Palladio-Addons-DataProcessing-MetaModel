@@ -183,6 +183,11 @@ public class DataProcessingContainerItemProvider extends EntityItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ProcessingPackage.Literals.DATA_PROCESSING_CONTAINER__OPERATIONS,
+				 ProcessingFactory.eINSTANCE.createUserReadData()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.DATA_PROCESSING_CONTAINER__OPERATIONS,
 				 ProcessingFactory.eINSTANCE.createJoinDataOperation()));
 
 		newChildDescriptors.add
