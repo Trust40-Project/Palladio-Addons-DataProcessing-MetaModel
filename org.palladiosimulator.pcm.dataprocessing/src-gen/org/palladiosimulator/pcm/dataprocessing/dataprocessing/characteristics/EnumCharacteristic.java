@@ -52,7 +52,7 @@ public interface EnumCharacteristic extends Characteristic
 	 * @see #setType(EnumCharacteristicType)
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage#getEnumCharacteristic_Type()
 	 * @model transient="true" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='let type = self.characteristicType.oclAsType(EnumCharacteristicType)\n\t\t\t\tin if type.oclIsInvalid()\n\t\t\t\tthen null\n\t\t\t\telse type\n\t\t\t\tendif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='let type = self.characteristicType\n\t\t\t\tin if type.oclIsUndefined() or not type.oclIsKindOf(EnumCharacteristicType)\n\t\t\t\tthen null\n\t\t\t\telse type.oclAsType(EnumCharacteristicType)\n\t\t\t\tendif'"
 	 * @generated
 	 */
 	EnumCharacteristicType getType();

@@ -669,7 +669,7 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		   source, 
 		   new String[] 
 		   {
-			 "derivation", "let type = self.characteristicType.oclAsType(EnumCharacteristicType)\n\t\t\t\tin if type.oclIsInvalid()\n\t\t\t\tthen null\n\t\t\t\telse type\n\t\t\t\tendif"
+			 "derivation", "let type = self.characteristicType\n\t\t\t\tin if type.oclIsUndefined() or not type.oclIsKindOf(EnumCharacteristicType)\n\t\t\t\tthen null\n\t\t\t\telse type.oclAsType(EnumCharacteristicType)\n\t\t\t\tendif"
 		   });
 	}
 
