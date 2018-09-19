@@ -76,18 +76,6 @@ public class ConsumeDataOperationItemProvider extends DataOperationItemProvider
 	}
 
 	/**
-	 * This returns ConsumeDataOperation.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object)
-	{
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ConsumeDataOperation"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,7 +89,7 @@ public class ConsumeDataOperationItemProvider extends DataOperationItemProvider
 			getString("_UI_ConsumeDataOperation_type") :
 			getString("_UI_ConsumeDataOperation_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

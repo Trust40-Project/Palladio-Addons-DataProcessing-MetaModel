@@ -88,7 +88,7 @@ public class SeffPackageImpl extends EPackageImpl implements SeffPackage
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link SeffPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -103,7 +103,8 @@ public class SeffPackageImpl extends EPackageImpl implements SeffPackage
 		if (isInited) return (SeffPackage)EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI);
 
 		// Obtain or create and register package
-		SeffPackageImpl theSeffPackage = (SeffPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof SeffPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new SeffPackageImpl());
+		Object registeredSeffPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		SeffPackageImpl theSeffPackage = registeredSeffPackage instanceof SeffPackageImpl ? (SeffPackageImpl)registeredSeffPackage : new SeffPackageImpl();
 
 		isInited = true;
 
@@ -115,11 +116,16 @@ public class SeffPackageImpl extends EPackageImpl implements SeffPackage
 		UnitsPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		DataprocessingPackageImpl theDataprocessingPackage = (DataprocessingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DataprocessingPackage.eNS_URI) instanceof DataprocessingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DataprocessingPackage.eNS_URI) : DataprocessingPackage.eINSTANCE);
-		RepositoryPackageImpl theRepositoryPackage = (RepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI) instanceof RepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI) : RepositoryPackage.eINSTANCE);
-		ProcessingPackageImpl theProcessingPackage = (ProcessingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ProcessingPackage.eNS_URI) instanceof ProcessingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ProcessingPackage.eNS_URI) : ProcessingPackage.eINSTANCE);
-		CharacteristicsPackageImpl theCharacteristicsPackage = (CharacteristicsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI) instanceof CharacteristicsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI) : CharacteristicsPackage.eINSTANCE);
-		DataPackageImpl theDataPackage = (DataPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI) instanceof DataPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI) : DataPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DataprocessingPackage.eNS_URI);
+		DataprocessingPackageImpl theDataprocessingPackage = (DataprocessingPackageImpl)(registeredPackage instanceof DataprocessingPackageImpl ? registeredPackage : DataprocessingPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
+		RepositoryPackageImpl theRepositoryPackage = (RepositoryPackageImpl)(registeredPackage instanceof RepositoryPackageImpl ? registeredPackage : RepositoryPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ProcessingPackage.eNS_URI);
+		ProcessingPackageImpl theProcessingPackage = (ProcessingPackageImpl)(registeredPackage instanceof ProcessingPackageImpl ? registeredPackage : ProcessingPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI);
+		CharacteristicsPackageImpl theCharacteristicsPackage = (CharacteristicsPackageImpl)(registeredPackage instanceof CharacteristicsPackageImpl ? registeredPackage : CharacteristicsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
+		DataPackageImpl theDataPackage = (DataPackageImpl)(registeredPackage instanceof DataPackageImpl ? registeredPackage : DataPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theSeffPackage.createPackageContents();
@@ -140,7 +146,6 @@ public class SeffPackageImpl extends EPackageImpl implements SeffPackage
 		// Mark meta-data to indicate it can't be changed
 		theSeffPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(SeffPackage.eNS_URI, theSeffPackage);
 		return theSeffPackage;

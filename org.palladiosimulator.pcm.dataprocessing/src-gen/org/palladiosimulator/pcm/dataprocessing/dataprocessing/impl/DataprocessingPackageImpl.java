@@ -86,7 +86,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link DataprocessingPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -101,7 +101,8 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		if (isInited) return (DataprocessingPackage)EPackage.Registry.INSTANCE.getEPackage(DataprocessingPackage.eNS_URI);
 
 		// Obtain or create and register package
-		DataprocessingPackageImpl theDataprocessingPackage = (DataprocessingPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DataprocessingPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new DataprocessingPackageImpl());
+		Object registeredDataprocessingPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		DataprocessingPackageImpl theDataprocessingPackage = registeredDataprocessingPackage instanceof DataprocessingPackageImpl ? (DataprocessingPackageImpl)registeredDataprocessingPackage : new DataprocessingPackageImpl();
 
 		isInited = true;
 
@@ -113,11 +114,16 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		UnitsPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		RepositoryPackageImpl theRepositoryPackage = (RepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI) instanceof RepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI) : RepositoryPackage.eINSTANCE);
-		ProcessingPackageImpl theProcessingPackage = (ProcessingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ProcessingPackage.eNS_URI) instanceof ProcessingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ProcessingPackage.eNS_URI) : ProcessingPackage.eINSTANCE);
-		CharacteristicsPackageImpl theCharacteristicsPackage = (CharacteristicsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI) instanceof CharacteristicsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI) : CharacteristicsPackage.eINSTANCE);
-		DataPackageImpl theDataPackage = (DataPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI) instanceof DataPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI) : DataPackage.eINSTANCE);
-		SeffPackageImpl theSeffPackage = (SeffPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI) instanceof SeffPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI) : SeffPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
+		RepositoryPackageImpl theRepositoryPackage = (RepositoryPackageImpl)(registeredPackage instanceof RepositoryPackageImpl ? registeredPackage : RepositoryPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ProcessingPackage.eNS_URI);
+		ProcessingPackageImpl theProcessingPackage = (ProcessingPackageImpl)(registeredPackage instanceof ProcessingPackageImpl ? registeredPackage : ProcessingPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI);
+		CharacteristicsPackageImpl theCharacteristicsPackage = (CharacteristicsPackageImpl)(registeredPackage instanceof CharacteristicsPackageImpl ? registeredPackage : CharacteristicsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
+		DataPackageImpl theDataPackage = (DataPackageImpl)(registeredPackage instanceof DataPackageImpl ? registeredPackage : DataPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI);
+		SeffPackageImpl theSeffPackage = (SeffPackageImpl)(registeredPackage instanceof SeffPackageImpl ? registeredPackage : SeffPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theDataprocessingPackage.createPackageContents();
@@ -138,7 +144,6 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		// Mark meta-data to indicate it can't be changed
 		theDataprocessingPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(DataprocessingPackage.eNS_URI, theDataprocessingPackage);
 		return theDataprocessingPackage;
@@ -322,16 +327,16 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 */
 	protected void createImportAnnotations()
 	{
-		String source = "http://www.eclipse.org/OCL/Import";	
+		String source = "http://www.eclipse.org/OCL/Import";
 		addAnnotation
-		  (this, 
-		   source, 
-		   new String[] 
+		  (this,
+		   source,
+		   new String[]
 		   {
-			 "entity", "../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity",
-			 "identifier", "../../../plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/",
-			 "repository_1", "../../org.palladiosimulator.pcm/model/pcm.ecore#//repository",
-			 "seff_1", "../../org.palladiosimulator.pcm/model/pcm.ecore#//seff"
+			   "entity", "http://palladiosimulator.org/PalladioComponentModel/Core/Entity/5.2",
+			   "identifier", "http://sdq.ipd.uka.de/Identifier/2.1",
+			   "repository_1", "http://palladiosimulator.org/PalladioComponentModel/Repository/5.2",
+			   "seff_1", "http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2"
 		   });
 	}
 

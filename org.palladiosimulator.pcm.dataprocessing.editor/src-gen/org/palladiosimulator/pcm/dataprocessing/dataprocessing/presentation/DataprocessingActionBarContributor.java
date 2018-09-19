@@ -175,6 +175,7 @@ public class DataprocessingActionBarContributor
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager)
 	{
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("dataprocessing-settings"));
 		toolBarManager.add(new Separator("dataprocessing-additions"));
 	}

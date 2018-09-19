@@ -177,6 +177,7 @@ public class RepositoryActionBarContributor
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager)
 	{
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("repository-settings"));
 		toolBarManager.add(new Separator("repository-additions"));
 	}

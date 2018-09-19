@@ -255,7 +255,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link ProcessingPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -270,7 +270,8 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		if (isInited) return (ProcessingPackage)EPackage.Registry.INSTANCE.getEPackage(ProcessingPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ProcessingPackageImpl theProcessingPackage = (ProcessingPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ProcessingPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ProcessingPackageImpl());
+		Object registeredProcessingPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		ProcessingPackageImpl theProcessingPackage = registeredProcessingPackage instanceof ProcessingPackageImpl ? (ProcessingPackageImpl)registeredProcessingPackage : new ProcessingPackageImpl();
 
 		isInited = true;
 
@@ -282,11 +283,16 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		UnitsPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		DataprocessingPackageImpl theDataprocessingPackage = (DataprocessingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DataprocessingPackage.eNS_URI) instanceof DataprocessingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DataprocessingPackage.eNS_URI) : DataprocessingPackage.eINSTANCE);
-		RepositoryPackageImpl theRepositoryPackage = (RepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI) instanceof RepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI) : RepositoryPackage.eINSTANCE);
-		CharacteristicsPackageImpl theCharacteristicsPackage = (CharacteristicsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI) instanceof CharacteristicsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI) : CharacteristicsPackage.eINSTANCE);
-		DataPackageImpl theDataPackage = (DataPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI) instanceof DataPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI) : DataPackage.eINSTANCE);
-		SeffPackageImpl theSeffPackage = (SeffPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI) instanceof SeffPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI) : SeffPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DataprocessingPackage.eNS_URI);
+		DataprocessingPackageImpl theDataprocessingPackage = (DataprocessingPackageImpl)(registeredPackage instanceof DataprocessingPackageImpl ? registeredPackage : DataprocessingPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
+		RepositoryPackageImpl theRepositoryPackage = (RepositoryPackageImpl)(registeredPackage instanceof RepositoryPackageImpl ? registeredPackage : RepositoryPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI);
+		CharacteristicsPackageImpl theCharacteristicsPackage = (CharacteristicsPackageImpl)(registeredPackage instanceof CharacteristicsPackageImpl ? registeredPackage : CharacteristicsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
+		DataPackageImpl theDataPackage = (DataPackageImpl)(registeredPackage instanceof DataPackageImpl ? registeredPackage : DataPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI);
+		SeffPackageImpl theSeffPackage = (SeffPackageImpl)(registeredPackage instanceof SeffPackageImpl ? registeredPackage : SeffPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theProcessingPackage.createPackageContents();
@@ -306,7 +312,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(theProcessingPackage, 
+			(theProcessingPackage,
 			 new EValidator.Descriptor()
 			 {
 				 public EValidator getEValidator()
@@ -318,7 +324,6 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		// Mark meta-data to indicate it can't be changed
 		theProcessingPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ProcessingPackage.eNS_URI, theProcessingPackage);
 		return theProcessingPackage;
@@ -1019,57 +1024,57 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 */
 	protected void createEcoreAnnotations()
 	{
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
-		   new String[] 
+		  (this,
+		   source,
+		   new String[]
 		   {
-			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
-		   });	
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });
 		addAnnotation
-		  (loadAllDataOperationEClass, 
-		   source, 
-		   new String[] 
+		  (loadAllDataOperationEClass,
+		   source,
+		   new String[]
 		   {
-			 "constraints", "resultTypeMustBeCollection"
-		   });	
+			   "constraints", "resultTypeMustBeCollection"
+		   });
 		addAnnotation
-		  (dataResultMappingEClass, 
-		   source, 
-		   new String[] 
+		  (dataResultMappingEClass,
+		   source,
+		   new String[]
 		   {
-			 "constraints", "mappedDataMustBeInReceivedData"
-		   });	
+			   "constraints", "mappedDataMustBeInReceivedData"
+		   });
 		addAnnotation
-		  (joinDataOperationEClass, 
-		   source, 
-		   new String[] 
+		  (joinDataOperationEClass,
+		   source,
+		   new String[]
 		   {
-			 "constraints", "resultMustBeCompositeOfInputs"
-		   });	
+			   "constraints", "resultMustBeCompositeOfInputs"
+		   });
 		addAnnotation
-		  (unionDataOperationEClass, 
-		   source, 
-		   new String[] 
+		  (unionDataOperationEClass,
+		   source,
+		   new String[]
 		   {
-			 "constraints", "inputsMustBeResultTypeOrResultEntityType"
-		   });	
+			   "constraints", "inputsMustBeResultTypeOrResultEntityType"
+		   });
 		addAnnotation
-		  (projectionDataOperationEClass, 
-		   source, 
-		   new String[] 
+		  (projectionDataOperationEClass,
+		   source,
+		   new String[]
 		   {
-			 "constraints", "noParameters outputIsComposedInInput"
-		   });	
+			   "constraints", "noParameters outputIsComposedInInput"
+		   });
 		addAnnotation
-		  (selectionDataOperationEClass, 
-		   source, 
-		   new String[] 
+		  (selectionDataOperationEClass,
+		   source,
+		   new String[]
 		   {
-			 "constraints", "inputAndOutputHaveSameEntityType"
+			   "constraints", "inputAndOutputHaveSameEntityType"
 		   });
 	}
 
@@ -1081,147 +1086,147 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 */
 	protected void createPivotAnnotations()
 	{
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
 		addAnnotation
-		  (dataOperationEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] 
+		  (dataOperationEClass.getEOperations().get(0),
+		   source,
+		   new String[]
 		   {
-			 "body", "self.oclAsSet()->selectByType(dataprocessing::data::Data)"
-		   });	
+			   "body", "self.oclAsSet()->selectByType(dataprocessing::data::Data)"
+		   });
 		addAnnotation
-		  (dataOperationEClass.getEOperations().get(1), 
-		   source, 
-		   new String[] 
+		  (dataOperationEClass.getEOperations().get(1),
+		   source,
+		   new String[]
 		   {
-			 "body", "self.oclAsSet()->selectByType(dataprocessing::data::Data)"
-		   });	
+			   "body", "self.oclAsSet()->selectByType(dataprocessing::data::Data)"
+		   });
 		addAnnotation
-		  (getDataOperation_IncomingData(), 
-		   source, 
-		   new String[] 
+		  (getDataOperation_IncomingData(),
+		   source,
+		   new String[]
 		   {
-			 "derivation", "determineIncomingData()"
-		   });	
+			   "derivation", "determineIncomingData()"
+		   });
 		addAnnotation
-		  (getDataOperation_OutgoingData(), 
-		   source, 
-		   new String[] 
+		  (getDataOperation_OutgoingData(),
+		   source,
+		   new String[]
 		   {
-			 "derivation", "determineOutgoingData()"
-		   });	
+			   "derivation", "determineOutgoingData()"
+		   });
 		addAnnotation
-		  (createDataOperationEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] 
+		  (createDataOperationEClass.getEOperations().get(0),
+		   source,
+		   new String[]
 		   {
-			 "body", "self.resultingData.oclAsSet()"
-		   });	
+			   "body", "self.resultingData.oclAsSet()"
+		   });
 		addAnnotation
-		  (loadAllDataOperationEClass, 
-		   source, 
-		   new String[] 
+		  (loadAllDataOperationEClass,
+		   source,
+		   new String[]
 		   {
-			 "resultTypeMustBeCollection", "self.resultingData.type.oclIsKindOf(repository_1::CollectionDataType)"
-		   });	
+			   "resultTypeMustBeCollection", "self.resultingData.type.oclIsKindOf(repository_1::CollectionDataType)"
+		   });
 		addAnnotation
-		  (performDataTransmissionOperationEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] 
+		  (performDataTransmissionOperationEClass.getEOperations().get(0),
+		   source,
+		   new String[]
 		   {
-			 "body", "self.outputMappings.data->asSet()"
-		   });	
+			   "body", "self.outputMappings.data->asSet()"
+		   });
 		addAnnotation
-		  (performDataTransmissionOperationEClass.getEOperations().get(1), 
-		   source, 
-		   new String[] 
+		  (performDataTransmissionOperationEClass.getEOperations().get(1),
+		   source,
+		   new String[]
 		   {
-			 "body", "self.inputMappings.data->asSet()"
-		   });	
+			   "body", "self.inputMappings.data->asSet()"
+		   });
 		addAnnotation
-		  (consumeDataOperationEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] 
+		  (consumeDataOperationEClass.getEOperations().get(0),
+		   source,
+		   new String[]
 		   {
-			 "body", "self.consumedData->asSet()"
-		   });	
+			   "body", "self.consumedData->asSet()"
+		   });
 		addAnnotation
-		  (dataResultMappingEClass, 
-		   source, 
-		   new String[] 
+		  (dataResultMappingEClass,
+		   source,
+		   new String[]
 		   {
-			 "mappedDataMustBeInReceivedData", "self.receivedData->includes(self.data)"
-		   });	
+			   "mappedDataMustBeInReceivedData", "self.receivedData->includes(self.data)"
+		   });
 		addAnnotation
-		  (manyToOneDataOperationEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] 
+		  (manyToOneDataOperationEClass.getEOperations().get(0),
+		   source,
+		   new String[]
 		   {
-			 "body", "self.consumedData->asSet()"
-		   });	
+			   "body", "self.consumedData->asSet()"
+		   });
 		addAnnotation
-		  (manyToOneDataOperationEClass.getEOperations().get(1), 
-		   source, 
-		   new String[] 
+		  (manyToOneDataOperationEClass.getEOperations().get(1),
+		   source,
+		   new String[]
 		   {
-			 "body", "self.resultingData->asSet()"
-		   });	
+			   "body", "self.resultingData->asSet()"
+		   });
 		addAnnotation
-		  (joinDataOperationEClass, 
-		   source, 
-		   new String[] 
+		  (joinDataOperationEClass,
+		   source,
+		   new String[]
 		   {
-			 "resultMustBeCompositeOfInputs", "\n\t\t\t\tlet resultInnerDeclarations = self.resultingData.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType in\n\t\t\t\t\tresultInnerDeclarations.datatype_InnerDeclaration = self.consumedData.type"
-		   });	
+			   "resultMustBeCompositeOfInputs", "\n\t\t\t\tlet resultInnerDeclarations = self.resultingData.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType in\n\t\t\t\t\tresultInnerDeclarations.datatype_InnerDeclaration = self.consumedData.type"
+		   });
 		addAnnotation
-		  (unionDataOperationEClass, 
-		   source, 
-		   new String[] 
+		  (unionDataOperationEClass,
+		   source,
+		   new String[]
 		   {
-			 "inputsMustBeResultTypeOrResultEntityType", "\n\t\t\t\tlet entityType = self.resultingData.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType in\n\t\t\t\t\tself.consumedData.type->forAll(t |\n\t\t\t\t\t\tt = entityType or t.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType = entityType)"
-		   });	
+			   "inputsMustBeResultTypeOrResultEntityType", "\n\t\t\t\tlet entityType = self.resultingData.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType in\n\t\t\t\t\tself.consumedData.type->forAll(t |\n\t\t\t\t\t\tt = entityType or t.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType = entityType)"
+		   });
 		addAnnotation
-		  (transformDataOperationEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] 
+		  (transformDataOperationEClass.getEOperations().get(0),
+		   source,
+		   new String[]
 		   {
-			 "body", "self.inputs->asSet()->union(self.parameterData)"
-		   });	
+			   "body", "self.inputs->asSet()->union(self.parameterData)"
+		   });
 		addAnnotation
-		  (transformDataOperationEClass.getEOperations().get(1), 
-		   source, 
-		   new String[] 
+		  (transformDataOperationEClass.getEOperations().get(1),
+		   source,
+		   new String[]
 		   {
-			 "body", "self.output->asSet()"
-		   });	
+			   "body", "self.output->asSet()"
+		   });
 		addAnnotation
-		  (projectionDataOperationEClass, 
-		   source, 
-		   new String[] 
+		  (projectionDataOperationEClass,
+		   source,
+		   new String[]
 		   {
-			 "noParameters", "self.parameterData->isEmpty()",
-			 "outputIsComposedInInput", "self.inputs.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)"
-		   });	
+			   "noParameters", "self.parameterData->isEmpty()",
+			   "outputIsComposedInInput", "self.inputs.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)"
+		   });
 		addAnnotation
-		  (selectionDataOperationEClass, 
-		   source, 
-		   new String[] 
+		  (selectionDataOperationEClass,
+		   source,
+		   new String[]
 		   {
-			 "inputAndOutputHaveSameEntityType", "self.inputs.type->oclAsSet() = self.output.type->oclAsSet() or self.inputs.type.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()"
-		   });	
+			   "inputAndOutputHaveSameEntityType", "self.inputs.type->oclAsSet() = self.output.type->oclAsSet() or self.inputs.type.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()"
+		   });
 		addAnnotation
-		  (characteristicChangingDataOperationEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] 
+		  (characteristicChangingDataOperationEClass.getEOperations().get(0),
+		   source,
+		   new String[]
 		   {
-			 "body", "self.data.oclAsSet()"
-		   });	
+			   "body", "self.data.oclAsSet()"
+		   });
 		addAnnotation
-		  (characteristicChangingDataOperationEClass.getEOperations().get(1), 
-		   source, 
-		   new String[] 
+		  (characteristicChangingDataOperationEClass.getEOperations().get(1),
+		   source,
+		   new String[]
 		   {
-			 "body", "self.determineIncomingData()"
+			   "body", "self.determineIncomingData()"
 		   });
 	}
 

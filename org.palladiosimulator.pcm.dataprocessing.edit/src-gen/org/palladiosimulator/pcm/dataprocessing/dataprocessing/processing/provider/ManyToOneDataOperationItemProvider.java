@@ -9,8 +9,13 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataFactory;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ManyToOneDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
@@ -48,7 +53,6 @@ public class ManyToOneDataOperationItemProvider extends DataOperationItemProvide
 			super.getPropertyDescriptors(object);
 
 			addConsumedDataPropertyDescriptor(object);
-			addResultingDataPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -77,26 +81,36 @@ public class ManyToOneDataOperationItemProvider extends DataOperationItemProvide
 	}
 
 	/**
-	 * This adds a property descriptor for the Resulting Data feature.
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addResultingDataPropertyDescriptor(Object object)
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object)
 	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ManyToOneDataOperation_resultingData_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ManyToOneDataOperation_resultingData_feature", "_UI_ManyToOneDataOperation_type"),
-				 ProcessingPackage.Literals.MANY_TO_ONE_DATA_OPERATION__RESULTING_DATA,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
+		if (childrenFeatures == null)
+		{
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(ProcessingPackage.Literals.MANY_TO_ONE_DATA_OPERATION__RESULTING_DATA);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child)
+	{
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -113,7 +127,7 @@ public class ManyToOneDataOperationItemProvider extends DataOperationItemProvide
 			getString("_UI_ManyToOneDataOperation_type") :
 			getString("_UI_ManyToOneDataOperation_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -126,6 +140,13 @@ public class ManyToOneDataOperationItemProvider extends DataOperationItemProvide
 	public void notifyChanged(Notification notification)
 	{
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(ManyToOneDataOperation.class))
+		{
+			case ProcessingPackage.MANY_TO_ONE_DATA_OPERATION__RESULTING_DATA:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -140,6 +161,26 @@ public class ManyToOneDataOperationItemProvider extends DataOperationItemProvide
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
 	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.MANY_TO_ONE_DATA_OPERATION__RESULTING_DATA,
+				 DataFactory.eINSTANCE.createOriginalData()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.MANY_TO_ONE_DATA_OPERATION__RESULTING_DATA,
+				 DataFactory.eINSTANCE.createParameterBasedData()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.MANY_TO_ONE_DATA_OPERATION__RESULTING_DATA,
+				 DataFactory.eINSTANCE.createResultBasedData()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.MANY_TO_ONE_DATA_OPERATION__RESULTING_DATA,
+				 DataFactory.eINSTANCE.createDerivedData()));
 	}
 
 }

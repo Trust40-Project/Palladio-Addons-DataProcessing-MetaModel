@@ -75,7 +75,7 @@ public class SelectionDataOperationItemProvider extends TransformDataOperationIt
 			getString("_UI_SelectionDataOperation_type") :
 			getString("_UI_SelectionDataOperation_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -125,7 +125,7 @@ public class DerivedDataItemProvider extends DataItemProvider
 			getString("_UI_DerivedData_type") :
 			getString("_UI_DerivedData_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

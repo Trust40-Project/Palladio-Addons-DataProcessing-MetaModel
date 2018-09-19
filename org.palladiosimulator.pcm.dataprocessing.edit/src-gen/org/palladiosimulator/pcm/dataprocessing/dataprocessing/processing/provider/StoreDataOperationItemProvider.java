@@ -101,7 +101,7 @@ public class StoreDataOperationItemProvider extends ConsumeDataOperationItemProv
 			getString("_UI_StoreDataOperation_type") :
 			getString("_UI_StoreDataOperation_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

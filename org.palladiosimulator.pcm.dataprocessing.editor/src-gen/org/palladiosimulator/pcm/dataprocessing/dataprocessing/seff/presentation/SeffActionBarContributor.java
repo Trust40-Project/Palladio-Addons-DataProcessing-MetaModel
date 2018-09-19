@@ -177,6 +177,7 @@ public class SeffActionBarContributor
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager)
 	{
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("seff-settings"));
 		toolBarManager.add(new Separator("seff-additions"));
 	}

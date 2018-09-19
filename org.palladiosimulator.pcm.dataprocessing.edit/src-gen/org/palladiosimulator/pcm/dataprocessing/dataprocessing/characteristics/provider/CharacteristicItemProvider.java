@@ -14,11 +14,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.provider.DataprocessingEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic} object.
@@ -94,7 +95,7 @@ public class CharacteristicItemProvider extends IdentifierItemProvider
 			getString("_UI_Characteristic_type") :
 			getString("_UI_Characteristic_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -132,7 +133,7 @@ public class CharacteristicItemProvider extends IdentifierItemProvider
 	@Override
 	public ResourceLocator getResourceLocator()
 	{
-		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
+		return DataprocessingEditPlugin.INSTANCE;
 	}
 
 }

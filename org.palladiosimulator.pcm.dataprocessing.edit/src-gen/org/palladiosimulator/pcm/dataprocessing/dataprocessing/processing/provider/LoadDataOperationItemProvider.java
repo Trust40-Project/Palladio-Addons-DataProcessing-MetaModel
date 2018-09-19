@@ -101,7 +101,7 @@ public class LoadDataOperationItemProvider extends CreateDataOperationItemProvid
 			getString("_UI_LoadDataOperation_type") :
 			getString("_UI_LoadDataOperation_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

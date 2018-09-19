@@ -2,6 +2,8 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.util;
 
+import de.uka.ipd.sdq.identifier.util.IdentifierValidator;
+
 import java.util.Map;
 
 import org.eclipse.emf.common.util.Diagnostic;
@@ -59,6 +61,14 @@ public class ProcessingValidator extends EObjectValidator
 	protected static final int DIAGNOSTIC_CODE_COUNT = GENERATED_DIAGNOSTIC_CODE_COUNT;
 
 	/**
+	 * The cached base package validator.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IdentifierValidator identifierValidator;
+
+	/**
 	 * Creates an instance of the switch.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,6 +77,7 @@ public class ProcessingValidator extends EObjectValidator
 	public ProcessingValidator()
 	{
 		super();
+		identifierValidator = IdentifierValidator.INSTANCE;
 	}
 
 	/**
@@ -146,7 +157,17 @@ public class ProcessingValidator extends EObjectValidator
 	 */
 	public boolean validateDataProcessingContainer(DataProcessingContainer dataProcessingContainer, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		return validate_EveryDefaultConstraint((EObject)dataProcessingContainer, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)dataProcessingContainer, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)dataProcessingContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)dataProcessingContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)dataProcessingContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)dataProcessingContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)dataProcessingContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)dataProcessingContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)dataProcessingContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)dataProcessingContainer, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(dataProcessingContainer, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -156,7 +177,17 @@ public class ProcessingValidator extends EObjectValidator
 	 */
 	public boolean validateDataOperation(DataOperation dataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		return validate_EveryDefaultConstraint((EObject)dataOperation, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)dataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)dataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)dataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)dataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)dataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)dataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)dataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)dataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)dataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(dataOperation, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -166,7 +197,17 @@ public class ProcessingValidator extends EObjectValidator
 	 */
 	public boolean validateCreateDataOperation(CreateDataOperation createDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		return validate_EveryDefaultConstraint((EObject)createDataOperation, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)createDataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)createDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)createDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)createDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)createDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)createDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)createDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)createDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)createDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(createDataOperation, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -176,7 +217,17 @@ public class ProcessingValidator extends EObjectValidator
 	 */
 	public boolean validateLoadDataOperation(LoadDataOperation loadDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		return validate_EveryDefaultConstraint((EObject)loadDataOperation, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)loadDataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)loadDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)loadDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)loadDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)loadDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)loadDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)loadDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)loadDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)loadDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(loadDataOperation, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -195,6 +246,7 @@ public class ProcessingValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_UniqueID((EObject)loadAllDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)loadAllDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)loadAllDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(loadAllDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateLoadAllDataOperation_resultTypeMustBeCollection(loadAllDataOperation, diagnostics, context);
 		return result;
 	}
@@ -236,7 +288,17 @@ public class ProcessingValidator extends EObjectValidator
 	 */
 	public boolean validatePerformDataTransmissionOperation(PerformDataTransmissionOperation performDataTransmissionOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		return validate_EveryDefaultConstraint((EObject)performDataTransmissionOperation, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)performDataTransmissionOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)performDataTransmissionOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)performDataTransmissionOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)performDataTransmissionOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)performDataTransmissionOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)performDataTransmissionOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)performDataTransmissionOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)performDataTransmissionOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)performDataTransmissionOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(performDataTransmissionOperation, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -246,7 +308,17 @@ public class ProcessingValidator extends EObjectValidator
 	 */
 	public boolean validateConsumeDataOperation(ConsumeDataOperation consumeDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		return validate_EveryDefaultConstraint((EObject)consumeDataOperation, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)consumeDataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)consumeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)consumeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)consumeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)consumeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)consumeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)consumeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)consumeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)consumeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(consumeDataOperation, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -256,7 +328,17 @@ public class ProcessingValidator extends EObjectValidator
 	 */
 	public boolean validateStoreDataOperation(StoreDataOperation storeDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		return validate_EveryDefaultConstraint((EObject)storeDataOperation, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)storeDataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)storeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)storeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)storeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)storeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)storeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)storeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)storeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)storeDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(storeDataOperation, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -266,7 +348,17 @@ public class ProcessingValidator extends EObjectValidator
 	 */
 	public boolean validateReturnDataOperation(ReturnDataOperation returnDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		return validate_EveryDefaultConstraint((EObject)returnDataOperation, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)returnDataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)returnDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)returnDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)returnDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)returnDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)returnDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)returnDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)returnDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)returnDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(returnDataOperation, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -276,7 +368,17 @@ public class ProcessingValidator extends EObjectValidator
 	 */
 	public boolean validateUserReadData(UserReadData userReadData, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		return validate_EveryDefaultConstraint((EObject)userReadData, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)userReadData, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)userReadData, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)userReadData, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)userReadData, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)userReadData, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)userReadData, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)userReadData, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)userReadData, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)userReadData, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(userReadData, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -286,7 +388,17 @@ public class ProcessingValidator extends EObjectValidator
 	 */
 	public boolean validateDataMapping(DataMapping dataMapping, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		return validate_EveryDefaultConstraint((EObject)dataMapping, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)dataMapping, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)dataMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)dataMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)dataMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)dataMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)dataMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)dataMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)dataMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)dataMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(dataMapping, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -296,7 +408,17 @@ public class ProcessingValidator extends EObjectValidator
 	 */
 	public boolean validateDataParameterMapping(DataParameterMapping dataParameterMapping, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		return validate_EveryDefaultConstraint((EObject)dataParameterMapping, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)dataParameterMapping, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)dataParameterMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)dataParameterMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)dataParameterMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)dataParameterMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)dataParameterMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)dataParameterMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)dataParameterMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)dataParameterMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(dataParameterMapping, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -315,6 +437,7 @@ public class ProcessingValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_UniqueID((EObject)dataResultMapping, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)dataResultMapping, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)dataResultMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(dataResultMapping, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDataResultMapping_mappedDataMustBeInReceivedData(dataResultMapping, diagnostics, context);
 		return result;
 	}
@@ -356,7 +479,17 @@ public class ProcessingValidator extends EObjectValidator
 	 */
 	public boolean validateManyToOneDataOperation(ManyToOneDataOperation manyToOneDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		return validate_EveryDefaultConstraint((EObject)manyToOneDataOperation, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)manyToOneDataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)manyToOneDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)manyToOneDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)manyToOneDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)manyToOneDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)manyToOneDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)manyToOneDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)manyToOneDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)manyToOneDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(manyToOneDataOperation, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -375,6 +508,7 @@ public class ProcessingValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_UniqueID((EObject)joinDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)joinDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)joinDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(joinDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateJoinDataOperation_resultMustBeCompositeOfInputs(joinDataOperation, diagnostics, context);
 		return result;
 	}
@@ -427,6 +561,7 @@ public class ProcessingValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_UniqueID((EObject)unionDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)unionDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)unionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(unionDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateUnionDataOperation_inputsMustBeResultTypeOrResultEntityType(unionDataOperation, diagnostics, context);
 		return result;
 	}
@@ -471,7 +606,17 @@ public class ProcessingValidator extends EObjectValidator
 	 */
 	public boolean validateTransformDataOperation(TransformDataOperation transformDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		return validate_EveryDefaultConstraint((EObject)transformDataOperation, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)transformDataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)transformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)transformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)transformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)transformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)transformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)transformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)transformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)transformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(transformDataOperation, diagnostics, context);
+		return result;
 	}
 
 	/**
@@ -490,6 +635,7 @@ public class ProcessingValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_UniqueID((EObject)projectionDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)projectionDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)projectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(projectionDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateProjectionDataOperation_noParameters(projectionDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateProjectionDataOperation_outputIsComposedInInput(projectionDataOperation, diagnostics, context);
 		return result;
@@ -571,6 +717,7 @@ public class ProcessingValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_UniqueID((EObject)selectionDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)selectionDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)selectionDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(selectionDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateSelectionDataOperation_inputAndOutputHaveSameEntityType(selectionDataOperation, diagnostics, context);
 		return result;
 	}
@@ -612,7 +759,17 @@ public class ProcessingValidator extends EObjectValidator
 	 */
 	public boolean validateCharacteristicChangingDataOperation(CharacteristicChangingDataOperation<?> characteristicChangingDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		return validate_EveryDefaultConstraint((EObject)characteristicChangingDataOperation, diagnostics, context);
+		if (!validate_NoCircularContainment((EObject)characteristicChangingDataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)characteristicChangingDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)characteristicChangingDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)characteristicChangingDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)characteristicChangingDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)characteristicChangingDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)characteristicChangingDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)characteristicChangingDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)characteristicChangingDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(characteristicChangingDataOperation, diagnostics, context);
+		return result;
 	}
 
 	/**

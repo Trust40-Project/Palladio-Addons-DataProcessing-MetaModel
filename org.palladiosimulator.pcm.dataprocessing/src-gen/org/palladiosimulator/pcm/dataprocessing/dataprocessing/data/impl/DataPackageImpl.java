@@ -120,7 +120,7 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link DataPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -135,7 +135,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		if (isInited) return (DataPackage)EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
 
 		// Obtain or create and register package
-		DataPackageImpl theDataPackage = (DataPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DataPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new DataPackageImpl());
+		Object registeredDataPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		DataPackageImpl theDataPackage = registeredDataPackage instanceof DataPackageImpl ? (DataPackageImpl)registeredDataPackage : new DataPackageImpl();
 
 		isInited = true;
 
@@ -147,11 +148,16 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		UnitsPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		DataprocessingPackageImpl theDataprocessingPackage = (DataprocessingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DataprocessingPackage.eNS_URI) instanceof DataprocessingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DataprocessingPackage.eNS_URI) : DataprocessingPackage.eINSTANCE);
-		RepositoryPackageImpl theRepositoryPackage = (RepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI) instanceof RepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI) : RepositoryPackage.eINSTANCE);
-		ProcessingPackageImpl theProcessingPackage = (ProcessingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ProcessingPackage.eNS_URI) instanceof ProcessingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ProcessingPackage.eNS_URI) : ProcessingPackage.eINSTANCE);
-		CharacteristicsPackageImpl theCharacteristicsPackage = (CharacteristicsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI) instanceof CharacteristicsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI) : CharacteristicsPackage.eINSTANCE);
-		SeffPackageImpl theSeffPackage = (SeffPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI) instanceof SeffPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI) : SeffPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DataprocessingPackage.eNS_URI);
+		DataprocessingPackageImpl theDataprocessingPackage = (DataprocessingPackageImpl)(registeredPackage instanceof DataprocessingPackageImpl ? registeredPackage : DataprocessingPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
+		RepositoryPackageImpl theRepositoryPackage = (RepositoryPackageImpl)(registeredPackage instanceof RepositoryPackageImpl ? registeredPackage : RepositoryPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ProcessingPackage.eNS_URI);
+		ProcessingPackageImpl theProcessingPackage = (ProcessingPackageImpl)(registeredPackage instanceof ProcessingPackageImpl ? registeredPackage : ProcessingPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI);
+		CharacteristicsPackageImpl theCharacteristicsPackage = (CharacteristicsPackageImpl)(registeredPackage instanceof CharacteristicsPackageImpl ? registeredPackage : CharacteristicsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI);
+		SeffPackageImpl theSeffPackage = (SeffPackageImpl)(registeredPackage instanceof SeffPackageImpl ? registeredPackage : SeffPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theDataPackage.createPackageContents();
@@ -172,7 +178,6 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		// Mark meta-data to indicate it can't be changed
 		theDataPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(DataPackage.eNS_URI, theDataPackage);
 		return theDataPackage;
@@ -416,15 +421,15 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 	 */
 	protected void createEcoreAnnotations()
 	{
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
-		   new String[] 
+		  (this,
+		   source,
+		   new String[]
 		   {
-			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
 		   });
 	}
 
@@ -436,48 +441,48 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 	 */
 	protected void createPivotAnnotations()
 	{
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
 		addAnnotation
-		  (dataEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] 
+		  (dataEClass.getEOperations().get(0),
+		   source,
+		   new String[]
 		   {
-			 "body", "null"
-		   });	
+			   "body", "null"
+		   });
 		addAnnotation
-		  (getData_Type(), 
-		   source, 
-		   new String[] 
+		  (getData_Type(),
+		   source,
+		   new String[]
 		   {
-			 "derivation", "determineDataType()"
-		   });	
+			   "derivation", "determineDataType()"
+		   });
 		addAnnotation
-		  (originalDataEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] 
+		  (originalDataEClass.getEOperations().get(0),
+		   source,
+		   new String[]
 		   {
-			 "body", "originalType"
-		   });	
+			   "body", "originalType"
+		   });
 		addAnnotation
-		  (parameterBasedDataEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] 
+		  (parameterBasedDataEClass.getEOperations().get(0),
+		   source,
+		   new String[]
 		   {
-			 "body", "parameter.dataType__Parameter"
-		   });	
+			   "body", "parameter.dataType__Parameter"
+		   });
 		addAnnotation
-		  (resultBasedDataEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] 
+		  (resultBasedDataEClass.getEOperations().get(0),
+		   source,
+		   new String[]
 		   {
-			 "body", "operation.returnType__OperationSignature"
-		   });	
+			   "body", "operation.returnType__OperationSignature"
+		   });
 		addAnnotation
-		  (derivedDataEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] 
+		  (derivedDataEClass.getEOperations().get(0),
+		   source,
+		   new String[]
 		   {
-			 "body", "resultingDataType"
+			   "body", "resultingDataType"
 		   });
 	}
 

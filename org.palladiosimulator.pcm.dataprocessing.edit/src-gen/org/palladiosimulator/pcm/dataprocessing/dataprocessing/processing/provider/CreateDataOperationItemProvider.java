@@ -114,7 +114,7 @@ public class CreateDataOperationItemProvider extends DataOperationItemProvider
 			getString("_UI_CreateDataOperation_type") :
 			getString("_UI_CreateDataOperation_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

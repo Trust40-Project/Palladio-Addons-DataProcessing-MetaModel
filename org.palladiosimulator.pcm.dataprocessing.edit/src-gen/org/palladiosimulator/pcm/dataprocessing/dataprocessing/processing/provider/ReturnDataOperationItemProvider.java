@@ -75,7 +75,7 @@ public class ReturnDataOperationItemProvider extends ConsumeDataOperationItemPro
 			getString("_UI_ReturnDataOperation_type") :
 			getString("_UI_ReturnDataOperation_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

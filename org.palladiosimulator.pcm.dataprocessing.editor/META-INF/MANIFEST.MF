@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.pcm.dataprocessing.editor;singleton:=true
+Automatic-Module-Name: org.palladiosimulator.pcm.dataprocessing.editor
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.pcm.dataprocessing.dataprocessing.presentation.DataprocessingEditorPlugin$Implementation

@@ -177,6 +177,7 @@ public class ProcessingActionBarContributor
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager)
 	{
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("processing-settings"));
 		toolBarManager.add(new Separator("processing-additions"));
 	}

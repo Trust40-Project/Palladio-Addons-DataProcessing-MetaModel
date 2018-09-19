@@ -177,6 +177,7 @@ public class DataActionBarContributor
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager)
 	{
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("data-settings"));
 		toolBarManager.add(new Separator("data-additions"));
 	}

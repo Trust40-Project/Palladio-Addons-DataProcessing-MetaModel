@@ -9,6 +9,8 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -17,6 +19,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataFactory;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.provider.DataprocessingEditPlugin;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.DataSEFFSpecification;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffPackage;
@@ -116,7 +120,7 @@ public class DataSEFFSpecificationItemProvider extends EntityItemProvider
 			getString("_UI_DataSEFFSpecification_type") :
 			getString("_UI_DataSEFFSpecification_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -155,6 +159,18 @@ public class DataSEFFSpecificationItemProvider extends EntityItemProvider
 			(createChildParameter
 				(SeffPackage.Literals.DATA_SEFF_SPECIFICATION__INPUT_DATA,
 				 DataFactory.eINSTANCE.createParameterBasedData()));
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator()
+	{
+		return DataprocessingEditPlugin.INSTANCE;
 	}
 
 }

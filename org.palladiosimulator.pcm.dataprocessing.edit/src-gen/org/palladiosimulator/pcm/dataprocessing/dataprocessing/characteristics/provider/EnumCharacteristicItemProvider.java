@@ -125,7 +125,7 @@ public class EnumCharacteristicItemProvider extends CharacteristicItemProvider
 			getString("_UI_EnumCharacteristic_type") :
 			getString("_UI_EnumCharacteristic_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

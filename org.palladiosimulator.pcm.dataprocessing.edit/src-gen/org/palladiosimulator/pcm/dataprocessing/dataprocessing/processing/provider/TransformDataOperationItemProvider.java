@@ -151,7 +151,7 @@ public class TransformDataOperationItemProvider extends DataOperationItemProvide
 			getString("_UI_TransformDataOperation_type") :
 			getString("_UI_TransformDataOperation_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

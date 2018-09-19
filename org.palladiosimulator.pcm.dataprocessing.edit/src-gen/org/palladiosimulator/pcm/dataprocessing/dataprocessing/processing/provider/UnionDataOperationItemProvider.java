@@ -75,7 +75,7 @@ public class UnionDataOperationItemProvider extends ManyToOneDataOperationItemPr
 			getString("_UI_UnionDataOperation_type") :
 			getString("_UI_UnionDataOperation_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

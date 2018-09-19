@@ -164,7 +164,7 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link CharacteristicsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -179,7 +179,8 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		if (isInited) return (CharacteristicsPackage)EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		CharacteristicsPackageImpl theCharacteristicsPackage = (CharacteristicsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof CharacteristicsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new CharacteristicsPackageImpl());
+		Object registeredCharacteristicsPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		CharacteristicsPackageImpl theCharacteristicsPackage = registeredCharacteristicsPackage instanceof CharacteristicsPackageImpl ? (CharacteristicsPackageImpl)registeredCharacteristicsPackage : new CharacteristicsPackageImpl();
 
 		isInited = true;
 
@@ -191,11 +192,16 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		UnitsPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		DataprocessingPackageImpl theDataprocessingPackage = (DataprocessingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DataprocessingPackage.eNS_URI) instanceof DataprocessingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DataprocessingPackage.eNS_URI) : DataprocessingPackage.eINSTANCE);
-		RepositoryPackageImpl theRepositoryPackage = (RepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI) instanceof RepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI) : RepositoryPackage.eINSTANCE);
-		ProcessingPackageImpl theProcessingPackage = (ProcessingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ProcessingPackage.eNS_URI) instanceof ProcessingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ProcessingPackage.eNS_URI) : ProcessingPackage.eINSTANCE);
-		DataPackageImpl theDataPackage = (DataPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI) instanceof DataPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI) : DataPackage.eINSTANCE);
-		SeffPackageImpl theSeffPackage = (SeffPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI) instanceof SeffPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI) : SeffPackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DataprocessingPackage.eNS_URI);
+		DataprocessingPackageImpl theDataprocessingPackage = (DataprocessingPackageImpl)(registeredPackage instanceof DataprocessingPackageImpl ? registeredPackage : DataprocessingPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
+		RepositoryPackageImpl theRepositoryPackage = (RepositoryPackageImpl)(registeredPackage instanceof RepositoryPackageImpl ? registeredPackage : RepositoryPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ProcessingPackage.eNS_URI);
+		ProcessingPackageImpl theProcessingPackage = (ProcessingPackageImpl)(registeredPackage instanceof ProcessingPackageImpl ? registeredPackage : ProcessingPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
+		DataPackageImpl theDataPackage = (DataPackageImpl)(registeredPackage instanceof DataPackageImpl ? registeredPackage : DataPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI);
+		SeffPackageImpl theSeffPackage = (SeffPackageImpl)(registeredPackage instanceof SeffPackageImpl ? registeredPackage : SeffPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theCharacteristicsPackage.createPackageContents();
@@ -215,7 +221,7 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(theCharacteristicsPackage, 
+			(theCharacteristicsPackage,
 			 new EValidator.Descriptor()
 			 {
 				 public EValidator getEValidator()
@@ -227,7 +233,6 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		// Mark meta-data to indicate it can't be changed
 		theCharacteristicsPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(CharacteristicsPackage.eNS_URI, theCharacteristicsPackage);
 		return theCharacteristicsPackage;
@@ -621,22 +626,22 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 	 */
 	protected void createEcoreAnnotations()
 	{
-		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
-		  (this, 
-		   source, 
-		   new String[] 
+		  (this,
+		   source,
+		   new String[]
 		   {
-			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
-		   });	
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });
 		addAnnotation
-		  (enumCharacteristicEClass, 
-		   source, 
-		   new String[] 
+		  (enumCharacteristicEClass,
+		   source,
+		   new String[]
 		   {
-			 "constraints", "valueCountMustMatchTypeRestriction literalsMustBelongToCorrectEnum"
+			   "constraints", "valueCountMustMatchTypeRestriction literalsMustBelongToCorrectEnum"
 		   });
 	}
 
@@ -648,28 +653,28 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 	 */
 	protected void createPivotAnnotations()
 	{
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
 		addAnnotation
-		  (getCharacterizable_Characteristics(), 
-		   source, 
-		   new String[] 
+		  (getCharacterizable_Characteristics(),
+		   source,
+		   new String[]
 		   {
-			 "derivation", "self.characteristicContainers->collect(characteristics)"
-		   });	
+			   "derivation", "self.characteristicContainers->collect(characteristics)->asOrderedSet()"
+		   });
 		addAnnotation
-		  (enumCharacteristicEClass, 
-		   source, 
-		   new String[] 
+		  (enumCharacteristicEClass,
+		   source,
+		   new String[]
 		   {
-			 "valueCountMustMatchTypeRestriction", "self.literals->size() < 2 or self.type.multipleChoice",
-			 "literalsMustBelongToCorrectEnum", "self.type.enum.literals->includesAll(self.literals)"
-		   });	
+			   "valueCountMustMatchTypeRestriction", "self.literals->size() < 2 or self.type.multipleChoice",
+			   "literalsMustBelongToCorrectEnum", "self.type.enum.literals->includesAll(self.literals)"
+		   });
 		addAnnotation
-		  (getEnumCharacteristic_Type(), 
-		   source, 
-		   new String[] 
+		  (getEnumCharacteristic_Type(),
+		   source,
+		   new String[]
 		   {
-			 "derivation", "let type = self.characteristicType\n\t\t\t\tin if type.oclIsUndefined() or not type.oclIsKindOf(EnumCharacteristicType)\n\t\t\t\tthen null\n\t\t\t\telse type.oclAsType(EnumCharacteristicType)\n\t\t\t\tendif"
+			   "derivation", "let type = self.characteristicType\n\t\t\t\tin if type.oclIsUndefined() or not type.oclIsKindOf(EnumCharacteristicType)\n\t\t\t\tthen null\n\t\t\t\telse type.oclAsType(EnumCharacteristicType)\n\t\t\t\tendif"
 		   });
 	}
 
@@ -681,13 +686,13 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 	 */
 	protected void createCollectionAnnotations()
 	{
-		String source = "http://www.eclipse.org/OCL/Collection";	
+		String source = "http://www.eclipse.org/OCL/Collection";
 		addAnnotation
-		  (getCharacterizable_Characteristics(), 
-		   source, 
-		   new String[] 
+		  (getCharacterizable_Characteristics(),
+		   source,
+		   new String[]
 		   {
-			 "nullFree", "false"
+			   "nullFree", "false"
 		   });
 	}
 

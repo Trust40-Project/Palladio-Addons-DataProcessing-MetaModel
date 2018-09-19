@@ -139,7 +139,7 @@ public class DataResultMappingItemProvider extends DataMappingItemProvider
 			getString("_UI_DataResultMapping_type") :
 			getString("_UI_DataResultMapping_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

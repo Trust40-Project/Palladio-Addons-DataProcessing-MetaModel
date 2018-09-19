@@ -114,7 +114,7 @@ public class PerformDataTransmissionOperationItemProvider extends DataOperationI
 			getString("_UI_PerformDataTransmissionOperation_type") :
 			getString("_UI_PerformDataTransmissionOperation_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -101,7 +101,7 @@ public class ParameterBasedDataItemProvider extends DataItemProvider
 			getString("_UI_ParameterBasedData_type") :
 			getString("_UI_ParameterBasedData_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

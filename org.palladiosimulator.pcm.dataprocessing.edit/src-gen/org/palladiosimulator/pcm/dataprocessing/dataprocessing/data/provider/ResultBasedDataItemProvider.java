@@ -101,7 +101,7 @@ public class ResultBasedDataItemProvider extends DataItemProvider
 			getString("_UI_ResultBasedData_type") :
 			getString("_UI_ResultBasedData_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

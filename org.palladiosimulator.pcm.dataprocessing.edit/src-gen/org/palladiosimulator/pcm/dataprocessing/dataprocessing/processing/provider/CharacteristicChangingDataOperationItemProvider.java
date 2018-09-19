@@ -164,7 +164,7 @@ public class CharacteristicChangingDataOperationItemProvider extends DataOperati
 			getString("_UI_CharacteristicChangingDataOperation_type") :
 			getString("_UI_CharacteristicChangingDataOperation_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

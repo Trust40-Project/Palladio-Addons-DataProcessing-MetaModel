@@ -139,7 +139,7 @@ public class DataSpecificationItemProvider
 	{
 		return getString("_UI_DataSpecification_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

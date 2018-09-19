@@ -101,7 +101,7 @@ public class OriginalDataItemProvider extends DataItemProvider
 			getString("_UI_OriginalData_type") :
 			getString("_UI_OriginalData_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

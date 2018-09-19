@@ -75,7 +75,7 @@ public class UserReadDataItemProvider extends ConsumeDataOperationItemProvider
 			getString("_UI_UserReadData_type") :
 			getString("_UI_UserReadData_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
