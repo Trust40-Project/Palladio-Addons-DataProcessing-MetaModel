@@ -41,6 +41,15 @@ public interface RepositoryFactory extends EFactory
 	Store createStore();
 
 	/**
+	 * Returns a new object of class '<em>Operation Signature Data Refinement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Operation Signature Data Refinement</em>'.
+	 * @generated
+	 */
+	OperationSignatureDataRefinement createOperationSignatureDataRefinement();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

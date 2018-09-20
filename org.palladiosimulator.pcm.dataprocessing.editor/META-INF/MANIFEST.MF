@@ -13,8 +13,7 @@ Export-Package: org.palladiosimulator.pcm.dataprocessing.dataprocessing.characte
  org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.presentation,
  org.palladiosimulator.pcm.dataprocessing.dataprocessing.presentation,
  org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.presentation,
- org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.presentation,
- org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.presentation
+ org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  org.palladiosimulator.pcm.dataprocessing.edit;visibility:=reexport,

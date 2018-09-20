@@ -97,24 +97,6 @@ public interface ProcessingFactory extends EFactory
 	UserReadData createUserReadData();
 
 	/**
-	 * Returns a new object of class '<em>Data Parameter Mapping</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Data Parameter Mapping</em>'.
-	 * @generated
-	 */
-	DataParameterMapping createDataParameterMapping();
-
-	/**
-	 * Returns a new object of class '<em>Data Result Mapping</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Data Result Mapping</em>'.
-	 * @generated
-	 */
-	DataResultMapping createDataResultMapping();
-
-	/**
 	 * Returns a new object of class '<em>Join Data Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

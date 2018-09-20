@@ -9,8 +9,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ReturnDataOperation;
 
 /**
@@ -45,8 +47,32 @@ public class ReturnDataOperationItemProvider extends ConsumeDataOperationItemPro
 		{
 			super.getPropertyDescriptors(object);
 
+			addReturnDestinationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Return Destination feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReturnDestinationPropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ReturnDataOperation_returnDestination_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ReturnDataOperation_returnDestination_feature", "_UI_ReturnDataOperation_type"),
+				 ProcessingPackage.Literals.RETURN_DATA_OPERATION__RETURN_DESTINATION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

@@ -38,9 +38,9 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.Reposi
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.impl.RepositoryPackageImpl;
 
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffPackage;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.UtilPackage;
 
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.impl.SeffPackageImpl;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.impl.UtilPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -122,8 +122,8 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		CharacteristicsPackageImpl theCharacteristicsPackage = (CharacteristicsPackageImpl)(registeredPackage instanceof CharacteristicsPackageImpl ? registeredPackage : CharacteristicsPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
 		DataPackageImpl theDataPackage = (DataPackageImpl)(registeredPackage instanceof DataPackageImpl ? registeredPackage : DataPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI);
-		SeffPackageImpl theSeffPackage = (SeffPackageImpl)(registeredPackage instanceof SeffPackageImpl ? registeredPackage : SeffPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(UtilPackage.eNS_URI);
+		UtilPackageImpl theUtilPackage = (UtilPackageImpl)(registeredPackage instanceof UtilPackageImpl ? registeredPackage : UtilPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theDataprocessingPackage.createPackageContents();
@@ -131,7 +131,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		theProcessingPackage.createPackageContents();
 		theCharacteristicsPackage.createPackageContents();
 		theDataPackage.createPackageContents();
-		theSeffPackage.createPackageContents();
+		theUtilPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theDataprocessingPackage.initializePackageContents();
@@ -139,7 +139,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		theProcessingPackage.initializePackageContents();
 		theCharacteristicsPackage.initializePackageContents();
 		theDataPackage.initializePackageContents();
-		theSeffPackage.initializePackageContents();
+		theUtilPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theDataprocessingPackage.freeze();
@@ -184,7 +184,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataSpecification_DataSEFFSpecifications()
+	public EReference getDataSpecification_StoreContainers()
 	{
 		return (EReference)dataSpecificationEClass.getEStructuralFeatures().get(2);
 	}
@@ -194,7 +194,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataSpecification_StoreContainers()
+	public EReference getDataSpecification_CharacteristicContainer()
 	{
 		return (EReference)dataSpecificationEClass.getEStructuralFeatures().get(3);
 	}
@@ -204,7 +204,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataSpecification_CharacteristicContainer()
+	public EReference getDataSpecification_RelatedCharacteristics()
 	{
 		return (EReference)dataSpecificationEClass.getEStructuralFeatures().get(4);
 	}
@@ -214,7 +214,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataSpecification_RelatedCharacteristics()
+	public EReference getDataSpecification_OperationSignatureDataRefinement()
 	{
 		return (EReference)dataSpecificationEClass.getEStructuralFeatures().get(5);
 	}
@@ -252,10 +252,10 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		dataSpecificationEClass = createEClass(DATA_SPECIFICATION);
 		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__DATA_PROCESSING_CONTAINERS);
 		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__CHARACTERISTIC_TYPE_CONTAINERS);
-		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__DATA_SEFF_SPECIFICATIONS);
 		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__STORE_CONTAINERS);
 		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER);
 		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__RELATED_CHARACTERISTICS);
+		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT);
 	}
 
 	/**
@@ -287,14 +287,14 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		ProcessingPackage theProcessingPackage = (ProcessingPackage)EPackage.Registry.INSTANCE.getEPackage(ProcessingPackage.eNS_URI);
 		CharacteristicsPackage theCharacteristicsPackage = (CharacteristicsPackage)EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI);
 		DataPackage theDataPackage = (DataPackage)EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
-		SeffPackage theSeffPackage = (SeffPackage)EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI);
+		UtilPackage theUtilPackage = (UtilPackage)EPackage.Registry.INSTANCE.getEPackage(UtilPackage.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theRepositoryPackage);
 		getESubpackages().add(theProcessingPackage);
 		getESubpackages().add(theCharacteristicsPackage);
 		getESubpackages().add(theDataPackage);
-		getESubpackages().add(theSeffPackage);
+		getESubpackages().add(theUtilPackage);
 
 		// Create type parameters
 
@@ -306,10 +306,10 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		initEClass(dataSpecificationEClass, DataSpecification.class, "DataSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDataSpecification_DataProcessingContainers(), theProcessingPackage.getDataProcessingContainer(), null, "dataProcessingContainers", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSpecification_CharacteristicTypeContainers(), theCharacteristicsPackage.getCharacteristicTypeContainer(), null, "characteristicTypeContainers", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataSpecification_DataSEFFSpecifications(), theSeffPackage.getDataSEFFSpecification(), null, "dataSEFFSpecifications", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSpecification_StoreContainers(), theRepositoryPackage.getStoreContainer(), null, "storeContainers", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSpecification_CharacteristicContainer(), theCharacteristicsPackage.getCharacteristicContainer(), null, "characteristicContainer", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSpecification_RelatedCharacteristics(), theCharacteristicsPackage.getRelatedCharacteristics(), null, "relatedCharacteristics", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataSpecification_OperationSignatureDataRefinement(), theRepositoryPackage.getOperationSignatureDataRefinement(), null, "operationSignatureDataRefinement", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

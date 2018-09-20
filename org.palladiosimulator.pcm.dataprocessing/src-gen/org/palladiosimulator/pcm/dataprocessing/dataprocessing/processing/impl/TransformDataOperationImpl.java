@@ -23,7 +23,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Transf
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.TransformDataOperationImpl#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.TransformDataOperationImpl#getInput <em>Input</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.TransformDataOperationImpl#getOutput <em>Output</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.TransformDataOperationImpl#getParameterData <em>Parameter Data</em>}</li>
  * </ul>
@@ -58,9 +58,9 @@ public abstract class TransformDataOperationImpl extends DataOperationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Data getInputs()
+	public Data getInput()
 	{
-		return (Data)eGet(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__INPUTS, true);
+		return (Data)eGet(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__INPUT, true);
 	}
 
 	/**
@@ -68,9 +68,9 @@ public abstract class TransformDataOperationImpl extends DataOperationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputs(Data newInputs)
+	public void setInput(Data newInput)
 	{
-		eSet(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__INPUTS, newInputs);
+		eSet(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__INPUT, newInput);
 	}
 
 	/**

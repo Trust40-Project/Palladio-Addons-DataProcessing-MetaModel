@@ -193,32 +193,6 @@ public class ProcessingSwitch<T1> extends Switch<T1>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ProcessingPackage.DATA_MAPPING:
-			{
-				DataMapping dataMapping = (DataMapping)theEObject;
-				T1 result = caseDataMapping(dataMapping);
-				if (result == null) result = caseIdentifier(dataMapping);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ProcessingPackage.DATA_PARAMETER_MAPPING:
-			{
-				DataParameterMapping dataParameterMapping = (DataParameterMapping)theEObject;
-				T1 result = caseDataParameterMapping(dataParameterMapping);
-				if (result == null) result = caseDataMapping(dataParameterMapping);
-				if (result == null) result = caseIdentifier(dataParameterMapping);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ProcessingPackage.DATA_RESULT_MAPPING:
-			{
-				DataResultMapping dataResultMapping = (DataResultMapping)theEObject;
-				T1 result = caseDataResultMapping(dataResultMapping);
-				if (result == null) result = caseDataMapping(dataResultMapping);
-				if (result == null) result = caseIdentifier(dataResultMapping);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ProcessingPackage.MANY_TO_ONE_DATA_OPERATION:
 			{
 				ManyToOneDataOperation manyToOneDataOperation = (ManyToOneDataOperation)theEObject;
@@ -460,54 +434,6 @@ public class ProcessingSwitch<T1> extends Switch<T1>
 	 * @generated
 	 */
 	public T1 caseUserReadData(UserReadData object)
-	{
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Data Mapping</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Data Mapping</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseDataMapping(DataMapping object)
-	{
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Data Parameter Mapping</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Data Parameter Mapping</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseDataParameterMapping(DataParameterMapping object)
-	{
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Data Result Mapping</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Data Result Mapping</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseDataResultMapping(DataResultMapping object)
 	{
 		return null;
 	}

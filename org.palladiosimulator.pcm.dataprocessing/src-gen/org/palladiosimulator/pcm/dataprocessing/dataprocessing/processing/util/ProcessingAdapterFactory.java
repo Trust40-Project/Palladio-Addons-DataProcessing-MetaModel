@@ -132,21 +132,6 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl
 				return createUserReadDataAdapter();
 			}
 			@Override
-			public Adapter caseDataMapping(DataMapping object)
-			{
-				return createDataMappingAdapter();
-			}
-			@Override
-			public Adapter caseDataParameterMapping(DataParameterMapping object)
-			{
-				return createDataParameterMappingAdapter();
-			}
-			@Override
-			public Adapter caseDataResultMapping(DataResultMapping object)
-			{
-				return createDataResultMappingAdapter();
-			}
-			@Override
 			public Adapter caseManyToOneDataOperation(ManyToOneDataOperation object)
 			{
 				return createManyToOneDataOperationAdapter();
@@ -364,51 +349,6 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createUserReadDataAdapter()
-	{
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataMapping <em>Data Mapping</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataMapping
-	 * @generated
-	 */
-	public Adapter createDataMappingAdapter()
-	{
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataParameterMapping <em>Data Parameter Mapping</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataParameterMapping
-	 * @generated
-	 */
-	public Adapter createDataParameterMappingAdapter()
-	{
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataResultMapping <em>Data Result Mapping</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataResultMapping
-	 * @generated
-	 */
-	public Adapter createDataResultMappingAdapter()
 	{
 		return null;
 	}

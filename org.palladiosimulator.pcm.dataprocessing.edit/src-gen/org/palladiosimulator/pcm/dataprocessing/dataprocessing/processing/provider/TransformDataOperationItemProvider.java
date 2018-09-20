@@ -52,27 +52,27 @@ public class TransformDataOperationItemProvider extends DataOperationItemProvide
 		{
 			super.getPropertyDescriptors(object);
 
-			addInputsPropertyDescriptor(object);
+			addInputPropertyDescriptor(object);
 			addParameterDataPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Inputs feature.
+	 * This adds a property descriptor for the Input feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addInputsPropertyDescriptor(Object object)
+	protected void addInputPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_TransformDataOperation_inputs_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TransformDataOperation_inputs_feature", "_UI_TransformDataOperation_type"),
-				 ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__INPUTS,
+				 getString("_UI_TransformDataOperation_input_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TransformDataOperation_input_feature", "_UI_TransformDataOperation_type"),
+				 ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__INPUT,
 				 true,
 				 false,
 				 true,
@@ -205,6 +205,21 @@ public class TransformDataOperationItemProvider extends DataOperationItemProvide
 			(createChildParameter
 				(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__OUTPUT,
 				 DataFactory.eINSTANCE.createDerivedData()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__OUTPUT,
+				 DataFactory.eINSTANCE.createRefinedResultBasedData()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__OUTPUT,
+				 DataFactory.eINSTANCE.createRefinedParameterBasedData()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.TRANSFORM_DATA_OPERATION__OUTPUT,
+				 DataFactory.eINSTANCE.createCopiedData()));
 	}
 
 }

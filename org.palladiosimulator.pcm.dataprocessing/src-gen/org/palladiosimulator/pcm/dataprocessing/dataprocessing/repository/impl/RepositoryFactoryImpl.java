@@ -66,6 +66,7 @@ public class RepositoryFactoryImpl extends EFactoryImpl implements RepositoryFac
 		{
 			case RepositoryPackage.STORE_CONTAINER: return (EObject)createStoreContainer();
 			case RepositoryPackage.STORE: return (EObject)createStore();
+			case RepositoryPackage.OPERATION_SIGNATURE_DATA_REFINEMENT: return (EObject)createOperationSignatureDataRefinement();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -91,6 +92,17 @@ public class RepositoryFactoryImpl extends EFactoryImpl implements RepositoryFac
 	{
 		StoreImpl store = new StoreImpl();
 		return store;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OperationSignatureDataRefinement createOperationSignatureDataRefinement()
+	{
+		OperationSignatureDataRefinementImpl operationSignatureDataRefinement = new OperationSignatureDataRefinementImpl();
+		return operationSignatureDataRefinement;
 	}
 
 	/**

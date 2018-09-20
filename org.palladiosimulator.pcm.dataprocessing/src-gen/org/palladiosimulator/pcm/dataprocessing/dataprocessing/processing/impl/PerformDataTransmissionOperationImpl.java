@@ -12,9 +12,10 @@ import org.eclipse.emf.ecore.EOperation;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataMapping;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.PerformDataTransmissionOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataMapping;
 
 /**
  * <!-- begin-user-doc -->

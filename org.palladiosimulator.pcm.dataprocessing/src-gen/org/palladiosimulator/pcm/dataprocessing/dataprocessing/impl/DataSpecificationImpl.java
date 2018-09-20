@@ -17,9 +17,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.R
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.OperationSignatureDataRefinement;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.StoreContainer;
-
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.DataSEFFSpecification;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,10 +30,10 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.DataSEFFSpec
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getDataProcessingContainers <em>Data Processing Containers</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getCharacteristicTypeContainers <em>Characteristic Type Containers</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getDataSEFFSpecifications <em>Data SEFF Specifications</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getStoreContainers <em>Store Containers</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getCharacteristicContainer <em>Characteristic Container</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getRelatedCharacteristics <em>Related Characteristics</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getOperationSignatureDataRefinement <em>Operation Signature Data Refinement</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,17 +100,6 @@ public class DataSpecificationImpl extends CDOObjectImpl implements DataSpecific
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<DataSEFFSpecification> getDataSEFFSpecifications()
-	{
-		return (EList<DataSEFFSpecification>)eGet(DataprocessingPackage.Literals.DATA_SPECIFICATION__DATA_SEFF_SPECIFICATIONS, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
 	public EList<StoreContainer> getStoreContainers()
 	{
 		return (EList<StoreContainer>)eGet(DataprocessingPackage.Literals.DATA_SPECIFICATION__STORE_CONTAINERS, true);
@@ -137,6 +125,17 @@ public class DataSpecificationImpl extends CDOObjectImpl implements DataSpecific
 	public EList<RelatedCharacteristics> getRelatedCharacteristics()
 	{
 		return (EList<RelatedCharacteristics>)eGet(DataprocessingPackage.Literals.DATA_SPECIFICATION__RELATED_CHARACTERISTICS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<OperationSignatureDataRefinement> getOperationSignatureDataRefinement()
+	{
+		return (EList<OperationSignatureDataRefinement>)eGet(DataprocessingPackage.Literals.DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT, true);
 	}
 
 } //DataSpecificationImpl

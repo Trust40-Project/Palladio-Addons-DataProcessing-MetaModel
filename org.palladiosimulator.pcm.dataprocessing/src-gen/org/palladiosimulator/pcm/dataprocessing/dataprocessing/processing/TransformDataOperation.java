@@ -15,7 +15,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getInput <em>Input</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getOutput <em>Output</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getParameterData <em>Parameter Data</em>}</li>
  * </ul>
@@ -27,30 +27,30 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 public interface TransformDataOperation extends DataOperation
 {
 	/**
-	 * Returns the value of the '<em><b>Inputs</b></em>' reference.
+	 * Returns the value of the '<em><b>Input</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Inputs</em>' reference isn't clear,
+	 * If the meaning of the '<em>Input</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Inputs</em>' reference.
-	 * @see #setInputs(Data)
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getTransformDataOperation_Inputs()
+	 * @return the value of the '<em>Input</em>' reference.
+	 * @see #setInput(Data)
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getTransformDataOperation_Input()
 	 * @model required="true"
 	 * @generated
 	 */
-	Data getInputs();
+	Data getInput();
 
 	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getInputs <em>Inputs</em>}' reference.
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation#getInput <em>Input</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Inputs</em>' reference.
-	 * @see #getInputs()
+	 * @param value the new value of the '<em>Input</em>' reference.
+	 * @see #getInput()
 	 * @generated
 	 */
-	void setInputs(Data value);
+	void setInput(Data value);
 
 	/**
 	 * Returns the value of the '<em><b>Output</b></em>' containment reference.
@@ -98,7 +98,7 @@ public interface TransformDataOperation extends DataOperation
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.inputs-&gt;asSet()-&gt;union(self.parameterData)'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.input-&gt;asSet()-&gt;union(self.parameterData)'"
 	 * @generated
 	 */
 	EList<Data> determineIncomingData();

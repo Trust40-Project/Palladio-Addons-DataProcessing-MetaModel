@@ -185,7 +185,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.provider.Dataproc
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.provider.extension.RepositoryItemProviderAdapterFactory;
 
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.provider.extension.SeffItemProviderAdapterFactory;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.provider.extension.UtilItemProviderAdapterFactory;
 
 import org.palladiosimulator.pcm.parameter.provider.ParameterItemProviderAdapterFactory;
 
@@ -204,6 +204,8 @@ import org.palladiosimulator.pcm.reliability.provider.ReliabilityItemProviderAda
 import org.palladiosimulator.pcm.resourceenvironment.provider.ResourceenvironmentItemProviderAdapterFactory;
 
 import org.palladiosimulator.pcm.resourcetype.provider.ResourcetypeItemProviderAdapterFactory;
+
+import org.palladiosimulator.pcm.seff.provider.SeffItemProviderAdapterFactory;
 
 import org.palladiosimulator.pcm.seff.seff_performance.provider.SeffPerformanceItemProviderAdapterFactory;
 
@@ -838,7 +840,7 @@ public class DataEditor
 		adapterFactory.addAdapterFactory(new ProcessingItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new CharacteristicsItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new DataItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SeffItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new UtilItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new PcmItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new CoreItemProviderAdapterFactory());
@@ -850,7 +852,7 @@ public class DataEditor
 		adapterFactory.addAdapterFactory(new ProtocolItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ParameterItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReliabilityItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new org.palladiosimulator.pcm.seff.provider.SeffItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new SeffItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new SeffPerformanceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new SeffReliabilityItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new QosannotationsItemProviderAdapterFactory());

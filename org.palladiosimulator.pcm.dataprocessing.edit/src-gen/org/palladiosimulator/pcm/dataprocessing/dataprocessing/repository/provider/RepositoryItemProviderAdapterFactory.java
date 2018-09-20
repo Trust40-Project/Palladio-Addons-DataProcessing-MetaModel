@@ -124,6 +124,31 @@ public class RepositoryItemProviderAdapterFactory extends RepositoryAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.OperationSignatureDataRefinement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OperationSignatureDataRefinementItemProvider operationSignatureDataRefinementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.OperationSignatureDataRefinement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOperationSignatureDataRefinementAdapter()
+	{
+		if (operationSignatureDataRefinementItemProvider == null)
+		{
+			operationSignatureDataRefinementItemProvider = new OperationSignatureDataRefinementItemProvider(this);
+		}
+
+		return operationSignatureDataRefinementItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -236,6 +261,7 @@ public class RepositoryItemProviderAdapterFactory extends RepositoryAdapterFacto
 	{
 		if (storeContainerItemProvider != null) storeContainerItemProvider.dispose();
 		if (storeItemProvider != null) storeItemProvider.dispose();
+		if (operationSignatureDataRefinementItemProvider != null) operationSignatureDataRefinementItemProvider.dispose();
 	}
 
 }

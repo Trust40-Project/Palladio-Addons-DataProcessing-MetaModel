@@ -37,4 +37,12 @@ public class DataItemProviderAdapterFactory
 		return derivedDataItemProvider;
 	}
 
+	@Override
+	public Adapter createRefinedParameterBasedDataAdapter() {
+		if (refinedParameterBasedDataItemProvider == null) {
+			refinedParameterBasedDataItemProvider = new RefinedParameterBasedDataItemProvider(this);
+		}
+		return refinedParameterBasedDataItemProvider;
+	}
+
 }

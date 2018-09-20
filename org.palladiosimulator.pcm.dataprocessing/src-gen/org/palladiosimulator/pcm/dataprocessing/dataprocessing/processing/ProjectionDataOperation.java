@@ -11,7 +11,7 @@ package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getProjectionDataOperation()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='noParameters outputIsComposedInInput'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot noParameters='self.parameterData-&gt;isEmpty()' outputIsComposedInInput='self.inputs.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration-&gt;includes(self.output.type)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot noParameters='self.parameterData-&gt;isEmpty()' outputIsComposedInInput='self.input.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration-&gt;includes(self.output.type)'"
  * @generated
  */
 public interface ProjectionDataOperation extends TransformDataOperation

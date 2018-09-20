@@ -105,6 +105,21 @@ public class DataAdapterFactory extends AdapterFactoryImpl
 				return createDerivedDataAdapter();
 			}
 			@Override
+			public Adapter caseRefinedResultBasedData(RefinedResultBasedData object)
+			{
+				return createRefinedResultBasedDataAdapter();
+			}
+			@Override
+			public Adapter caseRefinedParameterBasedData(RefinedParameterBasedData object)
+			{
+				return createRefinedParameterBasedDataAdapter();
+			}
+			@Override
+			public Adapter caseCopiedData(CopiedData object)
+			{
+				return createCopiedDataAdapter();
+			}
+			@Override
 			public Adapter caseIdentifier(Identifier object)
 			{
 				return createIdentifierAdapter();
@@ -212,6 +227,51 @@ public class DataAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createDerivedDataAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedResultBasedData <em>Refined Result Based Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedResultBasedData
+	 * @generated
+	 */
+	public Adapter createRefinedResultBasedDataAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedParameterBasedData <em>Refined Parameter Based Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedParameterBasedData
+	 * @generated
+	 */
+	public Adapter createRefinedParameterBasedDataAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.CopiedData <em>Copied Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.CopiedData
+	 * @generated
+	 */
+	public Adapter createCopiedDataAdapter()
 	{
 		return null;
 	}

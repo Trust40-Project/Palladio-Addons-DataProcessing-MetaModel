@@ -21,4 +21,12 @@ public class RepositoryItemProviderAdapterFactory extends
 		return storeContainerItemProvider;
 	}
 
+	@Override
+	public Adapter createOperationSignatureDataRefinementAdapter() {
+		if (operationSignatureDataRefinementItemProvider == null) {
+			operationSignatureDataRefinementItemProvider = new OperationSignatureDataRefinementItemProvider(this);
+		}
+		return operationSignatureDataRefinementItemProvider;
+	}
+
 }

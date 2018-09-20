@@ -85,22 +85,13 @@ public interface DataprocessingPackage extends EPackage
 	int DATA_SPECIFICATION__CHARACTERISTIC_TYPE_CONTAINERS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Data SEFF Specifications</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_SPECIFICATION__DATA_SEFF_SPECIFICATIONS = 2;
-
-	/**
 	 * The feature id for the '<em><b>Store Containers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION__STORE_CONTAINERS = 3;
+	int DATA_SPECIFICATION__STORE_CONTAINERS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Characteristic Container</b></em>' containment reference list.
@@ -109,7 +100,7 @@ public interface DataprocessingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER = 4;
+	int DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER = 3;
 
 	/**
 	 * The feature id for the '<em><b>Related Characteristics</b></em>' containment reference list.
@@ -118,7 +109,16 @@ public interface DataprocessingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION__RELATED_CHARACTERISTICS = 5;
+	int DATA_SPECIFICATION__RELATED_CHARACTERISTICS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Operation Signature Data Refinement</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT = 5;
 
 	/**
 	 * The number of structural features of the '<em>Data Specification</em>' class.
@@ -163,17 +163,6 @@ public interface DataprocessingPackage extends EPackage
 	EReference getDataSpecification_CharacteristicTypeContainers();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getDataSEFFSpecifications <em>Data SEFF Specifications</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Data SEFF Specifications</em>'.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getDataSEFFSpecifications()
-	 * @see #getDataSpecification()
-	 * @generated
-	 */
-	EReference getDataSpecification_DataSEFFSpecifications();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getStoreContainers <em>Store Containers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -205,6 +194,17 @@ public interface DataprocessingPackage extends EPackage
 	 * @generated
 	 */
 	EReference getDataSpecification_RelatedCharacteristics();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getOperationSignatureDataRefinement <em>Operation Signature Data Refinement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Operation Signature Data Refinement</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getOperationSignatureDataRefinement()
+	 * @see #getDataSpecification()
+	 * @generated
+	 */
+	EReference getDataSpecification_OperationSignatureDataRefinement();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -256,14 +256,6 @@ public interface DataprocessingPackage extends EPackage
 		EReference DATA_SPECIFICATION__CHARACTERISTIC_TYPE_CONTAINERS = eINSTANCE.getDataSpecification_CharacteristicTypeContainers();
 
 		/**
-		 * The meta object literal for the '<em><b>Data SEFF Specifications</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DATA_SPECIFICATION__DATA_SEFF_SPECIFICATIONS = eINSTANCE.getDataSpecification_DataSEFFSpecifications();
-
-		/**
 		 * The meta object literal for the '<em><b>Store Containers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -286,6 +278,14 @@ public interface DataprocessingPackage extends EPackage
 		 * @generated
 		 */
 		EReference DATA_SPECIFICATION__RELATED_CHARACTERISTICS = eINSTANCE.getDataSpecification_RelatedCharacteristics();
+
+		/**
+		 * The meta object literal for the '<em><b>Operation Signature Data Refinement</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT = eINSTANCE.getDataSpecification_OperationSignatureDataRefinement();
 
 	}
 

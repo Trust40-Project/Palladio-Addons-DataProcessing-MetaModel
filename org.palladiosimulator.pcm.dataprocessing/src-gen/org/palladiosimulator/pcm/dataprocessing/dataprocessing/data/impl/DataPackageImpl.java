@@ -26,12 +26,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.C
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacteristicsPackageImpl;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.CopiedData;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataFactory;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataPackage;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DerivedData;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.OriginalData;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ParameterBasedData;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedParameterBasedData;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedResultBasedData;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ResultBasedData;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataprocessingPackageImpl;
@@ -44,9 +47,9 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.Reposi
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.impl.RepositoryPackageImpl;
 
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffPackage;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.UtilPackage;
 
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.impl.SeffPackageImpl;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.impl.UtilPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -90,6 +93,27 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 	 * @generated
 	 */
 	private EClass derivedDataEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass refinedResultBasedDataEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass refinedParameterBasedDataEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass copiedDataEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -156,8 +180,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		ProcessingPackageImpl theProcessingPackage = (ProcessingPackageImpl)(registeredPackage instanceof ProcessingPackageImpl ? registeredPackage : ProcessingPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI);
 		CharacteristicsPackageImpl theCharacteristicsPackage = (CharacteristicsPackageImpl)(registeredPackage instanceof CharacteristicsPackageImpl ? registeredPackage : CharacteristicsPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI);
-		SeffPackageImpl theSeffPackage = (SeffPackageImpl)(registeredPackage instanceof SeffPackageImpl ? registeredPackage : SeffPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(UtilPackage.eNS_URI);
+		UtilPackageImpl theUtilPackage = (UtilPackageImpl)(registeredPackage instanceof UtilPackageImpl ? registeredPackage : UtilPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theDataPackage.createPackageContents();
@@ -165,7 +189,7 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		theRepositoryPackage.createPackageContents();
 		theProcessingPackage.createPackageContents();
 		theCharacteristicsPackage.createPackageContents();
-		theSeffPackage.createPackageContents();
+		theUtilPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theDataPackage.initializePackageContents();
@@ -173,7 +197,7 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		theRepositoryPackage.initializePackageContents();
 		theProcessingPackage.initializePackageContents();
 		theCharacteristicsPackage.initializePackageContents();
-		theSeffPackage.initializePackageContents();
+		theUtilPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theDataPackage.freeze();
@@ -298,6 +322,66 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRefinedResultBasedData()
+	{
+		return refinedResultBasedDataEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRefinedResultBasedData_RefiningDataType()
+	{
+		return (EReference)refinedResultBasedDataEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRefinedParameterBasedData()
+	{
+		return refinedParameterBasedDataEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRefinedParameterBasedData_RefiningDataType()
+	{
+		return (EReference)refinedParameterBasedDataEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCopiedData()
+	{
+		return copiedDataEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCopiedData_Source()
+	{
+		return (EReference)copiedDataEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public DataFactory getDataFactory()
 	{
 		return (DataFactory)getEFactoryInstance();
@@ -338,6 +422,15 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		derivedDataEClass = createEClass(DERIVED_DATA);
 		createEReference(derivedDataEClass, DERIVED_DATA__SOURCES);
 		createEReference(derivedDataEClass, DERIVED_DATA__RESULTING_DATA_TYPE);
+
+		refinedResultBasedDataEClass = createEClass(REFINED_RESULT_BASED_DATA);
+		createEReference(refinedResultBasedDataEClass, REFINED_RESULT_BASED_DATA__REFINING_DATA_TYPE);
+
+		refinedParameterBasedDataEClass = createEClass(REFINED_PARAMETER_BASED_DATA);
+		createEReference(refinedParameterBasedDataEClass, REFINED_PARAMETER_BASED_DATA__REFINING_DATA_TYPE);
+
+		copiedDataEClass = createEClass(COPIED_DATA);
+		createEReference(copiedDataEClass, COPIED_DATA__SOURCE);
 	}
 
 	/**
@@ -378,6 +471,9 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		parameterBasedDataEClass.getESuperTypes().add(this.getData());
 		resultBasedDataEClass.getESuperTypes().add(this.getData());
 		derivedDataEClass.getESuperTypes().add(this.getData());
+		refinedResultBasedDataEClass.getESuperTypes().add(this.getResultBasedData());
+		refinedParameterBasedDataEClass.getESuperTypes().add(this.getParameterBasedData());
+		copiedDataEClass.getESuperTypes().add(this.getData());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(dataEClass, Data.class, "Data", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -405,6 +501,21 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		initEReference(getDerivedData_ResultingDataType(), theRepositoryPackage_1.getDataType(), null, "resultingDataType", null, 1, 1, DerivedData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(derivedDataEClass, theRepositoryPackage_1.getDataType(), "determineDataType", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(refinedResultBasedDataEClass, RefinedResultBasedData.class, "RefinedResultBasedData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRefinedResultBasedData_RefiningDataType(), theRepositoryPackage_1.getDataType(), null, "refiningDataType", null, 1, 1, RefinedResultBasedData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(refinedResultBasedDataEClass, theRepositoryPackage_1.getDataType(), "determineDataType", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(refinedParameterBasedDataEClass, RefinedParameterBasedData.class, "RefinedParameterBasedData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRefinedParameterBasedData_RefiningDataType(), theRepositoryPackage_1.getDataType(), null, "refiningDataType", null, 1, 1, RefinedParameterBasedData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(refinedParameterBasedDataEClass, theRepositoryPackage_1.getDataType(), "determineDataType", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(copiedDataEClass, CopiedData.class, "CopiedData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCopiedData_Source(), this.getData(), null, "source", null, 1, 1, CopiedData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(copiedDataEClass, theRepositoryPackage_1.getDataType(), "determineDataType", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore
@@ -483,6 +594,27 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		   new String[]
 		   {
 			   "body", "resultingDataType"
+		   });
+		addAnnotation
+		  (refinedResultBasedDataEClass.getEOperations().get(0),
+		   source,
+		   new String[]
+		   {
+			   "body", "refiningDataType"
+		   });
+		addAnnotation
+		  (refinedParameterBasedDataEClass.getEOperations().get(0),
+		   source,
+		   new String[]
+		   {
+			   "body", "refiningDataType"
+		   });
+		addAnnotation
+		  (copiedDataEClass.getEOperations().get(0),
+		   source,
+		   new String[]
+		   {
+			   "body", "source.type"
 		   });
 	}
 

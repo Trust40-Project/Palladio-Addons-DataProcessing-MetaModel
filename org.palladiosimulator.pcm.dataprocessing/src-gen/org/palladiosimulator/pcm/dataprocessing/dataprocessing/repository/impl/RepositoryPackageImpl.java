@@ -36,14 +36,15 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Proces
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.OperationSignatureDataRefinement;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.RepositoryFactory;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.RepositoryPackage;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.Store;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.StoreContainer;
 
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffPackage;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.UtilPackage;
 
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.impl.SeffPackageImpl;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.impl.UtilPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,6 +67,13 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * @generated
 	 */
 	private EClass storeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass operationSignatureDataRefinementEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -132,8 +140,8 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 		CharacteristicsPackageImpl theCharacteristicsPackage = (CharacteristicsPackageImpl)(registeredPackage instanceof CharacteristicsPackageImpl ? registeredPackage : CharacteristicsPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
 		DataPackageImpl theDataPackage = (DataPackageImpl)(registeredPackage instanceof DataPackageImpl ? registeredPackage : DataPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI);
-		SeffPackageImpl theSeffPackage = (SeffPackageImpl)(registeredPackage instanceof SeffPackageImpl ? registeredPackage : SeffPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(UtilPackage.eNS_URI);
+		UtilPackageImpl theUtilPackage = (UtilPackageImpl)(registeredPackage instanceof UtilPackageImpl ? registeredPackage : UtilPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theRepositoryPackage.createPackageContents();
@@ -141,7 +149,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 		theProcessingPackage.createPackageContents();
 		theCharacteristicsPackage.createPackageContents();
 		theDataPackage.createPackageContents();
-		theSeffPackage.createPackageContents();
+		theUtilPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theRepositoryPackage.initializePackageContents();
@@ -149,7 +157,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 		theProcessingPackage.initializePackageContents();
 		theCharacteristicsPackage.initializePackageContents();
 		theDataPackage.initializePackageContents();
-		theSeffPackage.initializePackageContents();
+		theUtilPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theRepositoryPackage.freeze();
@@ -214,6 +222,36 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getOperationSignatureDataRefinement()
+	{
+		return operationSignatureDataRefinementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOperationSignatureDataRefinement_ParameterRefinements()
+	{
+		return (EReference)operationSignatureDataRefinementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOperationSignatureDataRefinement_ResultRefinements()
+	{
+		return (EReference)operationSignatureDataRefinementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public RepositoryFactory getRepositoryFactory()
 	{
 		return (RepositoryFactory)getEFactoryInstance();
@@ -245,6 +283,10 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 		storeEClass = createEClass(STORE);
 		createEReference(storeEClass, STORE__CONTAINER);
 		createEReference(storeEClass, STORE__DATA_TYPE);
+
+		operationSignatureDataRefinementEClass = createEClass(OPERATION_SIGNATURE_DATA_REFINEMENT);
+		createEReference(operationSignatureDataRefinementEClass, OPERATION_SIGNATURE_DATA_REFINEMENT__PARAMETER_REFINEMENTS);
+		createEReference(operationSignatureDataRefinementEClass, OPERATION_SIGNATURE_DATA_REFINEMENT__RESULT_REFINEMENTS);
 	}
 
 	/**
@@ -274,6 +316,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 		// Obtain other dependent packages
 		EntityPackage theEntityPackage = (EntityPackage)EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
 		org.palladiosimulator.pcm.repository.RepositoryPackage theRepositoryPackage_1 = (org.palladiosimulator.pcm.repository.RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(org.palladiosimulator.pcm.repository.RepositoryPackage.eNS_URI);
+		DataPackage theDataPackage = (DataPackage)EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -282,6 +325,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 		// Add supertypes to classes
 		storeContainerEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		storeEClass.getESuperTypes().add(theEntityPackage.getEntity());
+		operationSignatureDataRefinementEClass.getESuperTypes().add(theEntityPackage.getEntity());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(storeContainerEClass, StoreContainer.class, "StoreContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -290,6 +334,34 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 		initEClass(storeEClass, Store.class, "Store", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStore_Container(), this.getStoreContainer(), this.getStoreContainer_Stores(), "container", null, 0, 1, Store.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getStore_DataType(), theRepositoryPackage_1.getDataType(), null, "dataType", null, 1, 1, Store.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(operationSignatureDataRefinementEClass, OperationSignatureDataRefinement.class, "OperationSignatureDataRefinement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOperationSignatureDataRefinement_ParameterRefinements(), theDataPackage.getParameterBasedData(), null, "parameterRefinements", null, 1, -1, OperationSignatureDataRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperationSignatureDataRefinement_ResultRefinements(), theDataPackage.getResultBasedData(), null, "resultRefinements", null, 1, -1, OperationSignatureDataRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Create annotations
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations()
+	{
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[]
+		   {
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });
 	}
 
 } //RepositoryPackageImpl

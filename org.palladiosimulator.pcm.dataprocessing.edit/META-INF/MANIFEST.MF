@@ -18,8 +18,8 @@ Export-Package: org.palladiosimulator.pcm.dataprocessing.dataprocessing.characte
  org.palladiosimulator.pcm.dataprocessing.dataprocessing.provider,
  org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.provider,
  org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.provider.extension,
- org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.provider,
- org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.provider.extension
+ org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.provider,
+ org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.provider.extension
 Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.pcm.dataprocessing;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,

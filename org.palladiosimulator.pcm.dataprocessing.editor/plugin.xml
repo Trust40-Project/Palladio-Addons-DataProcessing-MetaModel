@@ -146,32 +146,4 @@
       </editor>
    </extension>
 
-   <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated dataprocessing -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.presentation.SeffModelWizardID"
-            name="%_UI_SeffModelWizard_label"
-            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.presentation.SeffModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/SeffModelFile.gif">
-         <description>%_UI_SeffModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated dataprocessing -->
-      <editor
-            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.presentation.SeffEditorID"
-            name="%_UI_SeffEditor_label"
-            icon="icons/full/obj16/SeffModelFile.gif"
-            extensions="seff"
-            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.presentation.SeffEditor"
-            contributorClass="org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.presentation.SeffActionBarContributor">
-      </editor>
-   </extension>
-
 </plugin>

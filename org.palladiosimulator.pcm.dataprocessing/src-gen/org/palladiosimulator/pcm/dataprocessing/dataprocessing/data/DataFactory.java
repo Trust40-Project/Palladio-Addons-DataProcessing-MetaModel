@@ -59,6 +59,33 @@ public interface DataFactory extends EFactory
 	DerivedData createDerivedData();
 
 	/**
+	 * Returns a new object of class '<em>Refined Result Based Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Refined Result Based Data</em>'.
+	 * @generated
+	 */
+	RefinedResultBasedData createRefinedResultBasedData();
+
+	/**
+	 * Returns a new object of class '<em>Refined Parameter Based Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Refined Parameter Based Data</em>'.
+	 * @generated
+	 */
+	RefinedParameterBasedData createRefinedParameterBasedData();
+
+	/**
+	 * Returns a new object of class '<em>Copied Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Copied Data</em>'.
+	 * @generated
+	 */
+	CopiedData createCopiedData();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

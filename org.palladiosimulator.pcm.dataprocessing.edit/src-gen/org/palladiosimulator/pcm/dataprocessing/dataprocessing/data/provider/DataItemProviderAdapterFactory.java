@@ -174,6 +174,81 @@ public class DataItemProviderAdapterFactory extends DataAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedResultBasedData} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RefinedResultBasedDataItemProvider refinedResultBasedDataItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedResultBasedData}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRefinedResultBasedDataAdapter()
+	{
+		if (refinedResultBasedDataItemProvider == null)
+		{
+			refinedResultBasedDataItemProvider = new RefinedResultBasedDataItemProvider(this);
+		}
+
+		return refinedResultBasedDataItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedParameterBasedData} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RefinedParameterBasedDataItemProvider refinedParameterBasedDataItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedParameterBasedData}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRefinedParameterBasedDataAdapter()
+	{
+		if (refinedParameterBasedDataItemProvider == null)
+		{
+			refinedParameterBasedDataItemProvider = new RefinedParameterBasedDataItemProvider(this);
+		}
+
+		return refinedParameterBasedDataItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.CopiedData} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CopiedDataItemProvider copiedDataItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.CopiedData}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCopiedDataAdapter()
+	{
+		if (copiedDataItemProvider == null)
+		{
+			copiedDataItemProvider = new CopiedDataItemProvider(this);
+		}
+
+		return copiedDataItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -288,6 +363,9 @@ public class DataItemProviderAdapterFactory extends DataAdapterFactory implement
 		if (parameterBasedDataItemProvider != null) parameterBasedDataItemProvider.dispose();
 		if (resultBasedDataItemProvider != null) resultBasedDataItemProvider.dispose();
 		if (derivedDataItemProvider != null) derivedDataItemProvider.dispose();
+		if (refinedResultBasedDataItemProvider != null) refinedResultBasedDataItemProvider.dispose();
+		if (refinedParameterBasedDataItemProvider != null) refinedParameterBasedDataItemProvider.dispose();
+		if (copiedDataItemProvider != null) copiedDataItemProvider.dispose();
 	}
 
 }

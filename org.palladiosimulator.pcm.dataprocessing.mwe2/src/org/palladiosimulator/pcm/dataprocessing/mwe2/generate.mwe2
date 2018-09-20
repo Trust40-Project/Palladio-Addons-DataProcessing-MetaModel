@@ -192,5 +192,21 @@ Workflow {
 			}
 		}
 		
+		// Util
+		replacement = {
+			filename =  "${pluginEditDir}/plugin.xml"
+			mapping = {
+				from = "${projectName}.dataprocessing.util.provider.UtilItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.util.provider.extension.UtilItemProviderAdapterFactory"
+			}
+		}
+		replacement = {
+			filename = "${pluginEditorDir}/src-gen/**/*Editor.java"
+			mapping = {
+				from = "${projectName}.dataprocessing.util.provider.UtilItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.util.provider.extension.UtilItemProviderAdapterFactory"
+			}
+		}
+		
 	}
 }

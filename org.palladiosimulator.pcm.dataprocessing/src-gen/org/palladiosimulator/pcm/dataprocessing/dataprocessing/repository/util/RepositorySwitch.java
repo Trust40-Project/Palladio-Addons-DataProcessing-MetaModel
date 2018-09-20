@@ -97,6 +97,16 @@ public class RepositorySwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case RepositoryPackage.OPERATION_SIGNATURE_DATA_REFINEMENT:
+			{
+				OperationSignatureDataRefinement operationSignatureDataRefinement = (OperationSignatureDataRefinement)theEObject;
+				T result = caseOperationSignatureDataRefinement(operationSignatureDataRefinement);
+				if (result == null) result = caseEntity(operationSignatureDataRefinement);
+				if (result == null) result = caseIdentifier(operationSignatureDataRefinement);
+				if (result == null) result = caseNamedElement(operationSignatureDataRefinement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -129,6 +139,22 @@ public class RepositorySwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseStore(Store object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Operation Signature Data Refinement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Operation Signature Data Refinement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOperationSignatureDataRefinement(OperationSignatureDataRefinement object)
 	{
 		return null;
 	}

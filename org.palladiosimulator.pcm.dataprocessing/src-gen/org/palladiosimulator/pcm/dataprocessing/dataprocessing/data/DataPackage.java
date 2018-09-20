@@ -333,6 +333,189 @@ public interface DataPackage extends EPackage
 	 */
 	int DERIVED_DATA_FEATURE_COUNT = DATA_FEATURE_COUNT + 2;
 
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.RefinedResultBasedDataImpl <em>Refined Result Based Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.RefinedResultBasedDataImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DataPackageImpl#getRefinedResultBasedData()
+	 * @generated
+	 */
+	int REFINED_RESULT_BASED_DATA = 5;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFINED_RESULT_BASED_DATA__ID = RESULT_BASED_DATA__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFINED_RESULT_BASED_DATA__ENTITY_NAME = RESULT_BASED_DATA__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFINED_RESULT_BASED_DATA__TYPE = RESULT_BASED_DATA__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Operation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFINED_RESULT_BASED_DATA__OPERATION = RESULT_BASED_DATA__OPERATION;
+
+	/**
+	 * The feature id for the '<em><b>Refining Data Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFINED_RESULT_BASED_DATA__REFINING_DATA_TYPE = RESULT_BASED_DATA_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Refined Result Based Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFINED_RESULT_BASED_DATA_FEATURE_COUNT = RESULT_BASED_DATA_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.RefinedParameterBasedDataImpl <em>Refined Parameter Based Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.RefinedParameterBasedDataImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DataPackageImpl#getRefinedParameterBasedData()
+	 * @generated
+	 */
+	int REFINED_PARAMETER_BASED_DATA = 6;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFINED_PARAMETER_BASED_DATA__ID = PARAMETER_BASED_DATA__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFINED_PARAMETER_BASED_DATA__ENTITY_NAME = PARAMETER_BASED_DATA__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFINED_PARAMETER_BASED_DATA__TYPE = PARAMETER_BASED_DATA__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFINED_PARAMETER_BASED_DATA__PARAMETER = PARAMETER_BASED_DATA__PARAMETER;
+
+	/**
+	 * The feature id for the '<em><b>Refining Data Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFINED_PARAMETER_BASED_DATA__REFINING_DATA_TYPE = PARAMETER_BASED_DATA_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Refined Parameter Based Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFINED_PARAMETER_BASED_DATA_FEATURE_COUNT = PARAMETER_BASED_DATA_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.CopiedDataImpl <em>Copied Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.CopiedDataImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DataPackageImpl#getCopiedData()
+	 * @generated
+	 */
+	int COPIED_DATA = 7;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COPIED_DATA__ID = DATA__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COPIED_DATA__ENTITY_NAME = DATA__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COPIED_DATA__TYPE = DATA__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COPIED_DATA__SOURCE = DATA_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Copied Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COPIED_DATA_FEATURE_COUNT = DATA_FEATURE_COUNT + 1;
+
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data <em>Data</em>}'.
@@ -449,6 +632,69 @@ public interface DataPackage extends EPackage
 	 * @generated
 	 */
 	EReference getDerivedData_ResultingDataType();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedResultBasedData <em>Refined Result Based Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Refined Result Based Data</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedResultBasedData
+	 * @generated
+	 */
+	EClass getRefinedResultBasedData();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedResultBasedData#getRefiningDataType <em>Refining Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Refining Data Type</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedResultBasedData#getRefiningDataType()
+	 * @see #getRefinedResultBasedData()
+	 * @generated
+	 */
+	EReference getRefinedResultBasedData_RefiningDataType();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedParameterBasedData <em>Refined Parameter Based Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Refined Parameter Based Data</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedParameterBasedData
+	 * @generated
+	 */
+	EClass getRefinedParameterBasedData();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedParameterBasedData#getRefiningDataType <em>Refining Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Refining Data Type</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedParameterBasedData#getRefiningDataType()
+	 * @see #getRefinedParameterBasedData()
+	 * @generated
+	 */
+	EReference getRefinedParameterBasedData_RefiningDataType();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.CopiedData <em>Copied Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Copied Data</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.CopiedData
+	 * @generated
+	 */
+	EClass getCopiedData();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.CopiedData#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.CopiedData#getSource()
+	 * @see #getCopiedData()
+	 * @generated
+	 */
+	EReference getCopiedData_Source();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -570,6 +816,60 @@ public interface DataPackage extends EPackage
 		 * @generated
 		 */
 		EReference DERIVED_DATA__RESULTING_DATA_TYPE = eINSTANCE.getDerivedData_ResultingDataType();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.RefinedResultBasedDataImpl <em>Refined Result Based Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.RefinedResultBasedDataImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DataPackageImpl#getRefinedResultBasedData()
+		 * @generated
+		 */
+		EClass REFINED_RESULT_BASED_DATA = eINSTANCE.getRefinedResultBasedData();
+
+		/**
+		 * The meta object literal for the '<em><b>Refining Data Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REFINED_RESULT_BASED_DATA__REFINING_DATA_TYPE = eINSTANCE.getRefinedResultBasedData_RefiningDataType();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.RefinedParameterBasedDataImpl <em>Refined Parameter Based Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.RefinedParameterBasedDataImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DataPackageImpl#getRefinedParameterBasedData()
+		 * @generated
+		 */
+		EClass REFINED_PARAMETER_BASED_DATA = eINSTANCE.getRefinedParameterBasedData();
+
+		/**
+		 * The meta object literal for the '<em><b>Refining Data Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REFINED_PARAMETER_BASED_DATA__REFINING_DATA_TYPE = eINSTANCE.getRefinedParameterBasedData_RefiningDataType();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.CopiedDataImpl <em>Copied Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.CopiedDataImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DataPackageImpl#getCopiedData()
+		 * @generated
+		 */
+		EClass COPIED_DATA = eINSTANCE.getCopiedData();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COPIED_DATA__SOURCE = eINSTANCE.getCopiedData_Source();
 
 	}
 

@@ -274,56 +274,6 @@ public class ProcessingItemProviderAdapterFactory extends ProcessingAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataParameterMapping} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DataParameterMappingItemProvider dataParameterMappingItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataParameterMapping}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDataParameterMappingAdapter()
-	{
-		if (dataParameterMappingItemProvider == null)
-		{
-			dataParameterMappingItemProvider = new DataParameterMappingItemProvider(this);
-		}
-
-		return dataParameterMappingItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataResultMapping} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DataResultMappingItemProvider dataResultMappingItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataResultMapping}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDataResultMappingAdapter()
-	{
-		if (dataResultMappingItemProvider == null)
-		{
-			dataResultMappingItemProvider = new DataResultMappingItemProvider(this);
-		}
-
-		return dataResultMappingItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.JoinDataOperation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -567,8 +517,6 @@ public class ProcessingItemProviderAdapterFactory extends ProcessingAdapterFacto
 		if (storeDataOperationItemProvider != null) storeDataOperationItemProvider.dispose();
 		if (returnDataOperationItemProvider != null) returnDataOperationItemProvider.dispose();
 		if (userReadDataItemProvider != null) userReadDataItemProvider.dispose();
-		if (dataParameterMappingItemProvider != null) dataParameterMappingItemProvider.dispose();
-		if (dataResultMappingItemProvider != null) dataResultMappingItemProvider.dispose();
 		if (joinDataOperationItemProvider != null) joinDataOperationItemProvider.dispose();
 		if (unionDataOperationItemProvider != null) unionDataOperationItemProvider.dispose();
 		if (projectionDataOperationItemProvider != null) projectionDataOperationItemProvider.dispose();

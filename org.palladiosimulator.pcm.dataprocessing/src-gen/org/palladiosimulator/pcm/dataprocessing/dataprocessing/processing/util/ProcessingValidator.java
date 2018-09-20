@@ -123,12 +123,6 @@ public class ProcessingValidator extends EObjectValidator
 				return validateReturnDataOperation((ReturnDataOperation)value, diagnostics, context);
 			case ProcessingPackage.USER_READ_DATA:
 				return validateUserReadData((UserReadData)value, diagnostics, context);
-			case ProcessingPackage.DATA_MAPPING:
-				return validateDataMapping((DataMapping)value, diagnostics, context);
-			case ProcessingPackage.DATA_PARAMETER_MAPPING:
-				return validateDataParameterMapping((DataParameterMapping)value, diagnostics, context);
-			case ProcessingPackage.DATA_RESULT_MAPPING:
-				return validateDataResultMapping((DataResultMapping)value, diagnostics, context);
 			case ProcessingPackage.MANY_TO_ONE_DATA_OPERATION:
 				return validateManyToOneDataOperation((ManyToOneDataOperation)value, diagnostics, context);
 			case ProcessingPackage.JOIN_DATA_OPERATION:
@@ -386,97 +380,6 @@ public class ProcessingValidator extends EObjectValidator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateDataMapping(DataMapping dataMapping, DiagnosticChain diagnostics, Map<Object, Object> context)
-	{
-		if (!validate_NoCircularContainment((EObject)dataMapping, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)dataMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)dataMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)dataMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)dataMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)dataMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)dataMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)dataMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)dataMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(dataMapping, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateDataParameterMapping(DataParameterMapping dataParameterMapping, DiagnosticChain diagnostics, Map<Object, Object> context)
-	{
-		if (!validate_NoCircularContainment((EObject)dataParameterMapping, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)dataParameterMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)dataParameterMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)dataParameterMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)dataParameterMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)dataParameterMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)dataParameterMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)dataParameterMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)dataParameterMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(dataParameterMapping, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateDataResultMapping(DataResultMapping dataResultMapping, DiagnosticChain diagnostics, Map<Object, Object> context)
-	{
-		if (!validate_NoCircularContainment((EObject)dataResultMapping, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)dataResultMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)dataResultMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)dataResultMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)dataResultMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)dataResultMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)dataResultMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)dataResultMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)dataResultMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(dataResultMapping, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDataResultMapping_mappedDataMustBeInReceivedData(dataResultMapping, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * The cached validation expression for the mappedDataMustBeInReceivedData constraint of '<em>Data Result Mapping</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected static final String DATA_RESULT_MAPPING__MAPPED_DATA_MUST_BE_IN_RECEIVED_DATA__EEXPRESSION = "self.receivedData->includes(self.data)";
-
-	/**
-	 * Validates the mappedDataMustBeInReceivedData constraint of '<em>Data Result Mapping</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateDataResultMapping_mappedDataMustBeInReceivedData(DataResultMapping dataResultMapping, DiagnosticChain diagnostics, Map<Object, Object> context)
-	{
-		return
-			validate
-				(ProcessingPackage.Literals.DATA_RESULT_MAPPING,
-				 (EObject)dataResultMapping,
-				 diagnostics,
-				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-				 "mappedDataMustBeInReceivedData",
-				 DATA_RESULT_MAPPING__MAPPED_DATA_MUST_BE_IN_RECEIVED_DATA__EEXPRESSION,
-				 Diagnostic.ERROR,
-				 DIAGNOSTIC_SOURCE,
-				 0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateManyToOneDataOperation(ManyToOneDataOperation manyToOneDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
 		if (!validate_NoCircularContainment((EObject)manyToOneDataOperation, diagnostics, context)) return false;
@@ -677,7 +580,7 @@ public class ProcessingValidator extends EObjectValidator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String PROJECTION_DATA_OPERATION__OUTPUT_IS_COMPOSED_IN_INPUT__EEXPRESSION = "self.inputs.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)";
+	protected static final String PROJECTION_DATA_OPERATION__OUTPUT_IS_COMPOSED_IN_INPUT__EEXPRESSION = "self.input.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)";
 
 	/**
 	 * Validates the outputIsComposedInInput constraint of '<em>Projection Data Operation</em>'.
@@ -728,7 +631,7 @@ public class ProcessingValidator extends EObjectValidator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String SELECTION_DATA_OPERATION__INPUT_AND_OUTPUT_HAVE_SAME_ENTITY_TYPE__EEXPRESSION = "self.inputs.type->oclAsSet() = self.output.type->oclAsSet() or self.inputs.type.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()";
+	protected static final String SELECTION_DATA_OPERATION__INPUT_AND_OUTPUT_HAVE_SAME_ENTITY_TYPE__EEXPRESSION = "self.input.type->oclAsSet() = self.output.type->oclAsSet() or self.input.type.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()";
 
 	/**
 	 * Validates the inputAndOutputHaveSameEntityType constraint of '<em>Selection Data Operation</em>'.

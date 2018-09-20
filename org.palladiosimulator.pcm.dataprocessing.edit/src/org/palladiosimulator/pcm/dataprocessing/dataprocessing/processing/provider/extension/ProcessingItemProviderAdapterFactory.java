@@ -14,22 +14,6 @@ public class ProcessingItemProviderAdapterFactory extends
 	}
 
 	@Override
-	public Adapter createDataParameterMappingAdapter() {
-		if (dataParameterMappingItemProvider == null) {
-			dataParameterMappingItemProvider = new DataParameterMappingItemProvider(this);
-		}
-		return dataParameterMappingItemProvider;
-	}
-
-	@Override
-	public Adapter createDataResultMappingAdapter() {
-		if (dataResultMappingItemProvider == null) {
-			dataResultMappingItemProvider = new DataResultMappingItemProvider(this);
-		}
-		return dataResultMappingItemProvider;
-	}
-
-	@Override
 	public Adapter createSelectionDataOperationAdapter() {
 		if (selectionDataOperationItemProvider == null) {
 			selectionDataOperationItemProvider = new SelectionDataOperationItemProvider(this);

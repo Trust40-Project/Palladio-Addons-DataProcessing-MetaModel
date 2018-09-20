@@ -12,9 +12,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.R
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.OperationSignatureDataRefinement;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.StoreContainer;
-
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.DataSEFFSpecification;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,10 +26,10 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.DataSEFFSpec
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getDataProcessingContainers <em>Data Processing Containers</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getCharacteristicTypeContainers <em>Characteristic Type Containers</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getDataSEFFSpecifications <em>Data SEFF Specifications</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getStoreContainers <em>Store Containers</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getCharacteristicContainer <em>Characteristic Container</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getRelatedCharacteristics <em>Related Characteristics</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getOperationSignatureDataRefinement <em>Operation Signature Data Refinement</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage#getDataSpecification()
@@ -71,22 +70,6 @@ public interface DataSpecification extends CDOObject
 	 * @generated
 	 */
 	EList<CharacteristicTypeContainer> getCharacteristicTypeContainers();
-
-	/**
-	 * Returns the value of the '<em><b>Data SEFF Specifications</b></em>' containment reference list.
-	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.DataSEFFSpecification}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Data SEFF Specifications</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Data SEFF Specifications</em>' containment reference list.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage#getDataSpecification_DataSEFFSpecifications()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<DataSEFFSpecification> getDataSEFFSpecifications();
 
 	/**
 	 * Returns the value of the '<em><b>Store Containers</b></em>' containment reference list.
@@ -135,5 +118,21 @@ public interface DataSpecification extends CDOObject
 	 * @generated
 	 */
 	EList<RelatedCharacteristics> getRelatedCharacteristics();
+
+	/**
+	 * Returns the value of the '<em><b>Operation Signature Data Refinement</b></em>' containment reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.OperationSignatureDataRefinement}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Operation Signature Data Refinement</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Operation Signature Data Refinement</em>' containment reference list.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage#getDataSpecification_OperationSignatureDataRefinement()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<OperationSignatureDataRefinement> getOperationSignatureDataRefinement();
 
 } // DataSpecification

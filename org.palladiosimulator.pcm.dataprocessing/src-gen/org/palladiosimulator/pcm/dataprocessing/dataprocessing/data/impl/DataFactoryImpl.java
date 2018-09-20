@@ -68,6 +68,9 @@ public class DataFactoryImpl extends EFactoryImpl implements DataFactory
 			case DataPackage.PARAMETER_BASED_DATA: return (EObject)createParameterBasedData();
 			case DataPackage.RESULT_BASED_DATA: return (EObject)createResultBasedData();
 			case DataPackage.DERIVED_DATA: return (EObject)createDerivedData();
+			case DataPackage.REFINED_RESULT_BASED_DATA: return (EObject)createRefinedResultBasedData();
+			case DataPackage.REFINED_PARAMETER_BASED_DATA: return (EObject)createRefinedParameterBasedData();
+			case DataPackage.COPIED_DATA: return (EObject)createCopiedData();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -115,6 +118,39 @@ public class DataFactoryImpl extends EFactoryImpl implements DataFactory
 	{
 		DerivedDataImpl derivedData = new DerivedDataImpl();
 		return derivedData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RefinedResultBasedData createRefinedResultBasedData()
+	{
+		RefinedResultBasedDataImpl refinedResultBasedData = new RefinedResultBasedDataImpl();
+		return refinedResultBasedData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RefinedParameterBasedData createRefinedParameterBasedData()
+	{
+		RefinedParameterBasedDataImpl refinedParameterBasedData = new RefinedParameterBasedDataImpl();
+		return refinedParameterBasedData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CopiedData createCopiedData()
+	{
+		CopiedDataImpl copiedData = new CopiedDataImpl();
+		return copiedData;
 	}
 
 	/**

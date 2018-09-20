@@ -131,6 +131,41 @@ public class DataSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case DataPackage.REFINED_RESULT_BASED_DATA:
+			{
+				RefinedResultBasedData refinedResultBasedData = (RefinedResultBasedData)theEObject;
+				T result = caseRefinedResultBasedData(refinedResultBasedData);
+				if (result == null) result = caseResultBasedData(refinedResultBasedData);
+				if (result == null) result = caseData(refinedResultBasedData);
+				if (result == null) result = caseEntity(refinedResultBasedData);
+				if (result == null) result = caseIdentifier(refinedResultBasedData);
+				if (result == null) result = caseNamedElement(refinedResultBasedData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DataPackage.REFINED_PARAMETER_BASED_DATA:
+			{
+				RefinedParameterBasedData refinedParameterBasedData = (RefinedParameterBasedData)theEObject;
+				T result = caseRefinedParameterBasedData(refinedParameterBasedData);
+				if (result == null) result = caseParameterBasedData(refinedParameterBasedData);
+				if (result == null) result = caseData(refinedParameterBasedData);
+				if (result == null) result = caseEntity(refinedParameterBasedData);
+				if (result == null) result = caseIdentifier(refinedParameterBasedData);
+				if (result == null) result = caseNamedElement(refinedParameterBasedData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DataPackage.COPIED_DATA:
+			{
+				CopiedData copiedData = (CopiedData)theEObject;
+				T result = caseCopiedData(copiedData);
+				if (result == null) result = caseData(copiedData);
+				if (result == null) result = caseEntity(copiedData);
+				if (result == null) result = caseIdentifier(copiedData);
+				if (result == null) result = caseNamedElement(copiedData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -211,6 +246,54 @@ public class DataSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseDerivedData(DerivedData object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Refined Result Based Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Refined Result Based Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRefinedResultBasedData(RefinedResultBasedData object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Refined Parameter Based Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Refined Parameter Based Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRefinedParameterBasedData(RefinedParameterBasedData object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Copied Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Copied Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCopiedData(CopiedData object)
 	{
 		return null;
 	}

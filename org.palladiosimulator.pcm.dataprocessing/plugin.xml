@@ -49,8 +49,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated dataprocessing -->
       <package
-            uri="http://www.palladiosimulator.org/pcm/dataprocessing/seff/0.1/"
-            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffPackage"
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/util/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.UtilPackage"
             genModel="model/dataprocessing.genmodel"/>
    </extension>
 

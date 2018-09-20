@@ -181,6 +181,21 @@ public class ManyToOneDataOperationItemProvider extends DataOperationItemProvide
 			(createChildParameter
 				(ProcessingPackage.Literals.MANY_TO_ONE_DATA_OPERATION__RESULTING_DATA,
 				 DataFactory.eINSTANCE.createDerivedData()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.MANY_TO_ONE_DATA_OPERATION__RESULTING_DATA,
+				 DataFactory.eINSTANCE.createRefinedResultBasedData()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.MANY_TO_ONE_DATA_OPERATION__RESULTING_DATA,
+				 DataFactory.eINSTANCE.createRefinedParameterBasedData()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.MANY_TO_ONE_DATA_OPERATION__RESULTING_DATA,
+				 DataFactory.eINSTANCE.createCopiedData()));
 	}
 
 }

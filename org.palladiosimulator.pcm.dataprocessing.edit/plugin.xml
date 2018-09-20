@@ -74,8 +74,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated dataprocessing -->
       <factory
-            uri="http://www.palladiosimulator.org/pcm/dataprocessing/seff/0.1/"
-            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.provider.extension.SeffItemProviderAdapterFactory"
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/util/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.provider.extension.UtilItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

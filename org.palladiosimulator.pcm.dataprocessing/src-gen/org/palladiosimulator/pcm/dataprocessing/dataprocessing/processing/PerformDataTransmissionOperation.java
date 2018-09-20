@@ -6,6 +6,8 @@ import org.eclipse.emf.common.util.EList;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataMapping;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Perform Data Transmission Operation</b></em>'.
@@ -27,7 +29,7 @@ public interface PerformDataTransmissionOperation extends DataOperation
 {
 	/**
 	 * Returns the value of the '<em><b>Input Mappings</b></em>' containment reference list.
-	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataMapping}.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataMapping}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Input Mappings</em>' containment reference list isn't clear,
@@ -43,7 +45,7 @@ public interface PerformDataTransmissionOperation extends DataOperation
 
 	/**
 	 * Returns the value of the '<em><b>Output Mappings</b></em>' containment reference list.
-	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataMapping}.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataMapping}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Output Mappings</em>' containment reference list isn't clear,
@@ -61,7 +63,7 @@ public interface PerformDataTransmissionOperation extends DataOperation
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.outputMappings.data-&gt;asSet()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.outputMappings.to-&gt;asSet()'"
 	 * @generated
 	 */
 	EList<Data> determineOutgoingData();
@@ -70,7 +72,7 @@ public interface PerformDataTransmissionOperation extends DataOperation
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.inputMappings.data-&gt;asSet()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.inputMappings.from-&gt;asSet()'"
 	 * @generated
 	 */
 	EList<Data> determineIncomingData();

@@ -21,6 +21,7 @@ import org.palladiosimulator.pcm.core.entity.EntityPackage;
  * <!-- end-user-doc -->
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.RepositoryFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
  * @generated
  */
 public interface RepositoryPackage extends EPackage
@@ -158,6 +159,61 @@ public interface RepositoryPackage extends EPackage
 	 */
 	int STORE_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 2;
 
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.impl.OperationSignatureDataRefinementImpl <em>Operation Signature Data Refinement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.impl.OperationSignatureDataRefinementImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.impl.RepositoryPackageImpl#getOperationSignatureDataRefinement()
+	 * @generated
+	 */
+	int OPERATION_SIGNATURE_DATA_REFINEMENT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_SIGNATURE_DATA_REFINEMENT__ID = EntityPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_SIGNATURE_DATA_REFINEMENT__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parameter Refinements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_SIGNATURE_DATA_REFINEMENT__PARAMETER_REFINEMENTS = EntityPackage.ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Result Refinements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_SIGNATURE_DATA_REFINEMENT__RESULT_REFINEMENTS = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Operation Signature Data Refinement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_SIGNATURE_DATA_REFINEMENT_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 2;
+
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.StoreContainer <em>Store Container</em>}'.
@@ -211,6 +267,38 @@ public interface RepositoryPackage extends EPackage
 	 * @generated
 	 */
 	EReference getStore_DataType();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.OperationSignatureDataRefinement <em>Operation Signature Data Refinement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Operation Signature Data Refinement</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.OperationSignatureDataRefinement
+	 * @generated
+	 */
+	EClass getOperationSignatureDataRefinement();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.OperationSignatureDataRefinement#getParameterRefinements <em>Parameter Refinements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameter Refinements</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.OperationSignatureDataRefinement#getParameterRefinements()
+	 * @see #getOperationSignatureDataRefinement()
+	 * @generated
+	 */
+	EReference getOperationSignatureDataRefinement_ParameterRefinements();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.OperationSignatureDataRefinement#getResultRefinements <em>Result Refinements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Result Refinements</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.OperationSignatureDataRefinement#getResultRefinements()
+	 * @see #getOperationSignatureDataRefinement()
+	 * @generated
+	 */
+	EReference getOperationSignatureDataRefinement_ResultRefinements();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -278,6 +366,32 @@ public interface RepositoryPackage extends EPackage
 		 * @generated
 		 */
 		EReference STORE__DATA_TYPE = eINSTANCE.getStore_DataType();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.impl.OperationSignatureDataRefinementImpl <em>Operation Signature Data Refinement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.impl.OperationSignatureDataRefinementImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.impl.RepositoryPackageImpl#getOperationSignatureDataRefinement()
+		 * @generated
+		 */
+		EClass OPERATION_SIGNATURE_DATA_REFINEMENT = eINSTANCE.getOperationSignatureDataRefinement();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameter Refinements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPERATION_SIGNATURE_DATA_REFINEMENT__PARAMETER_REFINEMENTS = eINSTANCE.getOperationSignatureDataRefinement_ParameterRefinements();
+
+		/**
+		 * The meta object literal for the '<em><b>Result Refinements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPERATION_SIGNATURE_DATA_REFINEMENT__RESULT_REFINEMENTS = eINSTANCE.getOperationSignatureDataRefinement_ResultRefinements();
 
 	}
 

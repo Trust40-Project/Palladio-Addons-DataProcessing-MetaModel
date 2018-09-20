@@ -75,8 +75,6 @@ public class ProcessingFactoryImpl extends EFactoryImpl implements ProcessingFac
 			case ProcessingPackage.STORE_DATA_OPERATION: return (EObject)createStoreDataOperation();
 			case ProcessingPackage.RETURN_DATA_OPERATION: return (EObject)createReturnDataOperation();
 			case ProcessingPackage.USER_READ_DATA: return (EObject)createUserReadData();
-			case ProcessingPackage.DATA_PARAMETER_MAPPING: return (EObject)createDataParameterMapping();
-			case ProcessingPackage.DATA_RESULT_MAPPING: return (EObject)createDataResultMapping();
 			case ProcessingPackage.JOIN_DATA_OPERATION: return (EObject)createJoinDataOperation();
 			case ProcessingPackage.UNION_DATA_OPERATION: return (EObject)createUnionDataOperation();
 			case ProcessingPackage.PROJECTION_DATA_OPERATION: return (EObject)createProjectionDataOperation();
@@ -207,28 +205,6 @@ public class ProcessingFactoryImpl extends EFactoryImpl implements ProcessingFac
 	{
 		UserReadDataImpl userReadData = new UserReadDataImpl();
 		return userReadData;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DataParameterMapping createDataParameterMapping()
-	{
-		DataParameterMappingImpl dataParameterMapping = new DataParameterMappingImpl();
-		return dataParameterMapping;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DataResultMapping createDataResultMapping()
-	{
-		DataResultMappingImpl dataResultMapping = new DataResultMappingImpl();
-		return dataResultMapping;
 	}
 
 	/**

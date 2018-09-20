@@ -53,9 +53,9 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.Reposi
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.impl.RepositoryPackageImpl;
 
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffPackage;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.UtilPackage;
 
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.impl.SeffPackageImpl;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.impl.UtilPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -200,8 +200,8 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		ProcessingPackageImpl theProcessingPackage = (ProcessingPackageImpl)(registeredPackage instanceof ProcessingPackageImpl ? registeredPackage : ProcessingPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
 		DataPackageImpl theDataPackage = (DataPackageImpl)(registeredPackage instanceof DataPackageImpl ? registeredPackage : DataPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SeffPackage.eNS_URI);
-		SeffPackageImpl theSeffPackage = (SeffPackageImpl)(registeredPackage instanceof SeffPackageImpl ? registeredPackage : SeffPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(UtilPackage.eNS_URI);
+		UtilPackageImpl theUtilPackage = (UtilPackageImpl)(registeredPackage instanceof UtilPackageImpl ? registeredPackage : UtilPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theCharacteristicsPackage.createPackageContents();
@@ -209,7 +209,7 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		theRepositoryPackage.createPackageContents();
 		theProcessingPackage.createPackageContents();
 		theDataPackage.createPackageContents();
-		theSeffPackage.createPackageContents();
+		theUtilPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theCharacteristicsPackage.initializePackageContents();
@@ -217,7 +217,7 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		theRepositoryPackage.initializePackageContents();
 		theProcessingPackage.initializePackageContents();
 		theDataPackage.initializePackageContents();
-		theSeffPackage.initializePackageContents();
+		theUtilPackage.initializePackageContents();
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put

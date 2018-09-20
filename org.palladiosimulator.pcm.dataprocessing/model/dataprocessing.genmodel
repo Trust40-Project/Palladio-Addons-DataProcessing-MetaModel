@@ -21,6 +21,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//DataSpecification/storeContainers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//DataSpecification/characteristicContainer"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//DataSpecification/relatedCharacteristics"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//DataSpecification/parameterDataRefinementContainers"/>
     </genClasses>
     <nestedGenPackages prefix="Repository" disposableProviderFactory="true" ecorePackage="dataprocessing.ecore#//repository">
       <genClasses ecoreClass="dataprocessing.ecore#//repository/StoreContainer">
@@ -30,6 +31,15 @@
         <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dataprocessing.ecore#//repository/Store/container"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dataprocessing.ecore#//repository/Store/dataType"/>
+      </genClasses>
+      <genClasses ecoreClass="dataprocessing.ecore#//repository/ParameterDataRefinementContainer">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dataprocessing.ecore#//repository/ParameterDataRefinementContainer/refinements"/>
+      </genClasses>
+      <genClasses ecoreClass="dataprocessing.ecore#//repository/ParameterDataRefinement">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//repository/ParameterDataRefinement/data"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dataprocessing.ecore#//repository/ParameterDataRefinement/parameter"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Processing" disposableProviderFactory="true" ecorePackage="dataprocessing.ecore#//processing">
@@ -74,19 +84,6 @@
       </genClasses>
       <genClasses ecoreClass="dataprocessing.ecore#//processing/ReturnDataOperation"/>
       <genClasses ecoreClass="dataprocessing.ecore#//processing/UserReadData"/>
-      <genClasses image="false" ecoreClass="dataprocessing.ecore#//processing/DataMapping">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/DataMapping/data"/>
-      </genClasses>
-      <genClasses ecoreClass="dataprocessing.ecore#//processing/DataParameterMapping">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/DataParameterMapping/parameter"/>
-      </genClasses>
-      <genClasses ecoreClass="dataprocessing.ecore#//processing/DataResultMapping">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/DataResultMapping/operation"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/DataResultMapping/receivedData"/>
-      </genClasses>
       <genClasses image="false" ecoreClass="dataprocessing.ecore#//processing/ManyToOneDataOperation">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference dataprocessing.ecore#//processing/ManyToOneDataOperation/consumedData"/>
@@ -187,6 +184,21 @@
     <nestedGenPackages prefix="Seff" disposableProviderFactory="true" ecorePackage="dataprocessing.ecore#//seff">
       <genClasses ecoreClass="dataprocessing.ecore#//seff/DataSEFFSpecification">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//seff/DataSEFFSpecification/inputData"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Util" disposableProviderFactory="true" ecorePackage="dataprocessing.ecore#//util">
+      <genClasses image="false" ecoreClass="dataprocessing.ecore#//util/DataMapping">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dataprocessing.ecore#//util/DataMapping/data"/>
+      </genClasses>
+      <genClasses ecoreClass="dataprocessing.ecore#//util/DataParameterMapping">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dataprocessing.ecore#//util/DataParameterMapping/parameter"/>
+      </genClasses>
+      <genClasses ecoreClass="dataprocessing.ecore#//util/DataResultMapping">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dataprocessing.ecore#//util/DataResultMapping/operation"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//util/DataResultMapping/receivedData"/>
       </genClasses>
     </nestedGenPackages>
   </genPackages>

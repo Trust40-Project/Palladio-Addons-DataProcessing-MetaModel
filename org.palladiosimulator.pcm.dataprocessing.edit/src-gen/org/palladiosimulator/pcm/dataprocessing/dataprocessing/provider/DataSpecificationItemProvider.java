@@ -33,8 +33,6 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Proces
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.RepositoryFactory;
 
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.seff.SeffFactory;
-
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification} object.
  * <!-- begin-user-doc -->
@@ -94,10 +92,10 @@ public class DataSpecificationItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__DATA_PROCESSING_CONTAINERS);
 			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__CHARACTERISTIC_TYPE_CONTAINERS);
-			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__DATA_SEFF_SPECIFICATIONS);
 			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__STORE_CONTAINERS);
 			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER);
 			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__RELATED_CHARACTERISTICS);
+			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT);
 		}
 		return childrenFeatures;
 	}
@@ -157,10 +155,10 @@ public class DataSpecificationItemProvider
 		{
 			case DataprocessingPackage.DATA_SPECIFICATION__DATA_PROCESSING_CONTAINERS:
 			case DataprocessingPackage.DATA_SPECIFICATION__CHARACTERISTIC_TYPE_CONTAINERS:
-			case DataprocessingPackage.DATA_SPECIFICATION__DATA_SEFF_SPECIFICATIONS:
 			case DataprocessingPackage.DATA_SPECIFICATION__STORE_CONTAINERS:
 			case DataprocessingPackage.DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER:
 			case DataprocessingPackage.DATA_SPECIFICATION__RELATED_CHARACTERISTICS:
+			case DataprocessingPackage.DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -191,11 +189,6 @@ public class DataSpecificationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(DataprocessingPackage.Literals.DATA_SPECIFICATION__DATA_SEFF_SPECIFICATIONS,
-				 SeffFactory.eINSTANCE.createDataSEFFSpecification()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(DataprocessingPackage.Literals.DATA_SPECIFICATION__STORE_CONTAINERS,
 				 RepositoryFactory.eINSTANCE.createStoreContainer()));
 
@@ -208,6 +201,11 @@ public class DataSpecificationItemProvider
 			(createChildParameter
 				(DataprocessingPackage.Literals.DATA_SPECIFICATION__RELATED_CHARACTERISTICS,
 				 CharacteristicsFactory.eINSTANCE.createRelatedCharacteristics()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DataprocessingPackage.Literals.DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT,
+				 RepositoryFactory.eINSTANCE.createOperationSignatureDataRefinement()));
 	}
 
 	/**
