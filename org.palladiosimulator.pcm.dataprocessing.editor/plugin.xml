@@ -146,4 +146,32 @@
       </editor>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dataprocessing -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.presentation.UtilModelWizardID"
+            name="%_UI_UtilModelWizard_label"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.presentation.UtilModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/UtilModelFile.gif">
+         <description>%_UI_UtilModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dataprocessing -->
+      <editor
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.presentation.UtilEditorID"
+            name="%_UI_UtilEditor_label"
+            icon="icons/full/obj16/UtilModelFile.gif"
+            extensions="util"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.presentation.UtilEditor"
+            contributorClass="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.presentation.UtilActionBarContributor">
+      </editor>
+   </extension>
+
 </plugin>

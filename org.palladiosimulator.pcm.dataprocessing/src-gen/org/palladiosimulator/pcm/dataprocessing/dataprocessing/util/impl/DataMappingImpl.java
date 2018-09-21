@@ -25,7 +25,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.UtilPackage;
  *
  * @generated
  */
-public abstract class DataMappingImpl extends IdentifierImpl implements DataMapping
+public class DataMappingImpl extends IdentifierImpl implements DataMapping
 {
 	/**
 	 * <!-- begin-user-doc -->

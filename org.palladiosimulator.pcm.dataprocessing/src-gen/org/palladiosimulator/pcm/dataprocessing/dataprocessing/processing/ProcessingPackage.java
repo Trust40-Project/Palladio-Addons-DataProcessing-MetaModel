@@ -481,13 +481,22 @@ public interface ProcessingPackage extends EPackage
 	int PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_MAPPINGS = DATA_OPERATION_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Output Data</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_DATA = DATA_OPERATION_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Perform Data Transmission Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERFORM_DATA_TRANSMISSION_OPERATION_FEATURE_COUNT = DATA_OPERATION_FEATURE_COUNT + 2;
+	int PERFORM_DATA_TRANSMISSION_OPERATION_FEATURE_COUNT = DATA_OPERATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ConsumeDataOperationImpl <em>Consume Data Operation</em>}' class.
@@ -1569,6 +1578,17 @@ public interface ProcessingPackage extends EPackage
 	EReference getPerformDataTransmissionOperation_OutputMappings();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.PerformDataTransmissionOperation#getOutputData <em>Output Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Output Data</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.PerformDataTransmissionOperation#getOutputData()
+	 * @see #getPerformDataTransmissionOperation()
+	 * @generated
+	 */
+	EReference getPerformDataTransmissionOperation_OutputData();
+
+	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ConsumeDataOperation <em>Consume Data Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1955,6 +1975,14 @@ public interface ProcessingPackage extends EPackage
 		 * @generated
 		 */
 		EReference PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_MAPPINGS = eINSTANCE.getPerformDataTransmissionOperation_OutputMappings();
+
+		/**
+		 * The meta object literal for the '<em><b>Output Data</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_DATA = eINSTANCE.getPerformDataTransmissionOperation_OutputData();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ConsumeDataOperationImpl <em>Consume Data Operation</em>}' class.

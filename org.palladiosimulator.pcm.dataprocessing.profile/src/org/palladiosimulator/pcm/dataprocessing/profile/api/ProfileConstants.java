@@ -1,4 +1,4 @@
-package org.palladiosimulator.pcm.dataprocessing.dataprocessing.util;
+package org.palladiosimulator.pcm.dataprocessing.profile.api;
 
 public class ProfileConstants {
 
@@ -9,5 +9,7 @@ public class ProfileConstants {
 	public static final String STEREOTYPE_NAME_DATA_PROCESSING = "DataProcessingSpecification";
 	
 	public static final String STEREOTYPE_NAME_OPERATION_SIGNATURE_DATA_REFINEMENT = "OperationSignatureDataRefinement";
+	
+	public static final String TAGGED_VALUE_NAME_OPERATION_SIGNATURE_DATA_REFINEMENT = "operationSignatureDataRefinement";
 	
 }

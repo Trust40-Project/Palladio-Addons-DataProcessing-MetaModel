@@ -292,7 +292,38 @@ public class ProcessingValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)performDataTransmissionOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)performDataTransmissionOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(performDataTransmissionOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validatePerformDataTransmissionOperation_outputMappingsAndOutputDataHasToMatch(performDataTransmissionOperation, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * The cached validation expression for the outputMappingsAndOutputDataHasToMatch constraint of '<em>Perform Data Transmission Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_MAPPINGS_AND_OUTPUT_DATA_HAS_TO_MATCH__EEXPRESSION = "outputMappings.to->asSet() = outputData->asSet()";
+
+	/**
+	 * Validates the outputMappingsAndOutputDataHasToMatch constraint of '<em>Perform Data Transmission Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePerformDataTransmissionOperation_outputMappingsAndOutputDataHasToMatch(PerformDataTransmissionOperation performDataTransmissionOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return
+			validate
+				(ProcessingPackage.Literals.PERFORM_DATA_TRANSMISSION_OPERATION,
+				 (EObject)performDataTransmissionOperation,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "outputMappingsAndOutputDataHasToMatch",
+				 PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_MAPPINGS_AND_OUTPUT_DATA_HAS_TO_MATCH__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**

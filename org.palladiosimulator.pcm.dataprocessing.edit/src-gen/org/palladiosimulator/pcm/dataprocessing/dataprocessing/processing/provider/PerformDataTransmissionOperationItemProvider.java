@@ -14,8 +14,12 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataFactory;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.PerformDataTransmissionOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.UtilFactory;
 
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.PerformDataTransmissionOperation} object.
@@ -69,6 +73,7 @@ public class PerformDataTransmissionOperationItemProvider extends DataOperationI
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ProcessingPackage.Literals.PERFORM_DATA_TRANSMISSION_OPERATION__INPUT_MAPPINGS);
 			childrenFeatures.add(ProcessingPackage.Literals.PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_MAPPINGS);
+			childrenFeatures.add(ProcessingPackage.Literals.PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_DATA);
 		}
 		return childrenFeatures;
 	}
@@ -131,6 +136,7 @@ public class PerformDataTransmissionOperationItemProvider extends DataOperationI
 		{
 			case ProcessingPackage.PERFORM_DATA_TRANSMISSION_OPERATION__INPUT_MAPPINGS:
 			case ProcessingPackage.PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_MAPPINGS:
+			case ProcessingPackage.PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_DATA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -148,6 +154,51 @@ public class PerformDataTransmissionOperationItemProvider extends DataOperationI
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
 	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.PERFORM_DATA_TRANSMISSION_OPERATION__INPUT_MAPPINGS,
+				 UtilFactory.eINSTANCE.createDataMapping()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_MAPPINGS,
+				 UtilFactory.eINSTANCE.createDataMapping()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_DATA,
+				 DataFactory.eINSTANCE.createResultBasedData()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_DATA,
+				 DataFactory.eINSTANCE.createRefinedResultBasedData()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
+	{
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == ProcessingPackage.Literals.PERFORM_DATA_TRANSMISSION_OPERATION__INPUT_MAPPINGS ||
+			childFeature == ProcessingPackage.Literals.PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_MAPPINGS;
+
+		if (qualify)
+		{
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

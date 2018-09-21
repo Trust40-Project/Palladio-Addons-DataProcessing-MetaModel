@@ -20,8 +20,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.UtilPackage#getDataMapping()
- * @model abstract="true"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='dataTypesMustBeTheSame'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='dataTypesMustBeTheSame'"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot dataTypesMustBeTheSame='from.type = to.type'"
  * @generated
  */

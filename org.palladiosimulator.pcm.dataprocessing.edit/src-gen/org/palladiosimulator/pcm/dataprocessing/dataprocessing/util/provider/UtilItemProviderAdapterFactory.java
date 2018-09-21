@@ -74,6 +74,31 @@ public class UtilItemProviderAdapterFactory extends UtilAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataMapping} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DataMappingItemProvider dataMappingItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataMapping}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDataMappingAdapter()
+	{
+		if (dataMappingItemProvider == null)
+		{
+			dataMappingItemProvider = new DataMappingItemProvider(this);
+		}
+
+		return dataMappingItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,6 +209,7 @@ public class UtilItemProviderAdapterFactory extends UtilAdapterFactory implement
 	 */
 	public void dispose()
 	{
+		if (dataMappingItemProvider != null) dataMappingItemProvider.dispose();
 	}
 
 }

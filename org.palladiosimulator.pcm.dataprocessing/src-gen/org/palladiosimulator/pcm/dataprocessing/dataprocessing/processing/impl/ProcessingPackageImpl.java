@@ -450,6 +450,16 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPerformDataTransmissionOperation_OutputData()
+	{
+		return (EReference)performDataTransmissionOperationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getConsumeDataOperation()
 	{
 		return consumeDataOperationEClass;
@@ -724,6 +734,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		performDataTransmissionOperationEClass = createEClass(PERFORM_DATA_TRANSMISSION_OPERATION);
 		createEReference(performDataTransmissionOperationEClass, PERFORM_DATA_TRANSMISSION_OPERATION__INPUT_MAPPINGS);
 		createEReference(performDataTransmissionOperationEClass, PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_MAPPINGS);
+		createEReference(performDataTransmissionOperationEClass, PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_DATA);
 
 		consumeDataOperationEClass = createEClass(CONSUME_DATA_OPERATION);
 		createEReference(consumeDataOperationEClass, CONSUME_DATA_OPERATION__CONSUMED_DATA);
@@ -845,6 +856,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		initEClass(performDataTransmissionOperationEClass, PerformDataTransmissionOperation.class, "PerformDataTransmissionOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPerformDataTransmissionOperation_InputMappings(), theUtilPackage.getDataMapping(), null, "inputMappings", null, 0, -1, PerformDataTransmissionOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPerformDataTransmissionOperation_OutputMappings(), theUtilPackage.getDataMapping(), null, "outputMappings", null, 0, -1, PerformDataTransmissionOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPerformDataTransmissionOperation_OutputData(), theDataPackage.getResultBasedData(), null, "outputData", null, 0, -1, PerformDataTransmissionOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(performDataTransmissionOperationEClass, theDataPackage.getData(), "determineOutgoingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
@@ -936,6 +948,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 			   "constraints", "resultTypeMustBeCollection"
 		   });
 		addAnnotation
+		  (performDataTransmissionOperationEClass,
+		   source,
+		   new String[]
+		   {
+			   "constraints", "outputMappingsAndOutputDataHasToMatch"
+		   });
+		addAnnotation
 		  (joinDataOperationEClass,
 		   source,
 		   new String[]
@@ -1015,6 +1034,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   new String[]
 		   {
 			   "resultTypeMustBeCollection", "self.resultingData.type.oclIsKindOf(repository_1::CollectionDataType)"
+		   });
+		addAnnotation
+		  (performDataTransmissionOperationEClass,
+		   source,
+		   new String[]
+		   {
+			   "outputMappingsAndOutputDataHasToMatch", "outputMappings.to->asSet() = outputData->asSet()"
 		   });
 		addAnnotation
 		  (performDataTransmissionOperationEClass.getEOperations().get(0),

@@ -64,9 +64,21 @@ public class UtilFactoryImpl extends EFactoryImpl implements UtilFactory
 	{
 		switch (eClass.getClassifierID())
 		{
+			case UtilPackage.DATA_MAPPING: return (EObject)createDataMapping();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataMapping createDataMapping()
+	{
+		DataMappingImpl dataMapping = new DataMappingImpl();
+		return dataMapping;
 	}
 
 	/**

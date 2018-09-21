@@ -11,7 +11,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.EcoreUtils;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.ItemPropertyDescriptorWrapper;
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.ProfileConstants;
+import org.palladiosimulator.pcm.dataprocessing.profile.api.ProfileConstants;
 
 public abstract class ParameterChoiceItePropertyDescriptorWrapper extends ItemPropertyDescriptorWrapper {
 

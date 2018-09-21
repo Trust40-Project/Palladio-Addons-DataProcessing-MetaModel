@@ -109,6 +109,12 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PerformDataTransmissionOperation"
         eSuperTypes="#//processing/DataOperation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="outputMappingsAndOutputDataHasToMatch"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="outputMappingsAndOutputDataHasToMatch" value="outputMappings.to->asSet() = outputData->asSet()"/>
+      </eAnnotations>
       <eOperations name="determineOutgoingData" ordered="false" upperBound="-1" eType="#//data/Data">
         <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
           <details key="body" value="self.outputMappings.to->asSet()"/>
@@ -123,6 +129,8 @@
           eType="#//util/DataMapping" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="outputMappings" upperBound="-1"
           eType="#//util/DataMapping" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outputData" upperBound="-1"
+          eType="#//data/ResultBasedData" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ConsumeDataOperation" abstract="true"
         eSuperTypes="#//processing/DataOperation">
@@ -408,7 +416,7 @@
       <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
       <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
     </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="DataMapping" abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eClassifiers xsi:type="ecore:EClass" name="DataMapping" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="constraints" value="dataTypesMustBeTheSame"/>
       </eAnnotations>

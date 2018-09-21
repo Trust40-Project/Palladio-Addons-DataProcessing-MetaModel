@@ -12,7 +12,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.Operat
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DefaultLabelProvider;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.EcoreUtils;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.ItemPropertyDescriptorWrapper;
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.ProfileConstants;
+import org.palladiosimulator.pcm.dataprocessing.profile.api.ProfileConstants;
 import org.palladiosimulator.pcm.repository.OperationSignature;
 
 public class ResultBasedDataItemProvider

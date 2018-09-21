@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ResultBasedData;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.PerformDataTransmissionOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
@@ -27,6 +28,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataMapping;
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.PerformDataTransmissionOperationImpl#getInputMappings <em>Input Mappings</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.PerformDataTransmissionOperationImpl#getOutputMappings <em>Output Mappings</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.PerformDataTransmissionOperationImpl#getOutputData <em>Output Data</em>}</li>
  * </ul>
  *
  * @generated
@@ -74,6 +76,17 @@ public class PerformDataTransmissionOperationImpl extends DataOperationImpl impl
 	public EList<DataMapping> getOutputMappings()
 	{
 		return (EList<DataMapping>)eGet(ProcessingPackage.Literals.PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_MAPPINGS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<ResultBasedData> getOutputData()
+	{
+		return (EList<ResultBasedData>)eGet(ProcessingPackage.Literals.PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_DATA, true);
 	}
 
 	/**

@@ -9,7 +9,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.provider.extension.ParameterChoiceItePropertyDescriptorWrapper;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.OperationSignatureDataRefinement;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DefaultLabelProvider;
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.ProfileConstants;
+import org.palladiosimulator.pcm.dataprocessing.profile.api.ProfileConstants;
 import org.palladiosimulator.pcm.repository.OperationSignature;
 
 public class ParameterBasedDataItemProvider

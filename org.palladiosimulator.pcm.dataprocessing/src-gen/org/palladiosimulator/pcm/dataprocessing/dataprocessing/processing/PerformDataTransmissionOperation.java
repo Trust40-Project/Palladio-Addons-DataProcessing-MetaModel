@@ -5,6 +5,7 @@ package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
 import org.eclipse.emf.common.util.EList;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ResultBasedData;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataMapping;
 
@@ -19,10 +20,12 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataMapping;
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.PerformDataTransmissionOperation#getInputMappings <em>Input Mappings</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.PerformDataTransmissionOperation#getOutputMappings <em>Output Mappings</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.PerformDataTransmissionOperation#getOutputData <em>Output Data</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getPerformDataTransmissionOperation()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='outputMappingsAndOutputDataHasToMatch'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot outputMappingsAndOutputDataHasToMatch='outputMappings.to-&gt;asSet() = outputData-&gt;asSet()'"
  * @generated
  */
 public interface PerformDataTransmissionOperation extends DataOperation
@@ -58,6 +61,22 @@ public interface PerformDataTransmissionOperation extends DataOperation
 	 * @generated
 	 */
 	EList<DataMapping> getOutputMappings();
+
+	/**
+	 * Returns the value of the '<em><b>Output Data</b></em>' containment reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ResultBasedData}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Output Data</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Output Data</em>' containment reference list.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getPerformDataTransmissionOperation_OutputData()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ResultBasedData> getOutputData();
 
 	/**
 	 * <!-- begin-user-doc -->
