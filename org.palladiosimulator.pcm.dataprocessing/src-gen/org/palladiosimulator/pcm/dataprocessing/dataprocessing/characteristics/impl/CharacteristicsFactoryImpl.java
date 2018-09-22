@@ -105,7 +105,7 @@ public class CharacteristicsFactoryImpl extends EFactoryImpl implements Characte
 	 */
 	public EnumCharacteristicLiteral createEnumCharacteristicLiteral()
 	{
-		EnumCharacteristicLiteralImpl enumCharacteristicLiteral = new EnumCharacteristicLiteralImpl();
+		EnumCharacteristicLiteralImplCustom enumCharacteristicLiteral = new EnumCharacteristicLiteralImplCustom();
 		return enumCharacteristicLiteral;
 	}
 

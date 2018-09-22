@@ -14,4 +14,8 @@ public class ProfileConstants {
 	
 	public static final String TAGGED_VALUE_NAME_OPERATION_SIGNATURE_DATA_REFINEMENT = "operationSignatureDataRefinement";
 	
+	public static final String STEREOTYPE_NAME_CHARACTERIZABLE = "Characterizable";
+	
+	public static final String TAGGED_VALUE_NAME_CHARACTERIZABLE_CONTAINER = "characteristicContainer";
+	
 }

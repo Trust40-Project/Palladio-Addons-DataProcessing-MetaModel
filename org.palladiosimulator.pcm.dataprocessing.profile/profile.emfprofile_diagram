@@ -33,6 +33,9 @@
       <extensions xmi:type="emfprofile:Extension" xmi:id="_JBEa8FqjEeiW1d-qz7Oqsw">
         <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//resourceenvironment/ResourceContainer"/>
       </extensions>
+      <extensions xmi:type="emfprofile:Extension" xmi:id="_17pjsL6DEeise_51G7D_6w">
+        <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//usagemodel/ScenarioBehaviour"/>
+      </extensions>
     </eClassifiers>
     <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_n9gd8FqjEeiW1d-qz7Oqsw" name="StoreHaving">
       <eSuperTypes xmi:type="ecore:EClass" href="http://www.modelversioning.org/emfprofile/application/1.1#//StereotypeApplication"/>

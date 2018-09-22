@@ -25,7 +25,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.E
  *
  * @generated
  */
-public class EnumCharacteristicImpl extends CharacteristicImpl implements EnumCharacteristic
+public class EnumCharacteristicImpl extends CharacteristicImplCustom implements EnumCharacteristic
 {
 	/**
 	 * <!-- begin-user-doc -->
