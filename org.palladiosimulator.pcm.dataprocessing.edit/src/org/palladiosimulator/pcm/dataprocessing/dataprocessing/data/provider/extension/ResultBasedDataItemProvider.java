@@ -1,7 +1,6 @@
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.provider.extension;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.notify.AdapterFactory;

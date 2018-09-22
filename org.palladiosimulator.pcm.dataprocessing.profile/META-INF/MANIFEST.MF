@@ -8,3 +8,4 @@ Require-Bundle: org.modelversioning.emfprofile;bundle-version="1.1.0",
  org.palladiosimulator.pcm.dataprocessing;bundle-version="0.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.palladiosimulator.pcm.dataprocessing.profile.api
+Automatic-Module-Name: org.palladiosimulator.pcm.dataprocessing.profile
