@@ -27,7 +27,7 @@ import org.palladiosimulator.pcm.repository.DataType;
  *
  * @generated
  */
-public class OriginalDataImpl extends DataImpl implements OriginalData
+public class OriginalDataImpl extends DataImplCustom implements OriginalData
 {
 	/**
 	 * <!-- begin-user-doc -->

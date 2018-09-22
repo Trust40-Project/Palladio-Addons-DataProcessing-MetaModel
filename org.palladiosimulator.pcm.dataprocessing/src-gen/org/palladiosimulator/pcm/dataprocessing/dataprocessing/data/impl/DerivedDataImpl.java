@@ -30,7 +30,7 @@ import org.palladiosimulator.pcm.repository.DataType;
  *
  * @generated
  */
-public class DerivedDataImpl extends DataImpl implements DerivedData
+public class DerivedDataImpl extends DataImplCustom implements DerivedData
 {
 	/**
 	 * <!-- begin-user-doc -->

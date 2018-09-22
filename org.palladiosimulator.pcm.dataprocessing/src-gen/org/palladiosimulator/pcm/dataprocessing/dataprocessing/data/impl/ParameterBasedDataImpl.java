@@ -28,7 +28,7 @@ import org.palladiosimulator.pcm.repository.Parameter;
  *
  * @generated
  */
-public class ParameterBasedDataImpl extends DataImpl implements ParameterBasedData
+public class ParameterBasedDataImpl extends DataImplCustom implements ParameterBasedData
 {
 	/**
 	 * <!-- begin-user-doc -->

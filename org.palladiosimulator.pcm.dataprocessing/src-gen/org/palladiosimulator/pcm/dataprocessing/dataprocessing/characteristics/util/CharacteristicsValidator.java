@@ -2,8 +2,6 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.util;
 
-import de.uka.ipd.sdq.identifier.util.IdentifierValidator;
-
 import java.util.Map;
 
 import org.eclipse.emf.common.util.Diagnostic;
@@ -61,14 +59,6 @@ public class CharacteristicsValidator extends EObjectValidator
 	protected static final int DIAGNOSTIC_CODE_COUNT = GENERATED_DIAGNOSTIC_CODE_COUNT;
 
 	/**
-	 * The cached base package validator.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IdentifierValidator identifierValidator;
-
-	/**
 	 * Creates an instance of the switch.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -77,7 +67,6 @@ public class CharacteristicsValidator extends EObjectValidator
 	public CharacteristicsValidator()
 	{
 		super();
-		identifierValidator = IdentifierValidator.INSTANCE;
 	}
 
 	/**
@@ -145,17 +134,7 @@ public class CharacteristicsValidator extends EObjectValidator
 	 */
 	public boolean validateCharacteristicTypeContainer(CharacteristicTypeContainer characteristicTypeContainer, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		if (!validate_NoCircularContainment((EObject)characteristicTypeContainer, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)characteristicTypeContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)characteristicTypeContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)characteristicTypeContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)characteristicTypeContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)characteristicTypeContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)characteristicTypeContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)characteristicTypeContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)characteristicTypeContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(characteristicTypeContainer, diagnostics, context);
-		return result;
+		return validate_EveryDefaultConstraint((EObject)characteristicTypeContainer, diagnostics, context);
 	}
 
 	/**
@@ -165,17 +144,7 @@ public class CharacteristicsValidator extends EObjectValidator
 	 */
 	public boolean validateCharacteristicType(CharacteristicType characteristicType, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		if (!validate_NoCircularContainment((EObject)characteristicType, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)characteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)characteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)characteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)characteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)characteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)characteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)characteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)characteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(characteristicType, diagnostics, context);
-		return result;
+		return validate_EveryDefaultConstraint((EObject)characteristicType, diagnostics, context);
 	}
 
 	/**
@@ -185,17 +154,7 @@ public class CharacteristicsValidator extends EObjectValidator
 	 */
 	public boolean validateEnumCharacteristicType(EnumCharacteristicType enumCharacteristicType, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		if (!validate_NoCircularContainment((EObject)enumCharacteristicType, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)enumCharacteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)enumCharacteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)enumCharacteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)enumCharacteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)enumCharacteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)enumCharacteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)enumCharacteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)enumCharacteristicType, diagnostics, context);
-		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(enumCharacteristicType, diagnostics, context);
-		return result;
+		return validate_EveryDefaultConstraint((EObject)enumCharacteristicType, diagnostics, context);
 	}
 
 	/**
@@ -205,17 +164,7 @@ public class CharacteristicsValidator extends EObjectValidator
 	 */
 	public boolean validateEnumCharacteristicLiteral(EnumCharacteristicLiteral enumCharacteristicLiteral, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		if (!validate_NoCircularContainment((EObject)enumCharacteristicLiteral, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)enumCharacteristicLiteral, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)enumCharacteristicLiteral, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)enumCharacteristicLiteral, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)enumCharacteristicLiteral, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)enumCharacteristicLiteral, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)enumCharacteristicLiteral, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)enumCharacteristicLiteral, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)enumCharacteristicLiteral, diagnostics, context);
-		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(enumCharacteristicLiteral, diagnostics, context);
-		return result;
+		return validate_EveryDefaultConstraint((EObject)enumCharacteristicLiteral, diagnostics, context);
 	}
 
 	/**
@@ -225,17 +174,7 @@ public class CharacteristicsValidator extends EObjectValidator
 	 */
 	public boolean validateCharacteristicContainer(CharacteristicContainer characteristicContainer, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		if (!validate_NoCircularContainment((EObject)characteristicContainer, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)characteristicContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)characteristicContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)characteristicContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)characteristicContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)characteristicContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)characteristicContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)characteristicContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)characteristicContainer, diagnostics, context);
-		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(characteristicContainer, diagnostics, context);
-		return result;
+		return validate_EveryDefaultConstraint((EObject)characteristicContainer, diagnostics, context);
 	}
 
 	/**
@@ -245,17 +184,7 @@ public class CharacteristicsValidator extends EObjectValidator
 	 */
 	public boolean validateCharacteristic(Characteristic characteristic, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		if (!validate_NoCircularContainment((EObject)characteristic, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)characteristic, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)characteristic, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)characteristic, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)characteristic, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)characteristic, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)characteristic, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)characteristic, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)characteristic, diagnostics, context);
-		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(characteristic, diagnostics, context);
-		return result;
+		return validate_EveryDefaultConstraint((EObject)characteristic, diagnostics, context);
 	}
 
 	/**
@@ -274,7 +203,6 @@ public class CharacteristicsValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_UniqueID((EObject)enumCharacteristic, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)enumCharacteristic, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)enumCharacteristic, diagnostics, context);
-		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(enumCharacteristic, diagnostics, context);
 		if (result || diagnostics != null) result &= validateEnumCharacteristic_valueCountMustMatchTypeRestriction(enumCharacteristic, diagnostics, context);
 		if (result || diagnostics != null) result &= validateEnumCharacteristic_literalsMustBelongToCorrectEnum(enumCharacteristic, diagnostics, context);
 		return result;
@@ -347,17 +275,7 @@ public class CharacteristicsValidator extends EObjectValidator
 	 */
 	public boolean validateEnumeration(Enumeration enumeration, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		if (!validate_NoCircularContainment((EObject)enumeration, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)enumeration, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)enumeration, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)enumeration, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)enumeration, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)enumeration, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)enumeration, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)enumeration, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)enumeration, diagnostics, context);
-		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(enumeration, diagnostics, context);
-		return result;
+		return validate_EveryDefaultConstraint((EObject)enumeration, diagnostics, context);
 	}
 
 	/**
@@ -367,17 +285,7 @@ public class CharacteristicsValidator extends EObjectValidator
 	 */
 	public boolean validateRelatedCharacteristics(RelatedCharacteristics relatedCharacteristics, DiagnosticChain diagnostics, Map<Object, Object> context)
 	{
-		if (!validate_NoCircularContainment((EObject)relatedCharacteristics, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms((EObject)relatedCharacteristics, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)relatedCharacteristics, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)relatedCharacteristics, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)relatedCharacteristics, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)relatedCharacteristics, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID((EObject)relatedCharacteristics, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)relatedCharacteristics, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)relatedCharacteristics, diagnostics, context);
-		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(relatedCharacteristics, diagnostics, context);
-		return result;
+		return validate_EveryDefaultConstraint((EObject)relatedCharacteristics, diagnostics, context);
 	}
 
 	/**

@@ -28,7 +28,7 @@ import org.palladiosimulator.pcm.repository.OperationSignature;
  *
  * @generated
  */
-public class ResultBasedDataImpl extends DataImpl implements ResultBasedData
+public class ResultBasedDataImpl extends DataImplCustom implements ResultBasedData
 {
 	/**
 	 * <!-- begin-user-doc -->
