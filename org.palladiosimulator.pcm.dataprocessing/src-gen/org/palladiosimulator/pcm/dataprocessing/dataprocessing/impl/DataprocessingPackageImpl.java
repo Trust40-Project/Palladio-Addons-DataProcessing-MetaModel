@@ -224,6 +224,16 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDataSpecification_StoreCharacteristicContainers()
+	{
+		return (EReference)dataSpecificationEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public DataprocessingFactory getDataprocessingFactory()
 	{
 		return (DataprocessingFactory)getEFactoryInstance();
@@ -256,6 +266,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER);
 		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__RELATED_CHARACTERISTICS);
 		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT);
+		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS);
 	}
 
 	/**
@@ -310,6 +321,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		initEReference(getDataSpecification_CharacteristicContainer(), theCharacteristicsPackage.getCharacteristicContainer(), null, "characteristicContainer", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSpecification_RelatedCharacteristics(), theCharacteristicsPackage.getRelatedCharacteristics(), null, "relatedCharacteristics", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSpecification_OperationSignatureDataRefinement(), theRepositoryPackage.getOperationSignatureDataRefinement(), null, "operationSignatureDataRefinement", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataSpecification_StoreCharacteristicContainers(), theCharacteristicsPackage.getStoreCharacteristicContainer(), null, "storeCharacteristicContainers", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

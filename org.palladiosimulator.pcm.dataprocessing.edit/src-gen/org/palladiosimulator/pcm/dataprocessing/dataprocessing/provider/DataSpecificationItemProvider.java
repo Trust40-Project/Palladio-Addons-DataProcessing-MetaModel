@@ -96,6 +96,7 @@ public class DataSpecificationItemProvider
 			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER);
 			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__RELATED_CHARACTERISTICS);
 			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT);
+			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS);
 		}
 		return childrenFeatures;
 	}
@@ -159,6 +160,7 @@ public class DataSpecificationItemProvider
 			case DataprocessingPackage.DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER:
 			case DataprocessingPackage.DATA_SPECIFICATION__RELATED_CHARACTERISTICS:
 			case DataprocessingPackage.DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT:
+			case DataprocessingPackage.DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -199,6 +201,11 @@ public class DataSpecificationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(DataprocessingPackage.Literals.DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER,
+				 CharacteristicsFactory.eINSTANCE.createStoreCharacteristics()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(DataprocessingPackage.Literals.DATA_SPECIFICATION__RELATED_CHARACTERISTICS,
 				 CharacteristicsFactory.eINSTANCE.createRelatedCharacteristics()));
 
@@ -206,6 +213,11 @@ public class DataSpecificationItemProvider
 			(createChildParameter
 				(DataprocessingPackage.Literals.DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT,
 				 RepositoryFactory.eINSTANCE.createOperationSignatureDataRefinement()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DataprocessingPackage.Literals.DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS,
+				 CharacteristicsFactory.eINSTANCE.createStoreCharacteristicContainer()));
 	}
 
 	/**

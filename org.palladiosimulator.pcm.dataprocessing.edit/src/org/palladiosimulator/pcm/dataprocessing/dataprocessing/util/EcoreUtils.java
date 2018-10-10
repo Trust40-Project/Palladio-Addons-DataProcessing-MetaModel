@@ -24,6 +24,14 @@ public final class EcoreUtils {
 		return Optional.ofNullable((T)currentObject);
 	}
 	
+	public static boolean isParent(EObject child, EObject parent) {
+		EObject currentObject = child.eContainer();
+		while (currentObject != null && currentObject != parent) {
+			currentObject = currentObject.eContainer();
+		}
+		return currentObject != null;
+	}
+	
 	public static Collection<EObject> getStereotypedElements(String stereotypeName, EObject taggedValue) {
 		return taggedValue.eResource().getResourceSet().getResources().stream()
 				.filter(ProfileAPI::hasProfileApplication)

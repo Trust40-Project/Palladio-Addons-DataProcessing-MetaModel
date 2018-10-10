@@ -53,4 +53,20 @@ public class CharacteristicsItemProviderAdapterFactory extends
 		return relatedCharacteristicsItemProvider;
 	}
 
+	@Override
+	public Adapter createStoreCharacteristicContainerAdapter() {
+		if (storeCharacteristicContainerItemProvider == null) {
+			storeCharacteristicContainerItemProvider = new StoreCharacteristicContainerItemProvider(this);
+		}
+		return storeCharacteristicContainerItemProvider;
+	}
+
+	@Override
+	public Adapter createStoreCharacteristicsAdapter() {
+		if (storeCharacteristicsItemProvider == null) {
+			storeCharacteristicsItemProvider = new StoreCharacteristicsItemProvider(this);
+		}
+		return storeCharacteristicsItemProvider;
+	}
+
 }

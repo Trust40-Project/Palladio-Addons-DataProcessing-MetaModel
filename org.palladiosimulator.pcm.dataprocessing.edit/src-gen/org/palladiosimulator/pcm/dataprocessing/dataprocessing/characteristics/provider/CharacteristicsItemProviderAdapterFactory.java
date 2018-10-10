@@ -249,6 +249,56 @@ public class CharacteristicsItemProviderAdapterFactory extends CharacteristicsAd
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristicContainer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StoreCharacteristicContainerItemProvider storeCharacteristicContainerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristicContainer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStoreCharacteristicContainerAdapter()
+	{
+		if (storeCharacteristicContainerItemProvider == null)
+		{
+			storeCharacteristicContainerItemProvider = new StoreCharacteristicContainerItemProvider(this);
+		}
+
+		return storeCharacteristicContainerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristics} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StoreCharacteristicsItemProvider storeCharacteristicsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristics}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStoreCharacteristicsAdapter()
+	{
+		if (storeCharacteristicsItemProvider == null)
+		{
+			storeCharacteristicsItemProvider = new StoreCharacteristicsItemProvider(this);
+		}
+
+		return storeCharacteristicsItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -366,6 +416,8 @@ public class CharacteristicsItemProviderAdapterFactory extends CharacteristicsAd
 		if (enumCharacteristicItemProvider != null) enumCharacteristicItemProvider.dispose();
 		if (enumerationItemProvider != null) enumerationItemProvider.dispose();
 		if (relatedCharacteristicsItemProvider != null) relatedCharacteristicsItemProvider.dispose();
+		if (storeCharacteristicContainerItemProvider != null) storeCharacteristicContainerItemProvider.dispose();
+		if (storeCharacteristicsItemProvider != null) storeCharacteristicsItemProvider.dispose();
 	}
 
 }

@@ -121,13 +121,22 @@ public interface DataprocessingPackage extends EPackage
 	int DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT = 5;
 
 	/**
+	 * The feature id for the '<em><b>Store Characteristic Containers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS = 6;
+
+	/**
 	 * The number of structural features of the '<em>Data Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION_FEATURE_COUNT = 6;
+	int DATA_SPECIFICATION_FEATURE_COUNT = 7;
 
 
 	/**
@@ -205,6 +214,17 @@ public interface DataprocessingPackage extends EPackage
 	 * @generated
 	 */
 	EReference getDataSpecification_OperationSignatureDataRefinement();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getStoreCharacteristicContainers <em>Store Characteristic Containers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Store Characteristic Containers</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getStoreCharacteristicContainers()
+	 * @see #getDataSpecification()
+	 * @generated
+	 */
+	EReference getDataSpecification_StoreCharacteristicContainers();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -286,6 +306,14 @@ public interface DataprocessingPackage extends EPackage
 		 * @generated
 		 */
 		EReference DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT = eINSTANCE.getDataSpecification_OperationSignatureDataRefinement();
+
+		/**
+		 * The meta object literal for the '<em><b>Store Characteristic Containers</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS = eINSTANCE.getDataSpecification_StoreCharacteristicContainers();
 
 	}
 

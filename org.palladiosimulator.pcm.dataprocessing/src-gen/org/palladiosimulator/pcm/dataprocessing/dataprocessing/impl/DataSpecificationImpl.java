@@ -14,6 +14,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPac
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicTypeContainer;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.RelatedCharacteristics;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristicContainer;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer;
 
@@ -34,6 +35,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.StoreC
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getCharacteristicContainer <em>Characteristic Container</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getRelatedCharacteristics <em>Related Characteristics</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getOperationSignatureDataRefinement <em>Operation Signature Data Refinement</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getStoreCharacteristicContainers <em>Store Characteristic Containers</em>}</li>
  * </ul>
  *
  * @generated
@@ -136,6 +138,17 @@ public class DataSpecificationImpl extends CDOObjectImpl implements DataSpecific
 	public EList<OperationSignatureDataRefinement> getOperationSignatureDataRefinement()
 	{
 		return (EList<OperationSignatureDataRefinement>)eGet(DataprocessingPackage.Literals.DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<StoreCharacteristicContainer> getStoreCharacteristicContainers()
+	{
+		return (EList<StoreCharacteristicContainer>)eGet(DataprocessingPackage.Literals.DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS, true);
 	}
 
 } //DataSpecificationImpl

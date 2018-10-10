@@ -193,6 +193,18 @@ public class ProcessingSwitch<T1> extends Switch<T1>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ProcessingPackage.SYSTEM_DISCARD_DATA:
+			{
+				SystemDiscardData systemDiscardData = (SystemDiscardData)theEObject;
+				T1 result = caseSystemDiscardData(systemDiscardData);
+				if (result == null) result = caseConsumeDataOperation(systemDiscardData);
+				if (result == null) result = caseDataOperation(systemDiscardData);
+				if (result == null) result = caseEntity(systemDiscardData);
+				if (result == null) result = caseIdentifier(systemDiscardData);
+				if (result == null) result = caseNamedElement(systemDiscardData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ProcessingPackage.MANY_TO_ONE_DATA_OPERATION:
 			{
 				ManyToOneDataOperation manyToOneDataOperation = (ManyToOneDataOperation)theEObject;
@@ -434,6 +446,22 @@ public class ProcessingSwitch<T1> extends Switch<T1>
 	 * @generated
 	 */
 	public T1 caseUserReadData(UserReadData object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>System Discard Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>System Discard Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseSystemDiscardData(SystemDiscardData object)
 	{
 		return null;
 	}

@@ -54,6 +54,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Projec
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ReturnDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.SelectionDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.StoreDataOperation;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.SystemDiscardData;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.TransformDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.UnionDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.UserReadData;
@@ -145,6 +146,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * @generated
 	 */
 	private EClass userReadDataEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass systemDiscardDataEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -530,6 +538,16 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSystemDiscardData()
+	{
+		return systemDiscardDataEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getManyToOneDataOperation()
 	{
 		return manyToOneDataOperationEClass;
@@ -747,6 +765,8 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 
 		userReadDataEClass = createEClass(USER_READ_DATA);
 
+		systemDiscardDataEClass = createEClass(SYSTEM_DISCARD_DATA);
+
 		manyToOneDataOperationEClass = createEClass(MANY_TO_ONE_DATA_OPERATION);
 		createEReference(manyToOneDataOperationEClass, MANY_TO_ONE_DATA_OPERATION__CONSUMED_DATA);
 		createEReference(manyToOneDataOperationEClass, MANY_TO_ONE_DATA_OPERATION__RESULTING_DATA);
@@ -822,6 +842,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		storeDataOperationEClass.getESuperTypes().add(this.getConsumeDataOperation());
 		returnDataOperationEClass.getESuperTypes().add(this.getConsumeDataOperation());
 		userReadDataEClass.getESuperTypes().add(this.getConsumeDataOperation());
+		systemDiscardDataEClass.getESuperTypes().add(this.getConsumeDataOperation());
 		manyToOneDataOperationEClass.getESuperTypes().add(this.getDataOperation());
 		joinDataOperationEClass.getESuperTypes().add(this.getManyToOneDataOperation());
 		unionDataOperationEClass.getESuperTypes().add(this.getManyToOneDataOperation());
@@ -874,6 +895,8 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		initEReference(getReturnDataOperation_ReturnDestination(), theDataPackage.getResultBasedData(), null, "returnDestination", null, 1, 1, ReturnDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(userReadDataEClass, UserReadData.class, "UserReadData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(systemDiscardDataEClass, SystemDiscardData.class, "SystemDiscardData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(manyToOneDataOperationEClass, ManyToOneDataOperation.class, "ManyToOneDataOperation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getManyToOneDataOperation_ConsumedData(), theDataPackage.getData(), null, "consumedData", null, 2, -1, ManyToOneDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -941,6 +964,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
 		   });
 		addAnnotation
+		  (dataOperationEClass,
+		   source,
+		   new String[]
+		   {
+			   "constraints", "outgoingDataIsUsed"
+		   });
+		addAnnotation
 		  (loadAllDataOperationEClass,
 		   source,
 		   new String[]
@@ -953,6 +983,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   new String[]
 		   {
 			   "constraints", "outputMappingsAndOutputDataHasToMatch"
+		   });
+		addAnnotation
+		  (consumeDataOperationEClass,
+		   source,
+		   new String[]
+		   {
+			   "constraints", "noDataEmission"
 		   });
 		addAnnotation
 		  (joinDataOperationEClass,
@@ -993,6 +1030,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	protected void createPivotAnnotations()
 	{
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+		addAnnotation
+		  (dataOperationEClass,
+		   source,
+		   new String[]
+		   {
+			   "outgoingDataIsUsed", "self.outgoingData->size() = 0 or DataOperation.allInstances()->select(do | do.incomingData->exists(inData | self.outgoingData->includes(inData)))->excluding(self)->size() > 0"
+		   });
 		addAnnotation
 		  (dataOperationEClass.getEOperations().get(0),
 		   source,
@@ -1055,6 +1099,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   new String[]
 		   {
 			   "body", "self.inputMappings.from->asSet()"
+		   });
+		addAnnotation
+		  (consumeDataOperationEClass,
+		   source,
+		   new String[]
+		   {
+			   "noDataEmission", "self.outgoingData->size() = 0"
 		   });
 		addAnnotation
 		  (consumeDataOperationEClass.getEOperations().get(0),

@@ -336,8 +336,8 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 		initEReference(getStore_DataType(), theRepositoryPackage_1.getDataType(), null, "dataType", null, 1, 1, Store.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operationSignatureDataRefinementEClass, OperationSignatureDataRefinement.class, "OperationSignatureDataRefinement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOperationSignatureDataRefinement_ParameterRefinements(), theDataPackage.getParameterBasedData(), null, "parameterRefinements", null, 1, -1, OperationSignatureDataRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOperationSignatureDataRefinement_ResultRefinements(), theDataPackage.getResultBasedData(), null, "resultRefinements", null, 1, -1, OperationSignatureDataRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperationSignatureDataRefinement_ParameterRefinements(), theDataPackage.getParameterBasedData(), null, "parameterRefinements", null, 0, -1, OperationSignatureDataRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperationSignatureDataRefinement_ResultRefinements(), theDataPackage.getResultBasedData(), null, "resultRefinements", null, 0, -1, OperationSignatureDataRefinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore

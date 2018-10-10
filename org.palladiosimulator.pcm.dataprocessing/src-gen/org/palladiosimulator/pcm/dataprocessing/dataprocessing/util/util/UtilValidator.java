@@ -2,6 +2,8 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.util;
 
+import de.uka.ipd.sdq.identifier.util.IdentifierValidator;
+
 import java.util.Map;
 
 import org.eclipse.emf.common.util.Diagnostic;
@@ -59,6 +61,14 @@ public class UtilValidator extends EObjectValidator
 	protected static final int DIAGNOSTIC_CODE_COUNT = GENERATED_DIAGNOSTIC_CODE_COUNT;
 
 	/**
+	 * The cached base package validator.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IdentifierValidator identifierValidator;
+
+	/**
 	 * Creates an instance of the switch.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,6 +77,7 @@ public class UtilValidator extends EObjectValidator
 	public UtilValidator()
 	{
 		super();
+		identifierValidator = IdentifierValidator.INSTANCE;
 	}
 
 	/**
@@ -115,6 +126,7 @@ public class UtilValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_UniqueID((EObject)dataMapping, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)dataMapping, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)dataMapping, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(dataMapping, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDataMapping_dataTypesMustBeTheSame(dataMapping, diagnostics, context);
 		return result;
 	}

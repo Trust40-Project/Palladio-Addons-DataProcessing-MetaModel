@@ -512,6 +512,107 @@ public interface CharacteristicsPackage extends EPackage
 	 */
 	int RELATED_CHARACTERISTICS_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 2;
 
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.StoreCharacteristicContainerImpl <em>Store Characteristic Container</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.StoreCharacteristicContainerImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacteristicsPackageImpl#getStoreCharacteristicContainer()
+	 * @generated
+	 */
+	int STORE_CHARACTERISTIC_CONTAINER = 10;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORE_CHARACTERISTIC_CONTAINER__ID = EntityPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORE_CHARACTERISTIC_CONTAINER__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Characteristics</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORE_CHARACTERISTIC_CONTAINER__CHARACTERISTICS = EntityPackage.ENTITY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Store Characteristic Container</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORE_CHARACTERISTIC_CONTAINER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.StoreCharacteristicsImpl <em>Store Characteristics</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.StoreCharacteristicsImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacteristicsPackageImpl#getStoreCharacteristics()
+	 * @generated
+	 */
+	int STORE_CHARACTERISTICS = 11;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORE_CHARACTERISTICS__ID = CHARACTERISTIC_CONTAINER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORE_CHARACTERISTICS__ENTITY_NAME = CHARACTERISTIC_CONTAINER__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Owned Characteristics</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORE_CHARACTERISTICS__OWNED_CHARACTERISTICS = CHARACTERISTIC_CONTAINER__OWNED_CHARACTERISTICS;
+
+	/**
+	 * The feature id for the '<em><b>Store</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORE_CHARACTERISTICS__STORE = CHARACTERISTIC_CONTAINER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Store Characteristics</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORE_CHARACTERISTICS_FEATURE_COUNT = CHARACTERISTIC_CONTAINER_FEATURE_COUNT + 1;
+
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characterizable <em>Characterizable</em>}'.
@@ -757,6 +858,48 @@ public interface CharacteristicsPackage extends EPackage
 	EReference getRelatedCharacteristics_RelatedEntity();
 
 	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristicContainer <em>Store Characteristic Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Store Characteristic Container</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristicContainer
+	 * @generated
+	 */
+	EClass getStoreCharacteristicContainer();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristicContainer#getCharacteristics <em>Characteristics</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Characteristics</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristicContainer#getCharacteristics()
+	 * @see #getStoreCharacteristicContainer()
+	 * @generated
+	 */
+	EReference getStoreCharacteristicContainer_Characteristics();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristics <em>Store Characteristics</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Store Characteristics</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristics
+	 * @generated
+	 */
+	EClass getStoreCharacteristics();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristics#getStore <em>Store</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Store</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristics#getStore()
+	 * @see #getStoreCharacteristics()
+	 * @generated
+	 */
+	EReference getStoreCharacteristics_Store();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -982,6 +1125,42 @@ public interface CharacteristicsPackage extends EPackage
 		 * @generated
 		 */
 		EReference RELATED_CHARACTERISTICS__RELATED_ENTITY = eINSTANCE.getRelatedCharacteristics_RelatedEntity();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.StoreCharacteristicContainerImpl <em>Store Characteristic Container</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.StoreCharacteristicContainerImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacteristicsPackageImpl#getStoreCharacteristicContainer()
+		 * @generated
+		 */
+		EClass STORE_CHARACTERISTIC_CONTAINER = eINSTANCE.getStoreCharacteristicContainer();
+
+		/**
+		 * The meta object literal for the '<em><b>Characteristics</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STORE_CHARACTERISTIC_CONTAINER__CHARACTERISTICS = eINSTANCE.getStoreCharacteristicContainer_Characteristics();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.StoreCharacteristicsImpl <em>Store Characteristics</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.StoreCharacteristicsImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.impl.CharacteristicsPackageImpl#getStoreCharacteristics()
+		 * @generated
+		 */
+		EClass STORE_CHARACTERISTICS = eINSTANCE.getStoreCharacteristics();
+
+		/**
+		 * The meta object literal for the '<em><b>Store</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STORE_CHARACTERISTICS__STORE = eINSTANCE.getStoreCharacteristics_Store();
 
 	}
 

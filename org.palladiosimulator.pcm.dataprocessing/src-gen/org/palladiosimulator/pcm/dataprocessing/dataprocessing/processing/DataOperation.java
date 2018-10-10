@@ -24,6 +24,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getDataOperation()
  * @model abstract="true"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='outgoingDataIsUsed'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot outgoingDataIsUsed='self.outgoingData-&gt;size() = 0 or DataOperation.allInstances()-&gt;select(do | do.incomingData-&gt;exists(inData | self.outgoingData-&gt;includes(inData)))-&gt;excluding(self)-&gt;size() &gt; 0'"
  * @generated
  */
 public interface DataOperation extends Entity

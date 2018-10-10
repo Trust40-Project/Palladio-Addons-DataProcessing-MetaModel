@@ -39,7 +39,7 @@ public interface OperationSignatureDataRefinement extends Entity
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameter Refinements</em>' containment reference list.
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.RepositoryPackage#getOperationSignatureDataRefinement_ParameterRefinements()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<ParameterBasedData> getParameterRefinements();
@@ -55,7 +55,7 @@ public interface OperationSignatureDataRefinement extends Entity
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Result Refinements</em>' containment reference list.
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.RepositoryPackage#getOperationSignatureDataRefinement_ResultRefinements()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<ResultBasedData> getResultRefinements();

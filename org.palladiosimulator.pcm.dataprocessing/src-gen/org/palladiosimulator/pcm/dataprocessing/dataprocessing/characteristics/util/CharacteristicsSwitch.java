@@ -170,6 +170,27 @@ public class CharacteristicsSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CharacteristicsPackage.STORE_CHARACTERISTIC_CONTAINER:
+			{
+				StoreCharacteristicContainer storeCharacteristicContainer = (StoreCharacteristicContainer)theEObject;
+				T result = caseStoreCharacteristicContainer(storeCharacteristicContainer);
+				if (result == null) result = caseEntity(storeCharacteristicContainer);
+				if (result == null) result = caseIdentifier(storeCharacteristicContainer);
+				if (result == null) result = caseNamedElement(storeCharacteristicContainer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CharacteristicsPackage.STORE_CHARACTERISTICS:
+			{
+				StoreCharacteristics storeCharacteristics = (StoreCharacteristics)theEObject;
+				T result = caseStoreCharacteristics(storeCharacteristics);
+				if (result == null) result = caseCharacteristicContainer(storeCharacteristics);
+				if (result == null) result = caseEntity(storeCharacteristics);
+				if (result == null) result = caseIdentifier(storeCharacteristics);
+				if (result == null) result = caseNamedElement(storeCharacteristics);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -330,6 +351,38 @@ public class CharacteristicsSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseRelatedCharacteristics(RelatedCharacteristics object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Store Characteristic Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Store Characteristic Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStoreCharacteristicContainer(StoreCharacteristicContainer object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Store Characteristics</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Store Characteristics</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStoreCharacteristics(StoreCharacteristics object)
 	{
 		return null;
 	}

@@ -71,6 +71,8 @@ public class CharacteristicsFactoryImpl extends EFactoryImpl implements Characte
 			case CharacteristicsPackage.ENUM_CHARACTERISTIC: return (EObject)createEnumCharacteristic();
 			case CharacteristicsPackage.ENUMERATION: return (EObject)createEnumeration();
 			case CharacteristicsPackage.RELATED_CHARACTERISTICS: return (EObject)createRelatedCharacteristics();
+			case CharacteristicsPackage.STORE_CHARACTERISTIC_CONTAINER: return (EObject)createStoreCharacteristicContainer();
+			case CharacteristicsPackage.STORE_CHARACTERISTICS: return (EObject)createStoreCharacteristics();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -138,7 +140,7 @@ public class CharacteristicsFactoryImpl extends EFactoryImpl implements Characte
 	 */
 	public Enumeration createEnumeration()
 	{
-		EnumerationImpl enumeration = new EnumerationImpl();
+		EnumerationImplCustom enumeration = new EnumerationImplCustom();
 		return enumeration;
 	}
 
@@ -151,6 +153,28 @@ public class CharacteristicsFactoryImpl extends EFactoryImpl implements Characte
 	{
 		RelatedCharacteristicsImpl relatedCharacteristics = new RelatedCharacteristicsImpl();
 		return relatedCharacteristics;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StoreCharacteristicContainer createStoreCharacteristicContainer()
+	{
+		StoreCharacteristicContainerImpl storeCharacteristicContainer = new StoreCharacteristicContainerImpl();
+		return storeCharacteristicContainer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StoreCharacteristics createStoreCharacteristics()
+	{
+		StoreCharacteristicsImpl storeCharacteristics = new StoreCharacteristicsImpl();
+		return storeCharacteristics;
 	}
 
 	/**

@@ -132,6 +132,11 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl
 				return createUserReadDataAdapter();
 			}
 			@Override
+			public Adapter caseSystemDiscardData(SystemDiscardData object)
+			{
+				return createSystemDiscardDataAdapter();
+			}
+			@Override
 			public Adapter caseManyToOneDataOperation(ManyToOneDataOperation object)
 			{
 				return createManyToOneDataOperationAdapter();
@@ -349,6 +354,21 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createUserReadDataAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.SystemDiscardData <em>System Discard Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.SystemDiscardData
+	 * @generated
+	 */
+	public Adapter createSystemDiscardDataAdapter()
 	{
 		return null;
 	}

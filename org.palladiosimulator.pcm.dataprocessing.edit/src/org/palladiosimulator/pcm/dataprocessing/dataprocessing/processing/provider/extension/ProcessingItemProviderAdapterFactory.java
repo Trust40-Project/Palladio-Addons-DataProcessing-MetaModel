@@ -45,4 +45,44 @@ public class ProcessingItemProviderAdapterFactory extends
 		return returnDataOperationItemProvider;
 	}
 
+	@Override
+	public Adapter createProjectionDataOperationAdapter() {
+		if (projectionDataOperationItemProvider == null) {
+			projectionDataOperationItemProvider = new ProjectionDataOperationItemProvider(this);
+		}
+		return projectionDataOperationItemProvider;
+	}
+
+	@Override
+	public Adapter createCharacteristicChangingDataOperationAdapter() {
+		if (characteristicChangingDataOperationItemProvider == null) {
+			characteristicChangingDataOperationItemProvider = new CharacteristicChangingDataOperationItemProvider(this);
+		}
+		return characteristicChangingDataOperationItemProvider;
+	}
+
+	@Override
+	public Adapter createLoadDataOperationAdapter() {
+		if (loadDataOperationItemProvider == null) {
+			loadDataOperationItemProvider = new LoadDataOperationItemProvider(this);
+		}
+		return loadDataOperationItemProvider;
+	}
+
+	@Override
+	public Adapter createLoadAllDataOperationAdapter() {
+		if (loadAllDataOperationItemProvider == null) {
+			loadAllDataOperationItemProvider = new LoadAllDataOperationItemProvider(this);
+		}
+		return loadAllDataOperationItemProvider;
+	}
+
+	@Override
+	public Adapter createSystemDiscardDataAdapter() {
+		if (systemDiscardDataItemProvider == null) {
+			systemDiscardDataItemProvider = new SystemDiscardDataItemProvider(this);
+		}
+		return systemDiscardDataItemProvider;
+	}
+
 }

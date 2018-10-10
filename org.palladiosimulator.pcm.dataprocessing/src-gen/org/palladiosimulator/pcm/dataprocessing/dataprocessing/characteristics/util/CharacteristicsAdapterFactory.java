@@ -130,6 +130,16 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl
 				return createRelatedCharacteristicsAdapter();
 			}
 			@Override
+			public Adapter caseStoreCharacteristicContainer(StoreCharacteristicContainer object)
+			{
+				return createStoreCharacteristicContainerAdapter();
+			}
+			@Override
+			public Adapter caseStoreCharacteristics(StoreCharacteristics object)
+			{
+				return createStoreCharacteristicsAdapter();
+			}
+			@Override
 			public Adapter caseIdentifier(Identifier object)
 			{
 				return createIdentifierAdapter();
@@ -312,6 +322,36 @@ public class CharacteristicsAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createRelatedCharacteristicsAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristicContainer <em>Store Characteristic Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristicContainer
+	 * @generated
+	 */
+	public Adapter createStoreCharacteristicContainerAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristics <em>Store Characteristics</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristics
+	 * @generated
+	 */
+	public Adapter createStoreCharacteristicsAdapter()
 	{
 		return null;
 	}

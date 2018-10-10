@@ -809,6 +809,79 @@ public interface ProcessingPackage extends EPackage
 	int USER_READ_DATA_FEATURE_COUNT = CONSUME_DATA_OPERATION_FEATURE_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.SystemDiscardDataImpl <em>System Discard Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.SystemDiscardDataImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getSystemDiscardData()
+	 * @generated
+	 */
+	int SYSTEM_DISCARD_DATA = 10;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_DISCARD_DATA__ID = CONSUME_DATA_OPERATION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_DISCARD_DATA__ENTITY_NAME = CONSUME_DATA_OPERATION__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Container</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_DISCARD_DATA__CONTAINER = CONSUME_DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_DISCARD_DATA__INCOMING_DATA = CONSUME_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_DISCARD_DATA__OUTGOING_DATA = CONSUME_DATA_OPERATION__OUTGOING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Consumed Data</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_DISCARD_DATA__CONSUMED_DATA = CONSUME_DATA_OPERATION__CONSUMED_DATA;
+
+	/**
+	 * The number of structural features of the '<em>System Discard Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_DISCARD_DATA_FEATURE_COUNT = CONSUME_DATA_OPERATION_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ManyToOneDataOperationImpl <em>Many To One Data Operation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -816,7 +889,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getManyToOneDataOperation()
 	 * @generated
 	 */
-	int MANY_TO_ONE_DATA_OPERATION = 10;
+	int MANY_TO_ONE_DATA_OPERATION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -898,7 +971,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getJoinDataOperation()
 	 * @generated
 	 */
-	int JOIN_DATA_OPERATION = 11;
+	int JOIN_DATA_OPERATION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -980,7 +1053,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getUnionDataOperation()
 	 * @generated
 	 */
-	int UNION_DATA_OPERATION = 12;
+	int UNION_DATA_OPERATION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1062,7 +1135,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getTransformDataOperation()
 	 * @generated
 	 */
-	int TRANSFORM_DATA_OPERATION = 13;
+	int TRANSFORM_DATA_OPERATION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1153,7 +1226,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getProjectionDataOperation()
 	 * @generated
 	 */
-	int PROJECTION_DATA_OPERATION = 14;
+	int PROJECTION_DATA_OPERATION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1244,7 +1317,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getSelectionDataOperation()
 	 * @generated
 	 */
-	int SELECTION_DATA_OPERATION = 15;
+	int SELECTION_DATA_OPERATION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1335,7 +1408,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getCharacteristicChangingDataOperation()
 	 * @generated
 	 */
-	int CHARACTERISTIC_CHANGING_DATA_OPERATION = 16;
+	int CHARACTERISTIC_CHANGING_DATA_OPERATION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1426,7 +1499,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getCharacteristicChangeOperation()
 	 * @generated
 	 */
-	int CHARACTERISTIC_CHANGE_OPERATION = 17;
+	int CHARACTERISTIC_CHANGE_OPERATION = 18;
 
 
 	/**
@@ -1660,6 +1733,16 @@ public interface ProcessingPackage extends EPackage
 	 * @generated
 	 */
 	EClass getUserReadData();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.SystemDiscardData <em>System Discard Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>System Discard Data</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.SystemDiscardData
+	 * @generated
+	 */
+	EClass getSystemDiscardData();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ManyToOneDataOperation <em>Many To One Data Operation</em>}'.
@@ -2047,6 +2130,16 @@ public interface ProcessingPackage extends EPackage
 		 * @generated
 		 */
 		EClass USER_READ_DATA = eINSTANCE.getUserReadData();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.SystemDiscardDataImpl <em>System Discard Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.SystemDiscardDataImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getSystemDiscardData()
+		 * @generated
+		 */
+		EClass SYSTEM_DISCARD_DATA = eINSTANCE.getSystemDiscardData();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ManyToOneDataOperationImpl <em>Many To One Data Operation</em>}' class.

@@ -180,6 +180,11 @@ public class CharacterizableItemProvider
 			(createChildParameter
 				(CharacteristicsPackage.Literals.CHARACTERIZABLE__CHARACTERISTIC_CONTAINERS,
 				 CharacteristicsFactory.eINSTANCE.createCharacteristicContainer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CharacteristicsPackage.Literals.CHARACTERIZABLE__CHARACTERISTIC_CONTAINERS,
+				 CharacteristicsFactory.eINSTANCE.createStoreCharacteristics()));
 	}
 
 	/**

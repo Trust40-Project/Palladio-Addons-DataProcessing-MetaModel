@@ -274,6 +274,31 @@ public class ProcessingItemProviderAdapterFactory extends ProcessingAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.SystemDiscardData} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SystemDiscardDataItemProvider systemDiscardDataItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.SystemDiscardData}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSystemDiscardDataAdapter()
+	{
+		if (systemDiscardDataItemProvider == null)
+		{
+			systemDiscardDataItemProvider = new SystemDiscardDataItemProvider(this);
+		}
+
+		return systemDiscardDataItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.JoinDataOperation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -517,6 +542,7 @@ public class ProcessingItemProviderAdapterFactory extends ProcessingAdapterFacto
 		if (storeDataOperationItemProvider != null) storeDataOperationItemProvider.dispose();
 		if (returnDataOperationItemProvider != null) returnDataOperationItemProvider.dispose();
 		if (userReadDataItemProvider != null) userReadDataItemProvider.dispose();
+		if (systemDiscardDataItemProvider != null) systemDiscardDataItemProvider.dispose();
 		if (joinDataOperationItemProvider != null) joinDataOperationItemProvider.dispose();
 		if (unionDataOperationItemProvider != null) unionDataOperationItemProvider.dispose();
 		if (projectionDataOperationItemProvider != null) projectionDataOperationItemProvider.dispose();

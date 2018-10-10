@@ -97,6 +97,15 @@ public interface ProcessingFactory extends EFactory
 	UserReadData createUserReadData();
 
 	/**
+	 * Returns a new object of class '<em>System Discard Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>System Discard Data</em>'.
+	 * @generated
+	 */
+	SystemDiscardData createSystemDiscardData();
+
+	/**
 	 * Returns a new object of class '<em>Join Data Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

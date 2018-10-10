@@ -75,6 +75,7 @@ public class ProcessingFactoryImpl extends EFactoryImpl implements ProcessingFac
 			case ProcessingPackage.STORE_DATA_OPERATION: return (EObject)createStoreDataOperation();
 			case ProcessingPackage.RETURN_DATA_OPERATION: return (EObject)createReturnDataOperation();
 			case ProcessingPackage.USER_READ_DATA: return (EObject)createUserReadData();
+			case ProcessingPackage.SYSTEM_DISCARD_DATA: return (EObject)createSystemDiscardData();
 			case ProcessingPackage.JOIN_DATA_OPERATION: return (EObject)createJoinDataOperation();
 			case ProcessingPackage.UNION_DATA_OPERATION: return (EObject)createUnionDataOperation();
 			case ProcessingPackage.PROJECTION_DATA_OPERATION: return (EObject)createProjectionDataOperation();
@@ -205,6 +206,17 @@ public class ProcessingFactoryImpl extends EFactoryImpl implements ProcessingFac
 	{
 		UserReadDataImpl userReadData = new UserReadDataImpl();
 		return userReadData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SystemDiscardData createSystemDiscardData()
+	{
+		SystemDiscardDataImpl systemDiscardData = new SystemDiscardDataImpl();
+		return systemDiscardData;
 	}
 
 	/**

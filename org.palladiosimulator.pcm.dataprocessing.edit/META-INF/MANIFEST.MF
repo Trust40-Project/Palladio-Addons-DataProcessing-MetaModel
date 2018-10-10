@@ -35,7 +35,7 @@ Require-Bundle: org.eclipse.core.runtime,
  de.uka.ipd.sdq.units.edit;visibility:=reexport,
  org.eclipse.emf.cdo.edit;bundle-version="4.4.100";visibility:=reexport,
  org.eclipse.emf.edit.ui,
- org.palladiosimulator.mdsdprofiles.api;bundle-version="1.0.1",
- org.modelversioning.emfprofile;bundle-version="1.1.0",
- org.palladiosimulator.pcm.dataprocessing.profile
+ org.palladiosimulator.mdsdprofiles.api;bundle-version="1.0.1";visibility:=reexport,
+ org.modelversioning.emfprofile;bundle-version="1.1.0";visibility:=reexport,
+ org.palladiosimulator.pcm.dataprocessing.profile;visibility:=reexport
 Bundle-ActivationPolicy: lazy

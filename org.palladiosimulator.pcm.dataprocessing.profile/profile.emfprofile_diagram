@@ -48,8 +48,11 @@
     </eClassifiers>
     <eClassifiers xmi:type="emfprofile:Stereotype" xmi:id="_4wkygFqjEeiW1d-qz7Oqsw" name="StoreCharacterization">
       <eSuperTypes xmi:type="ecore:EClass" href="http://www.modelversioning.org/emfprofile/application/1.1#//StereotypeApplication"/>
-      <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_RmKKoF9HEeiJu8Bap_lNiQ" name="characteristicContainer" lowerBound="1">
-        <eType xmi:type="ecore:EClass" href="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/#//characteristics/CharacteristicContainer"/>
+      <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_0O1PgL_WEei5W5zxrgoeHg" name="store" lowerBound="1">
+        <eType xmi:type="ecore:EClass" href="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/#//repository/Store"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_zP5FkL_XEei9d_RHz3hUBA" name="storeCharacteristicContainer" lowerBound="1">
+        <eType xmi:type="ecore:EClass" href="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/#//characteristics/StoreCharacteristicContainer"/>
       </eStructuralFeatures>
       <extensions xmi:type="emfprofile:Extension" xmi:id="_6E0ooFqjEeiW1d-qz7Oqsw">
         <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//core/composition/AssemblyContext"/>

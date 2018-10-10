@@ -86,6 +86,24 @@ public interface CharacteristicsFactory extends EFactory
 	RelatedCharacteristics createRelatedCharacteristics();
 
 	/**
+	 * Returns a new object of class '<em>Store Characteristic Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Store Characteristic Container</em>'.
+	 * @generated
+	 */
+	StoreCharacteristicContainer createStoreCharacteristicContainer();
+
+	/**
+	 * Returns a new object of class '<em>Store Characteristics</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Store Characteristics</em>'.
+	 * @generated
+	 */
+	StoreCharacteristics createStoreCharacteristics();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

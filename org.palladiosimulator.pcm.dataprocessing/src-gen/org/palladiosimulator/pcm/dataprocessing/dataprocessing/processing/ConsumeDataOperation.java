@@ -20,6 +20,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getConsumeDataOperation()
  * @model abstract="true"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='noDataEmission'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot noDataEmission='self.outgoingData-&gt;size() = 0'"
  * @generated
  */
 public interface ConsumeDataOperation extends DataOperation

@@ -36,6 +36,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.E
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.EnumCharacteristicType;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Enumeration;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.RelatedCharacteristics;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristicContainer;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristics;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.util.CharacteristicsValidator;
 
@@ -134,6 +136,20 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 	 * @generated
 	 */
 	private EClass relatedCharacteristicsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass storeCharacteristicContainerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass storeCharacteristicsEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -473,6 +489,46 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getStoreCharacteristicContainer()
+	{
+		return storeCharacteristicContainerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStoreCharacteristicContainer_Characteristics()
+	{
+		return (EReference)storeCharacteristicContainerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStoreCharacteristics()
+	{
+		return storeCharacteristicsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStoreCharacteristics_Store()
+	{
+		return (EReference)storeCharacteristicsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CharacteristicsFactory getCharacteristicsFactory()
 	{
 		return (CharacteristicsFactory)getEFactoryInstance();
@@ -530,6 +586,12 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		relatedCharacteristicsEClass = createEClass(RELATED_CHARACTERISTICS);
 		createEReference(relatedCharacteristicsEClass, RELATED_CHARACTERISTICS__CHARACTERISTICS);
 		createEReference(relatedCharacteristicsEClass, RELATED_CHARACTERISTICS__RELATED_ENTITY);
+
+		storeCharacteristicContainerEClass = createEClass(STORE_CHARACTERISTIC_CONTAINER);
+		createEReference(storeCharacteristicContainerEClass, STORE_CHARACTERISTIC_CONTAINER__CHARACTERISTICS);
+
+		storeCharacteristicsEClass = createEClass(STORE_CHARACTERISTICS);
+		createEReference(storeCharacteristicsEClass, STORE_CHARACTERISTICS__STORE);
 	}
 
 	/**
@@ -559,6 +621,7 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		// Obtain other dependent packages
 		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
 		EntityPackage theEntityPackage = (EntityPackage)EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
+		RepositoryPackage theRepositoryPackage = (RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -574,6 +637,8 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		enumCharacteristicEClass.getESuperTypes().add(this.getCharacteristic());
 		enumerationEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		relatedCharacteristicsEClass.getESuperTypes().add(theEntityPackage.getEntity());
+		storeCharacteristicContainerEClass.getESuperTypes().add(theEntityPackage.getEntity());
+		storeCharacteristicsEClass.getESuperTypes().add(this.getCharacteristicContainer());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(characterizableEClass, Characterizable.class, "Characterizable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -608,6 +673,12 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		initEClass(relatedCharacteristicsEClass, RelatedCharacteristics.class, "RelatedCharacteristics", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRelatedCharacteristics_Characteristics(), this.getCharacteristicContainer(), null, "characteristics", null, 1, 1, RelatedCharacteristics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRelatedCharacteristics_RelatedEntity(), theEntityPackage.getEntity(), null, "relatedEntity", null, 1, 1, RelatedCharacteristics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(storeCharacteristicContainerEClass, StoreCharacteristicContainer.class, "StoreCharacteristicContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStoreCharacteristicContainer_Characteristics(), this.getStoreCharacteristics(), null, "characteristics", null, 0, -1, StoreCharacteristicContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(storeCharacteristicsEClass, StoreCharacteristics.class, "StoreCharacteristics", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStoreCharacteristics_Store(), theRepositoryPackage.getStore(), null, "store", null, 1, 1, StoreCharacteristics.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore
