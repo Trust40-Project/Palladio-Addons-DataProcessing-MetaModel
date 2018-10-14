@@ -17,7 +17,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.Store;
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getLoadDataOperation()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='noManualCharacteristics'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot noManualCharacteristics='self.initialCharacteristics-&gt;size() = 0'"
  * @generated
  */
 public interface LoadDataOperation extends CreateDataOperation

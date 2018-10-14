@@ -14,6 +14,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsFactory;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataFactory;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CreateDataOperation;
@@ -70,6 +72,7 @@ public class CreateDataOperationItemProvider extends DataOperationItemProvider
 		{
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ProcessingPackage.Literals.CREATE_DATA_OPERATION__RESULTING_DATA);
+			childrenFeatures.add(ProcessingPackage.Literals.CREATE_DATA_OPERATION__INITIAL_CHARACTERISTICS);
 		}
 		return childrenFeatures;
 	}
@@ -131,6 +134,7 @@ public class CreateDataOperationItemProvider extends DataOperationItemProvider
 		switch (notification.getFeatureID(CreateDataOperation.class))
 		{
 			case ProcessingPackage.CREATE_DATA_OPERATION__RESULTING_DATA:
+			case ProcessingPackage.CREATE_DATA_OPERATION__INITIAL_CHARACTERISTICS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -183,6 +187,11 @@ public class CreateDataOperationItemProvider extends DataOperationItemProvider
 			(createChildParameter
 				(ProcessingPackage.Literals.CREATE_DATA_OPERATION__RESULTING_DATA,
 				 DataFactory.eINSTANCE.createCopiedData()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.CREATE_DATA_OPERATION__INITIAL_CHARACTERISTICS,
+				 CharacteristicsFactory.eINSTANCE.createEnumCharacteristic()));
 	}
 
 }

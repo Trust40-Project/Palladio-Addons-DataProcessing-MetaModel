@@ -4,6 +4,8 @@ package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 
 /**
@@ -16,6 +18,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CreateDataOperation#getResultingData <em>Resulting Data</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CreateDataOperation#getInitialCharacteristics <em>Initial Characteristics</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getCreateDataOperation()
@@ -49,6 +52,22 @@ public interface CreateDataOperation extends DataOperation
 	 * @generated
 	 */
 	void setResultingData(Data value);
+
+	/**
+	 * Returns the value of the '<em><b>Initial Characteristics</b></em>' containment reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Initial Characteristics</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Initial Characteristics</em>' containment reference list.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getCreateDataOperation_InitialCharacteristics()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Characteristic> getInitialCharacteristics();
 
 	/**
 	 * <!-- begin-user-doc -->

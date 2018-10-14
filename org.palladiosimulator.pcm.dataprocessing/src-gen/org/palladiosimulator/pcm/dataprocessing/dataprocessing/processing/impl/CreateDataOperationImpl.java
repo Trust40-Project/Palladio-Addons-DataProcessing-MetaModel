@@ -10,6 +10,8 @@ import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.Characteristic;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CreateDataOperation;
@@ -24,6 +26,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Proces
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.CreateDataOperationImpl#getResultingData <em>Resulting Data</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.CreateDataOperationImpl#getInitialCharacteristics <em>Initial Characteristics</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,6 +72,17 @@ public class CreateDataOperationImpl extends DataOperationImpl implements Create
 	public void setResultingData(Data newResultingData)
 	{
 		eSet(ProcessingPackage.Literals.CREATE_DATA_OPERATION__RESULTING_DATA, newResultingData);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Characteristic> getInitialCharacteristics()
+	{
+		return (EList<Characteristic>)eGet(ProcessingPackage.Literals.CREATE_DATA_OPERATION__INITIAL_CHARACTERISTICS, true);
 	}
 
 	/**

@@ -256,7 +256,38 @@ public class ProcessingValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)loadDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(loadDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDataOperation_outgoingDataIsUsed(loadDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateLoadDataOperation_noManualCharacteristics(loadDataOperation, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * The cached validation expression for the noManualCharacteristics constraint of '<em>Load Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String LOAD_DATA_OPERATION__NO_MANUAL_CHARACTERISTICS__EEXPRESSION = "self.initialCharacteristics->size() = 0";
+
+	/**
+	 * Validates the noManualCharacteristics constraint of '<em>Load Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateLoadDataOperation_noManualCharacteristics(LoadDataOperation loadDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return
+			validate
+				(ProcessingPackage.Literals.LOAD_DATA_OPERATION,
+				 (EObject)loadDataOperation,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "noManualCharacteristics",
+				 LOAD_DATA_OPERATION__NO_MANUAL_CHARACTERISTICS__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
@@ -277,6 +308,7 @@ public class ProcessingValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)loadAllDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(loadAllDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDataOperation_outgoingDataIsUsed(loadAllDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateLoadDataOperation_noManualCharacteristics(loadAllDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateLoadAllDataOperation_resultTypeMustBeCollection(loadAllDataOperation, diagnostics, context);
 		return result;
 	}

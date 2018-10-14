@@ -260,11 +260,29 @@
           lowerBound="1"
           eType="#//data/Data"
           containment="true"/>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="initialCharacteristics"
+          upperBound="-1"
+          eType="#//characteristics/Characteristic"
+          containment="true"/>
     </eClassifiers>
     <eClassifiers
         xsi:type="ecore:EClass"
         name="LoadDataOperation"
         eSuperTypes="#//processing/CreateDataOperation">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/Ecore">
+        <details
+            key="constraints"
+            value="noManualCharacteristics"/>
+      </eAnnotations>
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details
+            key="noManualCharacteristics"
+            value="self.initialCharacteristics->size() = 0"/>
+      </eAnnotations>
       <eStructuralFeatures
           xsi:type="ecore:EReference"
           name="store"

@@ -235,13 +235,22 @@ public interface ProcessingPackage extends EPackage
 	int CREATE_DATA_OPERATION__RESULTING_DATA = DATA_OPERATION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Initial Characteristics</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_DATA_OPERATION__INITIAL_CHARACTERISTICS = DATA_OPERATION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Create Data Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_DATA_OPERATION_FEATURE_COUNT = DATA_OPERATION_FEATURE_COUNT + 1;
+	int CREATE_DATA_OPERATION_FEATURE_COUNT = DATA_OPERATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.LoadDataOperationImpl <em>Load Data Operation</em>}' class.
@@ -306,6 +315,15 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int LOAD_DATA_OPERATION__RESULTING_DATA = CREATE_DATA_OPERATION__RESULTING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Initial Characteristics</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOAD_DATA_OPERATION__INITIAL_CHARACTERISTICS = CREATE_DATA_OPERATION__INITIAL_CHARACTERISTICS;
 
 	/**
 	 * The feature id for the '<em><b>Store</b></em>' reference.
@@ -388,6 +406,15 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int LOAD_ALL_DATA_OPERATION__RESULTING_DATA = LOAD_DATA_OPERATION__RESULTING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Initial Characteristics</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOAD_ALL_DATA_OPERATION__INITIAL_CHARACTERISTICS = LOAD_DATA_OPERATION__INITIAL_CHARACTERISTICS;
 
 	/**
 	 * The feature id for the '<em><b>Store</b></em>' reference.
@@ -1588,6 +1615,17 @@ public interface ProcessingPackage extends EPackage
 	EReference getCreateDataOperation_ResultingData();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CreateDataOperation#getInitialCharacteristics <em>Initial Characteristics</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Initial Characteristics</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CreateDataOperation#getInitialCharacteristics()
+	 * @see #getCreateDataOperation()
+	 * @generated
+	 */
+	EReference getCreateDataOperation_InitialCharacteristics();
+
+	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.LoadDataOperation <em>Load Data Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2004,6 +2042,14 @@ public interface ProcessingPackage extends EPackage
 		 * @generated
 		 */
 		EReference CREATE_DATA_OPERATION__RESULTING_DATA = eINSTANCE.getCreateDataOperation_ResultingData();
+
+		/**
+		 * The meta object literal for the '<em><b>Initial Characteristics</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CREATE_DATA_OPERATION__INITIAL_CHARACTERISTICS = eINSTANCE.getCreateDataOperation_InitialCharacteristics();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.LoadDataOperationImpl <em>Load Data Operation</em>}' class.

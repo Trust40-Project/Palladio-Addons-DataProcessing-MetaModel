@@ -398,6 +398,16 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCreateDataOperation_InitialCharacteristics()
+	{
+		return (EReference)createDataOperationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLoadDataOperation()
 	{
 		return loadDataOperationEClass;
@@ -743,6 +753,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 
 		createDataOperationEClass = createEClass(CREATE_DATA_OPERATION);
 		createEReference(createDataOperationEClass, CREATE_DATA_OPERATION__RESULTING_DATA);
+		createEReference(createDataOperationEClass, CREATE_DATA_OPERATION__INITIAL_CHARACTERISTICS);
 
 		loadDataOperationEClass = createEClass(LOAD_DATA_OPERATION);
 		createEReference(loadDataOperationEClass, LOAD_DATA_OPERATION__STORE);
@@ -820,9 +831,9 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		// Obtain other dependent packages
 		EntityPackage theEntityPackage = (EntityPackage)EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
 		DataPackage theDataPackage = (DataPackage)EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
+		CharacteristicsPackage theCharacteristicsPackage = (CharacteristicsPackage)EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI);
 		RepositoryPackage theRepositoryPackage = (RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
 		UtilPackage theUtilPackage = (UtilPackage)EPackage.Registry.INSTANCE.getEPackage(UtilPackage.eNS_URI);
-		CharacteristicsPackage theCharacteristicsPackage = (CharacteristicsPackage)EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter characteristicChangingDataOperationEClass_T = addETypeParameter(characteristicChangingDataOperationEClass, "T");
@@ -866,6 +877,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 
 		initEClass(createDataOperationEClass, CreateDataOperation.class, "CreateDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCreateDataOperation_ResultingData(), theDataPackage.getData(), null, "resultingData", null, 1, 1, CreateDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCreateDataOperation_InitialCharacteristics(), theCharacteristicsPackage.getCharacteristic(), null, "initialCharacteristics", null, 0, -1, CreateDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(createDataOperationEClass, theDataPackage.getData(), "determineOutgoingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
@@ -971,6 +983,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 			   "constraints", "outgoingDataIsUsed"
 		   });
 		addAnnotation
+		  (loadDataOperationEClass,
+		   source,
+		   new String[]
+		   {
+			   "constraints", "noManualCharacteristics"
+		   });
+		addAnnotation
 		  (loadAllDataOperationEClass,
 		   source,
 		   new String[]
@@ -1071,6 +1090,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   new String[]
 		   {
 			   "body", "self.resultingData.oclAsSet()"
+		   });
+		addAnnotation
+		  (loadDataOperationEClass,
+		   source,
+		   new String[]
+		   {
+			   "noManualCharacteristics", "self.initialCharacteristics->size() = 0"
 		   });
 		addAnnotation
 		  (loadAllDataOperationEClass,
