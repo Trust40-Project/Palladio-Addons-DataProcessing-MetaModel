@@ -9,15 +9,11 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicType;
-
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.provider.DataprocessingEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicType} object.
@@ -96,18 +92,6 @@ public class CharacteristicTypeItemProvider extends EntityItemProvider
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
 	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator()
-	{
-		return DataprocessingEditPlugin.INSTANCE;
 	}
 
 }

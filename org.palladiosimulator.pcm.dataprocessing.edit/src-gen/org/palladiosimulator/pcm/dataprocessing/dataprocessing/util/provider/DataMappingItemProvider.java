@@ -14,9 +14,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.provider.DataprocessingEditPlugin;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataMapping;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.UtilPackage;
@@ -157,7 +156,7 @@ public class DataMappingItemProvider extends IdentifierItemProvider
 	@Override
 	public ResourceLocator getResourceLocator()
 	{
-		return DataprocessingEditPlugin.INSTANCE;
+		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
 }

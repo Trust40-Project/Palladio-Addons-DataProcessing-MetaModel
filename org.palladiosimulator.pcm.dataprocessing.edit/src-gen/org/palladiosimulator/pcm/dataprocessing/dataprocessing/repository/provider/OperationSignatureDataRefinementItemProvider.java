@@ -9,8 +9,6 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -19,8 +17,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataFactory;
-
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.provider.DataprocessingEditPlugin;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.OperationSignatureDataRefinement;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.RepositoryPackage;
@@ -176,18 +172,6 @@ public class OperationSignatureDataRefinementItemProvider extends EntityItemProv
 			(createChildParameter
 				(RepositoryPackage.Literals.OPERATION_SIGNATURE_DATA_REFINEMENT__RESULT_REFINEMENTS,
 				 DataFactory.eINSTANCE.createRefinedResultBasedData()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator()
-	{
-		return DataprocessingEditPlugin.INSTANCE;
 	}
 
 }
