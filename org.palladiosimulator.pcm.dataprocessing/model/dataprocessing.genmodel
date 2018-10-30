@@ -22,6 +22,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//DataSpecification/relatedCharacteristics"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//DataSpecification/operationSignatureDataRefinement"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//DataSpecification/storeCharacteristicContainers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dataprocessing.ecore#//DataSpecification/extensions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="dataprocessing.ecore#//DataSpecificationExtension">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dataprocessing.ecore#//DataSpecificationExtension/specification"/>
     </genClasses>
     <nestedGenPackages prefix="Repository" disposableProviderFactory="true" extensibleProviderFactory="true"
         childCreationExtenders="true" ecorePackage="dataprocessing.ecore#//repository">

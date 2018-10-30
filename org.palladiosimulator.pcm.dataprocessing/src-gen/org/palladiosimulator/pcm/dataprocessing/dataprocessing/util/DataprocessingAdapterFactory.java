@@ -2,6 +2,8 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.util;
 
+import de.uka.ipd.sdq.identifier.Identifier;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -80,6 +82,16 @@ public class DataprocessingAdapterFactory extends AdapterFactoryImpl
 				return createDataSpecificationAdapter();
 			}
 			@Override
+			public Adapter caseDataSpecificationExtension(DataSpecificationExtension object)
+			{
+				return createDataSpecificationExtensionAdapter();
+			}
+			@Override
+			public Adapter caseIdentifier(Identifier object)
+			{
+				return createIdentifierAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object)
 			{
 				return createEObjectAdapter();
@@ -112,6 +124,36 @@ public class DataprocessingAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createDataSpecificationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension <em>Data Specification Extension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension
+	 * @generated
+	 */
+	public Adapter createDataSpecificationExtensionAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.identifier.Identifier <em>Identifier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.uka.ipd.sdq.identifier.Identifier
+	 * @generated
+	 */
+	public Adapter createIdentifierAdapter()
 	{
 		return null;
 	}

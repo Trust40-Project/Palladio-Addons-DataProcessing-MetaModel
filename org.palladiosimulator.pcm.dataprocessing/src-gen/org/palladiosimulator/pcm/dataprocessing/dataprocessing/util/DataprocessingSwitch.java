@@ -2,6 +2,8 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing.util;
 
+import de.uka.ipd.sdq.identifier.Identifier;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -79,6 +81,14 @@ public class DataprocessingSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case DataprocessingPackage.DATA_SPECIFICATION_EXTENSION:
+			{
+				DataSpecificationExtension dataSpecificationExtension = (DataSpecificationExtension)theEObject;
+				T result = caseDataSpecificationExtension(dataSpecificationExtension);
+				if (result == null) result = caseIdentifier(dataSpecificationExtension);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -95,6 +105,38 @@ public class DataprocessingSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseDataSpecification(DataSpecification object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Specification Extension</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Specification Extension</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataSpecificationExtension(DataSpecificationExtension object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Identifier</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIdentifier(Identifier object)
 	{
 		return null;
 	}

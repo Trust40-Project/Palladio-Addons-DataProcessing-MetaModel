@@ -97,6 +97,7 @@ public class DataSpecificationItemProvider
 			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__RELATED_CHARACTERISTICS);
 			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT);
 			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS);
+			childrenFeatures.add(DataprocessingPackage.Literals.DATA_SPECIFICATION__EXTENSIONS);
 		}
 		return childrenFeatures;
 	}
@@ -161,6 +162,7 @@ public class DataSpecificationItemProvider
 			case DataprocessingPackage.DATA_SPECIFICATION__RELATED_CHARACTERISTICS:
 			case DataprocessingPackage.DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT:
 			case DataprocessingPackage.DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS:
+			case DataprocessingPackage.DATA_SPECIFICATION__EXTENSIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer;
@@ -36,6 +37,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.StoreC
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getRelatedCharacteristics <em>Related Characteristics</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getOperationSignatureDataRefinement <em>Operation Signature Data Refinement</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getStoreCharacteristicContainers <em>Store Characteristic Containers</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataSpecificationImpl#getExtensions <em>Extensions</em>}</li>
  * </ul>
  *
  * @generated
@@ -149,6 +151,17 @@ public class DataSpecificationImpl extends CDOObjectImpl implements DataSpecific
 	public EList<StoreCharacteristicContainer> getStoreCharacteristicContainers()
 	{
 		return (EList<StoreCharacteristicContainer>)eGet(DataprocessingPackage.Literals.DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<DataSpecificationExtension> getExtensions()
+	{
+		return (EList<DataSpecificationExtension>)eGet(DataprocessingPackage.Literals.DATA_SPECIFICATION__EXTENSIONS, true);
 	}
 
 } //DataSpecificationImpl

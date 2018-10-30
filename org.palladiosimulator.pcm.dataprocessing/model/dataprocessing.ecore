@@ -67,6 +67,26 @@
         upperBound="-1"
         eType="#//characteristics/StoreCharacteristicContainer"
         containment="true"/>
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="extensions"
+        upperBound="-1"
+        eType="#//DataSpecificationExtension"
+        containment="true"
+        eOpposite="#//DataSpecificationExtension/specification"/>
+  </eClassifiers>
+  <eClassifiers
+      xsi:type="ecore:EClass"
+      name="DataSpecificationExtension"
+      abstract="true"
+      interface="true"
+      eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eStructuralFeatures
+        xsi:type="ecore:EReference"
+        name="specification"
+        lowerBound="1"
+        eType="#//DataSpecification"
+        eOpposite="#//DataSpecification/extensions"/>
   </eClassifiers>
   <eSubpackages
       name="repository"

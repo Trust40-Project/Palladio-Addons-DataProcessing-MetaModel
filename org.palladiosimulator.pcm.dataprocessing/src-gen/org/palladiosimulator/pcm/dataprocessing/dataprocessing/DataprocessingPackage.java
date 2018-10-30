@@ -2,6 +2,8 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing;
 
+import de.uka.ipd.sdq.identifier.IdentifierPackage;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -130,13 +132,59 @@ public interface DataprocessingPackage extends EPackage
 	int DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS = 6;
 
 	/**
+	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SPECIFICATION__EXTENSIONS = 7;
+
+	/**
 	 * The number of structural features of the '<em>Data Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION_FEATURE_COUNT = 7;
+	int DATA_SPECIFICATION_FEATURE_COUNT = 8;
+
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension <em>Data Specification Extension</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataprocessingPackageImpl#getDataSpecificationExtension()
+	 * @generated
+	 */
+	int DATA_SPECIFICATION_EXTENSION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SPECIFICATION_EXTENSION__ID = IdentifierPackage.IDENTIFIER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Specification</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SPECIFICATION_EXTENSION__SPECIFICATION = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Data Specification Extension</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SPECIFICATION_EXTENSION_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 
 	/**
@@ -227,6 +275,38 @@ public interface DataprocessingPackage extends EPackage
 	EReference getDataSpecification_StoreCharacteristicContainers();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getExtensions <em>Extensions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Extensions</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getExtensions()
+	 * @see #getDataSpecification()
+	 * @generated
+	 */
+	EReference getDataSpecification_Extensions();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension <em>Data Specification Extension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Specification Extension</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension
+	 * @generated
+	 */
+	EClass getDataSpecificationExtension();
+
+	/**
+	 * Returns the meta object for the container reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension#getSpecification <em>Specification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Specification</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension#getSpecification()
+	 * @see #getDataSpecificationExtension()
+	 * @generated
+	 */
+	EReference getDataSpecificationExtension_Specification();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -314,6 +394,32 @@ public interface DataprocessingPackage extends EPackage
 		 * @generated
 		 */
 		EReference DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS = eINSTANCE.getDataSpecification_StoreCharacteristicContainers();
+
+		/**
+		 * The meta object literal for the '<em><b>Extensions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_SPECIFICATION__EXTENSIONS = eINSTANCE.getDataSpecification_Extensions();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension <em>Data Specification Extension</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataprocessingPackageImpl#getDataSpecificationExtension()
+		 * @generated
+		 */
+		EClass DATA_SPECIFICATION_EXTENSION = eINSTANCE.getDataSpecificationExtension();
+
+		/**
+		 * The meta object literal for the '<em><b>Specification</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_SPECIFICATION_EXTENSION__SPECIFICATION = eINSTANCE.getDataSpecificationExtension_Specification();
 
 	}
 

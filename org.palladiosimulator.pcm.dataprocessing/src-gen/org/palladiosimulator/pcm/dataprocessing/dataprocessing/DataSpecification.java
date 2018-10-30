@@ -32,6 +32,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.StoreC
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getRelatedCharacteristics <em>Related Characteristics</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getOperationSignatureDataRefinement <em>Operation Signature Data Refinement</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getStoreCharacteristicContainers <em>Store Characteristic Containers</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getExtensions <em>Extensions</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage#getDataSpecification()
@@ -152,5 +153,23 @@ public interface DataSpecification extends CDOObject
 	 * @generated
 	 */
 	EList<StoreCharacteristicContainer> getStoreCharacteristicContainers();
+
+	/**
+	 * Returns the value of the '<em><b>Extensions</b></em>' containment reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension}.
+	 * It is bidirectional and its opposite is '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension#getSpecification <em>Specification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Extensions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Extensions</em>' containment reference list.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage#getDataSpecification_Extensions()
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension#getSpecification
+	 * @model opposite="specification" containment="true"
+	 * @generated
+	 */
+	EList<DataSpecificationExtension> getExtensions();
 
 } // DataSpecification
