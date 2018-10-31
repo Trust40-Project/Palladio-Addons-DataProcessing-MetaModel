@@ -1159,7 +1159,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   source,
 		   new String[]
 		   {
-			   "resultMustBeCompositeOfInputs", "\n\t\t\t\tlet resultInnerDeclarations = self.resultingData.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType in\n\t\t\t\t\tresultInnerDeclarations.datatype_InnerDeclaration = self.consumedData.type"
+			   "resultMustBeCompositeOfInputs", "\n\t\t\t\tlet resultInnerDeclarationTypes = self.resultingData.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration in\n\t\t\t\t\tlet consumedDataTypes = self.consumedData.type in\n\t\t\t\t\t\tresultInnerDeclarationTypes->asSet() = consumedDataTypes->asSet()"
 		   });
 		addAnnotation
 		  (unionDataOperationEClass,

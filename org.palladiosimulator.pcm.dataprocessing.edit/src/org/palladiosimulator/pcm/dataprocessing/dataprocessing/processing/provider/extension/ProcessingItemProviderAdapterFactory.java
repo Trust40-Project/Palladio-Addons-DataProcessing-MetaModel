@@ -85,4 +85,12 @@ public class ProcessingItemProviderAdapterFactory extends
 		return systemDiscardDataItemProvider;
 	}
 
+	@Override
+	public Adapter createJoinDataOperationAdapter() {
+		if (joinDataOperationItemProvider == null) {
+			joinDataOperationItemProvider = new JoinDataOperationItemProvider(this);
+		}
+		return joinDataOperationItemProvider;
+	}
+
 }
