@@ -392,9 +392,19 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataOperation_OutgoingData()
+	public EReference getDataOperation_ProcessingEffectProvider()
 	{
 		return (EReference)dataOperationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDataOperation_OutgoingData()
+	{
+		return (EReference)dataOperationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -762,26 +772,6 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProcessingEffectOperationTypeSpecifyingOperation_CustomProcessingEffectProvider()
-	{
-		return (EReference)processingEffectOperationTypeSpecifyingOperationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectProvider()
-	{
-		return (EReference)processingEffectOperationTypeSpecifyingOperationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getCharacteristicChangeOperation()
 	{
 		return characteristicChangeOperationEEnum;
@@ -823,6 +813,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		dataOperationEClass = createEClass(DATA_OPERATION);
 		createEReference(dataOperationEClass, DATA_OPERATION__CONTAINER);
 		createEReference(dataOperationEClass, DATA_OPERATION__INCOMING_DATA);
+		createEReference(dataOperationEClass, DATA_OPERATION__PROCESSING_EFFECT_PROVIDER);
 		createEReference(dataOperationEClass, DATA_OPERATION__OUTGOING_DATA);
 
 		createDataOperationEClass = createEClass(CREATE_DATA_OPERATION);
@@ -878,8 +869,6 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 
 		processingEffectOperationTypeSpecifyingOperationEClass = createEClass(PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION);
 		createEReference(processingEffectOperationTypeSpecifyingOperationEClass, PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE);
-		createEReference(processingEffectOperationTypeSpecifyingOperationEClass, PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER);
-		createEReference(processingEffectOperationTypeSpecifyingOperationEClass, PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_PROVIDER);
 
 		// Create enums
 		characteristicChangeOperationEEnum = createEEnum(CHARACTERISTIC_CHANGE_OPERATION);
@@ -912,10 +901,10 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		// Obtain other dependent packages
 		EntityPackage theEntityPackage = (EntityPackage)EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
 		DataPackage theDataPackage = (DataPackage)EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
+		EffectspecificationPackage theEffectspecificationPackage = (EffectspecificationPackage)EPackage.Registry.INSTANCE.getEPackage(EffectspecificationPackage.eNS_URI);
 		CharacteristicsPackage theCharacteristicsPackage = (CharacteristicsPackage)EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI);
 		RepositoryPackage theRepositoryPackage = (RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
 		UtilPackage theUtilPackage = (UtilPackage)EPackage.Registry.INSTANCE.getEPackage(UtilPackage.eNS_URI);
-		EffectspecificationPackage theEffectspecificationPackage = (EffectspecificationPackage)EPackage.Registry.INSTANCE.getEPackage(EffectspecificationPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter characteristicChangingDataOperationEClass_T = addETypeParameter(characteristicChangingDataOperationEClass, "T");
@@ -954,6 +943,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		initEClass(dataOperationEClass, DataOperation.class, "DataOperation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDataOperation_Container(), this.getDataProcessingContainer(), this.getDataProcessingContainer_Operations(), "container", null, 0, 1, DataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataOperation_IncomingData(), theDataPackage.getData(), null, "incomingData", null, 0, -1, DataOperation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		initEReference(getDataOperation_ProcessingEffectProvider(), theEffectspecificationPackage.getProcessingEffectProvider(), null, "processingEffectProvider", null, 1, 1, DataOperation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getDataOperation_OutgoingData(), theDataPackage.getData(), null, "outgoingData", null, 0, -1, DataOperation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 
 		addEOperation(dataOperationEClass, theDataPackage.getData(), "determineIncomingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
@@ -1033,8 +1023,6 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 
 		initEClass(processingEffectOperationTypeSpecifyingOperationEClass, ProcessingEffectOperationTypeSpecifyingOperation.class, "ProcessingEffectOperationTypeSpecifyingOperation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectOperationType(), theEffectspecificationPackage.getProcessingEffectOperationType(), null, "processingEffectOperationType", null, 1, 1, ProcessingEffectOperationTypeSpecifyingOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcessingEffectOperationTypeSpecifyingOperation_CustomProcessingEffectProvider(), theEffectspecificationPackage.getProcessingEffectProvider(), null, "customProcessingEffectProvider", null, 0, 1, ProcessingEffectOperationTypeSpecifyingOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectProvider(), theEffectspecificationPackage.getProcessingEffectProvider(), null, "processingEffectProvider", null, 1, 1, ProcessingEffectOperationTypeSpecifyingOperation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(characteristicChangeOperationEEnum, CharacteristicChangeOperation.class, "CharacteristicChangeOperation");
@@ -1170,6 +1158,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 			   "derivation", "determineIncomingData()"
 		   });
 		addAnnotation
+		  (getDataOperation_ProcessingEffectProvider(),
+		   source,
+		   new String[]
+		   {
+			   "derivation", "self.container.oclContainer.oclAsType(dataprocessing::effectspecification::ProcessingEffectProvider)"
+		   });
+		addAnnotation
 		  (getDataOperation_OutgoingData(),
 		   source,
 		   new String[]
@@ -1302,13 +1297,6 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   new String[]
 		   {
 			   "body", "self.determineIncomingData()"
-		   });
-		addAnnotation
-		  (getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectProvider(),
-		   source,
-		   new String[]
-		   {
-			   "derivation", "let defaultProvider = self.container.oclContainer.oclAsType(dataprocessing::effectspecification::ProcessingEffectProvider) in\n\tcustomProcessingEffectProvider->asOrderedSet()->including(defaultProvider)->select(not oclIsUndefined())->first()"
 		   });
 	}
 

@@ -67,6 +67,7 @@ public class EffectspecificationFactoryImpl extends EFactoryImpl implements Effe
 			case EffectspecificationPackage.PROCESSING_EFFECT_SPECIFICATION: return (EObject)createProcessingEffectSpecification();
 			case EffectspecificationPackage.PROCESSING_EFFECT_OPERATION_TYPE: return (EObject)createProcessingEffectOperationType();
 			case EffectspecificationPackage.OPERATION_TYPE_DATA_PROCESSING_EFFECT: return (EObject)createOperationTypeDataProcessingEffect();
+			case EffectspecificationPackage.DATA_CREATION_PROCESSING_EFFECT: return (EObject)createDataCreationProcessingEffect();
 			case EffectspecificationPackage.CHARACTERISTIC_CHANGE: return (EObject)createCharacteristicChange();
 			case EffectspecificationPackage.DIRECT_CHARACTERISTIC: return (EObject)createDirectCharacteristic();
 			default:
@@ -105,6 +106,17 @@ public class EffectspecificationFactoryImpl extends EFactoryImpl implements Effe
 	{
 		OperationTypeDataProcessingEffectImpl operationTypeDataProcessingEffect = new OperationTypeDataProcessingEffectImpl();
 		return operationTypeDataProcessingEffect;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataCreationProcessingEffect createDataCreationProcessingEffect()
+	{
+		DataCreationProcessingEffectImpl dataCreationProcessingEffect = new DataCreationProcessingEffectImpl();
+		return dataCreationProcessingEffect;
 	}
 
 	/**

@@ -164,6 +164,11 @@ public class ProcessingEffectSpecificationItemProvider extends IdentifierItemPro
 			(createChildParameter
 				(EffectspecificationPackage.Literals.PROCESSING_EFFECT_SPECIFICATION__PROCESSING_EFFECTS,
 				 EffectspecificationFactory.eINSTANCE.createOperationTypeDataProcessingEffect()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(EffectspecificationPackage.Literals.PROCESSING_EFFECT_SPECIFICATION__PROCESSING_EFFECTS,
+				 EffectspecificationFactory.eINSTANCE.createDataCreationProcessingEffect()));
 	}
 
 	/**

@@ -1,6 +1,6 @@
 /**
  */
-package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.provider;
+package org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.provider;
 
 
 import java.util.Collection;
@@ -9,19 +9,17 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation;
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.DataCreationProcessingEffect;
 
 /**
- * This is the item provider adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation} object.
+ * This is the item provider adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.DataCreationProcessingEffect} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ProcessingEffectOperationTypeSpecifyingOperationItemProvider extends DataOperationItemProvider
+public class DataCreationProcessingEffectItemProvider extends ProcessingEffectItemProvider
 {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -29,7 +27,7 @@ public class ProcessingEffectOperationTypeSpecifyingOperationItemProvider extend
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessingEffectOperationTypeSpecifyingOperationItemProvider(AdapterFactory adapterFactory)
+	public DataCreationProcessingEffectItemProvider(AdapterFactory adapterFactory)
 	{
 		super(adapterFactory);
 	}
@@ -47,32 +45,20 @@ public class ProcessingEffectOperationTypeSpecifyingOperationItemProvider extend
 		{
 			super.getPropertyDescriptors(object);
 
-			addProcessingEffectOperationTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Processing Effect Operation Type feature.
+	 * This returns DataCreationProcessingEffect.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addProcessingEffectOperationTypePropertyDescriptor(Object object)
+	@Override
+	public Object getImage(Object object)
 	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ProcessingEffectOperationTypeSpecifyingOperation_processingEffectOperationType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ProcessingEffectOperationTypeSpecifyingOperation_processingEffectOperationType_feature", "_UI_ProcessingEffectOperationTypeSpecifyingOperation_type"),
-				 ProcessingPackage.Literals.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/DataCreationProcessingEffect"));
 	}
 
 	/**
@@ -84,10 +70,10 @@ public class ProcessingEffectOperationTypeSpecifyingOperationItemProvider extend
 	@Override
 	public String getText(Object object)
 	{
-		String label = ((ProcessingEffectOperationTypeSpecifyingOperation)object).getId();
+		String label = ((DataCreationProcessingEffect)object).getId();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ProcessingEffectOperationTypeSpecifyingOperation_type") :
-			getString("_UI_ProcessingEffectOperationTypeSpecifyingOperation_type") + " " + label;
+			getString("_UI_DataCreationProcessingEffect_type") :
+			getString("_UI_DataCreationProcessingEffect_type") + " " + label;
 	}
 
 

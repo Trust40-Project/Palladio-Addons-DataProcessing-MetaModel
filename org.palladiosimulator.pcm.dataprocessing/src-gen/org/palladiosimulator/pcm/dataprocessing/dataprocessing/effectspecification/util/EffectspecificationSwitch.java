@@ -119,6 +119,17 @@ public class EffectspecificationSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case EffectspecificationPackage.DATA_CREATION_PROCESSING_EFFECT:
+			{
+				DataCreationProcessingEffect dataCreationProcessingEffect = (DataCreationProcessingEffect)theEObject;
+				T result = caseDataCreationProcessingEffect(dataCreationProcessingEffect);
+				if (result == null) result = caseProcessingEffect(dataCreationProcessingEffect);
+				if (result == null) result = caseEntity(dataCreationProcessingEffect);
+				if (result == null) result = caseIdentifier(dataCreationProcessingEffect);
+				if (result == null) result = caseNamedElement(dataCreationProcessingEffect);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case EffectspecificationPackage.CHARACTERISTIC_CHANGE:
 			{
 				CharacteristicChange characteristicChange = (CharacteristicChange)theEObject;
@@ -221,6 +232,22 @@ public class EffectspecificationSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseOperationTypeDataProcessingEffect(OperationTypeDataProcessingEffect object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Creation Processing Effect</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Creation Processing Effect</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataCreationProcessingEffect(DataCreationProcessingEffect object)
 	{
 		return null;
 	}

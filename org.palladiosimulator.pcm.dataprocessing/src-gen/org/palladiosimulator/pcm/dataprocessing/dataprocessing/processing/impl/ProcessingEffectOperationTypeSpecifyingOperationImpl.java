@@ -5,7 +5,6 @@ package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectOperationType;
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectProvider;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
@@ -19,8 +18,6 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Proces
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingEffectOperationTypeSpecifyingOperationImpl#getProcessingEffectOperationType <em>Processing Effect Operation Type</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingEffectOperationTypeSpecifyingOperationImpl#getCustomProcessingEffectProvider <em>Custom Processing Effect Provider</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingEffectOperationTypeSpecifyingOperationImpl#getProcessingEffectProvider <em>Processing Effect Provider</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,36 +63,6 @@ public abstract class ProcessingEffectOperationTypeSpecifyingOperationImpl exten
 	public void setProcessingEffectOperationType(ProcessingEffectOperationType newProcessingEffectOperationType)
 	{
 		eSet(ProcessingPackage.Literals.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE, newProcessingEffectOperationType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ProcessingEffectProvider getCustomProcessingEffectProvider()
-	{
-		return (ProcessingEffectProvider)eGet(ProcessingPackage.Literals.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCustomProcessingEffectProvider(ProcessingEffectProvider newCustomProcessingEffectProvider)
-	{
-		eSet(ProcessingPackage.Literals.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER, newCustomProcessingEffectProvider);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ProcessingEffectProvider getProcessingEffectProvider()
-	{
-		return (ProcessingEffectProvider)eGet(ProcessingPackage.Literals.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_PROVIDER, true);
 	}
 
 } //ProcessingEffectOperationTypeSpecifyingOperationImpl

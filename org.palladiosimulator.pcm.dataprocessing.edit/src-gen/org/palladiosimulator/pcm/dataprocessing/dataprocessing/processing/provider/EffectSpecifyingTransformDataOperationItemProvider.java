@@ -48,8 +48,6 @@ public class EffectSpecifyingTransformDataOperationItemProvider extends Transfor
 			super.getPropertyDescriptors(object);
 
 			addProcessingEffectOperationTypePropertyDescriptor(object);
-			addCustomProcessingEffectProviderPropertyDescriptor(object);
-			addProcessingEffectProviderPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -72,52 +70,6 @@ public class EffectSpecifyingTransformDataOperationItemProvider extends Transfor
 				 true,
 				 false,
 				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Custom Processing Effect Provider feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCustomProcessingEffectProviderPropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ProcessingEffectOperationTypeSpecifyingOperation_customProcessingEffectProvider_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ProcessingEffectOperationTypeSpecifyingOperation_customProcessingEffectProvider_feature", "_UI_ProcessingEffectOperationTypeSpecifyingOperation_type"),
-				 ProcessingPackage.Literals.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Processing Effect Provider feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addProcessingEffectProviderPropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ProcessingEffectOperationTypeSpecifyingOperation_processingEffectProvider_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ProcessingEffectOperationTypeSpecifyingOperation_processingEffectProvider_feature", "_UI_ProcessingEffectOperationTypeSpecifyingOperation_type"),
-				 ProcessingPackage.Literals.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_PROVIDER,
-				 false,
-				 false,
-				 false,
 				 null,
 				 null,
 				 null));

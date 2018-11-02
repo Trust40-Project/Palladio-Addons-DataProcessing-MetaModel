@@ -50,6 +50,15 @@ public interface EffectspecificationFactory extends EFactory
 	OperationTypeDataProcessingEffect createOperationTypeDataProcessingEffect();
 
 	/**
+	 * Returns a new object of class '<em>Data Creation Processing Effect</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Data Creation Processing Effect</em>'.
+	 * @generated
+	 */
+	DataCreationProcessingEffect createDataCreationProcessingEffect();
+
+	/**
 	 * Returns a new object of class '<em>Characteristic Change</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

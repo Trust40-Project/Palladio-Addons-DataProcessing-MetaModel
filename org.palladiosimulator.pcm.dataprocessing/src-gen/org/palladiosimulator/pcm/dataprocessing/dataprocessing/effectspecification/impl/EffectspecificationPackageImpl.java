@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EValidator;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
@@ -34,6 +35,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DataPac
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.CharacteristicChange;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.CharacteristicSpecification;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.DataCreationProcessingEffect;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.DirectCharacteristic;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.EffectspecificationFactory;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.EffectspecificationPackage;
@@ -42,6 +44,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecificati
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectOperationType;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectProvider;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectSpecification;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.util.EffectspecificationValidator;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataprocessingPackageImpl;
 
@@ -92,6 +96,13 @@ public class EffectspecificationPackageImpl extends EPackageImpl implements Effe
 	 * @generated
 	 */
 	private EClass operationTypeDataProcessingEffectEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dataCreationProcessingEffectEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -209,6 +220,17 @@ public class EffectspecificationPackageImpl extends EPackageImpl implements Effe
 		theDataPackage.initializePackageContents();
 		theUtilPackage.initializePackageContents();
 
+		// Register package validator
+		EValidator.Registry.INSTANCE.put
+			(theEffectspecificationPackage,
+			 new EValidator.Descriptor()
+			 {
+				 public EValidator getEValidator()
+				 {
+					 return EffectspecificationValidator.INSTANCE;
+				 }
+			 });
+
 		// Mark meta-data to indicate it can't be changed
 		theEffectspecificationPackage.freeze();
 
@@ -315,6 +337,16 @@ public class EffectspecificationPackageImpl extends EPackageImpl implements Effe
 	public EReference getOperationTypeDataProcessingEffect_RelevantOperationTypes()
 	{
 		return (EReference)operationTypeDataProcessingEffectEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDataCreationProcessingEffect()
+	{
+		return dataCreationProcessingEffectEClass;
 	}
 
 	/**
@@ -461,6 +493,8 @@ public class EffectspecificationPackageImpl extends EPackageImpl implements Effe
 		operationTypeDataProcessingEffectEClass = createEClass(OPERATION_TYPE_DATA_PROCESSING_EFFECT);
 		createEReference(operationTypeDataProcessingEffectEClass, OPERATION_TYPE_DATA_PROCESSING_EFFECT__RELEVANT_OPERATION_TYPES);
 
+		dataCreationProcessingEffectEClass = createEClass(DATA_CREATION_PROCESSING_EFFECT);
+
 		characteristicChangeEClass = createEClass(CHARACTERISTIC_CHANGE);
 		createEAttribute(characteristicChangeEClass, CHARACTERISTIC_CHANGE__CHANGE_OPERATION);
 		createEReference(characteristicChangeEClass, CHARACTERISTIC_CHANGE__CHARACTERISTIC_SPECIFICATIONS);
@@ -517,6 +551,7 @@ public class EffectspecificationPackageImpl extends EPackageImpl implements Effe
 		processingEffectOperationTypeEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		processingEffectEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		operationTypeDataProcessingEffectEClass.getESuperTypes().add(this.getProcessingEffect());
+		dataCreationProcessingEffectEClass.getESuperTypes().add(this.getProcessingEffect());
 		characteristicChangeEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		characteristicSpecificationEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		directCharacteristicEClass.getESuperTypes().add(this.getCharacteristicSpecification());
@@ -541,6 +576,12 @@ public class EffectspecificationPackageImpl extends EPackageImpl implements Effe
 		initEReference(getOperationTypeDataProcessingEffect_RelevantOperationTypes(), this.getProcessingEffectOperationType(), null, "relevantOperationTypes", null, 1, -1, OperationTypeDataProcessingEffect.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = addEOperation(operationTypeDataProcessingEffectEClass, ecorePackage.getEBoolean(), "isApplicableTo", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theProcessingPackage.getDataOperation(), "operation", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theDataPackage.getData(), "resultData", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(dataCreationProcessingEffectEClass, DataCreationProcessingEffect.class, "DataCreationProcessingEffect", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		op = addEOperation(dataCreationProcessingEffectEClass, ecorePackage.getEBoolean(), "isApplicableTo", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theProcessingPackage.getDataOperation(), "operation", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theDataPackage.getData(), "resultData", 1, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -585,6 +626,13 @@ public class EffectspecificationPackageImpl extends EPackageImpl implements Effe
 			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
 		   });
+		addAnnotation
+		  (dataCreationProcessingEffectEClass,
+		   source,
+		   new String[]
+		   {
+			   "constraints", "fromDataTypeHasToBeUndefined"
+		   });
 	}
 
 	/**
@@ -608,7 +656,21 @@ public class EffectspecificationPackageImpl extends EPackageImpl implements Effe
 		   source,
 		   new String[]
 		   {
-			   "body", "let typedOperation = operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation) in\n\trelevantOperationTypes->includes(typedOperation.processingEffectOperationType) and\n\t(toDataType.oclIsUndefined() or toDataType = resultData.type) and\n\t(fromDataType.oclIsUndefined() or operation.incomingData.type->includes(fromDataType))"
+			   "body", "operation.oclIsKindOf(processing::ProcessingEffectOperationTypeSpecifyingOperation) and \nlet typedOperation = operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation) in\n\trelevantOperationTypes->includes(typedOperation.processingEffectOperationType) and\n\t(toDataType.oclIsUndefined() or toDataType = resultData.type) and\n\t(fromDataType.oclIsUndefined() or operation.incomingData.type->includes(fromDataType))"
+		   });
+		addAnnotation
+		  (dataCreationProcessingEffectEClass,
+		   source,
+		   new String[]
+		   {
+			   "fromDataTypeHasToBeUndefined", "fromDataType.oclIsUndefined()"
+		   });
+		addAnnotation
+		  (dataCreationProcessingEffectEClass.getEOperations().get(0),
+		   source,
+		   new String[]
+		   {
+			   "body", "operation.oclIsTypeOf(processing::CreateDataOperation) and\n\tlet typedOperation = operation.oclAsType(processing::CreateDataOperation) in\n\t\ttoDataType = typedOperation.resultingData.type"
 		   });
 		addAnnotation
 		  (processingEffectProviderEClass.getEOperations().get(0),

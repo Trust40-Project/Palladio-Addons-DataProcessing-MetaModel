@@ -14,6 +14,8 @@ import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectProvider;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
@@ -28,6 +30,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Proces
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.DataOperationImpl#getContainer <em>Container</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.DataOperationImpl#getIncomingData <em>Incoming Data</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.DataOperationImpl#getProcessingEffectProvider <em>Processing Effect Provider</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.DataOperationImpl#getOutgoingData <em>Outgoing Data</em>}</li>
  * </ul>
  *
@@ -85,6 +88,16 @@ public abstract class DataOperationImpl extends EntityImpl implements DataOperat
 	public EList<Data> getIncomingData()
 	{
 		return (EList<Data>)eGet(ProcessingPackage.Literals.DATA_OPERATION__INCOMING_DATA, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProcessingEffectProvider getProcessingEffectProvider()
+	{
+		return (ProcessingEffectProvider)eGet(ProcessingPackage.Literals.DATA_OPERATION__PROCESSING_EFFECT_PROVIDER, true);
 	}
 
 	/**

@@ -168,6 +168,31 @@ public class EffectspecificationItemProviderAdapterFactory extends Effectspecifi
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.DataCreationProcessingEffect} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DataCreationProcessingEffectItemProvider dataCreationProcessingEffectItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.DataCreationProcessingEffect}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDataCreationProcessingEffectAdapter()
+	{
+		if (dataCreationProcessingEffectItemProvider == null)
+		{
+			dataCreationProcessingEffectItemProvider = new DataCreationProcessingEffectItemProvider(this);
+		}
+
+		return dataCreationProcessingEffectItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.CharacteristicChange} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -361,6 +386,7 @@ public class EffectspecificationItemProviderAdapterFactory extends Effectspecifi
 		if (processingEffectSpecificationItemProvider != null) processingEffectSpecificationItemProvider.dispose();
 		if (processingEffectOperationTypeItemProvider != null) processingEffectOperationTypeItemProvider.dispose();
 		if (operationTypeDataProcessingEffectItemProvider != null) operationTypeDataProcessingEffectItemProvider.dispose();
+		if (dataCreationProcessingEffectItemProvider != null) dataCreationProcessingEffectItemProvider.dispose();
 		if (characteristicChangeItemProvider != null) characteristicChangeItemProvider.dispose();
 		if (directCharacteristicItemProvider != null) directCharacteristicItemProvider.dispose();
 	}

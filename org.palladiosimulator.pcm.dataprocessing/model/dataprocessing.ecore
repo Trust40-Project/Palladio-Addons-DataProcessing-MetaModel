@@ -272,6 +272,22 @@
       </eStructuralFeatures>
       <eStructuralFeatures
           xsi:type="ecore:EReference"
+          name="processingEffectProvider"
+          lowerBound="1"
+          eType="#//effectspecification/ProcessingEffectProvider"
+          changeable="false"
+          volatile="true"
+          transient="true"
+          derived="true">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details
+              key="derivation"
+              value="self.container.oclContainer.oclAsType(dataprocessing::effectspecification::ProcessingEffectProvider)"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
           name="outgoingData"
           ordered="false"
           upperBound="-1"
@@ -711,26 +727,6 @@
           name="processingEffectOperationType"
           lowerBound="1"
           eType="#//effectspecification/ProcessingEffectOperationType"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="customProcessingEffectProvider"
-          eType="#//effectspecification/ProcessingEffectProvider"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="processingEffectProvider"
-          lowerBound="1"
-          eType="#//effectspecification/ProcessingEffectProvider"
-          changeable="false"
-          volatile="true"
-          transient="true"
-          derived="true">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-          <details
-              key="derivation"
-              value="let defaultProvider = self.container.oclContainer.oclAsType(dataprocessing::effectspecification::ProcessingEffectProvider) in&#xA;&#x9;customProcessingEffectProvider->asOrderedSet()->including(defaultProvider)->select(not oclIsUndefined())->first()"/>
-        </eAnnotations>
-      </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages
@@ -1301,7 +1297,7 @@
             source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
           <details
               key="body"
-              value="let typedOperation = operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation) in&#xA;&#x9;relevantOperationTypes->includes(typedOperation.processingEffectOperationType) and&#xA;&#x9;(toDataType.oclIsUndefined() or toDataType = resultData.type) and&#xA;&#x9;(fromDataType.oclIsUndefined() or operation.incomingData.type->includes(fromDataType))"/>
+              value="operation.oclIsKindOf(processing::ProcessingEffectOperationTypeSpecifyingOperation) and &#xA;let typedOperation = operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation) in&#xA;&#x9;relevantOperationTypes->includes(typedOperation.processingEffectOperationType) and&#xA;&#x9;(toDataType.oclIsUndefined() or toDataType = resultData.type) and&#xA;&#x9;(fromDataType.oclIsUndefined() or operation.incomingData.type->includes(fromDataType))"/>
         </eAnnotations>
         <eParameters
             name="operation"
@@ -1318,6 +1314,42 @@
           lowerBound="1"
           upperBound="-1"
           eType="#//effectspecification/ProcessingEffectOperationType"/>
+    </eClassifiers>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="DataCreationProcessingEffect"
+        eSuperTypes="#//effectspecification/ProcessingEffect">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/Ecore">
+        <details
+            key="constraints"
+            value="fromDataTypeHasToBeUndefined"/>
+      </eAnnotations>
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details
+            key="fromDataTypeHasToBeUndefined"
+            value="fromDataType.oclIsUndefined()"/>
+      </eAnnotations>
+      <eOperations
+          name="isApplicableTo"
+          lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details
+              key="body"
+              value="operation.oclIsTypeOf(processing::CreateDataOperation) and&#xA;&#x9;let typedOperation = operation.oclAsType(processing::CreateDataOperation) in&#xA;&#x9;&#x9;toDataType = typedOperation.resultingData.type"/>
+        </eAnnotations>
+        <eParameters
+            name="operation"
+            lowerBound="1"
+            eType="#//processing/DataOperation"/>
+        <eParameters
+            name="resultData"
+            lowerBound="1"
+            eType="#//data/Data"/>
+      </eOperations>
     </eClassifiers>
     <eClassifiers
         xsi:type="ecore:EClass"

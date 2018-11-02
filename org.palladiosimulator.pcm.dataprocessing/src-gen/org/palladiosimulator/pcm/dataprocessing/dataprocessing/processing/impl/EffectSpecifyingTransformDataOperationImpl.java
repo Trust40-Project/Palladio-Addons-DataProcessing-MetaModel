@@ -5,7 +5,6 @@ package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectOperationType;
-import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectProvider;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.EffectSpecifyingTransformDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation;
@@ -20,8 +19,6 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Proces
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.EffectSpecifyingTransformDataOperationImpl#getProcessingEffectOperationType <em>Processing Effect Operation Type</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.EffectSpecifyingTransformDataOperationImpl#getCustomProcessingEffectProvider <em>Custom Processing Effect Provider</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.EffectSpecifyingTransformDataOperationImpl#getProcessingEffectProvider <em>Processing Effect Provider</em>}</li>
  * </ul>
  *
  * @generated
@@ -74,36 +71,6 @@ public class EffectSpecifyingTransformDataOperationImpl extends TransformDataOpe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessingEffectProvider getCustomProcessingEffectProvider()
-	{
-		return (ProcessingEffectProvider)eGet(ProcessingPackage.Literals.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCustomProcessingEffectProvider(ProcessingEffectProvider newCustomProcessingEffectProvider)
-	{
-		eSet(ProcessingPackage.Literals.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER, newCustomProcessingEffectProvider);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ProcessingEffectProvider getProcessingEffectProvider()
-	{
-		return (ProcessingEffectProvider)eGet(ProcessingPackage.Literals.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_PROVIDER, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
 	{
@@ -112,8 +79,6 @@ public class EffectSpecifyingTransformDataOperationImpl extends TransformDataOpe
 			switch (derivedFeatureID)
 			{
 				case ProcessingPackage.EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE: return ProcessingPackage.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE;
-				case ProcessingPackage.EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER: return ProcessingPackage.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER;
-				case ProcessingPackage.EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER: return ProcessingPackage.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_PROVIDER;
 				default: return -1;
 			}
 		}
@@ -133,8 +98,6 @@ public class EffectSpecifyingTransformDataOperationImpl extends TransformDataOpe
 			switch (baseFeatureID)
 			{
 				case ProcessingPackage.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE: return ProcessingPackage.EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE;
-				case ProcessingPackage.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER: return ProcessingPackage.EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER;
-				case ProcessingPackage.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_PROVIDER: return ProcessingPackage.EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
 				default: return -1;
 			}
 		}

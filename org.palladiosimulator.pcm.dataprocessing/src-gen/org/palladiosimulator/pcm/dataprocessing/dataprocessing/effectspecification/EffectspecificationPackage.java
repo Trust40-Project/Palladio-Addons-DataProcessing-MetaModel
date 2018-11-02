@@ -291,6 +291,70 @@ public interface EffectspecificationPackage extends EPackage
 	int OPERATION_TYPE_DATA_PROCESSING_EFFECT_FEATURE_COUNT = PROCESSING_EFFECT_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.DataCreationProcessingEffectImpl <em>Data Creation Processing Effect</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.DataCreationProcessingEffectImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.EffectspecificationPackageImpl#getDataCreationProcessingEffect()
+	 * @generated
+	 */
+	int DATA_CREATION_PROCESSING_EFFECT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_CREATION_PROCESSING_EFFECT__ID = PROCESSING_EFFECT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_CREATION_PROCESSING_EFFECT__ENTITY_NAME = PROCESSING_EFFECT__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>From Data Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_CREATION_PROCESSING_EFFECT__FROM_DATA_TYPE = PROCESSING_EFFECT__FROM_DATA_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>To Data Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_CREATION_PROCESSING_EFFECT__TO_DATA_TYPE = PROCESSING_EFFECT__TO_DATA_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Characteristic Changes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_CREATION_PROCESSING_EFFECT__CHARACTERISTIC_CHANGES = PROCESSING_EFFECT__CHARACTERISTIC_CHANGES;
+
+	/**
+	 * The number of structural features of the '<em>Data Creation Processing Effect</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_CREATION_PROCESSING_EFFECT_FEATURE_COUNT = PROCESSING_EFFECT_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.CharacteristicChangeImpl <em>Characteristic Change</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -298,7 +362,7 @@ public interface EffectspecificationPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.EffectspecificationPackageImpl#getCharacteristicChange()
 	 * @generated
 	 */
-	int CHARACTERISTIC_CHANGE = 4;
+	int CHARACTERISTIC_CHANGE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -362,7 +426,7 @@ public interface EffectspecificationPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.EffectspecificationPackageImpl#getCharacteristicSpecification()
 	 * @generated
 	 */
-	int CHARACTERISTIC_SPECIFICATION = 5;
+	int CHARACTERISTIC_SPECIFICATION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -408,7 +472,7 @@ public interface EffectspecificationPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.EffectspecificationPackageImpl#getDirectCharacteristic()
 	 * @generated
 	 */
-	int DIRECT_CHARACTERISTIC = 6;
+	int DIRECT_CHARACTERISTIC = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -463,7 +527,7 @@ public interface EffectspecificationPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.EffectspecificationPackageImpl#getProcessingEffectProvider()
 	 * @generated
 	 */
-	int PROCESSING_EFFECT_PROVIDER = 7;
+	int PROCESSING_EFFECT_PROVIDER = 8;
 
 	/**
 	 * The feature id for the '<em><b>Processing Effects</b></em>' reference list.
@@ -589,6 +653,16 @@ public interface EffectspecificationPackage extends EPackage
 	 * @generated
 	 */
 	EReference getOperationTypeDataProcessingEffect_RelevantOperationTypes();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.DataCreationProcessingEffect <em>Data Creation Processing Effect</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Creation Processing Effect</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.DataCreationProcessingEffect
+	 * @generated
+	 */
+	EClass getDataCreationProcessingEffect();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.CharacteristicChange <em>Characteristic Change</em>}'.
@@ -806,6 +880,16 @@ public interface EffectspecificationPackage extends EPackage
 		 * @generated
 		 */
 		EReference OPERATION_TYPE_DATA_PROCESSING_EFFECT__RELEVANT_OPERATION_TYPES = eINSTANCE.getOperationTypeDataProcessingEffect_RelevantOperationTypes();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.DataCreationProcessingEffectImpl <em>Data Creation Processing Effect</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.DataCreationProcessingEffectImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.EffectspecificationPackageImpl#getDataCreationProcessingEffect()
+		 * @generated
+		 */
+		EClass DATA_CREATION_PROCESSING_EFFECT = eINSTANCE.getDataCreationProcessingEffect();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.CharacteristicChangeImpl <em>Characteristic Change</em>}' class.

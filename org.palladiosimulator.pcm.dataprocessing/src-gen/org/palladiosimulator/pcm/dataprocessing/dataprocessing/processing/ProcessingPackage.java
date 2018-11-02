@@ -153,13 +153,22 @@ public interface ProcessingPackage extends EPackage
 	int DATA_OPERATION__INCOMING_DATA = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = EntityPackage.ENTITY_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_OPERATION__OUTGOING_DATA = EntityPackage.ENTITY_FEATURE_COUNT + 2;
+	int DATA_OPERATION__OUTGOING_DATA = EntityPackage.ENTITY_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Data Operation</em>' class.
@@ -168,7 +177,7 @@ public interface ProcessingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_OPERATION_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 3;
+	int DATA_OPERATION_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.CreateDataOperationImpl <em>Create Data Operation</em>}' class.
@@ -215,6 +224,15 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int CREATE_DATA_OPERATION__INCOMING_DATA = DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
@@ -297,6 +315,15 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int LOAD_DATA_OPERATION__INCOMING_DATA = CREATE_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOAD_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = CREATE_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
@@ -390,6 +417,15 @@ public interface ProcessingPackage extends EPackage
 	int LOAD_ALL_DATA_OPERATION__INCOMING_DATA = LOAD_DATA_OPERATION__INCOMING_DATA;
 
 	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOAD_ALL_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = LOAD_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -479,6 +515,15 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int PERFORM_DATA_TRANSMISSION_OPERATION__INCOMING_DATA = DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORM_DATA_TRANSMISSION_OPERATION__PROCESSING_EFFECT_PROVIDER = DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
@@ -572,6 +617,15 @@ public interface ProcessingPackage extends EPackage
 	int CONSUME_DATA_OPERATION__INCOMING_DATA = DATA_OPERATION__INCOMING_DATA;
 
 	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSUME_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -643,6 +697,15 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int STORE_DATA_OPERATION__INCOMING_DATA = CONSUME_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORE_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = CONSUME_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
@@ -727,6 +790,15 @@ public interface ProcessingPackage extends EPackage
 	int RETURN_DATA_OPERATION__INCOMING_DATA = CONSUME_DATA_OPERATION__INCOMING_DATA;
 
 	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = CONSUME_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -809,6 +881,15 @@ public interface ProcessingPackage extends EPackage
 	int USER_READ_DATA__INCOMING_DATA = CONSUME_DATA_OPERATION__INCOMING_DATA;
 
 	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_READ_DATA__PROCESSING_EFFECT_PROVIDER = CONSUME_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -882,6 +963,15 @@ public interface ProcessingPackage extends EPackage
 	int SYSTEM_DISCARD_DATA__INCOMING_DATA = CONSUME_DATA_OPERATION__INCOMING_DATA;
 
 	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_DISCARD_DATA__PROCESSING_EFFECT_PROVIDER = CONSUME_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -953,6 +1043,15 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int MANY_TO_ONE_DATA_OPERATION__INCOMING_DATA = DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_ONE_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
@@ -1037,6 +1136,15 @@ public interface ProcessingPackage extends EPackage
 	int JOIN_DATA_OPERATION__INCOMING_DATA = MANY_TO_ONE_DATA_OPERATION__INCOMING_DATA;
 
 	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JOIN_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = MANY_TO_ONE_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1119,6 +1227,15 @@ public interface ProcessingPackage extends EPackage
 	int UNION_DATA_OPERATION__INCOMING_DATA = MANY_TO_ONE_DATA_OPERATION__INCOMING_DATA;
 
 	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = MANY_TO_ONE_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1199,6 +1316,15 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int TRANSFORM_DATA_OPERATION__INCOMING_DATA = DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFORM_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
@@ -1292,6 +1418,15 @@ public interface ProcessingPackage extends EPackage
 	int PROJECTION_DATA_OPERATION__INCOMING_DATA = TRANSFORM_DATA_OPERATION__INCOMING_DATA;
 
 	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECTION_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = TRANSFORM_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1381,6 +1516,15 @@ public interface ProcessingPackage extends EPackage
 	 * @ordered
 	 */
 	int SELECTION_DATA_OPERATION__INCOMING_DATA = TRANSFORM_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = TRANSFORM_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
@@ -1474,6 +1618,15 @@ public interface ProcessingPackage extends EPackage
 	int CHARACTERISTIC_CHANGING_DATA_OPERATION__INCOMING_DATA = DATA_OPERATION__INCOMING_DATA;
 
 	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHARACTERISTIC_CHANGING_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1565,6 +1718,15 @@ public interface ProcessingPackage extends EPackage
 	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__INCOMING_DATA = TRANSFORM_DATA_OPERATION__INCOMING_DATA;
 
 	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = TRANSFORM_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1610,31 +1772,13 @@ public interface ProcessingPackage extends EPackage
 	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE = TRANSFORM_DATA_OPERATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Custom Processing Effect Provider</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER = TRANSFORM_DATA_OPERATION_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = TRANSFORM_DATA_OPERATION_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>Effect Specifying Transform Data Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION_FEATURE_COUNT = TRANSFORM_DATA_OPERATION_FEATURE_COUNT + 3;
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION_FEATURE_COUNT = TRANSFORM_DATA_OPERATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingEffectOperationTypeSpecifyingOperationImpl <em>Effect Operation Type Specifying Operation</em>}' class.
@@ -1683,6 +1827,15 @@ public interface ProcessingPackage extends EPackage
 	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__INCOMING_DATA = DATA_OPERATION__INCOMING_DATA;
 
 	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_PROVIDER = DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1701,31 +1854,13 @@ public interface ProcessingPackage extends EPackage
 	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE = DATA_OPERATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Custom Processing Effect Provider</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER = DATA_OPERATION_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_PROVIDER = DATA_OPERATION_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>Effect Operation Type Specifying Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION_FEATURE_COUNT = DATA_OPERATION_FEATURE_COUNT + 3;
+	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION_FEATURE_COUNT = DATA_OPERATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CharacteristicChangeOperation <em>Characteristic Change Operation</em>}' enum.
@@ -1790,6 +1925,17 @@ public interface ProcessingPackage extends EPackage
 	 * @generated
 	 */
 	EReference getDataOperation_IncomingData();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation#getProcessingEffectProvider <em>Processing Effect Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Processing Effect Provider</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation#getProcessingEffectProvider()
+	 * @see #getDataOperation()
+	 * @generated
+	 */
+	EReference getDataOperation_ProcessingEffectProvider();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation#getOutgoingData <em>Outgoing Data</em>}'.
@@ -2181,28 +2327,6 @@ public interface ProcessingPackage extends EPackage
 	EReference getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectOperationType();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation#getCustomProcessingEffectProvider <em>Custom Processing Effect Provider</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Custom Processing Effect Provider</em>'.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation#getCustomProcessingEffectProvider()
-	 * @see #getProcessingEffectOperationTypeSpecifyingOperation()
-	 * @generated
-	 */
-	EReference getProcessingEffectOperationTypeSpecifyingOperation_CustomProcessingEffectProvider();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation#getProcessingEffectProvider <em>Processing Effect Provider</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Processing Effect Provider</em>'.
-	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation#getProcessingEffectProvider()
-	 * @see #getProcessingEffectOperationTypeSpecifyingOperation()
-	 * @generated
-	 */
-	EReference getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectProvider();
-
-	/**
 	 * Returns the meta object for enum '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CharacteristicChangeOperation <em>Characteristic Change Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2278,6 +2402,14 @@ public interface ProcessingPackage extends EPackage
 		 * @generated
 		 */
 		EReference DATA_OPERATION__INCOMING_DATA = eINSTANCE.getDataOperation_IncomingData();
+
+		/**
+		 * The meta object literal for the '<em><b>Processing Effect Provider</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = eINSTANCE.getDataOperation_ProcessingEffectProvider();
 
 		/**
 		 * The meta object literal for the '<em><b>Outgoing Data</b></em>' reference list feature.
@@ -2610,22 +2742,6 @@ public interface ProcessingPackage extends EPackage
 		 * @generated
 		 */
 		EReference PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE = eINSTANCE.getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectOperationType();
-
-		/**
-		 * The meta object literal for the '<em><b>Custom Processing Effect Provider</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER = eINSTANCE.getProcessingEffectOperationTypeSpecifyingOperation_CustomProcessingEffectProvider();
-
-		/**
-		 * The meta object literal for the '<em><b>Processing Effect Provider</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_PROVIDER = eINSTANCE.getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectProvider();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CharacteristicChangeOperation <em>Characteristic Change Operation</em>}' enum.

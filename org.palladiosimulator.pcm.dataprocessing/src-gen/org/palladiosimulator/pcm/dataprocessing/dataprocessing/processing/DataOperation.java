@@ -8,6 +8,8 @@ import org.palladiosimulator.pcm.core.entity.Entity;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectProvider;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Data Operation</b></em>'.
@@ -19,6 +21,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation#getContainer <em>Container</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation#getIncomingData <em>Incoming Data</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation#getProcessingEffectProvider <em>Processing Effect Provider</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation#getOutgoingData <em>Outgoing Data</em>}</li>
  * </ul>
  *
@@ -74,6 +77,22 @@ public interface DataOperation extends Entity
 	 * @generated
 	 */
 	EList<Data> getIncomingData();
+
+	/**
+	 * Returns the value of the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Processing Effect Provider</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Processing Effect Provider</em>' reference.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getDataOperation_ProcessingEffectProvider()
+	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='self.container.oclContainer.oclAsType(dataprocessing::effectspecification::ProcessingEffectProvider)'"
+	 * @generated
+	 */
+	ProcessingEffectProvider getProcessingEffectProvider();
 
 	/**
 	 * Returns the value of the '<em><b>Outgoing Data</b></em>' reference list.

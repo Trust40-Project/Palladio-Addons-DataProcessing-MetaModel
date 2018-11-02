@@ -50,6 +50,7 @@ public class DataOperationItemProvider extends EntityItemProvider
 			super.getPropertyDescriptors(object);
 
 			addIncomingDataPropertyDescriptor(object);
+			addProcessingEffectProviderPropertyDescriptor(object);
 			addOutgoingDataPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -70,6 +71,29 @@ public class DataOperationItemProvider extends EntityItemProvider
 				 getString("_UI_DataOperation_incomingData_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DataOperation_incomingData_feature", "_UI_DataOperation_type"),
 				 ProcessingPackage.Literals.DATA_OPERATION__INCOMING_DATA,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Processing Effect Provider feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addProcessingEffectProviderPropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DataOperation_processingEffectProvider_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DataOperation_processingEffectProvider_feature", "_UI_DataOperation_type"),
+				 ProcessingPackage.Literals.DATA_OPERATION__PROCESSING_EFFECT_PROVIDER,
 				 false,
 				 false,
 				 false,
