@@ -13,6 +13,8 @@ import org.eclipse.emf.ecore.EObject;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.*;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectProvider;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
@@ -87,6 +89,11 @@ public class DataprocessingAdapterFactory extends AdapterFactoryImpl
 				return createDataSpecificationExtensionAdapter();
 			}
 			@Override
+			public Adapter caseProcessingEffectProvider(ProcessingEffectProvider object)
+			{
+				return createProcessingEffectProviderAdapter();
+			}
+			@Override
 			public Adapter caseIdentifier(Identifier object)
 			{
 				return createIdentifierAdapter();
@@ -139,6 +146,21 @@ public class DataprocessingAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createDataSpecificationExtensionAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectProvider <em>Processing Effect Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectProvider
+	 * @generated
+	 */
+	public Adapter createProcessingEffectProviderAdapter()
 	{
 		return null;
 	}

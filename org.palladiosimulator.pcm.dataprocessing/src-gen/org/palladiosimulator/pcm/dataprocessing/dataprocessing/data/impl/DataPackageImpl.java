@@ -37,6 +37,10 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedParam
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.RefinedResultBasedData;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.ResultBasedData;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.EffectspecificationPackage;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.EffectspecificationPackageImpl;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataprocessingPackageImpl;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
@@ -182,6 +186,8 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		CharacteristicsPackageImpl theCharacteristicsPackage = (CharacteristicsPackageImpl)(registeredPackage instanceof CharacteristicsPackageImpl ? registeredPackage : CharacteristicsPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(UtilPackage.eNS_URI);
 		UtilPackageImpl theUtilPackage = (UtilPackageImpl)(registeredPackage instanceof UtilPackageImpl ? registeredPackage : UtilPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(EffectspecificationPackage.eNS_URI);
+		EffectspecificationPackageImpl theEffectspecificationPackage = (EffectspecificationPackageImpl)(registeredPackage instanceof EffectspecificationPackageImpl ? registeredPackage : EffectspecificationPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theDataPackage.createPackageContents();
@@ -190,6 +196,7 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		theProcessingPackage.createPackageContents();
 		theCharacteristicsPackage.createPackageContents();
 		theUtilPackage.createPackageContents();
+		theEffectspecificationPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theDataPackage.initializePackageContents();
@@ -198,6 +205,7 @@ public class DataPackageImpl extends EPackageImpl implements DataPackage
 		theProcessingPackage.initializePackageContents();
 		theCharacteristicsPackage.initializePackageContents();
 		theUtilPackage.initializePackageContents();
+		theEffectspecificationPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theDataPackage.freeze();

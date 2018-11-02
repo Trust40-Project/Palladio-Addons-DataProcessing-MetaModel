@@ -443,6 +443,31 @@ public class ProcessingItemProviderAdapterFactory extends ProcessingAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.EffectSpecifyingTransformDataOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EffectSpecifyingTransformDataOperationItemProvider effectSpecifyingTransformDataOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.EffectSpecifyingTransformDataOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEffectSpecifyingTransformDataOperationAdapter()
+	{
+		if (effectSpecifyingTransformDataOperationItemProvider == null)
+		{
+			effectSpecifyingTransformDataOperationItemProvider = new EffectSpecifyingTransformDataOperationItemProvider(this);
+		}
+
+		return effectSpecifyingTransformDataOperationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -597,6 +622,7 @@ public class ProcessingItemProviderAdapterFactory extends ProcessingAdapterFacto
 		if (projectionDataOperationItemProvider != null) projectionDataOperationItemProvider.dispose();
 		if (selectionDataOperationItemProvider != null) selectionDataOperationItemProvider.dispose();
 		if (characteristicChangingDataOperationItemProvider != null) characteristicChangingDataOperationItemProvider.dispose();
+		if (effectSpecifyingTransformDataOperationItemProvider != null) effectSpecifyingTransformDataOperationItemProvider.dispose();
 	}
 
 }

@@ -31,6 +31,10 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataPackage;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DataPackageImpl;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.EffectspecificationPackage;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.EffectspecificationPackageImpl;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl;
@@ -132,6 +136,8 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		DataPackageImpl theDataPackage = (DataPackageImpl)(registeredPackage instanceof DataPackageImpl ? registeredPackage : DataPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(UtilPackage.eNS_URI);
 		UtilPackageImpl theUtilPackage = (UtilPackageImpl)(registeredPackage instanceof UtilPackageImpl ? registeredPackage : UtilPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(EffectspecificationPackage.eNS_URI);
+		EffectspecificationPackageImpl theEffectspecificationPackage = (EffectspecificationPackageImpl)(registeredPackage instanceof EffectspecificationPackageImpl ? registeredPackage : EffectspecificationPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theDataprocessingPackage.createPackageContents();
@@ -140,6 +146,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		theCharacteristicsPackage.createPackageContents();
 		theDataPackage.createPackageContents();
 		theUtilPackage.createPackageContents();
+		theEffectspecificationPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theDataprocessingPackage.initializePackageContents();
@@ -148,6 +155,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		theCharacteristicsPackage.initializePackageContents();
 		theDataPackage.initializePackageContents();
 		theUtilPackage.initializePackageContents();
+		theEffectspecificationPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theDataprocessingPackage.freeze();
@@ -252,6 +260,16 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDataSpecification_ExternalDataProcessingEffects()
+	{
+		return (EReference)dataSpecificationEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDataSpecificationExtension()
 	{
 		return dataSpecificationExtensionEClass;
@@ -306,6 +324,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT);
 		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS);
 		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__EXTENSIONS);
+		createEReference(dataSpecificationEClass, DATA_SPECIFICATION__EXTERNAL_DATA_PROCESSING_EFFECTS);
 
 		dataSpecificationExtensionEClass = createEClass(DATA_SPECIFICATION_EXTENSION);
 		createEReference(dataSpecificationExtensionEClass, DATA_SPECIFICATION_EXTENSION__SPECIFICATION);
@@ -341,6 +360,7 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		CharacteristicsPackage theCharacteristicsPackage = (CharacteristicsPackage)EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI);
 		DataPackage theDataPackage = (DataPackage)EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
 		UtilPackage theUtilPackage = (UtilPackage)EPackage.Registry.INSTANCE.getEPackage(UtilPackage.eNS_URI);
+		EffectspecificationPackage theEffectspecificationPackage = (EffectspecificationPackage)EPackage.Registry.INSTANCE.getEPackage(EffectspecificationPackage.eNS_URI);
 		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
 
 		// Add subpackages
@@ -349,12 +369,14 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		getESubpackages().add(theCharacteristicsPackage);
 		getESubpackages().add(theDataPackage);
 		getESubpackages().add(theUtilPackage);
+		getESubpackages().add(theEffectspecificationPackage);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		dataSpecificationEClass.getESuperTypes().add(theEffectspecificationPackage.getProcessingEffectProvider());
 		dataSpecificationExtensionEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 
 		// Initialize classes and features; add operations and parameters
@@ -367,6 +389,9 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		initEReference(getDataSpecification_OperationSignatureDataRefinement(), theRepositoryPackage.getOperationSignatureDataRefinement(), null, "operationSignatureDataRefinement", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSpecification_StoreCharacteristicContainers(), theCharacteristicsPackage.getStoreCharacteristicContainer(), null, "storeCharacteristicContainers", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataSpecification_Extensions(), this.getDataSpecificationExtension(), this.getDataSpecificationExtension_Specification(), "extensions", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataSpecification_ExternalDataProcessingEffects(), theEffectspecificationPackage.getProcessingEffectSpecification(), null, "externalDataProcessingEffects", null, 0, -1, DataSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(dataSpecificationEClass, theEffectspecificationPackage.getProcessingEffect(), "determineProcessingEffects", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(dataSpecificationExtensionEClass, DataSpecificationExtension.class, "DataSpecificationExtension", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDataSpecificationExtension_Specification(), this.getDataSpecification(), this.getDataSpecification_Extensions(), "specification", null, 1, 1, DataSpecificationExtension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -377,6 +402,10 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		// Create annotations
 		// http://www.eclipse.org/OCL/Import
 		createImportAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+		createPivotAnnotations();
 	}
 
 	/**
@@ -397,6 +426,44 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 			   "identifier", "http://sdq.ipd.uka.de/Identifier/2.1",
 			   "repository_1", "http://palladiosimulator.org/PalladioComponentModel/Repository/5.2",
 			   "seff_1", "http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations()
+	{
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[]
+		   {
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createPivotAnnotations()
+	{
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+		addAnnotation
+		  (dataSpecificationEClass.getEOperations().get(0),
+		   source,
+		   new String[]
+		   {
+			   "body", "let extensionEffects = extensions->selectByKind(dataprocessing::effectspecification::ProcessingEffectSpecification).processingEffects->asSet() in\n\t\t\t\tlet externalEffects = externalDataProcessingEffects.processingEffects->asSet() in\n\t\t\t\t\texternalEffects->union(extensionEffects)"
 		   });
 	}
 

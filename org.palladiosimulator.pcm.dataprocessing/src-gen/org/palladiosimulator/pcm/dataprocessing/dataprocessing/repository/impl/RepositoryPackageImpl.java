@@ -30,6 +30,10 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataPackage;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DataPackageImpl;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.EffectspecificationPackage;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.EffectspecificationPackageImpl;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataprocessingPackageImpl;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
@@ -142,6 +146,8 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 		DataPackageImpl theDataPackage = (DataPackageImpl)(registeredPackage instanceof DataPackageImpl ? registeredPackage : DataPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(UtilPackage.eNS_URI);
 		UtilPackageImpl theUtilPackage = (UtilPackageImpl)(registeredPackage instanceof UtilPackageImpl ? registeredPackage : UtilPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(EffectspecificationPackage.eNS_URI);
+		EffectspecificationPackageImpl theEffectspecificationPackage = (EffectspecificationPackageImpl)(registeredPackage instanceof EffectspecificationPackageImpl ? registeredPackage : EffectspecificationPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theRepositoryPackage.createPackageContents();
@@ -150,6 +156,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 		theCharacteristicsPackage.createPackageContents();
 		theDataPackage.createPackageContents();
 		theUtilPackage.createPackageContents();
+		theEffectspecificationPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theRepositoryPackage.initializePackageContents();
@@ -158,6 +165,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 		theCharacteristicsPackage.initializePackageContents();
 		theDataPackage.initializePackageContents();
 		theUtilPackage.initializePackageContents();
+		theEffectspecificationPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theRepositoryPackage.freeze();

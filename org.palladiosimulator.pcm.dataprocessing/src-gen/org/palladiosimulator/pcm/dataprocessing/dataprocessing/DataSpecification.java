@@ -2,14 +2,16 @@
  */
 package org.palladiosimulator.pcm.dataprocessing.dataprocessing;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicContainer;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicTypeContainer;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.RelatedCharacteristics;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.StoreCharacteristicContainer;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffect;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectProvider;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectSpecification;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer;
 
@@ -33,14 +35,14 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.StoreC
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getOperationSignatureDataRefinement <em>Operation Signature Data Refinement</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getStoreCharacteristicContainers <em>Store Characteristic Containers</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getExtensions <em>Extensions</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getExternalDataProcessingEffects <em>External Data Processing Effects</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage#getDataSpecification()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface DataSpecification extends CDOObject
+public interface DataSpecification extends ProcessingEffectProvider
 {
 	/**
 	 * Returns the value of the '<em><b>Data Processing Containers</b></em>' containment reference list.
@@ -171,5 +173,30 @@ public interface DataSpecification extends CDOObject
 	 * @generated
 	 */
 	EList<DataSpecificationExtension> getExtensions();
+
+	/**
+	 * Returns the value of the '<em><b>External Data Processing Effects</b></em>' reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.ProcessingEffectSpecification}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>External Data Processing Effects</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>External Data Processing Effects</em>' reference list.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage#getDataSpecification_ExternalDataProcessingEffects()
+	 * @model
+	 * @generated
+	 */
+	EList<ProcessingEffectSpecification> getExternalDataProcessingEffects();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='let extensionEffects = extensions-&gt;selectByKind(dataprocessing::effectspecification::ProcessingEffectSpecification).processingEffects-&gt;asSet() in\n\t\t\t\tlet externalEffects = externalDataProcessingEffects.processingEffects-&gt;asSet() in\n\t\t\t\t\texternalEffects-&gt;union(extensionEffects)'"
+	 * @generated
+	 */
+	EList<ProcessingEffect> determineProcessingEffects();
 
 } // DataSpecification

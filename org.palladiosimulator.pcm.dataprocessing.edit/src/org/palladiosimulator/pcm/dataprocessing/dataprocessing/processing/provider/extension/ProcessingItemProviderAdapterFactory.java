@@ -93,4 +93,21 @@ public class ProcessingItemProviderAdapterFactory extends
 		return joinDataOperationItemProvider;
 	}
 
+	@Override
+	public Adapter createEffectSpecifyingTransformDataOperationAdapter() {
+		if (effectSpecifyingTransformDataOperationItemProvider == null) {
+			effectSpecifyingTransformDataOperationItemProvider = new EffectSpecifyingTransformDataOperationItemProvider(
+					this);
+		}
+		return effectSpecifyingTransformDataOperationItemProvider;
+	}
+
+	@Override
+	public Adapter createStoreDataOperationAdapter() {
+		if (storeDataOperationItemProvider == null) {
+			storeDataOperationItemProvider = new StoreDataOperationItemProvider(this);
+		}
+		return storeDataOperationItemProvider;
+	}
+
 }

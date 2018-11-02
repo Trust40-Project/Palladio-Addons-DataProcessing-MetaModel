@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -28,6 +29,9 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingPackage;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsFactory;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.EffectspecificationFactory;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.EffectspecificationPackage;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingFactory;
 
@@ -72,8 +76,56 @@ public class DataSpecificationItemProvider
 		{
 			super.getPropertyDescriptors(object);
 
+			addProcessingEffectsPropertyDescriptor(object);
+			addExternalDataProcessingEffectsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Processing Effects feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addProcessingEffectsPropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ProcessingEffectProvider_processingEffects_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ProcessingEffectProvider_processingEffects_feature", "_UI_ProcessingEffectProvider_type"),
+				 EffectspecificationPackage.Literals.PROCESSING_EFFECT_PROVIDER__PROCESSING_EFFECTS,
+				 false,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the External Data Processing Effects feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addExternalDataProcessingEffectsPropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DataSpecification_externalDataProcessingEffects_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DataSpecification_externalDataProcessingEffects_feature", "_UI_DataSpecification_type"),
+				 DataprocessingPackage.Literals.DATA_SPECIFICATION__EXTERNAL_DATA_PROCESSING_EFFECTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -220,6 +272,11 @@ public class DataSpecificationItemProvider
 			(createChildParameter
 				(DataprocessingPackage.Literals.DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS,
 				 CharacteristicsFactory.eINSTANCE.createStoreCharacteristicContainer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DataprocessingPackage.Literals.DATA_SPECIFICATION__EXTENSIONS,
+				 EffectspecificationFactory.eINSTANCE.createProcessingEffectSpecification()));
 	}
 
 	/**

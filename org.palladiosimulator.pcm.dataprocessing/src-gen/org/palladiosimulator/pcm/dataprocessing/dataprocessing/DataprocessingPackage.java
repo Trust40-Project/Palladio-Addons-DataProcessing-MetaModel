@@ -8,6 +8,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.EffectspecificationPackage;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Package</b> for the model.
@@ -22,6 +24,7 @@ import org.eclipse.emf.ecore.EReference;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingFactory
  * @model kind="package"
  *        annotation="http://www.eclipse.org/OCL/Import entity='http://palladiosimulator.org/PalladioComponentModel/Core/Entity/5.2' identifier='http://sdq.ipd.uka.de/Identifier/2.1' repository_1='http://palladiosimulator.org/PalladioComponentModel/Repository/5.2' seff_1='http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
  * @generated
  */
 public interface DataprocessingPackage extends EPackage
@@ -69,13 +72,22 @@ public interface DataprocessingPackage extends EPackage
 	int DATA_SPECIFICATION = 0;
 
 	/**
+	 * The feature id for the '<em><b>Processing Effects</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SPECIFICATION__PROCESSING_EFFECTS = EffectspecificationPackage.PROCESSING_EFFECT_PROVIDER__PROCESSING_EFFECTS;
+
+	/**
 	 * The feature id for the '<em><b>Data Processing Containers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION__DATA_PROCESSING_CONTAINERS = 0;
+	int DATA_SPECIFICATION__DATA_PROCESSING_CONTAINERS = EffectspecificationPackage.PROCESSING_EFFECT_PROVIDER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Characteristic Type Containers</b></em>' containment reference list.
@@ -84,7 +96,7 @@ public interface DataprocessingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION__CHARACTERISTIC_TYPE_CONTAINERS = 1;
+	int DATA_SPECIFICATION__CHARACTERISTIC_TYPE_CONTAINERS = EffectspecificationPackage.PROCESSING_EFFECT_PROVIDER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Store Containers</b></em>' containment reference list.
@@ -93,7 +105,7 @@ public interface DataprocessingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION__STORE_CONTAINERS = 2;
+	int DATA_SPECIFICATION__STORE_CONTAINERS = EffectspecificationPackage.PROCESSING_EFFECT_PROVIDER_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Characteristic Container</b></em>' containment reference list.
@@ -102,7 +114,7 @@ public interface DataprocessingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER = 3;
+	int DATA_SPECIFICATION__CHARACTERISTIC_CONTAINER = EffectspecificationPackage.PROCESSING_EFFECT_PROVIDER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Related Characteristics</b></em>' containment reference list.
@@ -111,7 +123,7 @@ public interface DataprocessingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION__RELATED_CHARACTERISTICS = 4;
+	int DATA_SPECIFICATION__RELATED_CHARACTERISTICS = EffectspecificationPackage.PROCESSING_EFFECT_PROVIDER_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Operation Signature Data Refinement</b></em>' containment reference list.
@@ -120,7 +132,7 @@ public interface DataprocessingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT = 5;
+	int DATA_SPECIFICATION__OPERATION_SIGNATURE_DATA_REFINEMENT = EffectspecificationPackage.PROCESSING_EFFECT_PROVIDER_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Store Characteristic Containers</b></em>' containment reference list.
@@ -129,7 +141,7 @@ public interface DataprocessingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS = 6;
+	int DATA_SPECIFICATION__STORE_CHARACTERISTIC_CONTAINERS = EffectspecificationPackage.PROCESSING_EFFECT_PROVIDER_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Extensions</b></em>' containment reference list.
@@ -138,7 +150,16 @@ public interface DataprocessingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION__EXTENSIONS = 7;
+	int DATA_SPECIFICATION__EXTENSIONS = EffectspecificationPackage.PROCESSING_EFFECT_PROVIDER_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>External Data Processing Effects</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SPECIFICATION__EXTERNAL_DATA_PROCESSING_EFFECTS = EffectspecificationPackage.PROCESSING_EFFECT_PROVIDER_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Data Specification</em>' class.
@@ -147,7 +168,7 @@ public interface DataprocessingPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SPECIFICATION_FEATURE_COUNT = 8;
+	int DATA_SPECIFICATION_FEATURE_COUNT = EffectspecificationPackage.PROCESSING_EFFECT_PROVIDER_FEATURE_COUNT + 9;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension <em>Data Specification Extension</em>}' class.
@@ -286,6 +307,17 @@ public interface DataprocessingPackage extends EPackage
 	EReference getDataSpecification_Extensions();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getExternalDataProcessingEffects <em>External Data Processing Effects</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>External Data Processing Effects</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecification#getExternalDataProcessingEffects()
+	 * @see #getDataSpecification()
+	 * @generated
+	 */
+	EReference getDataSpecification_ExternalDataProcessingEffects();
+
+	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension <em>Data Specification Extension</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -402,6 +434,14 @@ public interface DataprocessingPackage extends EPackage
 		 * @generated
 		 */
 		EReference DATA_SPECIFICATION__EXTENSIONS = eINSTANCE.getDataSpecification_Extensions();
+
+		/**
+		 * The meta object literal for the '<em><b>External Data Processing Effects</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_SPECIFICATION__EXTERNAL_DATA_PROCESSING_EFFECTS = eINSTANCE.getDataSpecification_ExternalDataProcessingEffects();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataSpecificationExtension <em>Data Specification Extension</em>}' class.

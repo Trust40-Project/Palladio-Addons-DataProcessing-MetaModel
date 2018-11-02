@@ -1519,6 +1519,215 @@ public interface ProcessingPackage extends EPackage
 	int CHARACTERISTIC_CHANGING_DATA_OPERATION_FEATURE_COUNT = DATA_OPERATION_FEATURE_COUNT + 3;
 
 	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.EffectSpecifyingTransformDataOperationImpl <em>Effect Specifying Transform Data Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.EffectSpecifyingTransformDataOperationImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getEffectSpecifyingTransformDataOperation()
+	 * @generated
+	 */
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION = 18;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__ID = TRANSFORM_DATA_OPERATION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__ENTITY_NAME = TRANSFORM_DATA_OPERATION__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Container</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__CONTAINER = TRANSFORM_DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__INCOMING_DATA = TRANSFORM_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__OUTGOING_DATA = TRANSFORM_DATA_OPERATION__OUTGOING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Input</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__INPUT = TRANSFORM_DATA_OPERATION__INPUT;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__OUTPUT = TRANSFORM_DATA_OPERATION__OUTPUT;
+
+	/**
+	 * The feature id for the '<em><b>Parameter Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__PARAMETER_DATA = TRANSFORM_DATA_OPERATION__PARAMETER_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Processing Effect Operation Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE = TRANSFORM_DATA_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Custom Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER = TRANSFORM_DATA_OPERATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = TRANSFORM_DATA_OPERATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Effect Specifying Transform Data Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION_FEATURE_COUNT = TRANSFORM_DATA_OPERATION_FEATURE_COUNT + 3;
+
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingEffectOperationTypeSpecifyingOperationImpl <em>Effect Operation Type Specifying Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingEffectOperationTypeSpecifyingOperationImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getProcessingEffectOperationTypeSpecifyingOperation()
+	 * @generated
+	 */
+	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION = 19;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__ID = DATA_OPERATION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__ENTITY_NAME = DATA_OPERATION__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Container</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__CONTAINER = DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__INCOMING_DATA = DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__OUTGOING_DATA = DATA_OPERATION__OUTGOING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Processing Effect Operation Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE = DATA_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Custom Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER = DATA_OPERATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_PROVIDER = DATA_OPERATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Effect Operation Type Specifying Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION_FEATURE_COUNT = DATA_OPERATION_FEATURE_COUNT + 3;
+
+	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CharacteristicChangeOperation <em>Characteristic Change Operation</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1526,7 +1735,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getCharacteristicChangeOperation()
 	 * @generated
 	 */
-	int CHARACTERISTIC_CHANGE_OPERATION = 18;
+	int CHARACTERISTIC_CHANGE_OPERATION = 20;
 
 
 	/**
@@ -1941,6 +2150,59 @@ public interface ProcessingPackage extends EPackage
 	EReference getCharacteristicChangingDataOperation_Characteristic();
 
 	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.EffectSpecifyingTransformDataOperation <em>Effect Specifying Transform Data Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Effect Specifying Transform Data Operation</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.EffectSpecifyingTransformDataOperation
+	 * @generated
+	 */
+	EClass getEffectSpecifyingTransformDataOperation();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation <em>Effect Operation Type Specifying Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Effect Operation Type Specifying Operation</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation
+	 * @generated
+	 */
+	EClass getProcessingEffectOperationTypeSpecifyingOperation();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation#getProcessingEffectOperationType <em>Processing Effect Operation Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Processing Effect Operation Type</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation#getProcessingEffectOperationType()
+	 * @see #getProcessingEffectOperationTypeSpecifyingOperation()
+	 * @generated
+	 */
+	EReference getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectOperationType();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation#getCustomProcessingEffectProvider <em>Custom Processing Effect Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Custom Processing Effect Provider</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation#getCustomProcessingEffectProvider()
+	 * @see #getProcessingEffectOperationTypeSpecifyingOperation()
+	 * @generated
+	 */
+	EReference getProcessingEffectOperationTypeSpecifyingOperation_CustomProcessingEffectProvider();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation#getProcessingEffectProvider <em>Processing Effect Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Processing Effect Provider</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation#getProcessingEffectProvider()
+	 * @see #getProcessingEffectOperationTypeSpecifyingOperation()
+	 * @generated
+	 */
+	EReference getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectProvider();
+
+	/**
 	 * Returns the meta object for enum '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CharacteristicChangeOperation <em>Characteristic Change Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2320,6 +2582,50 @@ public interface ProcessingPackage extends EPackage
 		 * @generated
 		 */
 		EReference CHARACTERISTIC_CHANGING_DATA_OPERATION__CHARACTERISTIC = eINSTANCE.getCharacteristicChangingDataOperation_Characteristic();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.EffectSpecifyingTransformDataOperationImpl <em>Effect Specifying Transform Data Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.EffectSpecifyingTransformDataOperationImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getEffectSpecifyingTransformDataOperation()
+		 * @generated
+		 */
+		EClass EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION = eINSTANCE.getEffectSpecifyingTransformDataOperation();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingEffectOperationTypeSpecifyingOperationImpl <em>Effect Operation Type Specifying Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingEffectOperationTypeSpecifyingOperationImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getProcessingEffectOperationTypeSpecifyingOperation()
+		 * @generated
+		 */
+		EClass PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION = eINSTANCE.getProcessingEffectOperationTypeSpecifyingOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Processing Effect Operation Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE = eINSTANCE.getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectOperationType();
+
+		/**
+		 * The meta object literal for the '<em><b>Custom Processing Effect Provider</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER = eINSTANCE.getProcessingEffectOperationTypeSpecifyingOperation_CustomProcessingEffectProvider();
+
+		/**
+		 * The meta object literal for the '<em><b>Processing Effect Provider</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_PROVIDER = eINSTANCE.getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectProvider();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CharacteristicChangeOperation <em>Characteristic Change Operation</em>}' enum.

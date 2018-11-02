@@ -35,6 +35,10 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataPackage;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DataPackageImpl;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.EffectspecificationPackage;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.EffectspecificationPackageImpl;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataprocessingPackageImpl;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CharacteristicChangeOperation;
@@ -43,11 +47,13 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Consum
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CreateDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.EffectSpecifyingTransformDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.JoinDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.LoadAllDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.LoadDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ManyToOneDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.PerformDataTransmissionOperation;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingFactory;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProjectionDataOperation;
@@ -208,6 +214,20 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass effectSpecifyingTransformDataOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass processingEffectOperationTypeSpecifyingOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum characteristicChangeOperationEEnum = null;
 
 	/**
@@ -277,6 +297,8 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		DataPackageImpl theDataPackage = (DataPackageImpl)(registeredPackage instanceof DataPackageImpl ? registeredPackage : DataPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(UtilPackage.eNS_URI);
 		UtilPackageImpl theUtilPackage = (UtilPackageImpl)(registeredPackage instanceof UtilPackageImpl ? registeredPackage : UtilPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(EffectspecificationPackage.eNS_URI);
+		EffectspecificationPackageImpl theEffectspecificationPackage = (EffectspecificationPackageImpl)(registeredPackage instanceof EffectspecificationPackageImpl ? registeredPackage : EffectspecificationPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theProcessingPackage.createPackageContents();
@@ -285,6 +307,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		theCharacteristicsPackage.createPackageContents();
 		theDataPackage.createPackageContents();
 		theUtilPackage.createPackageContents();
+		theEffectspecificationPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theProcessingPackage.initializePackageContents();
@@ -293,6 +316,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		theCharacteristicsPackage.initializePackageContents();
 		theDataPackage.initializePackageContents();
 		theUtilPackage.initializePackageContents();
+		theEffectspecificationPackage.initializePackageContents();
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
@@ -708,6 +732,56 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEffectSpecifyingTransformDataOperation()
+	{
+		return effectSpecifyingTransformDataOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProcessingEffectOperationTypeSpecifyingOperation()
+	{
+		return processingEffectOperationTypeSpecifyingOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectOperationType()
+	{
+		return (EReference)processingEffectOperationTypeSpecifyingOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProcessingEffectOperationTypeSpecifyingOperation_CustomProcessingEffectProvider()
+	{
+		return (EReference)processingEffectOperationTypeSpecifyingOperationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectProvider()
+	{
+		return (EReference)processingEffectOperationTypeSpecifyingOperationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getCharacteristicChangeOperation()
 	{
 		return characteristicChangeOperationEEnum;
@@ -800,6 +874,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		createEAttribute(characteristicChangingDataOperationEClass, CHARACTERISTIC_CHANGING_DATA_OPERATION__OPERATION);
 		createEReference(characteristicChangingDataOperationEClass, CHARACTERISTIC_CHANGING_DATA_OPERATION__CHARACTERISTIC);
 
+		effectSpecifyingTransformDataOperationEClass = createEClass(EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION);
+
+		processingEffectOperationTypeSpecifyingOperationEClass = createEClass(PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION);
+		createEReference(processingEffectOperationTypeSpecifyingOperationEClass, PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE);
+		createEReference(processingEffectOperationTypeSpecifyingOperationEClass, PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__CUSTOM_PROCESSING_EFFECT_PROVIDER);
+		createEReference(processingEffectOperationTypeSpecifyingOperationEClass, PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_PROVIDER);
+
 		// Create enums
 		characteristicChangeOperationEEnum = createEEnum(CHARACTERISTIC_CHANGE_OPERATION);
 	}
@@ -834,6 +915,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		CharacteristicsPackage theCharacteristicsPackage = (CharacteristicsPackage)EPackage.Registry.INSTANCE.getEPackage(CharacteristicsPackage.eNS_URI);
 		RepositoryPackage theRepositoryPackage = (RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
 		UtilPackage theUtilPackage = (UtilPackage)EPackage.Registry.INSTANCE.getEPackage(UtilPackage.eNS_URI);
+		EffectspecificationPackage theEffectspecificationPackage = (EffectspecificationPackage)EPackage.Registry.INSTANCE.getEPackage(EffectspecificationPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter characteristicChangingDataOperationEClass_T = addETypeParameter(characteristicChangingDataOperationEClass, "T");
@@ -861,6 +943,9 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		projectionDataOperationEClass.getESuperTypes().add(this.getTransformDataOperation());
 		selectionDataOperationEClass.getESuperTypes().add(this.getTransformDataOperation());
 		characteristicChangingDataOperationEClass.getESuperTypes().add(this.getDataOperation());
+		effectSpecifyingTransformDataOperationEClass.getESuperTypes().add(this.getTransformDataOperation());
+		effectSpecifyingTransformDataOperationEClass.getESuperTypes().add(this.getProcessingEffectOperationTypeSpecifyingOperation());
+		processingEffectOperationTypeSpecifyingOperationEClass.getESuperTypes().add(this.getDataOperation());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(dataProcessingContainerEClass, DataProcessingContainer.class, "DataProcessingContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -943,6 +1028,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		addEOperation(characteristicChangingDataOperationEClass, theDataPackage.getData(), "determineIncomingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		addEOperation(characteristicChangingDataOperationEClass, theDataPackage.getData(), "determineOutgoingData", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(effectSpecifyingTransformDataOperationEClass, EffectSpecifyingTransformDataOperation.class, "EffectSpecifyingTransformDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(processingEffectOperationTypeSpecifyingOperationEClass, ProcessingEffectOperationTypeSpecifyingOperation.class, "ProcessingEffectOperationTypeSpecifyingOperation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectOperationType(), theEffectspecificationPackage.getProcessingEffectOperationType(), null, "processingEffectOperationType", null, 1, 1, ProcessingEffectOperationTypeSpecifyingOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProcessingEffectOperationTypeSpecifyingOperation_CustomProcessingEffectProvider(), theEffectspecificationPackage.getProcessingEffectProvider(), null, "customProcessingEffectProvider", null, 0, 1, ProcessingEffectOperationTypeSpecifyingOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectProvider(), theEffectspecificationPackage.getProcessingEffectProvider(), null, "processingEffectProvider", null, 1, 1, ProcessingEffectOperationTypeSpecifyingOperation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(characteristicChangeOperationEEnum, CharacteristicChangeOperation.class, "CharacteristicChangeOperation");
@@ -1210,6 +1302,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   new String[]
 		   {
 			   "body", "self.determineIncomingData()"
+		   });
+		addAnnotation
+		  (getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectProvider(),
+		   source,
+		   new String[]
+		   {
+			   "derivation", "let defaultProvider = self.container.oclContainer.oclAsType(dataprocessing::effectspecification::ProcessingEffectProvider) in\n\tcustomProcessingEffectProvider->asOrderedSet()->including(defaultProvider)->select(not oclIsUndefined())->first()"
 		   });
 	}
 

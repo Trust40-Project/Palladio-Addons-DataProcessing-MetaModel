@@ -172,6 +172,16 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl
 				return createCharacteristicChangingDataOperationAdapter();
 			}
 			@Override
+			public Adapter caseEffectSpecifyingTransformDataOperation(EffectSpecifyingTransformDataOperation object)
+			{
+				return createEffectSpecifyingTransformDataOperationAdapter();
+			}
+			@Override
+			public Adapter caseProcessingEffectOperationTypeSpecifyingOperation(ProcessingEffectOperationTypeSpecifyingOperation object)
+			{
+				return createProcessingEffectOperationTypeSpecifyingOperationAdapter();
+			}
+			@Override
 			public Adapter caseIdentifier(Identifier object)
 			{
 				return createIdentifierAdapter();
@@ -474,6 +484,36 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createCharacteristicChangingDataOperationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.EffectSpecifyingTransformDataOperation <em>Effect Specifying Transform Data Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.EffectSpecifyingTransformDataOperation
+	 * @generated
+	 */
+	public Adapter createEffectSpecifyingTransformDataOperationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation <em>Effect Operation Type Specifying Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingEffectOperationTypeSpecifyingOperation
+	 * @generated
+	 */
+	public Adapter createProcessingEffectOperationTypeSpecifyingOperationAdapter()
 	{
 		return null;
 	}

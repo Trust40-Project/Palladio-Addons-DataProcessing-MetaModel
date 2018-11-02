@@ -139,6 +139,10 @@ public class ProcessingValidator extends EObjectValidator
 				return validateSelectionDataOperation((SelectionDataOperation)value, diagnostics, context);
 			case ProcessingPackage.CHARACTERISTIC_CHANGING_DATA_OPERATION:
 				return validateCharacteristicChangingDataOperation((CharacteristicChangingDataOperation<?>)value, diagnostics, context);
+			case ProcessingPackage.EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION:
+				return validateEffectSpecifyingTransformDataOperation((EffectSpecifyingTransformDataOperation)value, diagnostics, context);
+			case ProcessingPackage.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION:
+				return validateProcessingEffectOperationTypeSpecifyingOperation((ProcessingEffectOperationTypeSpecifyingOperation)value, diagnostics, context);
 			case ProcessingPackage.CHARACTERISTIC_CHANGE_OPERATION:
 				return validateCharacteristicChangeOperation((CharacteristicChangeOperation)value, diagnostics, context);
 			default:
@@ -840,6 +844,48 @@ public class ProcessingValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)characteristicChangingDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(characteristicChangingDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDataOperation_outgoingDataIsUsed(characteristicChangingDataOperation, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateEffectSpecifyingTransformDataOperation(EffectSpecifyingTransformDataOperation effectSpecifyingTransformDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		if (!validate_NoCircularContainment((EObject)effectSpecifyingTransformDataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)effectSpecifyingTransformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)effectSpecifyingTransformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)effectSpecifyingTransformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)effectSpecifyingTransformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)effectSpecifyingTransformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)effectSpecifyingTransformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)effectSpecifyingTransformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)effectSpecifyingTransformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(effectSpecifyingTransformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateDataOperation_outgoingDataIsUsed(effectSpecifyingTransformDataOperation, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateProcessingEffectOperationTypeSpecifyingOperation(ProcessingEffectOperationTypeSpecifyingOperation processingEffectOperationTypeSpecifyingOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		if (!validate_NoCircularContainment((EObject)processingEffectOperationTypeSpecifyingOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)processingEffectOperationTypeSpecifyingOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)processingEffectOperationTypeSpecifyingOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)processingEffectOperationTypeSpecifyingOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)processingEffectOperationTypeSpecifyingOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)processingEffectOperationTypeSpecifyingOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)processingEffectOperationTypeSpecifyingOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)processingEffectOperationTypeSpecifyingOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)processingEffectOperationTypeSpecifyingOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(processingEffectOperationTypeSpecifyingOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateDataOperation_outgoingDataIsUsed(processingEffectOperationTypeSpecifyingOperation, diagnostics, context);
 		return result;
 	}
 

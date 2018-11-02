@@ -29,6 +29,10 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataPackage;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DataPackageImpl;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.EffectspecificationPackage;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.EffectspecificationPackageImpl;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataprocessingPackageImpl;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage;
@@ -127,6 +131,8 @@ public class UtilPackageImpl extends EPackageImpl implements UtilPackage
 		CharacteristicsPackageImpl theCharacteristicsPackage = (CharacteristicsPackageImpl)(registeredPackage instanceof CharacteristicsPackageImpl ? registeredPackage : CharacteristicsPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DataPackage.eNS_URI);
 		DataPackageImpl theDataPackage = (DataPackageImpl)(registeredPackage instanceof DataPackageImpl ? registeredPackage : DataPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(EffectspecificationPackage.eNS_URI);
+		EffectspecificationPackageImpl theEffectspecificationPackage = (EffectspecificationPackageImpl)(registeredPackage instanceof EffectspecificationPackageImpl ? registeredPackage : EffectspecificationPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theUtilPackage.createPackageContents();
@@ -135,6 +141,7 @@ public class UtilPackageImpl extends EPackageImpl implements UtilPackage
 		theProcessingPackage.createPackageContents();
 		theCharacteristicsPackage.createPackageContents();
 		theDataPackage.createPackageContents();
+		theEffectspecificationPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theUtilPackage.initializePackageContents();
@@ -143,6 +150,7 @@ public class UtilPackageImpl extends EPackageImpl implements UtilPackage
 		theProcessingPackage.initializePackageContents();
 		theCharacteristicsPackage.initializePackageContents();
 		theDataPackage.initializePackageContents();
+		theEffectspecificationPackage.initializePackageContents();
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put

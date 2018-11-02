@@ -13,6 +13,8 @@ Export-Package: org.palladiosimulator.pcm.dataprocessing.dataprocessing.characte
  org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.provider.extension,
  org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.provider,
  org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.provider.extension,
+ org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.provider,
+ org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.provider.extension,
  org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.provider,
  org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.provider.extension,
  org.palladiosimulator.pcm.dataprocessing.dataprocessing.provider,

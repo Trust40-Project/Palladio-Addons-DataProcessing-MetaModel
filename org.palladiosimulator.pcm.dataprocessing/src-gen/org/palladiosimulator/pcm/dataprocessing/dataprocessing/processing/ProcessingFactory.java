@@ -151,6 +151,15 @@ public interface ProcessingFactory extends EFactory
 	<T extends CharacteristicType> CharacteristicChangingDataOperation<T> createCharacteristicChangingDataOperation();
 
 	/**
+	 * Returns a new object of class '<em>Effect Specifying Transform Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Effect Specifying Transform Data Operation</em>'.
+	 * @generated
+	 */
+	EffectSpecifyingTransformDataOperation createEffectSpecifyingTransformDataOperation();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

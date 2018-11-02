@@ -286,6 +286,30 @@ public class ProcessingSwitch<T1> extends Switch<T1>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ProcessingPackage.EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION:
+			{
+				EffectSpecifyingTransformDataOperation effectSpecifyingTransformDataOperation = (EffectSpecifyingTransformDataOperation)theEObject;
+				T1 result = caseEffectSpecifyingTransformDataOperation(effectSpecifyingTransformDataOperation);
+				if (result == null) result = caseTransformDataOperation(effectSpecifyingTransformDataOperation);
+				if (result == null) result = caseProcessingEffectOperationTypeSpecifyingOperation(effectSpecifyingTransformDataOperation);
+				if (result == null) result = caseDataOperation(effectSpecifyingTransformDataOperation);
+				if (result == null) result = caseEntity(effectSpecifyingTransformDataOperation);
+				if (result == null) result = caseIdentifier(effectSpecifyingTransformDataOperation);
+				if (result == null) result = caseNamedElement(effectSpecifyingTransformDataOperation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ProcessingPackage.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION:
+			{
+				ProcessingEffectOperationTypeSpecifyingOperation processingEffectOperationTypeSpecifyingOperation = (ProcessingEffectOperationTypeSpecifyingOperation)theEObject;
+				T1 result = caseProcessingEffectOperationTypeSpecifyingOperation(processingEffectOperationTypeSpecifyingOperation);
+				if (result == null) result = caseDataOperation(processingEffectOperationTypeSpecifyingOperation);
+				if (result == null) result = caseEntity(processingEffectOperationTypeSpecifyingOperation);
+				if (result == null) result = caseIdentifier(processingEffectOperationTypeSpecifyingOperation);
+				if (result == null) result = caseNamedElement(processingEffectOperationTypeSpecifyingOperation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -574,6 +598,38 @@ public class ProcessingSwitch<T1> extends Switch<T1>
 	 * @generated
 	 */
 	public <T extends CharacteristicType> T1 caseCharacteristicChangingDataOperation(CharacteristicChangingDataOperation<T> object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Effect Specifying Transform Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Effect Specifying Transform Data Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseEffectSpecifyingTransformDataOperation(EffectSpecifyingTransformDataOperation object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Effect Operation Type Specifying Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Effect Operation Type Specifying Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseProcessingEffectOperationTypeSpecifyingOperation(ProcessingEffectOperationTypeSpecifyingOperation object)
 	{
 		return null;
 	}

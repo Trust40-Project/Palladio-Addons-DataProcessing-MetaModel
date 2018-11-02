@@ -81,6 +81,7 @@ public class ProcessingFactoryImpl extends EFactoryImpl implements ProcessingFac
 			case ProcessingPackage.PROJECTION_DATA_OPERATION: return (EObject)createProjectionDataOperation();
 			case ProcessingPackage.SELECTION_DATA_OPERATION: return (EObject)createSelectionDataOperation();
 			case ProcessingPackage.CHARACTERISTIC_CHANGING_DATA_OPERATION: return (EObject)createCharacteristicChangingDataOperation();
+			case ProcessingPackage.EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION: return (EObject)createEffectSpecifyingTransformDataOperation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -272,6 +273,17 @@ public class ProcessingFactoryImpl extends EFactoryImpl implements ProcessingFac
 	{
 		CharacteristicChangingDataOperationImpl<T> characteristicChangingDataOperation = new CharacteristicChangingDataOperationImpl<T>();
 		return characteristicChangingDataOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EffectSpecifyingTransformDataOperation createEffectSpecifyingTransformDataOperation()
+	{
+		EffectSpecifyingTransformDataOperationImpl effectSpecifyingTransformDataOperation = new EffectSpecifyingTransformDataOperationImpl();
+		return effectSpecifyingTransformDataOperation;
 	}
 
 	/**

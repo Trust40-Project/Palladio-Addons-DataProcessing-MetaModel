@@ -174,4 +174,32 @@
       </editor>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dataprocessing -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.presentation.EffectspecificationModelWizardID"
+            name="%_UI_EffectspecificationModelWizard_label"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.presentation.EffectspecificationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EffectspecificationModelFile.gif">
+         <description>%_UI_EffectspecificationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dataprocessing -->
+      <editor
+            id="org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.presentation.EffectspecificationEditorID"
+            name="%_UI_EffectspecificationEditor_label"
+            icon="icons/full/obj16/EffectspecificationModelFile.gif"
+            extensions="effectspecification"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.presentation.EffectspecificationEditor"
+            contributorClass="org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.presentation.EffectspecificationActionBarContributor">
+      </editor>
+   </extension>
+
 </plugin>

@@ -208,5 +208,21 @@ Workflow {
 			}
 		}
 		
+		// EffectSpecification
+		replacement = {
+			filename =  "${pluginEditDir}/plugin.xml"
+			mapping = {
+				from = "${projectName}.dataprocessing.effectspecification.provider.EffectspecificationItemProviderAdapterFactory\""
+				to = "${projectName}.dataprocessing.effectspecification.provider.extension.EffectspecificationItemProviderAdapterFactory\""
+			}
+		}
+		replacement = {
+			filename = "${pluginEditorDir}/src-gen/**/*Editor.java"
+			mapping = {
+				from = "${projectName}.dataprocessing.effectspecification.provider.EffectspecificationItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.effectspecification.provider.extension.EffectspecificationItemProviderAdapterFactory"
+			}
+		}
+		
 	}
 }

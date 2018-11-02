@@ -54,4 +54,12 @@
             genModel="model/dataprocessing.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dataprocessing -->
+      <package
+            uri="http://www.palladiosimulator.org/pcm/dataprocessing/effectspecification/0.1/"
+            class="org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.EffectspecificationPackage"
+            genModel="model/dataprocessing.genmodel"/>
+   </extension>
+
 </plugin>

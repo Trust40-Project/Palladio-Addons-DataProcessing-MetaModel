@@ -177,6 +177,8 @@ import org.palladiosimulator.pcm.core.provider.CoreItemProviderAdapterFactory;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.provider.extension.CharacteristicsItemProviderAdapterFactory;
 
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.provider.extension.EffectspecificationItemProviderAdapterFactory;
+
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.presentation.DataprocessingEditorPlugin;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.provider.extension.ProcessingItemProviderAdapterFactory;
@@ -841,6 +843,7 @@ public class DataEditor
 		adapterFactory.addAdapterFactory(new CharacteristicsItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new DataItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new UtilItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new EffectspecificationItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new PcmItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new CoreItemProviderAdapterFactory());

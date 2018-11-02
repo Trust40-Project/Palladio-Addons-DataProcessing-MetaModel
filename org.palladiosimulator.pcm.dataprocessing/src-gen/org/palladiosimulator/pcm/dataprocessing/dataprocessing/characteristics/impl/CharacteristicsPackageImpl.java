@@ -12,6 +12,7 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
@@ -44,6 +45,10 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.u
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataPackage;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.impl.DataPackageImpl;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.EffectspecificationPackage;
+
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.impl.EffectspecificationPackageImpl;
 
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.impl.DataprocessingPackageImpl;
 
@@ -218,6 +223,8 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		DataPackageImpl theDataPackage = (DataPackageImpl)(registeredPackage instanceof DataPackageImpl ? registeredPackage : DataPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(UtilPackage.eNS_URI);
 		UtilPackageImpl theUtilPackage = (UtilPackageImpl)(registeredPackage instanceof UtilPackageImpl ? registeredPackage : UtilPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(EffectspecificationPackage.eNS_URI);
+		EffectspecificationPackageImpl theEffectspecificationPackage = (EffectspecificationPackageImpl)(registeredPackage instanceof EffectspecificationPackageImpl ? registeredPackage : EffectspecificationPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theCharacteristicsPackage.createPackageContents();
@@ -226,6 +233,7 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		theProcessingPackage.createPackageContents();
 		theDataPackage.createPackageContents();
 		theUtilPackage.createPackageContents();
+		theEffectspecificationPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theCharacteristicsPackage.initializePackageContents();
@@ -234,6 +242,7 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		theProcessingPackage.initializePackageContents();
 		theDataPackage.initializePackageContents();
 		theUtilPackage.initializePackageContents();
+		theEffectspecificationPackage.initializePackageContents();
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
@@ -651,9 +660,15 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 
 		initEClass(characteristicTypeEClass, CharacteristicType.class, "CharacteristicType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		EOperation op = addEOperation(characteristicTypeEClass, ecorePackage.getEBoolean(), "hasCompatibleValueRange", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getCharacteristicType(), "characteristicType", 1, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(enumCharacteristicTypeEClass, EnumCharacteristicType.class, "EnumCharacteristicType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEnumCharacteristicType_MultipleChoice(), ecorePackage.getEBoolean(), "multipleChoice", "false", 1, 1, EnumCharacteristicType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEnumCharacteristicType_Enum(), this.getEnumeration(), null, "enum", null, 1, 1, EnumCharacteristicType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = addEOperation(enumCharacteristicTypeEClass, ecorePackage.getEBoolean(), "hasCompatibleValueRange", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getCharacteristicType(), "characteristicType", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(enumCharacteristicLiteralEClass, EnumCharacteristicLiteral.class, "EnumCharacteristicLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -731,6 +746,20 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		   new String[]
 		   {
 			   "derivation", "self.characteristicContainers->collect(characteristics)->asOrderedSet()"
+		   });
+		addAnnotation
+		  (characteristicTypeEClass.getEOperations().get(0),
+		   source,
+		   new String[]
+		   {
+			   "body", "false"
+		   });
+		addAnnotation
+		  (enumCharacteristicTypeEClass.getEOperations().get(0),
+		   source,
+		   new String[]
+		   {
+			   "body", "let otherType = characteristicType.oclAsType(EnumCharacteristicType) in\n\tmultipleChoice = otherType.multipleChoice and\n\tenum = otherType.enum"
 		   });
 		addAnnotation
 		  (enumCharacteristicEClass,

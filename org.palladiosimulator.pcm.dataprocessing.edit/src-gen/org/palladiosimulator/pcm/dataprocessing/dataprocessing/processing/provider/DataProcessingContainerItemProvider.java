@@ -214,6 +214,11 @@ public class DataProcessingContainerItemProvider extends EntityItemProvider
 			(createChildParameter
 				(ProcessingPackage.Literals.DATA_PROCESSING_CONTAINER__OPERATIONS,
 				 ProcessingFactory.eINSTANCE.createCharacteristicChangingDataOperation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ProcessingPackage.Literals.DATA_PROCESSING_CONTAINER__OPERATIONS,
+				 ProcessingFactory.eINSTANCE.createEffectSpecifyingTransformDataOperation()));
 	}
 
 }
