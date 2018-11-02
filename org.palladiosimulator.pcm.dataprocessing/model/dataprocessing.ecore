@@ -1301,7 +1301,7 @@
             source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
           <details
               key="body"
-              value="let typedOperation = operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation) in&#xA;&#x9;relevantOperationTypes->includes(typedOperation.processingEffectOperationType) and&#xA;&#x9;toDataType = resultData.type and&#xA;&#x9;(fromDataType.oclIsUndefined() or operation.incomingData.type->includes(fromDataType))"/>
+              value="let typedOperation = operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation) in&#xA;&#x9;relevantOperationTypes->includes(typedOperation.processingEffectOperationType) and&#xA;&#x9;(toDataType.oclIsUndefined() or toDataType = resultData.type) and&#xA;&#x9;(fromDataType.oclIsUndefined() or operation.incomingData.type->includes(fromDataType))"/>
         </eAnnotations>
         <eParameters
             name="operation"

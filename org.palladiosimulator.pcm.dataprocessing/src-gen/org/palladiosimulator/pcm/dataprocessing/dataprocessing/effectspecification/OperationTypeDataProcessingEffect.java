@@ -46,7 +46,7 @@ public interface OperationTypeDataProcessingEffect extends ProcessingEffect
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" operationRequired="true" resultDataRequired="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='let typedOperation = operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation) in\n\trelevantOperationTypes-&gt;includes(typedOperation.processingEffectOperationType) and\n\ttoDataType = resultData.type and\n\t(fromDataType.oclIsUndefined() or operation.incomingData.type-&gt;includes(fromDataType))'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='let typedOperation = operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation) in\n\trelevantOperationTypes-&gt;includes(typedOperation.processingEffectOperationType) and\n\t(toDataType.oclIsUndefined() or toDataType = resultData.type) and\n\t(fromDataType.oclIsUndefined() or operation.incomingData.type-&gt;includes(fromDataType))'"
 	 * @generated
 	 */
 	boolean isApplicableTo(DataOperation operation, Data resultData);

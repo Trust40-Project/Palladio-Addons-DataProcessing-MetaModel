@@ -608,7 +608,7 @@ public class EffectspecificationPackageImpl extends EPackageImpl implements Effe
 		   source,
 		   new String[]
 		   {
-			   "body", "let typedOperation = operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation) in\n\trelevantOperationTypes->includes(typedOperation.processingEffectOperationType) and\n\ttoDataType = resultData.type and\n\t(fromDataType.oclIsUndefined() or operation.incomingData.type->includes(fromDataType))"
+			   "body", "let typedOperation = operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation) in\n\trelevantOperationTypes->includes(typedOperation.processingEffectOperationType) and\n\t(toDataType.oclIsUndefined() or toDataType = resultData.type) and\n\t(fromDataType.oclIsUndefined() or operation.incomingData.type->includes(fromDataType))"
 		   });
 		addAnnotation
 		  (processingEffectProviderEClass.getEOperations().get(0),
