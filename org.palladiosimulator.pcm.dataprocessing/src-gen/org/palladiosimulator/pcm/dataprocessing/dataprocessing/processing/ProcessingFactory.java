@@ -160,6 +160,15 @@ public interface ProcessingFactory extends EFactory
 	EffectSpecifyingTransformDataOperation createEffectSpecifyingTransformDataOperation();
 
 	/**
+	 * Returns a new object of class '<em>Delete Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Delete Data Operation</em>'.
+	 * @generated
+	 */
+	DeleteDataOperation createDeleteDataOperation();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

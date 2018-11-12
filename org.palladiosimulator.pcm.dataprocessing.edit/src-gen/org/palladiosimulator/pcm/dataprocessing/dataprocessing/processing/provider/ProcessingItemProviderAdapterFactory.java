@@ -468,6 +468,31 @@ public class ProcessingItemProviderAdapterFactory extends ProcessingAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DeleteDataOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DeleteDataOperationItemProvider deleteDataOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DeleteDataOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDeleteDataOperationAdapter()
+	{
+		if (deleteDataOperationItemProvider == null)
+		{
+			deleteDataOperationItemProvider = new DeleteDataOperationItemProvider(this);
+		}
+
+		return deleteDataOperationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -623,6 +648,7 @@ public class ProcessingItemProviderAdapterFactory extends ProcessingAdapterFacto
 		if (selectionDataOperationItemProvider != null) selectionDataOperationItemProvider.dispose();
 		if (characteristicChangingDataOperationItemProvider != null) characteristicChangingDataOperationItemProvider.dispose();
 		if (effectSpecifyingTransformDataOperationItemProvider != null) effectSpecifyingTransformDataOperationItemProvider.dispose();
+		if (deleteDataOperationItemProvider != null) deleteDataOperationItemProvider.dispose();
 	}
 
 }

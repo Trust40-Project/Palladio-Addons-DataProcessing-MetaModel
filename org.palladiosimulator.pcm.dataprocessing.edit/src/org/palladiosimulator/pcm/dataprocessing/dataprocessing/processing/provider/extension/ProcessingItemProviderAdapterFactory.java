@@ -110,4 +110,20 @@ public class ProcessingItemProviderAdapterFactory extends
 		return storeDataOperationItemProvider;
 	}
 
+	@Override
+	public Adapter createUserReadDataAdapter() {
+		if (userReadDataItemProvider == null) {
+			userReadDataItemProvider = new UserReadDataItemProvider(this);
+		}
+		return userReadDataItemProvider;
+	}
+
+	@Override
+	public Adapter createDeleteDataOperationAdapter() {
+		if (deleteDataOperationItemProvider == null) {
+			deleteDataOperationItemProvider = new DeleteDataOperationItemProvider(this);
+		}
+		return deleteDataOperationItemProvider;
+	}
+
 }

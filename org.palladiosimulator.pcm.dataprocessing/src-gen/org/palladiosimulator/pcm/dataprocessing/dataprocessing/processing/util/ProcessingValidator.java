@@ -143,6 +143,8 @@ public class ProcessingValidator extends EObjectValidator
 				return validateEffectSpecifyingTransformDataOperation((EffectSpecifyingTransformDataOperation)value, diagnostics, context);
 			case ProcessingPackage.PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION:
 				return validateProcessingEffectOperationTypeSpecifyingOperation((ProcessingEffectOperationTypeSpecifyingOperation)value, diagnostics, context);
+			case ProcessingPackage.DELETE_DATA_OPERATION:
+				return validateDeleteDataOperation((DeleteDataOperation)value, diagnostics, context);
 			case ProcessingPackage.CHARACTERISTIC_CHANGE_OPERATION:
 				return validateCharacteristicChangeOperation((CharacteristicChangeOperation)value, diagnostics, context);
 			default:
@@ -886,6 +888,28 @@ public class ProcessingValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)processingEffectOperationTypeSpecifyingOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(processingEffectOperationTypeSpecifyingOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDataOperation_outgoingDataIsUsed(processingEffectOperationTypeSpecifyingOperation, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDeleteDataOperation(DeleteDataOperation deleteDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		if (!validate_NoCircularContainment((EObject)deleteDataOperation, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms((EObject)deleteDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms((EObject)deleteDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained((EObject)deleteDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired((EObject)deleteDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves((EObject)deleteDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID((EObject)deleteDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique((EObject)deleteDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)deleteDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(deleteDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateDataOperation_outgoingDataIsUsed(deleteDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateConsumeDataOperation_noDataEmission(deleteDataOperation, diagnostics, context);
 		return result;
 	}
 

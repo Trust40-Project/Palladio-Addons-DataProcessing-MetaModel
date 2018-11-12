@@ -728,6 +728,16 @@
           lowerBound="1"
           eType="#//effectspecification/ProcessingEffectOperationType"/>
     </eClassifiers>
+    <eClassifiers
+        xsi:type="ecore:EClass"
+        name="DeleteDataOperation"
+        eSuperTypes="#//processing/ConsumeDataOperation">
+      <eStructuralFeatures
+          xsi:type="ecore:EReference"
+          name="store"
+          lowerBound="1"
+          eType="#//repository/Store"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages
       name="characteristics"

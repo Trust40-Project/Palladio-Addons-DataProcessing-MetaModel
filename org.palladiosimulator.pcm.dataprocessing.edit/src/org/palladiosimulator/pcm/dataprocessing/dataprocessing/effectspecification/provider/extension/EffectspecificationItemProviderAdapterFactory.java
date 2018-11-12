@@ -37,4 +37,12 @@ public class EffectspecificationItemProviderAdapterFactory extends
 		return characteristicChangeItemProvider;
 	}
 
+	@Override
+	public Adapter createDataCreationProcessingEffectAdapter() {
+		if (dataCreationProcessingEffectItemProvider == null) {
+			dataCreationProcessingEffectItemProvider = new DataCreationProcessingEffectItemProvider(this);
+		}
+		return dataCreationProcessingEffectItemProvider;
+	}
+
 }

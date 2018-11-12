@@ -182,6 +182,11 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl
 				return createProcessingEffectOperationTypeSpecifyingOperationAdapter();
 			}
 			@Override
+			public Adapter caseDeleteDataOperation(DeleteDataOperation object)
+			{
+				return createDeleteDataOperationAdapter();
+			}
+			@Override
 			public Adapter caseIdentifier(Identifier object)
 			{
 				return createIdentifierAdapter();
@@ -514,6 +519,21 @@ public class ProcessingAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createProcessingEffectOperationTypeSpecifyingOperationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DeleteDataOperation <em>Delete Data Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DeleteDataOperation
+	 * @generated
+	 */
+	public Adapter createDeleteDataOperationAdapter()
 	{
 		return null;
 	}

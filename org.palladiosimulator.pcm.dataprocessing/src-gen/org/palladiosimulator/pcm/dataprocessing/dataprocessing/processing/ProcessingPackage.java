@@ -1863,6 +1863,97 @@ public interface ProcessingPackage extends EPackage
 	int PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION_FEATURE_COUNT = DATA_OPERATION_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.DeleteDataOperationImpl <em>Delete Data Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.DeleteDataOperationImpl
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getDeleteDataOperation()
+	 * @generated
+	 */
+	int DELETE_DATA_OPERATION = 20;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_DATA_OPERATION__ID = CONSUME_DATA_OPERATION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_DATA_OPERATION__ENTITY_NAME = CONSUME_DATA_OPERATION__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Container</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_DATA_OPERATION__CONTAINER = CONSUME_DATA_OPERATION__CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_DATA_OPERATION__INCOMING_DATA = CONSUME_DATA_OPERATION__INCOMING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Processing Effect Provider</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER = CONSUME_DATA_OPERATION__PROCESSING_EFFECT_PROVIDER;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_DATA_OPERATION__OUTGOING_DATA = CONSUME_DATA_OPERATION__OUTGOING_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Consumed Data</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_DATA_OPERATION__CONSUMED_DATA = CONSUME_DATA_OPERATION__CONSUMED_DATA;
+
+	/**
+	 * The feature id for the '<em><b>Store</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_DATA_OPERATION__STORE = CONSUME_DATA_OPERATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Delete Data Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_DATA_OPERATION_FEATURE_COUNT = CONSUME_DATA_OPERATION_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CharacteristicChangeOperation <em>Characteristic Change Operation</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1870,7 +1961,7 @@ public interface ProcessingPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getCharacteristicChangeOperation()
 	 * @generated
 	 */
-	int CHARACTERISTIC_CHANGE_OPERATION = 20;
+	int CHARACTERISTIC_CHANGE_OPERATION = 21;
 
 
 	/**
@@ -2327,6 +2418,27 @@ public interface ProcessingPackage extends EPackage
 	EReference getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectOperationType();
 
 	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DeleteDataOperation <em>Delete Data Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete Data Operation</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DeleteDataOperation
+	 * @generated
+	 */
+	EClass getDeleteDataOperation();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DeleteDataOperation#getStore <em>Store</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Store</em>'.
+	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DeleteDataOperation#getStore()
+	 * @see #getDeleteDataOperation()
+	 * @generated
+	 */
+	EReference getDeleteDataOperation_Store();
+
+	/**
 	 * Returns the meta object for enum '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CharacteristicChangeOperation <em>Characteristic Change Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2742,6 +2854,24 @@ public interface ProcessingPackage extends EPackage
 		 * @generated
 		 */
 		EReference PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE = eINSTANCE.getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectOperationType();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.DeleteDataOperationImpl <em>Delete Data Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.DeleteDataOperationImpl
+		 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.impl.ProcessingPackageImpl#getDeleteDataOperation()
+		 * @generated
+		 */
+		EClass DELETE_DATA_OPERATION = eINSTANCE.getDeleteDataOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Store</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DELETE_DATA_OPERATION__STORE = eINSTANCE.getDeleteDataOperation_Store();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CharacteristicChangeOperation <em>Characteristic Change Operation</em>}' enum.

@@ -310,6 +310,18 @@ public class ProcessingSwitch<T1> extends Switch<T1>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ProcessingPackage.DELETE_DATA_OPERATION:
+			{
+				DeleteDataOperation deleteDataOperation = (DeleteDataOperation)theEObject;
+				T1 result = caseDeleteDataOperation(deleteDataOperation);
+				if (result == null) result = caseConsumeDataOperation(deleteDataOperation);
+				if (result == null) result = caseDataOperation(deleteDataOperation);
+				if (result == null) result = caseEntity(deleteDataOperation);
+				if (result == null) result = caseIdentifier(deleteDataOperation);
+				if (result == null) result = caseNamedElement(deleteDataOperation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -630,6 +642,22 @@ public class ProcessingSwitch<T1> extends Switch<T1>
 	 * @generated
 	 */
 	public T1 caseProcessingEffectOperationTypeSpecifyingOperation(ProcessingEffectOperationTypeSpecifyingOperation object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Delete Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Delete Data Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseDeleteDataOperation(DeleteDataOperation object)
 	{
 		return null;
 	}

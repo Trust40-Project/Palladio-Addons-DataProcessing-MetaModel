@@ -47,6 +47,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.Consum
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.CreateDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataProcessingContainer;
+import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DeleteDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.EffectSpecifyingTransformDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.JoinDataOperation;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.LoadAllDataOperation;
@@ -222,6 +223,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * @generated
 	 */
 	private EClass processingEffectOperationTypeSpecifyingOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deleteDataOperationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -772,6 +780,26 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getDeleteDataOperation()
+	{
+		return deleteDataOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDeleteDataOperation_Store()
+	{
+		return (EReference)deleteDataOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getCharacteristicChangeOperation()
 	{
 		return characteristicChangeOperationEEnum;
@@ -870,6 +898,9 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		processingEffectOperationTypeSpecifyingOperationEClass = createEClass(PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION);
 		createEReference(processingEffectOperationTypeSpecifyingOperationEClass, PROCESSING_EFFECT_OPERATION_TYPE_SPECIFYING_OPERATION__PROCESSING_EFFECT_OPERATION_TYPE);
 
+		deleteDataOperationEClass = createEClass(DELETE_DATA_OPERATION);
+		createEReference(deleteDataOperationEClass, DELETE_DATA_OPERATION__STORE);
+
 		// Create enums
 		characteristicChangeOperationEEnum = createEEnum(CHARACTERISTIC_CHANGE_OPERATION);
 	}
@@ -935,6 +966,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		effectSpecifyingTransformDataOperationEClass.getESuperTypes().add(this.getTransformDataOperation());
 		effectSpecifyingTransformDataOperationEClass.getESuperTypes().add(this.getProcessingEffectOperationTypeSpecifyingOperation());
 		processingEffectOperationTypeSpecifyingOperationEClass.getESuperTypes().add(this.getDataOperation());
+		deleteDataOperationEClass.getESuperTypes().add(this.getConsumeDataOperation());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(dataProcessingContainerEClass, DataProcessingContainer.class, "DataProcessingContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1023,6 +1055,9 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 
 		initEClass(processingEffectOperationTypeSpecifyingOperationEClass, ProcessingEffectOperationTypeSpecifyingOperation.class, "ProcessingEffectOperationTypeSpecifyingOperation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProcessingEffectOperationTypeSpecifyingOperation_ProcessingEffectOperationType(), theEffectspecificationPackage.getProcessingEffectOperationType(), null, "processingEffectOperationType", null, 1, 1, ProcessingEffectOperationTypeSpecifyingOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(deleteDataOperationEClass, DeleteDataOperation.class, "DeleteDataOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDeleteDataOperation_Store(), theRepositoryPackage.getStore(), null, "store", null, 1, 1, DeleteDataOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(characteristicChangeOperationEEnum, CharacteristicChangeOperation.class, "CharacteristicChangeOperation");
