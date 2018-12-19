@@ -716,7 +716,20 @@
     <eClassifiers
         xsi:type="ecore:EClass"
         name="EffectSpecifyingTransformDataOperation"
-        eSuperTypes="#//processing/TransformDataOperation #//processing/ProcessingEffectOperationTypeSpecifyingOperation"/>
+        eSuperTypes="#//processing/TransformDataOperation #//processing/ProcessingEffectOperationTypeSpecifyingOperation">
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/Ecore">
+        <details
+            key="constraints"
+            value="noParameters"/>
+      </eAnnotations>
+      <eAnnotations
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details
+            key="noParameters"
+            value="self.parameterData->isEmpty()"/>
+      </eAnnotations>
+    </eClassifiers>
     <eClassifiers
         xsi:type="ecore:EClass"
         name="ProcessingEffectOperationTypeSpecifyingOperation"

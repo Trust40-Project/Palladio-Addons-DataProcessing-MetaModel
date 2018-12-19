@@ -1153,6 +1153,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   {
 			   "constraints", "inputAndOutputHaveSameEntityType"
 		   });
+		addAnnotation
+		  (effectSpecifyingTransformDataOperationEClass,
+		   source,
+		   new String[]
+		   {
+			   "constraints", "noParameters"
+		   });
 	}
 
 	/**
@@ -1332,6 +1339,13 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   new String[]
 		   {
 			   "body", "self.determineIncomingData()"
+		   });
+		addAnnotation
+		  (effectSpecifyingTransformDataOperationEClass,
+		   source,
+		   new String[]
+		   {
+			   "noParameters", "self.parameterData->isEmpty()"
 		   });
 	}
 

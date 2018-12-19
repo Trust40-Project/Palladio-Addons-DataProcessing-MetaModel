@@ -867,7 +867,38 @@ public class ProcessingValidator extends EObjectValidator
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique((EObject)effectSpecifyingTransformDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= identifierValidator.validateIdentifier_identifierIsUnique(effectSpecifyingTransformDataOperation, diagnostics, context);
 		if (result || diagnostics != null) result &= validateDataOperation_outgoingDataIsUsed(effectSpecifyingTransformDataOperation, diagnostics, context);
+		if (result || diagnostics != null) result &= validateEffectSpecifyingTransformDataOperation_noParameters(effectSpecifyingTransformDataOperation, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * The cached validation expression for the noParameters constraint of '<em>Effect Specifying Transform Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__NO_PARAMETERS__EEXPRESSION = "self.parameterData->isEmpty()";
+
+	/**
+	 * Validates the noParameters constraint of '<em>Effect Specifying Transform Data Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateEffectSpecifyingTransformDataOperation_noParameters(EffectSpecifyingTransformDataOperation effectSpecifyingTransformDataOperation, DiagnosticChain diagnostics, Map<Object, Object> context)
+	{
+		return
+			validate
+				(ProcessingPackage.Literals.EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION,
+				 (EObject)effectSpecifyingTransformDataOperation,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "noParameters",
+				 EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__NO_PARAMETERS__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**

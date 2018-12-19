@@ -10,7 +10,8 @@ package org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing;
  *
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getEffectSpecifyingTransformDataOperation()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='noParameters'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot noParameters='self.parameterData-&gt;isEmpty()'"
  * @generated
  */
 public interface EffectSpecifyingTransformDataOperation extends TransformDataOperation, ProcessingEffectOperationTypeSpecifyingOperation
