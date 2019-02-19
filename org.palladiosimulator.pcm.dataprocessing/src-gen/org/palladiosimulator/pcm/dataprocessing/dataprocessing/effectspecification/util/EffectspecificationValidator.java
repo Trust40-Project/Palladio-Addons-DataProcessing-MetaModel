@@ -249,7 +249,7 @@ public class EffectspecificationValidator extends EObjectValidator
 				 (EObject)dataCreationProcessingEffect,
 				 diagnostics,
 				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "fromDataTypeHasToBeUndefined",
 				 DATA_CREATION_PROCESSING_EFFECT__FROM_DATA_TYPE_HAS_TO_BE_UNDEFINED__EEXPRESSION,
 				 Diagnostic.ERROR,

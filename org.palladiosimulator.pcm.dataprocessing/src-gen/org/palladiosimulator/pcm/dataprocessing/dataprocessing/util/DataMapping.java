@@ -21,7 +21,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.UtilPackage#getDataMapping()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='dataTypesMustBeTheSame'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot dataTypesMustBeTheSame='from.type = to.type'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL dataTypesMustBeTheSame='from.type = to.type'"
  * @generated
  */
 public interface DataMapping extends Identifier

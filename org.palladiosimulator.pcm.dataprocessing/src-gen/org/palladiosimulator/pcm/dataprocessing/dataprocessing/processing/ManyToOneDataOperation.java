@@ -71,7 +71,7 @@ public interface ManyToOneDataOperation extends DataOperation
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.consumedData-&gt;asSet()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.consumedData-&gt;asSet()'"
 	 * @generated
 	 */
 	EList<Data> determineIncomingData();
@@ -80,7 +80,7 @@ public interface ManyToOneDataOperation extends DataOperation
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.resultingData-&gt;asSet()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.resultingData-&gt;asSet()'"
 	 * @generated
 	 */
 	EList<Data> determineOutgoingData();

@@ -1068,8 +1068,8 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
-		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
-		createPivotAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL
+		createOCLAnnotations();
 	}
 
 	/**
@@ -1086,9 +1086,9 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   source,
 		   new String[]
 		   {
-			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
 		   });
 		addAnnotation
 		  (dataOperationEClass,
@@ -1163,14 +1163,21 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 	}
 
 	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createPivotAnnotations()
+	protected void createOCLAnnotations()
 	{
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[]
+		   {
+			   "environmentFactoryClass", "org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"
+		   });
 		addAnnotation
 		  (dataOperationEClass,
 		   source,
@@ -1204,7 +1211,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   source,
 		   new String[]
 		   {
-			   "derivation", "self.container.oclContainer.oclAsType(dataprocessing::effectspecification::ProcessingEffectProvider)"
+			   "derivation", "self.container.oclAsType(ecore::EObject).eContainer().oclAsType(dataprocessing::effectspecification::ProcessingEffectProvider)"
 		   });
 		addAnnotation
 		  (getDataOperation_OutgoingData(),
@@ -1232,7 +1239,7 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   source,
 		   new String[]
 		   {
-			   "resultTypeMustBeCollection", "self.resultingData.type.oclIsKindOf(repository_1::CollectionDataType)"
+			   "resultTypeMustBeCollection", "self.resultingData.type.oclIsKindOf(pcm::repository::CollectionDataType)"
 		   });
 		addAnnotation
 		  (performDataTransmissionOperationEClass,
@@ -1288,14 +1295,14 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   source,
 		   new String[]
 		   {
-			   "resultMustBeCompositeOfInputs", "\n\t\t\t\tlet resultInnerDeclarationTypes = self.resultingData.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration in\n\t\t\t\t\tlet consumedDataTypes = self.consumedData.type in\n\t\t\t\t\t\tresultInnerDeclarationTypes->asSet() = consumedDataTypes->asSet()"
+			   "resultMustBeCompositeOfInputs", "self.resultingData.type.oclAsType(pcm::repository::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->asSet() = self.consumedData.type->asSet()"
 		   });
 		addAnnotation
 		  (unionDataOperationEClass,
 		   source,
 		   new String[]
 		   {
-			   "inputsMustBeResultTypeOrResultEntityType", "\n\t\t\t\tlet entityType = self.resultingData.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType in\n\t\t\t\t\tself.consumedData.type->forAll(t |\n\t\t\t\t\t\tt = entityType or t.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType = entityType)"
+			   "inputsMustBeResultTypeOrResultEntityType", "self.consumedData.type->forAll(t |\n\tt = self.resultingData.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType or\n\tt.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType = self.resultingData.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType)"
 		   });
 		addAnnotation
 		  (transformDataOperationEClass.getEOperations().get(0),
@@ -1317,14 +1324,14 @@ public class ProcessingPackageImpl extends EPackageImpl implements ProcessingPac
 		   new String[]
 		   {
 			   "noParameters", "self.parameterData->isEmpty()",
-			   "outputIsComposedInInput", "self.input.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)"
+			   "outputIsComposedInInput", "self.input.type.oclAsType(pcm::repository::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)"
 		   });
 		addAnnotation
 		  (selectionDataOperationEClass,
 		   source,
 		   new String[]
 		   {
-			   "inputAndOutputHaveSameEntityType", "self.input.type->oclAsSet() = self.output.type->oclAsSet() or self.input.type.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()"
+			   "inputAndOutputHaveSameEntityType", "self.input.type->oclAsSet() = self.output.type->oclAsSet() or self.input.type.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()"
 		   });
 		addAnnotation
 		  (characteristicChangingDataOperationEClass.getEOperations().get(0),

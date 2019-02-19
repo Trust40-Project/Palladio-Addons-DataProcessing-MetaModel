@@ -28,7 +28,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecificati
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getDataOperation()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='outgoingDataIsUsed'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot outgoingDataIsUsed='self.outgoingData-&gt;size() = 0 or DataOperation.allInstances()-&gt;select(do | do.incomingData-&gt;exists(inData | self.outgoingData-&gt;includes(inData)))-&gt;excluding(self)-&gt;size() &gt; 0'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL outgoingDataIsUsed='self.outgoingData-&gt;size() = 0 or DataOperation.allInstances()-&gt;select(do | do.incomingData-&gt;exists(inData | self.outgoingData-&gt;includes(inData)))-&gt;excluding(self)-&gt;size() &gt; 0'"
  * @generated
  */
 public interface DataOperation extends Entity
@@ -73,7 +73,7 @@ public interface DataOperation extends Entity
 	 * @return the value of the '<em>Incoming Data</em>' reference list.
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getDataOperation_IncomingData()
 	 * @model transient="true" changeable="false" volatile="true" derived="true" ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='determineIncomingData()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='determineIncomingData()'"
 	 * @generated
 	 */
 	EList<Data> getIncomingData();
@@ -89,7 +89,7 @@ public interface DataOperation extends Entity
 	 * @return the value of the '<em>Processing Effect Provider</em>' reference.
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getDataOperation_ProcessingEffectProvider()
 	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='self.container.oclContainer.oclAsType(dataprocessing::effectspecification::ProcessingEffectProvider)'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='self.container.oclAsType(ecore::EObject).eContainer().oclAsType(dataprocessing::effectspecification::ProcessingEffectProvider)'"
 	 * @generated
 	 */
 	ProcessingEffectProvider getProcessingEffectProvider();
@@ -106,7 +106,7 @@ public interface DataOperation extends Entity
 	 * @return the value of the '<em>Outgoing Data</em>' reference list.
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getDataOperation_OutgoingData()
 	 * @model transient="true" changeable="false" volatile="true" derived="true" ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='determineOutgoingData()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='determineOutgoingData()'"
 	 * @generated
 	 */
 	EList<Data> getOutgoingData();
@@ -115,7 +115,7 @@ public interface DataOperation extends Entity
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.oclAsSet()-&gt;selectByType(dataprocessing::data::Data)'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.oclAsSet()-&gt;selectByType(dataprocessing::data::Data)'"
 	 * @generated
 	 */
 	EList<Data> determineIncomingData();
@@ -124,7 +124,7 @@ public interface DataOperation extends Entity
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.oclAsSet()-&gt;selectByType(dataprocessing::data::Data)'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.oclAsSet()-&gt;selectByType(dataprocessing::data::Data)'"
 	 * @generated
 	 */
 	EList<Data> determineOutgoingData();

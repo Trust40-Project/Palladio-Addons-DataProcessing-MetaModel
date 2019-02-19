@@ -53,7 +53,7 @@ public interface ParameterBasedData extends Data
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='parameter.dataType__Parameter'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='parameter.dataType__Parameter'"
 	 * @generated
 	 */
 	DataType determineDataType();

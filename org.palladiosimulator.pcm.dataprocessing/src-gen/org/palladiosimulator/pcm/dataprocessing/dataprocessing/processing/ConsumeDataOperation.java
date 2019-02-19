@@ -21,7 +21,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.Data;
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getConsumeDataOperation()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='noDataEmission'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot noDataEmission='self.outgoingData-&gt;size() = 0'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL noDataEmission='self.outgoingData-&gt;size() = 0'"
  * @generated
  */
 public interface ConsumeDataOperation extends DataOperation
@@ -56,7 +56,7 @@ public interface ConsumeDataOperation extends DataOperation
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.consumedData-&gt;asSet()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.consumedData-&gt;asSet()'"
 	 * @generated
 	 */
 	EList<Data> determineIncomingData();

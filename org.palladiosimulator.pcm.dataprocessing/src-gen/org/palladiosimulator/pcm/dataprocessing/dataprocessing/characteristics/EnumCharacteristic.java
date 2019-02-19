@@ -19,7 +19,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage#getEnumCharacteristic()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='valueCountMustMatchTypeRestriction literalsMustBelongToCorrectEnum'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot valueCountMustMatchTypeRestriction='self.literals-&gt;size() &lt; 2 or self.type.multipleChoice' literalsMustBelongToCorrectEnum='self.type.enum.literals-&gt;includesAll(self.literals)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL valueCountMustMatchTypeRestriction='self.literals-&gt;size() &lt; 2 or self.type.multipleChoice' literalsMustBelongToCorrectEnum='self.type.enum.literals-&gt;includesAll(self.literals)'"
  * @generated
  */
 public interface EnumCharacteristic extends Characteristic
@@ -52,7 +52,7 @@ public interface EnumCharacteristic extends Characteristic
 	 * @see #setType(EnumCharacteristicType)
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage#getEnumCharacteristic_Type()
 	 * @model transient="true" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='let type = self.characteristicType\n\t\t\t\tin if type.oclIsUndefined() or not type.oclIsKindOf(EnumCharacteristicType)\n\t\t\t\tthen null\n\t\t\t\telse type.oclAsType(EnumCharacteristicType)\n\t\t\t\tendif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='if self.characteristicType.oclIsUndefined() or not self.characteristicType.oclIsKindOf(EnumCharacteristicType) then\n\tnull\nelse\n\tself.characteristicType.oclAsType(EnumCharacteristicType)\nendif'"
 	 * @generated
 	 */
 	EnumCharacteristicType getType();

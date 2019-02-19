@@ -215,7 +215,7 @@ public class ProcessingValidator extends EObjectValidator
 				 (EObject)dataOperation,
 				 diagnostics,
 				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "outgoingDataIsUsed",
 				 DATA_OPERATION__OUTGOING_DATA_IS_USED__EEXPRESSION,
 				 Diagnostic.ERROR,
@@ -288,7 +288,7 @@ public class ProcessingValidator extends EObjectValidator
 				 (EObject)loadDataOperation,
 				 diagnostics,
 				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "noManualCharacteristics",
 				 LOAD_DATA_OPERATION__NO_MANUAL_CHARACTERISTICS__EEXPRESSION,
 				 Diagnostic.ERROR,
@@ -325,7 +325,7 @@ public class ProcessingValidator extends EObjectValidator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String LOAD_ALL_DATA_OPERATION__RESULT_TYPE_MUST_BE_COLLECTION__EEXPRESSION = "self.resultingData.type.oclIsKindOf(repository_1::CollectionDataType)";
+	protected static final String LOAD_ALL_DATA_OPERATION__RESULT_TYPE_MUST_BE_COLLECTION__EEXPRESSION = "self.resultingData.type.oclIsKindOf(pcm::repository::CollectionDataType)";
 
 	/**
 	 * Validates the resultTypeMustBeCollection constraint of '<em>Load All Data Operation</em>'.
@@ -341,7 +341,7 @@ public class ProcessingValidator extends EObjectValidator
 				 (EObject)loadAllDataOperation,
 				 diagnostics,
 				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "resultTypeMustBeCollection",
 				 LOAD_ALL_DATA_OPERATION__RESULT_TYPE_MUST_BE_COLLECTION__EEXPRESSION,
 				 Diagnostic.ERROR,
@@ -393,7 +393,7 @@ public class ProcessingValidator extends EObjectValidator
 				 (EObject)performDataTransmissionOperation,
 				 diagnostics,
 				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "outputMappingsAndOutputDataHasToMatch",
 				 PERFORM_DATA_TRANSMISSION_OPERATION__OUTPUT_MAPPINGS_AND_OUTPUT_DATA_HAS_TO_MATCH__EEXPRESSION,
 				 Diagnostic.ERROR,
@@ -445,7 +445,7 @@ public class ProcessingValidator extends EObjectValidator
 				 (EObject)consumeDataOperation,
 				 diagnostics,
 				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "noDataEmission",
 				 CONSUME_DATA_OPERATION__NO_DATA_EMISSION__EEXPRESSION,
 				 Diagnostic.ERROR,
@@ -590,10 +590,7 @@ public class ProcessingValidator extends EObjectValidator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String JOIN_DATA_OPERATION__RESULT_MUST_BE_COMPOSITE_OF_INPUTS__EEXPRESSION = "\n" +
-		"\t\t\t\tlet resultInnerDeclarationTypes = self.resultingData.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration in\n" +
-		"\t\t\t\t\tlet consumedDataTypes = self.consumedData.type in\n" +
-		"\t\t\t\t\t\tresultInnerDeclarationTypes->asSet() = consumedDataTypes->asSet()";
+	protected static final String JOIN_DATA_OPERATION__RESULT_MUST_BE_COMPOSITE_OF_INPUTS__EEXPRESSION = "self.resultingData.type.oclAsType(pcm::repository::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->asSet() = self.consumedData.type->asSet()";
 
 	/**
 	 * Validates the resultMustBeCompositeOfInputs constraint of '<em>Join Data Operation</em>'.
@@ -609,7 +606,7 @@ public class ProcessingValidator extends EObjectValidator
 				 (EObject)joinDataOperation,
 				 diagnostics,
 				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "resultMustBeCompositeOfInputs",
 				 JOIN_DATA_OPERATION__RESULT_MUST_BE_COMPOSITE_OF_INPUTS__EEXPRESSION,
 				 Diagnostic.ERROR,
@@ -645,10 +642,9 @@ public class ProcessingValidator extends EObjectValidator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String UNION_DATA_OPERATION__INPUTS_MUST_BE_RESULT_TYPE_OR_RESULT_ENTITY_TYPE__EEXPRESSION = "\n" +
-		"\t\t\t\tlet entityType = self.resultingData.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType in\n" +
-		"\t\t\t\t\tself.consumedData.type->forAll(t |\n" +
-		"\t\t\t\t\t\tt = entityType or t.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType = entityType)";
+	protected static final String UNION_DATA_OPERATION__INPUTS_MUST_BE_RESULT_TYPE_OR_RESULT_ENTITY_TYPE__EEXPRESSION = "self.consumedData.type->forAll(t |\n" +
+		"\tt = self.resultingData.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType or\n" +
+		"\tt.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType = self.resultingData.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType)";
 
 	/**
 	 * Validates the inputsMustBeResultTypeOrResultEntityType constraint of '<em>Union Data Operation</em>'.
@@ -664,7 +660,7 @@ public class ProcessingValidator extends EObjectValidator
 				 (EObject)unionDataOperation,
 				 diagnostics,
 				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "inputsMustBeResultTypeOrResultEntityType",
 				 UNION_DATA_OPERATION__INPUTS_MUST_BE_RESULT_TYPE_OR_RESULT_ENTITY_TYPE__EEXPRESSION,
 				 Diagnostic.ERROR,
@@ -738,7 +734,7 @@ public class ProcessingValidator extends EObjectValidator
 				 (EObject)projectionDataOperation,
 				 diagnostics,
 				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "noParameters",
 				 PROJECTION_DATA_OPERATION__NO_PARAMETERS__EEXPRESSION,
 				 Diagnostic.ERROR,
@@ -752,7 +748,7 @@ public class ProcessingValidator extends EObjectValidator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String PROJECTION_DATA_OPERATION__OUTPUT_IS_COMPOSED_IN_INPUT__EEXPRESSION = "self.input.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)";
+	protected static final String PROJECTION_DATA_OPERATION__OUTPUT_IS_COMPOSED_IN_INPUT__EEXPRESSION = "self.input.type.oclAsType(pcm::repository::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)";
 
 	/**
 	 * Validates the outputIsComposedInInput constraint of '<em>Projection Data Operation</em>'.
@@ -768,7 +764,7 @@ public class ProcessingValidator extends EObjectValidator
 				 (EObject)projectionDataOperation,
 				 diagnostics,
 				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "outputIsComposedInInput",
 				 PROJECTION_DATA_OPERATION__OUTPUT_IS_COMPOSED_IN_INPUT__EEXPRESSION,
 				 Diagnostic.ERROR,
@@ -804,7 +800,7 @@ public class ProcessingValidator extends EObjectValidator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String SELECTION_DATA_OPERATION__INPUT_AND_OUTPUT_HAVE_SAME_ENTITY_TYPE__EEXPRESSION = "self.input.type->oclAsSet() = self.output.type->oclAsSet() or self.input.type.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()";
+	protected static final String SELECTION_DATA_OPERATION__INPUT_AND_OUTPUT_HAVE_SAME_ENTITY_TYPE__EEXPRESSION = "self.input.type->oclAsSet() = self.output.type->oclAsSet() or self.input.type.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()";
 
 	/**
 	 * Validates the inputAndOutputHaveSameEntityType constraint of '<em>Selection Data Operation</em>'.
@@ -820,7 +816,7 @@ public class ProcessingValidator extends EObjectValidator
 				 (EObject)selectionDataOperation,
 				 diagnostics,
 				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "inputAndOutputHaveSameEntityType",
 				 SELECTION_DATA_OPERATION__INPUT_AND_OUTPUT_HAVE_SAME_ENTITY_TYPE__EEXPRESSION,
 				 Diagnostic.ERROR,
@@ -893,7 +889,7 @@ public class ProcessingValidator extends EObjectValidator
 				 (EObject)effectSpecifyingTransformDataOperation,
 				 diagnostics,
 				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "noParameters",
 				 EFFECT_SPECIFYING_TRANSFORM_DATA_OPERATION__NO_PARAMETERS__EEXPRESSION,
 				 Diagnostic.ERROR,

@@ -8,31 +8,22 @@
     nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/"
     nsPrefix="dataprocessing">
   <eAnnotations
-      source="http://www.eclipse.org/OCL/Import">
-    <details
-        key="entity"
-        value="http://palladiosimulator.org/PalladioComponentModel/Core/Entity/5.2"/>
-    <details
-        key="identifier"
-        value="http://sdq.ipd.uka.de/Identifier/2.1"/>
-    <details
-        key="repository_1"
-        value="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2"/>
-    <details
-        key="seff_1"
-        value="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2"/>
-  </eAnnotations>
-  <eAnnotations
       source="http://www.eclipse.org/emf/2002/Ecore">
     <details
         key="invocationDelegates"
-        value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+        value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     <details
         key="settingDelegates"
-        value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+        value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     <details
         key="validationDelegates"
-        value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+        value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+  </eAnnotations>
+  <eAnnotations
+      source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+    <details
+        key="environmentFactoryClass"
+        value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
   </eAnnotations>
   <eClassifiers
       xsi:type="ecore:EClass"
@@ -44,10 +35,10 @@
         upperBound="-1"
         eType="#//effectspecification/ProcessingEffect">
       <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details
             key="body"
-            value="let extensionEffects = extensions->selectByKind(dataprocessing::effectspecification::ProcessingEffectSpecification).processingEffects->asSet() in&#xA;&#x9;&#x9;&#x9;&#x9;let externalEffects = externalDataProcessingEffects.processingEffects->asSet() in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;externalEffects->union(extensionEffects)"/>
+            value="externalDataProcessingEffects.processingEffects->asSet()->union(extensions->selectByKind(dataprocessing::effectspecification::ProcessingEffectSpecification).processingEffects->asSet())"/>
       </eAnnotations>
     </eOperations>
     <eStructuralFeatures
@@ -126,13 +117,19 @@
         source="http://www.eclipse.org/emf/2002/Ecore">
       <details
           key="invocationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details
           key="settingDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details
           key="validationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    </eAnnotations>
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details
+          key="environmentFactoryClass"
+          value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
     </eAnnotations>
     <eClassifiers
         xsi:type="ecore:EClass"
@@ -187,13 +184,19 @@
         source="http://www.eclipse.org/emf/2002/Ecore">
       <details
           key="invocationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details
           key="settingDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details
           key="validationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    </eAnnotations>
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details
+          key="environmentFactoryClass"
+          value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
     </eAnnotations>
     <eClassifiers
         xsi:type="ecore:EClass"
@@ -219,7 +222,7 @@
             value="outgoingDataIsUsed"/>
       </eAnnotations>
       <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details
             key="outgoingDataIsUsed"
             value="self.outgoingData->size() = 0 or DataOperation.allInstances()->select(do | do.incomingData->exists(inData | self.outgoingData->includes(inData)))->excluding(self)->size() > 0"/>
@@ -230,7 +233,7 @@
           upperBound="-1"
           eType="#//data/Data">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="self.oclAsSet()->selectByType(dataprocessing::data::Data)"/>
@@ -242,7 +245,7 @@
           upperBound="-1"
           eType="#//data/Data">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="self.oclAsSet()->selectByType(dataprocessing::data::Data)"/>
@@ -264,7 +267,7 @@
           transient="true"
           derived="true">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="derivation"
               value="determineIncomingData()"/>
@@ -280,10 +283,10 @@
           transient="true"
           derived="true">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="derivation"
-              value="self.container.oclContainer.oclAsType(dataprocessing::effectspecification::ProcessingEffectProvider)"/>
+              value="self.container.oclAsType(ecore::EObject).eContainer().oclAsType(dataprocessing::effectspecification::ProcessingEffectProvider)"/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures
@@ -297,7 +300,7 @@
           transient="true"
           derived="true">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="derivation"
               value="determineOutgoingData()"/>
@@ -314,7 +317,7 @@
           upperBound="-1"
           eType="#//data/Data">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="self.resultingData.oclAsSet()"/>
@@ -344,7 +347,7 @@
             value="noManualCharacteristics"/>
       </eAnnotations>
       <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details
             key="noManualCharacteristics"
             value="self.initialCharacteristics->size() = 0"/>
@@ -366,10 +369,10 @@
             value="resultTypeMustBeCollection"/>
       </eAnnotations>
       <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details
             key="resultTypeMustBeCollection"
-            value="self.resultingData.type.oclIsKindOf(repository_1::CollectionDataType)"/>
+            value="self.resultingData.type.oclIsKindOf(pcm::repository::CollectionDataType)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers
@@ -383,7 +386,7 @@
             value="outputMappingsAndOutputDataHasToMatch"/>
       </eAnnotations>
       <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details
             key="outputMappingsAndOutputDataHasToMatch"
             value="outputMappings.to->asSet() = outputData->asSet()"/>
@@ -394,7 +397,7 @@
           upperBound="-1"
           eType="#//data/Data">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="self.outputMappings.to->asSet()"/>
@@ -406,7 +409,7 @@
           upperBound="-1"
           eType="#//data/Data">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="self.inputMappings.from->asSet()"/>
@@ -443,7 +446,7 @@
             value="noDataEmission"/>
       </eAnnotations>
       <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details
             key="noDataEmission"
             value="self.outgoingData->size() = 0"/>
@@ -454,7 +457,7 @@
           upperBound="-1"
           eType="#//data/Data">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="self.consumedData->asSet()"/>
@@ -505,7 +508,7 @@
           upperBound="-1"
           eType="#//data/Data">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="self.consumedData->asSet()"/>
@@ -517,7 +520,7 @@
           upperBound="-1"
           eType="#//data/Data">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="self.resultingData->asSet()"/>
@@ -547,10 +550,10 @@
             value="resultMustBeCompositeOfInputs"/>
       </eAnnotations>
       <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details
             key="resultMustBeCompositeOfInputs"
-            value="&#xA;&#x9;&#x9;&#x9;&#x9;let resultInnerDeclarationTypes = self.resultingData.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;let consumedDataTypes = self.consumedData.type in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;resultInnerDeclarationTypes->asSet() = consumedDataTypes->asSet()"/>
+            value="self.resultingData.type.oclAsType(pcm::repository::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->asSet() = self.consumedData.type->asSet()"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers
@@ -564,10 +567,10 @@
             value="inputsMustBeResultTypeOrResultEntityType"/>
       </eAnnotations>
       <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details
             key="inputsMustBeResultTypeOrResultEntityType"
-            value="&#xA;&#x9;&#x9;&#x9;&#x9;let entityType = self.resultingData.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;self.consumedData.type->forAll(t |&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;t = entityType or t.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType = entityType)"/>
+            value="self.consumedData.type->forAll(t |&#xA;&#x9;t = self.resultingData.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType or&#xA;&#x9;t.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType = self.resultingData.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers
@@ -581,7 +584,7 @@
           upperBound="-1"
           eType="#//data/Data">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="self.input->asSet()->union(self.parameterData)"/>
@@ -593,7 +596,7 @@
           upperBound="-1"
           eType="#//data/Data">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="self.output->asSet()"/>
@@ -627,13 +630,13 @@
             value="noParameters outputIsComposedInInput"/>
       </eAnnotations>
       <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details
             key="noParameters"
             value="self.parameterData->isEmpty()"/>
         <details
             key="outputIsComposedInInput"
-            value="self.input.type.oclAsType(repository_1::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)"/>
+            value="self.input.type.oclAsType(pcm::repository::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers
@@ -647,10 +650,10 @@
             value="inputAndOutputHaveSameEntityType"/>
       </eAnnotations>
       <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details
             key="inputAndOutputHaveSameEntityType"
-            value="self.input.type->oclAsSet() = self.output.type->oclAsSet() or self.input.type.oclAsType(repository_1::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()"/>
+            value="self.input.type->oclAsSet() = self.output.type->oclAsSet() or self.input.type.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers
@@ -668,7 +671,7 @@
           upperBound="-1"
           eType="#//data/Data">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="self.data.oclAsSet()"/>
@@ -680,7 +683,7 @@
           upperBound="-1"
           eType="#//data/Data">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="self.determineIncomingData()"/>
@@ -724,7 +727,7 @@
             value="noParameters"/>
       </eAnnotations>
       <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details
             key="noParameters"
             value="self.parameterData->isEmpty()"/>
@@ -760,13 +763,19 @@
         source="http://www.eclipse.org/emf/2002/Ecore">
       <details
           key="invocationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details
           key="settingDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details
           key="validationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    </eAnnotations>
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details
+          key="environmentFactoryClass"
+          value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
     </eAnnotations>
     <eClassifiers
         xsi:type="ecore:EClass"
@@ -789,7 +798,7 @@
           transient="true"
           derived="true">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="derivation"
               value="self.characteristicContainers->collect(characteristics)->asOrderedSet()"/>
@@ -829,7 +838,7 @@
           lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="false"/>
@@ -849,10 +858,10 @@
           lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
-              value="let otherType = characteristicType.oclAsType(EnumCharacteristicType) in&#xA;&#x9;multipleChoice = otherType.multipleChoice and&#xA;&#x9;enum = otherType.enum"/>
+              value="multipleChoice = characteristicType.oclAsType(EnumCharacteristicType).multipleChoice and&#xA;enum = characteristicType.oclAsType(EnumCharacteristicType).enum"/>
         </eAnnotations>
         <eParameters
             name="characteristicType"
@@ -908,7 +917,7 @@
             value="valueCountMustMatchTypeRestriction literalsMustBelongToCorrectEnum"/>
       </eAnnotations>
       <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details
             key="valueCountMustMatchTypeRestriction"
             value="self.literals->size() &lt; 2 or self.type.multipleChoice"/>
@@ -929,10 +938,10 @@
           transient="true"
           derived="true">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="derivation"
-              value="let type = self.characteristicType&#xA;&#x9;&#x9;&#x9;&#x9;in if type.oclIsUndefined() or not type.oclIsKindOf(EnumCharacteristicType)&#xA;&#x9;&#x9;&#x9;&#x9;then null&#xA;&#x9;&#x9;&#x9;&#x9;else type.oclAsType(EnumCharacteristicType)&#xA;&#x9;&#x9;&#x9;&#x9;endif"/>
+              value="if self.characteristicType.oclIsUndefined() or not self.characteristicType.oclIsKindOf(EnumCharacteristicType) then&#xA;&#x9;null&#xA;else&#xA;&#x9;self.characteristicType.oclAsType(EnumCharacteristicType)&#xA;endif"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -992,13 +1001,19 @@
         source="http://www.eclipse.org/emf/2002/Ecore">
       <details
           key="invocationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details
           key="settingDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details
           key="validationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    </eAnnotations>
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details
+          key="environmentFactoryClass"
+          value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
     </eAnnotations>
     <eClassifiers
         xsi:type="ecore:EClass"
@@ -1010,7 +1025,7 @@
           lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="null"/>
@@ -1026,7 +1041,7 @@
           transient="true"
           derived="true">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="derivation"
               value="determineDataType()"/>
@@ -1042,7 +1057,7 @@
           lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="originalType"/>
@@ -1063,7 +1078,7 @@
           lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="parameter.dataType__Parameter"/>
@@ -1084,7 +1099,7 @@
           lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="operation.returnType__OperationSignature"/>
@@ -1105,7 +1120,7 @@
           lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="resultingDataType"/>
@@ -1132,7 +1147,7 @@
           lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="refiningDataType"/>
@@ -1153,7 +1168,7 @@
           lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="refiningDataType"/>
@@ -1174,7 +1189,7 @@
           lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="source.type"/>
@@ -1195,13 +1210,19 @@
         source="http://www.eclipse.org/emf/2002/Ecore">
       <details
           key="invocationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details
           key="settingDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details
           key="validationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    </eAnnotations>
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details
+          key="environmentFactoryClass"
+          value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
     </eAnnotations>
     <eClassifiers
         xsi:type="ecore:EClass"
@@ -1214,7 +1235,7 @@
             value="dataTypesMustBeTheSame"/>
       </eAnnotations>
       <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details
             key="dataTypesMustBeTheSame"
             value="from.type = to.type"/>
@@ -1239,13 +1260,19 @@
         source="http://www.eclipse.org/emf/2002/Ecore">
       <details
           key="invocationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details
           key="settingDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
       <details
           key="validationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    </eAnnotations>
+    <eAnnotations
+        source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details
+          key="environmentFactoryClass"
+          value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
     </eAnnotations>
     <eClassifiers
         xsi:type="ecore:EClass"
@@ -1278,7 +1305,7 @@
           lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
               value="false"/>
@@ -1317,10 +1344,10 @@
           lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
-              value="operation.oclIsKindOf(processing::ProcessingEffectOperationTypeSpecifyingOperation) and &#xA;let typedOperation = operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation) in&#xA;&#x9;relevantOperationTypes->includes(typedOperation.processingEffectOperationType) and&#xA;&#x9;(toDataType.oclIsUndefined() or toDataType = resultData.type) and&#xA;&#x9;(fromDataType.oclIsUndefined() or operation.incomingData.type->includes(fromDataType))"/>
+              value="operation.oclIsKindOf(processing::ProcessingEffectOperationTypeSpecifyingOperation) and &#xA;relevantOperationTypes->includes(operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation).processingEffectOperationType) and&#xA;(toDataType.oclIsUndefined() or toDataType = resultData.type) and&#xA;(fromDataType.oclIsUndefined() or operation.incomingData.type->includes(fromDataType))"/>
         </eAnnotations>
         <eParameters
             name="operation"
@@ -1349,7 +1376,7 @@
             value="fromDataTypeHasToBeUndefined"/>
       </eAnnotations>
       <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details
             key="fromDataTypeHasToBeUndefined"
             value="fromDataType.oclIsUndefined()"/>
@@ -1359,10 +1386,10 @@
           lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
-              value="operation.oclIsTypeOf(processing::CreateDataOperation) and&#xA;&#x9;let typedOperation = operation.oclAsType(processing::CreateDataOperation) in&#xA;&#x9;&#x9;toDataType = typedOperation.resultingData.type"/>
+              value="operation.oclIsTypeOf(processing::CreateDataOperation) and&#xA;toDataType = operation.oclAsType(processing::CreateDataOperation).resultingData.type"/>
         </eAnnotations>
         <eParameters
             name="operation"
@@ -1435,10 +1462,10 @@
           upperBound="-1"
           eType="#//effectspecification/ProcessingEffect">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="body"
-              value="self->selectByKind(ProcessingEffect)"/>
+              value="self->selectByKind(dataprocessing::effectspecification::ProcessingEffect)"/>
         </eAnnotations>
       </eOperations>
       <eStructuralFeatures
@@ -1452,7 +1479,7 @@
           transient="true"
           derived="true">
         <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
           <details
               key="derivation"
               value="determineProcessingEffects()"/>

@@ -604,8 +604,8 @@ public class EffectspecificationPackageImpl extends EPackageImpl implements Effe
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
-		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
-		createPivotAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL
+		createOCLAnnotations();
 	}
 
 	/**
@@ -622,9 +622,9 @@ public class EffectspecificationPackageImpl extends EPackageImpl implements Effe
 		   source,
 		   new String[]
 		   {
-			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
 		   });
 		addAnnotation
 		  (dataCreationProcessingEffectEClass,
@@ -636,14 +636,21 @@ public class EffectspecificationPackageImpl extends EPackageImpl implements Effe
 	}
 
 	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createPivotAnnotations()
+	protected void createOCLAnnotations()
 	{
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[]
+		   {
+			   "environmentFactoryClass", "org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"
+		   });
 		addAnnotation
 		  (processingEffectEClass.getEOperations().get(0),
 		   source,
@@ -656,7 +663,7 @@ public class EffectspecificationPackageImpl extends EPackageImpl implements Effe
 		   source,
 		   new String[]
 		   {
-			   "body", "operation.oclIsKindOf(processing::ProcessingEffectOperationTypeSpecifyingOperation) and \nlet typedOperation = operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation) in\n\trelevantOperationTypes->includes(typedOperation.processingEffectOperationType) and\n\t(toDataType.oclIsUndefined() or toDataType = resultData.type) and\n\t(fromDataType.oclIsUndefined() or operation.incomingData.type->includes(fromDataType))"
+			   "body", "operation.oclIsKindOf(processing::ProcessingEffectOperationTypeSpecifyingOperation) and \nrelevantOperationTypes->includes(operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation).processingEffectOperationType) and\n(toDataType.oclIsUndefined() or toDataType = resultData.type) and\n(fromDataType.oclIsUndefined() or operation.incomingData.type->includes(fromDataType))"
 		   });
 		addAnnotation
 		  (dataCreationProcessingEffectEClass,
@@ -670,14 +677,14 @@ public class EffectspecificationPackageImpl extends EPackageImpl implements Effe
 		   source,
 		   new String[]
 		   {
-			   "body", "operation.oclIsTypeOf(processing::CreateDataOperation) and\n\tlet typedOperation = operation.oclAsType(processing::CreateDataOperation) in\n\t\ttoDataType = typedOperation.resultingData.type"
+			   "body", "operation.oclIsTypeOf(processing::CreateDataOperation) and\ntoDataType = operation.oclAsType(processing::CreateDataOperation).resultingData.type"
 		   });
 		addAnnotation
 		  (processingEffectProviderEClass.getEOperations().get(0),
 		   source,
 		   new String[]
 		   {
-			   "body", "self->selectByKind(ProcessingEffect)"
+			   "body", "self->selectByKind(dataprocessing::effectspecification::ProcessingEffect)"
 		   });
 		addAnnotation
 		  (getProcessingEffectProvider_ProcessingEffects(),

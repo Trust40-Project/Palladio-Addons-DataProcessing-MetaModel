@@ -14,7 +14,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.DataOp
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.EffectspecificationPackage#getDataCreationProcessingEffect()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='fromDataTypeHasToBeUndefined'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot fromDataTypeHasToBeUndefined='fromDataType.oclIsUndefined()'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL fromDataTypeHasToBeUndefined='fromDataType.oclIsUndefined()'"
  * @generated
  */
 public interface DataCreationProcessingEffect extends ProcessingEffect
@@ -23,7 +23,7 @@ public interface DataCreationProcessingEffect extends ProcessingEffect
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" operationRequired="true" resultDataRequired="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='operation.oclIsTypeOf(processing::CreateDataOperation) and\n\tlet typedOperation = operation.oclAsType(processing::CreateDataOperation) in\n\t\ttoDataType = typedOperation.resultingData.type'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='operation.oclIsTypeOf(processing::CreateDataOperation) and\ntoDataType = operation.oclAsType(processing::CreateDataOperation).resultingData.type'"
 	 * @generated
 	 */
 	boolean isApplicableTo(DataOperation operation, Data resultData);

@@ -194,7 +194,7 @@ public interface DataSpecification extends ProcessingEffectProvider
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='let extensionEffects = extensions-&gt;selectByKind(dataprocessing::effectspecification::ProcessingEffectSpecification).processingEffects-&gt;asSet() in\n\t\t\t\tlet externalEffects = externalDataProcessingEffects.processingEffects-&gt;asSet() in\n\t\t\t\t\texternalEffects-&gt;union(extensionEffects)'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='externalDataProcessingEffects.processingEffects-&gt;asSet()-&gt;union(extensions-&gt;selectByKind(dataprocessing::effectspecification::ProcessingEffectSpecification).processingEffects-&gt;asSet())'"
 	 * @generated
 	 */
 	EList<ProcessingEffect> determineProcessingEffects();

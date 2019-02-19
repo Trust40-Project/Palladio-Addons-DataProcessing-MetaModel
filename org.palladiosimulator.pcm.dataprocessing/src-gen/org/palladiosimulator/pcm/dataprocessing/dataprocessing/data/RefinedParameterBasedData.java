@@ -52,7 +52,7 @@ public interface RefinedParameterBasedData extends ParameterBasedData
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='refiningDataType'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='refiningDataType'"
 	 * @generated
 	 */
 	DataType determineDataType();

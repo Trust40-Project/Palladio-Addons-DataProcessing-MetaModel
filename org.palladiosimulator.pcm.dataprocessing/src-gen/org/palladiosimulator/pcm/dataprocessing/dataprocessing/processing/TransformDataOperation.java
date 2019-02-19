@@ -98,7 +98,7 @@ public interface TransformDataOperation extends DataOperation
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.input-&gt;asSet()-&gt;union(self.parameterData)'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.input-&gt;asSet()-&gt;union(self.parameterData)'"
 	 * @generated
 	 */
 	EList<Data> determineIncomingData();
@@ -107,7 +107,7 @@ public interface TransformDataOperation extends DataOperation
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.output-&gt;asSet()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.output-&gt;asSet()'"
 	 * @generated
 	 */
 	EList<Data> determineOutgoingData();

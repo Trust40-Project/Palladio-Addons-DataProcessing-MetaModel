@@ -698,8 +698,8 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
-		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
-		createPivotAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL
+		createOCLAnnotations();
 		// http://www.eclipse.org/OCL/Collection
 		createCollectionAnnotations();
 	}
@@ -718,9 +718,9 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		   source,
 		   new String[]
 		   {
-			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
 		   });
 		addAnnotation
 		  (enumCharacteristicEClass,
@@ -732,14 +732,21 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 	}
 
 	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createPivotAnnotations()
+	protected void createOCLAnnotations()
 	{
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[]
+		   {
+			   "environmentFactoryClass", "org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"
+		   });
 		addAnnotation
 		  (getCharacterizable_Characteristics(),
 		   source,
@@ -759,7 +766,7 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		   source,
 		   new String[]
 		   {
-			   "body", "let otherType = characteristicType.oclAsType(EnumCharacteristicType) in\n\tmultipleChoice = otherType.multipleChoice and\n\tenum = otherType.enum"
+			   "body", "multipleChoice = characteristicType.oclAsType(EnumCharacteristicType).multipleChoice and\nenum = characteristicType.oclAsType(EnumCharacteristicType).enum"
 		   });
 		addAnnotation
 		  (enumCharacteristicEClass,
@@ -774,7 +781,7 @@ public class CharacteristicsPackageImpl extends EPackageImpl implements Characte
 		   source,
 		   new String[]
 		   {
-			   "derivation", "let type = self.characteristicType\n\t\t\t\tin if type.oclIsUndefined() or not type.oclIsKindOf(EnumCharacteristicType)\n\t\t\t\tthen null\n\t\t\t\telse type.oclAsType(EnumCharacteristicType)\n\t\t\t\tendif"
+			   "derivation", "if self.characteristicType.oclIsUndefined() or not self.characteristicType.oclIsKindOf(EnumCharacteristicType) then\n\tnull\nelse\n\tself.characteristicType.oclAsType(EnumCharacteristicType)\nendif"
 		   });
 	}
 

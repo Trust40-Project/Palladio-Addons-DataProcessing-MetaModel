@@ -23,8 +23,8 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecificati
  * <!-- end-user-doc -->
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.DataprocessingFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/OCL/Import entity='http://palladiosimulator.org/PalladioComponentModel/Core/Entity/5.2' identifier='http://sdq.ipd.uka.de/Identifier/2.1' repository_1='http://palladiosimulator.org/PalladioComponentModel/Repository/5.2' seff_1='http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL environmentFactoryClass='org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory'"
  * @generated
  */
 public interface DataprocessingPackage extends EPackage

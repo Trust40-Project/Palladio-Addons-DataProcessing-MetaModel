@@ -71,7 +71,7 @@ public interface DerivedData extends Data
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='resultingDataType'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='resultingDataType'"
 	 * @generated
 	 */
 	DataType determineDataType();

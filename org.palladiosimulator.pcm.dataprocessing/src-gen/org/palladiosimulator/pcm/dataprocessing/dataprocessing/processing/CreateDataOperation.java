@@ -73,7 +73,7 @@ public interface CreateDataOperation extends DataOperation
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.resultingData.oclAsSet()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.resultingData.oclAsSet()'"
 	 * @generated
 	 */
 	EList<Data> determineOutgoingData();

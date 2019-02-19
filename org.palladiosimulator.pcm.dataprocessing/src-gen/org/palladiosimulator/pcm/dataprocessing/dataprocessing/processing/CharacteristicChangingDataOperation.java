@@ -114,7 +114,7 @@ public interface CharacteristicChangingDataOperation<T extends CharacteristicTyp
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.data.oclAsSet()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.data.oclAsSet()'"
 	 * @generated
 	 */
 	EList<Data> determineIncomingData();
@@ -123,7 +123,7 @@ public interface CharacteristicChangingDataOperation<T extends CharacteristicTyp
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.determineIncomingData()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.determineIncomingData()'"
 	 * @generated
 	 */
 	EList<Data> determineOutgoingData();

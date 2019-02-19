@@ -35,7 +35,7 @@ public interface Data extends Entity
 	 * @return the value of the '<em>Type</em>' reference.
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.DataPackage#getData_Type()
 	 * @model required="true" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='determineDataType()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='determineDataType()'"
 	 * @generated
 	 */
 	DataType getType();
@@ -44,7 +44,7 @@ public interface Data extends Entity
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='null'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='null'"
 	 * @generated
 	 */
 	DataType determineDataType();

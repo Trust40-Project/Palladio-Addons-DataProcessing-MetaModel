@@ -106,7 +106,7 @@ public interface ProcessingEffect extends Entity
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" operationRequired="true" resultDataRequired="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='false'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='false'"
 	 * @generated
 	 */
 	boolean isApplicableTo(DataOperation operation, Data resultData);

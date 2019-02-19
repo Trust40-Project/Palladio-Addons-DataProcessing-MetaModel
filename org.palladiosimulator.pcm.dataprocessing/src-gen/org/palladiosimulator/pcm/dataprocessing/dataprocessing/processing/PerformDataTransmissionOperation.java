@@ -25,7 +25,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataMapping;
  *
  * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.ProcessingPackage#getPerformDataTransmissionOperation()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='outputMappingsAndOutputDataHasToMatch'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot outputMappingsAndOutputDataHasToMatch='outputMappings.to-&gt;asSet() = outputData-&gt;asSet()'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL outputMappingsAndOutputDataHasToMatch='outputMappings.to-&gt;asSet() = outputData-&gt;asSet()'"
  * @generated
  */
 public interface PerformDataTransmissionOperation extends DataOperation
@@ -82,7 +82,7 @@ public interface PerformDataTransmissionOperation extends DataOperation
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.outputMappings.to-&gt;asSet()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.outputMappings.to-&gt;asSet()'"
 	 * @generated
 	 */
 	EList<Data> determineOutgoingData();
@@ -91,7 +91,7 @@ public interface PerformDataTransmissionOperation extends DataOperation
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self.inputMappings.from-&gt;asSet()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self.inputMappings.from-&gt;asSet()'"
 	 * @generated
 	 */
 	EList<Data> determineIncomingData();

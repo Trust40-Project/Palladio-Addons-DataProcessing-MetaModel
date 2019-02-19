@@ -400,33 +400,10 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		createResource(eNS_URI);
 
 		// Create annotations
-		// http://www.eclipse.org/OCL/Import
-		createImportAnnotations();
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
-		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
-		createPivotAnnotations();
-	}
-
-	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/OCL/Import</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createImportAnnotations()
-	{
-		String source = "http://www.eclipse.org/OCL/Import";
-		addAnnotation
-		  (this,
-		   source,
-		   new String[]
-		   {
-			   "entity", "http://palladiosimulator.org/PalladioComponentModel/Core/Entity/5.2",
-			   "identifier", "http://sdq.ipd.uka.de/Identifier/2.1",
-			   "repository_1", "http://palladiosimulator.org/PalladioComponentModel/Repository/5.2",
-			   "seff_1", "http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2"
-		   });
+		// http://www.eclipse.org/emf/2002/Ecore/OCL
+		createOCLAnnotations();
 	}
 
 	/**
@@ -443,27 +420,34 @@ public class DataprocessingPackageImpl extends EPackageImpl implements Dataproce
 		   source,
 		   new String[]
 		   {
-			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
-			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+			   "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL",
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
 		   });
 	}
 
 	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createPivotAnnotations()
+	protected void createOCLAnnotations()
 	{
-		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[]
+		   {
+			   "environmentFactoryClass", "org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"
+		   });
 		addAnnotation
 		  (dataSpecificationEClass.getEOperations().get(0),
 		   source,
 		   new String[]
 		   {
-			   "body", "let extensionEffects = extensions->selectByKind(dataprocessing::effectspecification::ProcessingEffectSpecification).processingEffects->asSet() in\n\t\t\t\tlet externalEffects = externalDataProcessingEffects.processingEffects->asSet() in\n\t\t\t\t\texternalEffects->union(extensionEffects)"
+			   "body", "externalDataProcessingEffects.processingEffects->asSet()->union(extensions->selectByKind(dataprocessing::effectspecification::ProcessingEffectSpecification).processingEffects->asSet())"
 		   });
 	}
 

@@ -20,7 +20,7 @@ public interface CharacteristicType extends Entity
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" characteristicTypeRequired="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='false'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='false'"
 	 * @generated
 	 */
 	boolean hasCompatibleValueRange(CharacteristicType characteristicType);

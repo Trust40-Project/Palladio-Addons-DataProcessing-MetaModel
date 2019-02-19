@@ -54,7 +54,7 @@ public interface Characterizable extends CDOObject
 	 * @return the value of the '<em>Characteristics</em>' reference list.
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.CharacteristicsPackage#getCharacterizable_Characteristics()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='self.characteristicContainers-&gt;collect(characteristics)-&gt;asOrderedSet()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='self.characteristicContainers-&gt;collect(characteristics)-&gt;asOrderedSet()'"
 	 *        annotation="http://www.eclipse.org/OCL/Collection nullFree='false'"
 	 * @generated
 	 */

@@ -53,7 +53,7 @@ public interface ResultBasedData extends Data
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='operation.returnType__OperationSignature'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='operation.returnType__OperationSignature'"
 	 * @generated
 	 */
 	DataType determineDataType();

@@ -79,7 +79,7 @@ public interface EnumCharacteristicType extends CharacteristicType
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model required="true" characteristicTypeRequired="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='let otherType = characteristicType.oclAsType(EnumCharacteristicType) in\n\tmultipleChoice = otherType.multipleChoice and\n\tenum = otherType.enum'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='multipleChoice = characteristicType.oclAsType(EnumCharacteristicType).multipleChoice and\nenum = characteristicType.oclAsType(EnumCharacteristicType).enum'"
 	 * @generated
 	 */
 	boolean hasCompatibleValueRange(CharacteristicType characteristicType);

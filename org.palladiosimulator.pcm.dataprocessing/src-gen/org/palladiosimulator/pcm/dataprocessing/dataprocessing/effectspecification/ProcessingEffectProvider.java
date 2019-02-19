@@ -37,7 +37,7 @@ public interface ProcessingEffectProvider extends CDOObject
 	 * @return the value of the '<em>Processing Effects</em>' reference list.
 	 * @see org.palladiosimulator.pcm.dataprocessing.dataprocessing.effectspecification.EffectspecificationPackage#getProcessingEffectProvider_ProcessingEffects()
 	 * @model transient="true" changeable="false" volatile="true" derived="true" ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='determineProcessingEffects()'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL derivation='determineProcessingEffects()'"
 	 * @generated
 	 */
 	EList<ProcessingEffect> getProcessingEffects();
@@ -46,7 +46,7 @@ public interface ProcessingEffectProvider extends CDOObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model ordered="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='self-&gt;selectByKind(ProcessingEffect)'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='self-&gt;selectByKind(dataprocessing::effectspecification::ProcessingEffect)'"
 	 * @generated
 	 */
 	EList<ProcessingEffect> determineProcessingEffects();

@@ -153,7 +153,7 @@ public class UtilValidator extends EObjectValidator
 				 (EObject)dataMapping,
 				 diagnostics,
 				 context,
-				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL",
 				 "dataTypesMustBeTheSame",
 				 DATA_MAPPING__DATA_TYPES_MUST_BE_THE_SAME__EEXPRESSION,
 				 Diagnostic.ERROR,
