@@ -1,0 +1,222 @@
+module org.palladiosimulator.pcm.dataspec.mwe2.dataspec
+
+import org.eclipse.emf.mwe.utils.StandaloneSetup
+import org.eclipse.emf.mwe.utils.DirectoryCleaner
+import org.eclipse.emf.mwe2.ecore.EcoreGenerator
+import tools.mdsd.ecoreworkflow.mwe2lib.component.RegexComponent
+
+var workspaceRoot = "../../"
+var projectName = "org.palladiosimulator.pcm.dataprocessing"
+var pluginEditDir = "${workspaceRoot}bundles/${projectName}.edit"
+var pluginEditorDir = "${workspaceRoot}bundles/${projectName}.editor"
+
+Workflow {
+
+	bean = StandaloneSetup {
+		scanClassPath = true
+		platformUri = workspaceRoot
+		
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+			to = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+			to = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel"
+			to = "platform:/resource/org.palladiosimulator.pcm/model/pcm.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore"
+			to = "platform:/resource/org.palladiosimulator.pcm/model/pcm.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
+			to = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore"
+			to = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
+			to = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore"
+			to = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel"
+			to = "platform:/resource/de.uka.ipd.sdq.units/model/Units.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore"
+			to = "platform:/resource/de.uka.ipd.sdq.units/model/Units.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+			to = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel"
+			to = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore"
+			to = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore"
+		}
+		uriMap = {
+			from = "platform:/plugin/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+			to = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+		}
+		
+		registerGenModelFile = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+		registerGenModelFile = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+		registerGenModelFile = "platform:/resource/org.eclipse.uml2.codegen.ecore/model/GenModel.genmodel"
+		registerGeneratedEPackage = "org.eclipse.uml2.codegen.ecore.genmodel.GenModelPackage"
+		
+		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.genmodel"
+		registerGenModelFile = "platform:/resource/org.palladiosimulator.pcm/model/pcm.genmodel"
+		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel"
+		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.genmodel"
+		registerGenModelFile = "platform:/resource/de.uka.ipd.sdq.units/model/Units.genmodel"
+		
+		logResourceUriMap = true
+	}
+
+	component = EcoreGenerator {
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+		genModel = "platform:/resource/${projectName}/model/dataprocessing.genmodel"
+		srcPath = "platform:/resource/${projectName}/src"
+		srcPath = "platform:/resource/${projectName}.edit/src"
+		srcPath = "platform:/resource/${projectName}.editor/src"
+	}
+
+	component = RegexComponent {
+		
+		// Repository
+		replacement = {
+			filename =  "${pluginEditDir}/plugin.xml"
+			mapping = {
+				from = "${projectName}.dataprocessing.repository.provider.RepositoryItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.repository.provider.extension.RepositoryItemProviderAdapterFactory"
+			}
+		}
+		replacement = {
+			directory = "${pluginEditorDir}/src-gen"
+			wildcard = "**/*Editor.java"
+			mapping = {
+				from = "${projectName}.dataprocessing.repository.provider.RepositoryItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.repository.provider.extension.RepositoryItemProviderAdapterFactory"
+			}
+		}
+		
+		// Characteristics
+		replacement = {
+			filename =  "${pluginEditDir}/plugin.xml"
+			mapping = {
+				from = "${projectName}.dataprocessing.characteristics.provider.CharacteristicsItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.characteristics.provider.extension.CharacteristicsItemProviderAdapterFactory"
+			}
+		}
+		replacement = {
+			directory = "${pluginEditorDir}/src-gen"
+			wildcard = "**/*Editor.java"
+			mapping = {
+				from = "${projectName}.dataprocessing.characteristics.provider.CharacteristicsItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.characteristics.provider.extension.CharacteristicsItemProviderAdapterFactory"
+			}
+		}
+		
+		// Processing
+		replacement = {
+			filename =  "${pluginEditDir}/plugin.xml"
+			mapping = {
+				from = "${projectName}.dataprocessing.processing.provider.ProcessingItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.processing.provider.extension.ProcessingItemProviderAdapterFactory"
+			}
+		}
+		replacement = {
+			directory = "${pluginEditorDir}/src-gen"
+			wildcard = "**/*Editor.java"
+			mapping = {
+				from = "${projectName}.dataprocessing.processing.provider.ProcessingItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.processing.provider.extension.ProcessingItemProviderAdapterFactory"
+			}
+		}
+		
+		// Data
+		replacement = {
+			filename =  "${pluginEditDir}/plugin.xml"
+			mapping = {
+				from = "${projectName}.dataprocessing.data.provider.DataItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.data.provider.extension.DataItemProviderAdapterFactory"
+			}
+		}
+		replacement = {
+			directory = "${pluginEditorDir}/src-gen"
+			wildcard = "**/*Editor.java"
+			mapping = {
+				from = "${projectName}.dataprocessing.data.provider.DataItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.data.provider.extension.DataItemProviderAdapterFactory"
+			}
+		}
+		
+		// SEFF
+		replacement = {
+			filename =  "${pluginEditDir}/plugin.xml"
+			mapping = {
+				from = "${projectName}.dataprocessing.seff.provider.SeffItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.seff.provider.extension.SeffItemProviderAdapterFactory"
+			}
+		}
+		replacement = {
+			directory = "${pluginEditorDir}/src-gen"
+			wildcard = "**/*Editor.java"
+			mapping = {
+				from = "${projectName}.dataprocessing.seff.provider.SeffItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.seff.provider.extension.SeffItemProviderAdapterFactory"
+			}
+		}
+		
+		// Util
+		replacement = {
+			filename =  "${pluginEditDir}/plugin.xml"
+			mapping = {
+				from = "${projectName}.dataprocessing.util.provider.UtilItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.util.provider.extension.UtilItemProviderAdapterFactory"
+			}
+		}
+		replacement = {
+			directory = "${pluginEditorDir}/src-gen"
+			wildcard = "**/*Editor.java"
+			mapping = {
+				from = "${projectName}.dataprocessing.util.provider.UtilItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.util.provider.extension.UtilItemProviderAdapterFactory"
+			}
+		}
+		
+		// EffectSpecification
+		replacement = {
+			filename =  "${pluginEditDir}/plugin.xml"
+			mapping = {
+				from = "${projectName}.dataprocessing.effectspecification.provider.EffectspecificationItemProviderAdapterFactory\""
+				to = "${projectName}.dataprocessing.effectspecification.provider.extension.EffectspecificationItemProviderAdapterFactory\""
+			}
+		}
+		replacement = {
+			directory = "${pluginEditorDir}/src-gen"
+			wildcard = "**/*Editor.java"
+			mapping = {
+				from = "${projectName}.dataprocessing.effectspecification.provider.EffectspecificationItemProviderAdapterFactory"
+				to = "${projectName}.dataprocessing.effectspecification.provider.extension.EffectspecificationItemProviderAdapterFactory"
+			}
+		}
+		
+	}
+}

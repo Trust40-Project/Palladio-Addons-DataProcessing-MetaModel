@@ -12,7 +12,8 @@
 	<packaging>pom</packaging>
 	
 	<modules>
-
+		<module>org.palladiosimulator.pcm.dataprocessing.mwe2</module>
+		<module>org.palladiosimulator.pcm.dataprocessing.updatesite</module>
 	</modules>
 	
 </project>

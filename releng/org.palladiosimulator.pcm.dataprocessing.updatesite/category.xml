@@ -6,10 +6,10 @@
 	<feature url="features/org.palladiosimulator.pcm.dataprocessing.model.feature_0.1.0.qualifier.jar" id="org.palladiosimulator.pcm.dataprocessing.model.feature" version="0.1.0.qualifier">
 		<category name="org.palladiosimulator.addons.category"/>
 	</feature>
-	<feature id="org.palladiosimulator.pcm.dataprocessing.full.feature.source" version="1.0.0.qualifier">
-		<category name="org.palladiosimulator.addons.source.category"/>
+	<feature url="features/org.palladiosimulator.pcm.dataprocessing.full.feature.source_0.1.0.qualifier.jar" id="org.palladiosimulator.pcm.dataprocessing.full.feature.source" version="0.1.0.qualifier">
+		<category name="org.palladiosimulator.addons.category"/>
 	</feature>
-	<feature id="org.palladiosimulator.pcm.dataprocessing.model.feature.source" version="1.0.0.qualifier">
+	<feature url="features/org.palladiosimulator.pcm.dataprocessing.model.feature.source_0.1.0.qualifier.jar" id="org.palladiosimulator.pcm.dataprocessing.model.feature.source" version="0.1.0.qualifier">
 		<category name="org.palladiosimulator.addons.source.category"/>
 	</feature>
 	<category-def name="org.palladiosimulator.addons.category" label="Palladio Bench Addons">
