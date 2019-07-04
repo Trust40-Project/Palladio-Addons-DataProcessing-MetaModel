@@ -7,8 +7,8 @@ import tools.mdsd.ecoreworkflow.mwe2lib.component.RegexComponent
 
 var workspaceRoot = "../../"
 var projectName = "org.palladiosimulator.pcm.dataprocessing"
-var pluginEditDir = "${workspaceRoot}bundles/${projectName}.edit"
-var pluginEditorDir = "${workspaceRoot}bundles/${projectName}.editor"
+var pluginEditDir = "${workspaceRoot}/bundles/${projectName}.edit"
+var pluginEditorDir = "${workspaceRoot}/bundles/${projectName}.editor"
 
 Workflow {
 
