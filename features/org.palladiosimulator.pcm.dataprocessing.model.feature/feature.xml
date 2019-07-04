@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.palladiosimulator.pcm.dataprocessing.model.feature"
-      label="Model Feature"
+      label="PCM Data Processing Meta Model"
       version="0.1.0.qualifier"
       plugin="org.palladiosimulator.branding"
       license-feature="org.palladiosimulator.license.epl2"
