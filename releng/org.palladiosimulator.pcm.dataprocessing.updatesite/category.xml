@@ -7,7 +7,7 @@
 		<category name="org.palladiosimulator.addons.category"/>
 	</feature>
 	<feature url="features/org.palladiosimulator.pcm.dataprocessing.editor.feature.source_0.1.0.qualifier.jar" id="org.palladiosimulator.pcm.dataprocessing.editor.feature.source" version="0.1.0.qualifier">
-		<category name="org.palladiosimulator.addons.category"/>
+		<category name="org.palladiosimulator.addons.source.category"/>
 	</feature>
 	<feature url="features/org.palladiosimulator.pcm.dataprocessing.model.feature.source_0.1.0.qualifier.jar" id="org.palladiosimulator.pcm.dataprocessing.model.feature.source" version="0.1.0.qualifier">
 		<category name="org.palladiosimulator.addons.source.category"/>
