@@ -8,7 +8,7 @@ Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.pcm.dataprocessing.dataprocessing.provider.DataprocessingEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.provider,
  org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.provider.extension,
  org.palladiosimulator.pcm.dataprocessing.dataprocessing.data.provider,
@@ -40,5 +40,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.edit.ui,
  org.palladiosimulator.mdsdprofiles.api;bundle-version="1.0.1";visibility:=reexport,
  org.modelversioning.emfprofile;bundle-version="1.1.0";visibility:=reexport,
- org.palladiosimulator.pcm.dataprocessing.profile;visibility:=reexport
+ org.palladiosimulator.pcm.dataprocessing.profile;visibility:=reexport,
+ org.palladiosimulator.pcm.dataprocessing.edit.icons;bundle-version="0.1.0"
 Bundle-ActivationPolicy: lazy

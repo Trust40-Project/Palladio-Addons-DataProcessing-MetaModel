@@ -3,70 +3,78 @@ package org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.
 import org.eclipse.emf.common.notify.Adapter;
 
 public class CharacteristicsItemProviderAdapterFactory extends
-		org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.provider.CharacteristicsItemProviderAdapterFactory {
+        org.palladiosimulator.pcm.dataprocessing.dataprocessing.characteristics.provider.CharacteristicsItemProviderAdapterFactory {
 
-	@Override
-	public Adapter createEnumCharacteristicTypeAdapter() {
-		if (enumCharacteristicTypeItemProvider == null) {
-			enumCharacteristicTypeItemProvider = new EnumCharacteristicTypeItemProvider(this);
-		}
-		return enumCharacteristicTypeItemProvider;
-	}
+    @Override
+    public Adapter createEnumCharacteristicTypeAdapter() {
+        if (enumCharacteristicTypeItemProvider == null) {
+            enumCharacteristicTypeItemProvider = new EnumCharacteristicTypeItemProvider(this);
+        }
+        return enumCharacteristicTypeItemProvider;
+    }
 
-	@Override
-	public Adapter createEnumerationAdapter() {
-		if (enumerationItemProvider == null) {
-			enumerationItemProvider = new EnumerationItemProvider(this);
-		}
-		return enumerationItemProvider;
-	}
+    @Override
+    public Adapter createEnumerationAdapter() {
+        if (enumerationItemProvider == null) {
+            enumerationItemProvider = new EnumerationItemProvider(this);
+        }
+        return enumerationItemProvider;
+    }
 
-	@Override
-	public Adapter createEnumCharacteristicLiteralAdapter() {
-		if (enumCharacteristicLiteralItemProvider == null) {
-			enumCharacteristicLiteralItemProvider = new EnumCharacteristicLiteralItemProvider(this);
-		}
-		return enumCharacteristicLiteralItemProvider;
-	}
+    @Override
+    public Adapter createEnumCharacteristicLiteralAdapter() {
+        if (enumCharacteristicLiteralItemProvider == null) {
+            enumCharacteristicLiteralItemProvider = new EnumCharacteristicLiteralItemProvider(this);
+        }
+        return enumCharacteristicLiteralItemProvider;
+    }
 
-	@Override
-	public Adapter createEnumCharacteristicAdapter() {
-		if (enumCharacteristicItemProvider == null) {
-			enumCharacteristicItemProvider = new EnumCharacteristicItemProvider(this);
-		}
-		return enumCharacteristicItemProvider;
-	}
+    @Override
+    public Adapter createEnumCharacteristicAdapter() {
+        if (enumCharacteristicItemProvider == null) {
+            enumCharacteristicItemProvider = new EnumCharacteristicItemProvider(this);
+        }
+        return enumCharacteristicItemProvider;
+    }
 
-	@Override
-	public Adapter createCharacteristicContainerAdapter() {
-		if (characteristicContainerItemProvider == null) {
-			characteristicContainerItemProvider = new CharacteristicContainerItemProvider(this);
-		}
-		return characteristicContainerItemProvider;
-	}
+    @Override
+    public Adapter createCharacteristicContainerAdapter() {
+        if (characteristicContainerItemProvider == null) {
+            characteristicContainerItemProvider = new CharacteristicContainerItemProvider(this);
+        }
+        return characteristicContainerItemProvider;
+    }
 
-	@Override
-	public Adapter createRelatedCharacteristicsAdapter() {
-		if (relatedCharacteristicsItemProvider == null) {
-			relatedCharacteristicsItemProvider = new RelatedCharacteristicsItemProvider(this);
-		}
-		return relatedCharacteristicsItemProvider;
-	}
+    @Override
+    public Adapter createRelatedCharacteristicsAdapter() {
+        if (relatedCharacteristicsItemProvider == null) {
+            relatedCharacteristicsItemProvider = new RelatedCharacteristicsItemProvider(this);
+        }
+        return relatedCharacteristicsItemProvider;
+    }
 
-	@Override
-	public Adapter createStoreCharacteristicContainerAdapter() {
-		if (storeCharacteristicContainerItemProvider == null) {
-			storeCharacteristicContainerItemProvider = new StoreCharacteristicContainerItemProvider(this);
-		}
-		return storeCharacteristicContainerItemProvider;
-	}
+    @Override
+    public Adapter createStoreCharacteristicContainerAdapter() {
+        if (storeCharacteristicContainerItemProvider == null) {
+            storeCharacteristicContainerItemProvider = new StoreCharacteristicContainerItemProvider(this);
+        }
+        return storeCharacteristicContainerItemProvider;
+    }
 
-	@Override
-	public Adapter createStoreCharacteristicsAdapter() {
-		if (storeCharacteristicsItemProvider == null) {
-			storeCharacteristicsItemProvider = new StoreCharacteristicsItemProvider(this);
-		}
-		return storeCharacteristicsItemProvider;
-	}
+    @Override
+    public Adapter createStoreCharacteristicsAdapter() {
+        if (storeCharacteristicsItemProvider == null) {
+            storeCharacteristicsItemProvider = new StoreCharacteristicsItemProvider(this);
+        }
+        return storeCharacteristicsItemProvider;
+    }
+
+    @Override
+    public Adapter createCharacteristicTypeContainerAdapter() {
+        if (characteristicTypeContainerItemProvider == null) {
+            characteristicTypeContainerItemProvider = new CharacteristicTypeContainerItemProvider(this);
+        }
+        return characteristicTypeContainerItemProvider;
+    }
 
 }

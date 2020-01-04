@@ -7,6 +7,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataFilterUtils;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DefaultLabelProvider;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.ItemPropertyDescriptorWrapper;
+import org.palladiosimulator.pcm.dataprocessing.edit.icons.Activator;
 
 public class ProjectionDataOperationItemProvider extends
 		org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.provider.ProjectionDataOperationItemProvider {
@@ -47,4 +48,12 @@ public class ProjectionDataOperationItemProvider extends
 	public String getText(Object object) {
 		return DefaultLabelProvider.getLabel(object, getString("_UI_ProjectionDataOperation_type"), super::getText);
 	}
+
+    @Override
+    public Object getImage(Object object) {
+        Object image = Activator.getInstance().getResourceLocator().getImage("obj16/ProjectionDataOperation");
+        return overlayImage(object, image);
+    }
+	
+	
 }

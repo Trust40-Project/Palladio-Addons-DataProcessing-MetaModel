@@ -1,1490 +1,639 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    name="dataprocessing"
-    nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/"
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dataprocessing" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/"
     nsPrefix="dataprocessing">
-  <eAnnotations
-      source="http://www.eclipse.org/emf/2002/Ecore">
-    <details
-        key="invocationDelegates"
-        value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
-    <details
-        key="settingDelegates"
-        value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
-    <details
-        key="validationDelegates"
-        value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
   </eAnnotations>
-  <eAnnotations
-      source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-    <details
-        key="environmentFactoryClass"
-        value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+    <details key="environmentFactoryClass" value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
   </eAnnotations>
-  <eClassifiers
-      xsi:type="ecore:EClass"
-      name="DataSpecification"
-      eSuperTypes="#//effectspecification/ProcessingEffectProvider">
-    <eOperations
-        name="determineProcessingEffects"
-        ordered="false"
-        upperBound="-1"
+  <eClassifiers xsi:type="ecore:EClass" name="DataSpecification" eSuperTypes="#//effectspecification/ProcessingEffectProvider">
+    <eOperations name="determineProcessingEffects" ordered="false" upperBound="-1"
         eType="#//effectspecification/ProcessingEffect">
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details
-            key="body"
-            value="externalDataProcessingEffects.processingEffects->asSet()->union(extensions->selectByKind(dataprocessing::effectspecification::ProcessingEffectSpecification).processingEffects->asSet())"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="body" value="externalDataProcessingEffects.processingEffects->asSet()->union(extensions->selectByKind(dataprocessing::effectspecification::ProcessingEffectSpecification).processingEffects->asSet())"/>
       </eAnnotations>
     </eOperations>
-    <eStructuralFeatures
-        xsi:type="ecore:EReference"
-        name="dataProcessingContainers"
-        upperBound="-1"
-        eType="#//processing/DataProcessingContainer"
-        containment="true"/>
-    <eStructuralFeatures
-        xsi:type="ecore:EReference"
-        name="characteristicTypeContainers"
-        upperBound="-1"
-        eType="#//characteristics/CharacteristicTypeContainer"
-        containment="true"/>
-    <eStructuralFeatures
-        xsi:type="ecore:EReference"
-        name="storeContainers"
-        upperBound="-1"
-        eType="#//repository/StoreContainer"
-        containment="true"/>
-    <eStructuralFeatures
-        xsi:type="ecore:EReference"
-        name="characteristicContainer"
-        upperBound="-1"
-        eType="#//characteristics/CharacteristicContainer"
-        containment="true"/>
-    <eStructuralFeatures
-        xsi:type="ecore:EReference"
-        name="relatedCharacteristics"
-        upperBound="-1"
-        eType="#//characteristics/RelatedCharacteristics"
-        containment="true"/>
-    <eStructuralFeatures
-        xsi:type="ecore:EReference"
-        name="operationSignatureDataRefinement"
-        upperBound="-1"
-        eType="#//repository/OperationSignatureDataRefinement"
-        containment="true"/>
-    <eStructuralFeatures
-        xsi:type="ecore:EReference"
-        name="storeCharacteristicContainers"
-        upperBound="-1"
-        eType="#//characteristics/StoreCharacteristicContainer"
-        containment="true"/>
-    <eStructuralFeatures
-        xsi:type="ecore:EReference"
-        name="extensions"
-        upperBound="-1"
-        eType="#//DataSpecificationExtension"
-        containment="true"
-        eOpposite="#//DataSpecificationExtension/specification"/>
-    <eStructuralFeatures
-        xsi:type="ecore:EReference"
-        name="externalDataProcessingEffects"
-        upperBound="-1"
-        eType="#//effectspecification/ProcessingEffectSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataProcessingContainers"
+        upperBound="-1" eType="#//processing/DataProcessingContainer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="characteristicTypeContainers"
+        upperBound="-1" eType="#//characteristics/CharacteristicTypeContainer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="storeContainers" upperBound="-1"
+        eType="#//repository/StoreContainer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="characteristicContainer"
+        upperBound="-1" eType="#//characteristics/CharacteristicContainer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedCharacteristics"
+        upperBound="-1" eType="#//characteristics/RelatedCharacteristics" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationSignatureDataRefinement"
+        upperBound="-1" eType="#//repository/OperationSignatureDataRefinement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="storeCharacteristicContainers"
+        upperBound="-1" eType="#//characteristics/StoreCharacteristicContainer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extensions" upperBound="-1"
+        eType="#//DataSpecificationExtension" containment="true" eOpposite="#//DataSpecificationExtension/specification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="externalDataProcessingEffects"
+        upperBound="-1" eType="#//effectspecification/ProcessingEffectSpecification"/>
   </eClassifiers>
-  <eClassifiers
-      xsi:type="ecore:EClass"
-      name="DataSpecificationExtension"
-      abstract="true"
-      interface="true"
-      eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
-    <eStructuralFeatures
-        xsi:type="ecore:EReference"
-        name="specification"
-        lowerBound="1"
-        eType="#//DataSpecification"
-        eOpposite="#//DataSpecification/extensions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataSpecificationExtension" abstract="true"
+      interface="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specification" lowerBound="1"
+        eType="#//DataSpecification" eOpposite="#//DataSpecification/extensions"/>
   </eClassifiers>
-  <eSubpackages
-      name="repository"
-      nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/repository/0.1/"
+  <eSubpackages name="repository" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/repository/0.1/"
       nsPrefix="repository">
-    <eAnnotations
-        source="http://www.eclipse.org/emf/2002/Ecore">
-      <details
-          key="invocationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
-      <details
-          key="settingDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
-      <details
-          key="validationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     </eAnnotations>
-    <eAnnotations
-        source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details
-          key="environmentFactoryClass"
-          value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="environmentFactoryClass" value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
     </eAnnotations>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="StoreContainer"
-        eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="stores"
-          upperBound="-1"
-          eType="#//repository/Store"
-          containment="true"
-          eOpposite="#//repository/Store/container"/>
+    <eClassifiers xsi:type="ecore:EClass" name="StoreContainer" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="stores" upperBound="-1"
+          eType="#//repository/Store" containment="true" eOpposite="#//repository/Store/container"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="Store"
-        eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="container"
-          eType="#//repository/StoreContainer"
+    <eClassifiers xsi:type="ecore:EClass" name="Store" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="container" eType="#//repository/StoreContainer"
           eOpposite="#//repository/StoreContainer/stores"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="dataType"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="OperationSignatureDataRefinement"
+    <eClassifiers xsi:type="ecore:EClass" name="OperationSignatureDataRefinement"
         eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="parameterRefinements"
-          upperBound="-1"
-          eType="#//data/ParameterBasedData"
-          containment="true"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="resultRefinements"
-          upperBound="-1"
-          eType="#//data/ResultBasedData"
-          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameterRefinements"
+          upperBound="-1" eType="#//data/ParameterBasedData" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resultRefinements" upperBound="-1"
+          eType="#//data/ResultBasedData" containment="true"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages
-      name="processing"
-      nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/processing/0.1/"
+  <eSubpackages name="processing" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/processing/0.1/"
       nsPrefix="processing">
-    <eAnnotations
-        source="http://www.eclipse.org/emf/2002/Ecore">
-      <details
-          key="invocationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
-      <details
-          key="settingDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
-      <details
-          key="validationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     </eAnnotations>
-    <eAnnotations
-        source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details
-          key="environmentFactoryClass"
-          value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="environmentFactoryClass" value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
     </eAnnotations>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="DataProcessingContainer"
-        eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="operations"
-          upperBound="-1"
-          eType="#//processing/DataOperation"
-          containment="true"
-          eOpposite="#//processing/DataOperation/container"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DataProcessingContainer" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
+          eType="#//processing/DataOperation" containment="true" eOpposite="#//processing/DataOperation/container"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="DataOperation"
-        abstract="true"
-        eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore">
-        <details
-            key="constraints"
-            value="outgoingDataIsUsed"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DataOperation" abstract="true" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="outgoingDataIsUsed"/>
       </eAnnotations>
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details
-            key="outgoingDataIsUsed"
-            value="self.outgoingData->size() = 0 or DataOperation.allInstances()->select(do | do.incomingData->exists(inData | self.outgoingData->includes(inData)))->excluding(self)->size() > 0"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="outgoingDataIsUsed" value="self.outgoingData->size() = 0 or DataOperation.allInstances()->select(do | do.incomingData->exists(inData | self.outgoingData->includes(inData)))->excluding(self)->size() > 0"/>
       </eAnnotations>
-      <eOperations
-          name="determineIncomingData"
-          ordered="false"
-          upperBound="-1"
-          eType="#//data/Data">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="self.oclAsSet()->selectByType(dataprocessing::data::Data)"/>
+      <eOperations name="determineIncomingData" ordered="false" upperBound="-1" eType="#//data/Data">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="self.oclAsSet()->selectByType(dataprocessing::data::Data)"/>
         </eAnnotations>
       </eOperations>
-      <eOperations
-          name="determineOutgoingData"
-          ordered="false"
-          upperBound="-1"
-          eType="#//data/Data">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="self.oclAsSet()->selectByType(dataprocessing::data::Data)"/>
+      <eOperations name="determineOutgoingData" ordered="false" upperBound="-1" eType="#//data/Data">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="self.oclAsSet()->selectByType(dataprocessing::data::Data)"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="container"
-          eType="#//processing/DataProcessingContainer"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="container" eType="#//processing/DataProcessingContainer"
           eOpposite="#//processing/DataProcessingContainer/operations"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="incomingData"
-          ordered="false"
-          upperBound="-1"
-          eType="#//data/Data"
-          changeable="false"
-          volatile="true"
-          transient="true"
-          derived="true">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="derivation"
-              value="determineIncomingData()"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="incomingData" ordered="false"
+          upperBound="-1" eType="#//data/Data" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="derivation" value="determineIncomingData()"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="processingEffectProvider"
-          lowerBound="1"
-          eType="#//effectspecification/ProcessingEffectProvider"
-          changeable="false"
-          volatile="true"
-          transient="true"
-          derived="true">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="derivation"
-              value="self.container.oclAsType(ecore::EObject).eContainer().oclAsType(dataprocessing::effectspecification::ProcessingEffectProvider)"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="processingEffectProvider"
+          lowerBound="1" eType="#//effectspecification/ProcessingEffectProvider" changeable="false"
+          volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="derivation" value="self.container.oclAsType(ecore::EObject).eContainer().oclAsType(dataprocessing::effectspecification::ProcessingEffectProvider)"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="outgoingData"
-          ordered="false"
-          upperBound="-1"
-          eType="#//data/Data"
-          changeable="false"
-          volatile="true"
-          transient="true"
-          derived="true">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="derivation"
-              value="determineOutgoingData()"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingData" ordered="false"
+          upperBound="-1" eType="#//data/Data" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="derivation" value="determineOutgoingData()"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="CreateDataOperation"
-        eSuperTypes="#//processing/DataOperation">
-      <eOperations
-          name="determineOutgoingData"
-          ordered="false"
-          upperBound="-1"
-          eType="#//data/Data">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="self.resultingData.oclAsSet()"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CreateDataOperation" eSuperTypes="#//processing/DataOperation">
+      <eOperations name="determineOutgoingData" ordered="false" upperBound="-1" eType="#//data/Data">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="self.resultingData.oclAsSet()"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="resultingData"
-          lowerBound="1"
-          eType="#//data/Data"
-          containment="true"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="initialCharacteristics"
-          upperBound="-1"
-          eType="#//characteristics/Characteristic"
-          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resultingData" lowerBound="1"
+          eType="#//data/Data" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="initialCharacteristics"
+          upperBound="-1" eType="#//characteristics/Characteristic" containment="true"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="LoadDataOperation"
-        eSuperTypes="#//processing/CreateDataOperation">
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore">
-        <details
-            key="constraints"
-            value="noManualCharacteristics"/>
+    <eClassifiers xsi:type="ecore:EClass" name="LoadDataOperation" eSuperTypes="#//processing/CreateDataOperation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="noManualCharacteristics"/>
       </eAnnotations>
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details
-            key="noManualCharacteristics"
-            value="self.initialCharacteristics->size() = 0"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="noManualCharacteristics" value="self.initialCharacteristics->size() = 0"/>
       </eAnnotations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="store"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="store" lowerBound="1"
           eType="#//repository/Store"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="LoadAllDataOperation"
-        eSuperTypes="#//processing/LoadDataOperation">
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore">
-        <details
-            key="constraints"
-            value="resultTypeMustBeCollection"/>
+    <eClassifiers xsi:type="ecore:EClass" name="LoadAllDataOperation" eSuperTypes="#//processing/LoadDataOperation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="resultTypeMustBeCollection"/>
       </eAnnotations>
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details
-            key="resultTypeMustBeCollection"
-            value="self.resultingData.type.oclIsKindOf(pcm::repository::CollectionDataType)"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="resultTypeMustBeCollection" value="self.resultingData.type.oclIsKindOf(pcm::repository::CollectionDataType)"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="PerformDataTransmissionOperation"
+    <eClassifiers xsi:type="ecore:EClass" name="PerformDataTransmissionOperation"
         eSuperTypes="#//processing/DataOperation">
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore">
-        <details
-            key="constraints"
-            value="outputMappingsAndOutputDataHasToMatch"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="outputMappingsAndOutputDataHasToMatch"/>
       </eAnnotations>
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details
-            key="outputMappingsAndOutputDataHasToMatch"
-            value="outputMappings.to->asSet() = outputData->asSet()"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="outputMappingsAndOutputDataHasToMatch" value="outputMappings.to->asSet() = outputData->asSet()"/>
       </eAnnotations>
-      <eOperations
-          name="determineOutgoingData"
-          ordered="false"
-          upperBound="-1"
-          eType="#//data/Data">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="self.outputMappings.to->asSet()"/>
+      <eOperations name="determineOutgoingData" ordered="false" upperBound="-1" eType="#//data/Data">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="self.outputMappings.to->asSet()"/>
         </eAnnotations>
       </eOperations>
-      <eOperations
-          name="determineIncomingData"
-          ordered="false"
-          upperBound="-1"
-          eType="#//data/Data">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="self.inputMappings.from->asSet()"/>
+      <eOperations name="determineIncomingData" ordered="false" upperBound="-1" eType="#//data/Data">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="self.inputMappings.from->asSet()"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="inputMappings"
-          upperBound="-1"
-          eType="#//util/DataMapping"
-          containment="true"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="outputMappings"
-          upperBound="-1"
-          eType="#//util/DataMapping"
-          containment="true"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="outputData"
-          upperBound="-1"
-          eType="#//data/ResultBasedData"
-          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inputMappings" upperBound="-1"
+          eType="#//util/DataMapping" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outputMappings" upperBound="-1"
+          eType="#//util/DataMapping" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outputData" upperBound="-1"
+          eType="#//data/ResultBasedData" containment="true"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="ConsumeDataOperation"
-        abstract="true"
+    <eClassifiers xsi:type="ecore:EClass" name="ConsumeDataOperation" abstract="true"
         eSuperTypes="#//processing/DataOperation">
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore">
-        <details
-            key="constraints"
-            value="noDataEmission"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="noDataEmission"/>
       </eAnnotations>
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details
-            key="noDataEmission"
-            value="self.outgoingData->size() = 0"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="noDataEmission" value="self.outgoingData->size() = 0"/>
       </eAnnotations>
-      <eOperations
-          name="determineIncomingData"
-          ordered="false"
-          upperBound="-1"
-          eType="#//data/Data">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="self.consumedData->asSet()"/>
+      <eOperations name="determineIncomingData" ordered="false" upperBound="-1" eType="#//data/Data">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="self.consumedData->asSet()"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="consumedData"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="consumedData" lowerBound="1"
           eType="#//data/Data"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="StoreDataOperation"
-        eSuperTypes="#//processing/ConsumeDataOperation">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="store"
-          lowerBound="1"
+    <eClassifiers xsi:type="ecore:EClass" name="StoreDataOperation" eSuperTypes="#//processing/ConsumeDataOperation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="store" lowerBound="1"
           eType="#//repository/Store"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="ReturnDataOperation"
-        eSuperTypes="#//processing/ConsumeDataOperation">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="returnDestination"
-          lowerBound="1"
+    <eClassifiers xsi:type="ecore:EClass" name="ReturnDataOperation" eSuperTypes="#//processing/ConsumeDataOperation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="returnDestination" lowerBound="1"
           eType="#//data/ResultBasedData"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="UserReadData"
-        eSuperTypes="#//processing/ConsumeDataOperation"/>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="SystemDiscardData"
-        eSuperTypes="#//processing/ConsumeDataOperation"/>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="ManyToOneDataOperation"
-        abstract="true"
+    <eClassifiers xsi:type="ecore:EClass" name="UserReadData" eSuperTypes="#//processing/ConsumeDataOperation"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SystemDiscardData" eSuperTypes="#//processing/ConsumeDataOperation"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ManyToOneDataOperation" abstract="true"
         eSuperTypes="#//processing/DataOperation">
-      <eOperations
-          name="determineIncomingData"
-          ordered="false"
-          upperBound="-1"
-          eType="#//data/Data">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="self.consumedData->asSet()"/>
+      <eOperations name="determineIncomingData" ordered="false" upperBound="-1" eType="#//data/Data">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="self.consumedData->asSet()"/>
         </eAnnotations>
       </eOperations>
-      <eOperations
-          name="determineOutgoingData"
-          ordered="false"
-          upperBound="-1"
-          eType="#//data/Data">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="self.resultingData->asSet()"/>
+      <eOperations name="determineOutgoingData" ordered="false" upperBound="-1" eType="#//data/Data">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="self.resultingData->asSet()"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="consumedData"
-          lowerBound="2"
-          upperBound="-1"
-          eType="#//data/Data"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="resultingData"
-          lowerBound="1"
-          eType="#//data/Data"
-          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="consumedData" lowerBound="2"
+          upperBound="-1" eType="#//data/Data"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resultingData" lowerBound="1"
+          eType="#//data/Data" containment="true"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="JoinDataOperation"
-        eSuperTypes="#//processing/ManyToOneDataOperation">
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore">
-        <details
-            key="constraints"
-            value="resultMustBeCompositeOfInputs"/>
+    <eClassifiers xsi:type="ecore:EClass" name="JoinDataOperation" eSuperTypes="#//processing/ManyToOneDataOperation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="resultMustBeCompositeOfInputs"/>
       </eAnnotations>
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details
-            key="resultMustBeCompositeOfInputs"
-            value="self.resultingData.type.oclAsType(pcm::repository::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->asSet() = self.consumedData.type->asSet()"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="resultMustBeCompositeOfInputs" value="self.resultingData.type.oclAsType(pcm::repository::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->asSet() = self.consumedData.type->asSet()"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="UnionDataOperation"
-        eSuperTypes="#//processing/ManyToOneDataOperation">
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore">
-        <details
-            key="constraints"
-            value="inputsMustBeResultTypeOrResultEntityType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="UnionDataOperation" eSuperTypes="#//processing/ManyToOneDataOperation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="inputsMustBeResultTypeOrResultEntityType"/>
       </eAnnotations>
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details
-            key="inputsMustBeResultTypeOrResultEntityType"
-            value="self.consumedData.type->forAll(t |&#xA;&#x9;t = self.resultingData.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType or&#xA;&#x9;t.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType = self.resultingData.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType)"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="inputsMustBeResultTypeOrResultEntityType" value="self.consumedData.type->forAll(t |&#xA;&#x9;t = self.resultingData.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType or&#xA;&#x9;t.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType = self.resultingData.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType)"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="TransformDataOperation"
-        abstract="true"
+    <eClassifiers xsi:type="ecore:EClass" name="TransformDataOperation" abstract="true"
         eSuperTypes="#//processing/DataOperation">
-      <eOperations
-          name="determineIncomingData"
-          ordered="false"
-          upperBound="-1"
-          eType="#//data/Data">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="self.input->asSet()->union(self.parameterData)"/>
+      <eOperations name="determineIncomingData" ordered="false" upperBound="-1" eType="#//data/Data">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="self.input->asSet()->union(self.parameterData)"/>
         </eAnnotations>
       </eOperations>
-      <eOperations
-          name="determineOutgoingData"
-          ordered="false"
-          upperBound="-1"
-          eType="#//data/Data">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="self.output->asSet()"/>
+      <eOperations name="determineOutgoingData" ordered="false" upperBound="-1" eType="#//data/Data">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="self.output->asSet()"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="input"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="input" lowerBound="1"
           eType="#//data/Data"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="output"
-          lowerBound="1"
-          eType="#//data/Data"
-          containment="true"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="parameterData"
-          upperBound="-1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"
+          eType="#//data/Data" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameterData" upperBound="-1"
           eType="#//data/Data"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="ProjectionDataOperation"
-        eSuperTypes="#//processing/TransformDataOperation">
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore">
-        <details
-            key="constraints"
-            value="noParameters outputIsComposedInInput"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ProjectionDataOperation" eSuperTypes="#//processing/TransformDataOperation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="noParameters outputIsComposedInInput"/>
       </eAnnotations>
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details
-            key="noParameters"
-            value="self.parameterData->isEmpty()"/>
-        <details
-            key="outputIsComposedInInput"
-            value="self.input.type.oclAsType(pcm::repository::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="noParameters" value="self.parameterData->isEmpty()"/>
+        <details key="outputIsComposedInInput" value="self.input.type.oclAsType(pcm::repository::CompositeDataType).innerDeclaration_CompositeDataType.datatype_InnerDeclaration->includes(self.output.type)"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="SelectionDataOperation"
-        eSuperTypes="#//processing/TransformDataOperation">
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore">
-        <details
-            key="constraints"
-            value="inputAndOutputHaveSameEntityType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SelectionDataOperation" eSuperTypes="#//processing/TransformDataOperation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="inputAndOutputHaveSameEntityType"/>
       </eAnnotations>
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details
-            key="inputAndOutputHaveSameEntityType"
-            value="self.input.type->oclAsSet() = self.output.type->oclAsSet() or self.input.type.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="inputAndOutputHaveSameEntityType" value="self.input.type->oclAsSet() = self.output.type->oclAsSet() or self.input.type.oclAsType(pcm::repository::CollectionDataType).innerType_CollectionDataType->oclAsSet() = self.output.type->oclAsSet()"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="CharacteristicChangingDataOperation"
+    <eClassifiers xsi:type="ecore:EClass" name="CharacteristicChangingDataOperation"
         eSuperTypes="#//processing/DataOperation">
-      <eTypeParameters
-          name="T">
-        <eBounds
-            eClassifier="#//characteristics/CharacteristicType"/>
+      <eTypeParameters name="T">
+        <eBounds eClassifier="#//characteristics/CharacteristicType"/>
       </eTypeParameters>
-      <eOperations
-          name="determineIncomingData"
-          ordered="false"
-          upperBound="-1"
-          eType="#//data/Data">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="self.data.oclAsSet()"/>
+      <eOperations name="determineIncomingData" ordered="false" upperBound="-1" eType="#//data/Data">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="self.data.oclAsSet()"/>
         </eAnnotations>
       </eOperations>
-      <eOperations
-          name="determineOutgoingData"
-          ordered="false"
-          upperBound="-1"
-          eType="#//data/Data">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="self.determineIncomingData()"/>
+      <eOperations name="determineOutgoingData" ordered="false" upperBound="-1" eType="#//data/Data">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="self.determineIncomingData()"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="data"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="data" lowerBound="1"
           eType="#//data/Data"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EAttribute"
-          name="operation"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" lowerBound="1"
           eType="#//processing/CharacteristicChangeOperation"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="characteristic"
-          lowerBound="1"
-          eType="#//characteristics/Characteristic"
-          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="characteristic" lowerBound="1"
+          eType="#//characteristics/Characteristic" containment="true"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EEnum"
-        name="CharacteristicChangeOperation">
-      <eLiterals
-          name="ADD"/>
-      <eLiterals
-          name="REMOVE"/>
-      <eLiterals
-          name="REPLACE"/>
+    <eClassifiers xsi:type="ecore:EEnum" name="CharacteristicChangeOperation">
+      <eLiterals name="ADD"/>
+      <eLiterals name="REMOVE"/>
+      <eLiterals name="REPLACE"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="EffectSpecifyingTransformDataOperation"
+    <eClassifiers xsi:type="ecore:EClass" name="EffectSpecifyingTransformDataOperation"
         eSuperTypes="#//processing/TransformDataOperation #//processing/ProcessingEffectOperationTypeSpecifyingOperation">
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore">
-        <details
-            key="constraints"
-            value="noParameters"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="noParameters"/>
       </eAnnotations>
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details
-            key="noParameters"
-            value="self.parameterData->isEmpty()"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="noParameters" value="self.parameterData->isEmpty()"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="ProcessingEffectOperationTypeSpecifyingOperation"
-        abstract="true"
-        eSuperTypes="#//processing/DataOperation">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="processingEffectOperationType"
-          lowerBound="1"
-          eType="#//effectspecification/ProcessingEffectOperationType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ProcessingEffectOperationTypeSpecifyingOperation"
+        abstract="true" eSuperTypes="#//processing/DataOperation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="processingEffectOperationType"
+          lowerBound="1" eType="#//effectspecification/ProcessingEffectOperationType"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="DeleteDataOperation"
-        eSuperTypes="#//processing/ConsumeDataOperation">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="store"
-          lowerBound="1"
+    <eClassifiers xsi:type="ecore:EClass" name="DeleteDataOperation" eSuperTypes="#//processing/ConsumeDataOperation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="store" lowerBound="1"
           eType="#//repository/Store"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EffectSpecifyingReducingDataOperation"
+        eSuperTypes="#//processing/ManyToOneDataOperation #//processing/ProcessingEffectOperationTypeSpecifyingOperation"/>
   </eSubpackages>
-  <eSubpackages
-      name="characteristics"
-      nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/characteristics/0.1/"
+  <eSubpackages name="characteristics" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/characteristics/0.1/"
       nsPrefix="characteristics">
-    <eAnnotations
-        source="http://www.eclipse.org/emf/2002/Ecore">
-      <details
-          key="invocationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
-      <details
-          key="settingDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
-      <details
-          key="validationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     </eAnnotations>
-    <eAnnotations
-        source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details
-          key="environmentFactoryClass"
-          value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="environmentFactoryClass" value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
     </eAnnotations>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="Characterizable"
-        abstract="true">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="characteristicContainers"
-          lowerBound="1"
-          upperBound="-1"
-          eType="#//characteristics/CharacteristicContainer"
+    <eClassifiers xsi:type="ecore:EClass" name="Characterizable" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="characteristicContainers"
+          lowerBound="1" upperBound="-1" eType="#//characteristics/CharacteristicContainer"
           containment="true"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="characteristics"
-          upperBound="-1"
-          eType="#//characteristics/Characteristic"
-          changeable="false"
-          volatile="true"
-          transient="true"
-          derived="true">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="derivation"
-              value="self.characteristicContainers->collect(characteristics)->asOrderedSet()"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="characteristics" upperBound="-1"
+          eType="#//characteristics/Characteristic" changeable="false" volatile="true"
+          transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="derivation" value="self.characteristicContainers->collect(characteristics)->asOrderedSet()"/>
         </eAnnotations>
-        <eAnnotations
-            source="http://www.eclipse.org/OCL/Collection">
-          <details
-              key="nullFree"
-              value="false"/>
+        <eAnnotations source="http://www.eclipse.org/OCL/Collection">
+          <details key="nullFree" value="false"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="CharacteristicTypeContainer"
-        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="characteristicTypes"
-          upperBound="-1"
-          eType="#//characteristics/CharacteristicType"
-          containment="true"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="enumerations"
-          upperBound="-1"
-          eType="#//characteristics/Enumeration"
-          containment="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CharacteristicTypeContainer" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="characteristicTypes"
+          upperBound="-1" eType="#//characteristics/CharacteristicType" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="enumerations" upperBound="-1"
+          eType="#//characteristics/Enumeration" containment="true"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="CharacteristicType"
-        abstract="true"
+    <eClassifiers xsi:type="ecore:EClass" name="CharacteristicType" abstract="true"
         eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eOperations
-          name="hasCompatibleValueRange"
-          lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="false"/>
+      <eOperations name="hasCompatibleValueRange" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="false"/>
         </eAnnotations>
-        <eParameters
-            name="characteristicType"
-            lowerBound="1"
-            eType="#//characteristics/CharacteristicType"/>
+        <eParameters name="characteristicType" lowerBound="1" eType="#//characteristics/CharacteristicType"/>
       </eOperations>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="EnumCharacteristicType"
-        eSuperTypes="#//characteristics/CharacteristicType">
-      <eOperations
-          name="hasCompatibleValueRange"
-          lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="multipleChoice = characteristicType.oclAsType(EnumCharacteristicType).multipleChoice and&#xA;enum = characteristicType.oclAsType(EnumCharacteristicType).enum"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EnumCharacteristicType" eSuperTypes="#//characteristics/CharacteristicType">
+      <eOperations name="hasCompatibleValueRange" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="multipleChoice = characteristicType.oclAsType(EnumCharacteristicType).multipleChoice and&#xA;enum = characteristicType.oclAsType(EnumCharacteristicType).enum"/>
         </eAnnotations>
-        <eParameters
-            name="characteristicType"
-            lowerBound="1"
-            eType="#//characteristics/CharacteristicType"/>
+        <eParameters name="characteristicType" lowerBound="1" eType="#//characteristics/CharacteristicType"/>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EAttribute"
-          name="multipleChoice"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="multipleChoice" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
           defaultValueLiteral="false"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="enum"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="enum" lowerBound="1"
           eType="#//characteristics/Enumeration"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="EnumCharacteristicLiteral"
-        eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="CharacteristicContainer"
-        eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="ownedCharacteristics"
-          upperBound="-1"
-          eType="#//characteristics/Characteristic"
-          containment="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EnumCharacteristicLiteral" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CharacteristicContainer" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ownedCharacteristics"
+          upperBound="-1" eType="#//characteristics/Characteristic" containment="true"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="Characteristic"
-        abstract="true"
-        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="characteristicType"
-          lowerBound="1"
+    <eClassifiers xsi:type="ecore:EClass" name="Characteristic" abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="characteristicType" lowerBound="1"
           eType="#//characteristics/CharacteristicType"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="EnumCharacteristic"
-        eSuperTypes="#//characteristics/Characteristic">
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore">
-        <details
-            key="constraints"
-            value="valueCountMustMatchTypeRestriction literalsMustBelongToCorrectEnum"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EnumCharacteristic" eSuperTypes="#//characteristics/Characteristic">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="valueCountMustMatchTypeRestriction literalsMustBelongToCorrectEnum"/>
       </eAnnotations>
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details
-            key="valueCountMustMatchTypeRestriction"
-            value="self.literals->size() &lt; 2 or self.type.multipleChoice"/>
-        <details
-            key="literalsMustBelongToCorrectEnum"
-            value="self.type.enum.literals->includesAll(self.literals)"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="valueCountMustMatchTypeRestriction" value="self.literals->size() &lt; 2 or self.type.multipleChoice"/>
+        <details key="literalsMustBelongToCorrectEnum" value="self.type.enum.literals->includesAll(self.literals)"/>
       </eAnnotations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="literals"
-          upperBound="-1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="literals" upperBound="-1"
           eType="#//characteristics/EnumCharacteristicLiteral"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="type"
-          eType="#//characteristics/EnumCharacteristicType"
-          volatile="true"
-          transient="true"
-          derived="true">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="derivation"
-              value="if self.characteristicType.oclIsUndefined() or not self.characteristicType.oclIsKindOf(EnumCharacteristicType) then&#xA;&#x9;null&#xA;else&#xA;&#x9;self.characteristicType.oclAsType(EnumCharacteristicType)&#xA;endif"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//characteristics/EnumCharacteristicType"
+          volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="derivation" value="if self.characteristicType.oclIsUndefined() or not self.characteristicType.oclIsKindOf(EnumCharacteristicType) then&#xA;&#x9;null&#xA;else&#xA;&#x9;self.characteristicType.oclAsType(EnumCharacteristicType)&#xA;endif"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="Enumeration"
-        eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="literals"
-          upperBound="-1"
-          eType="#//characteristics/EnumCharacteristicLiteral"
-          containment="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Enumeration" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="literals" upperBound="-1"
+          eType="#//characteristics/EnumCharacteristicLiteral" containment="true"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="RelatedCharacteristics"
-        eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="characteristics"
-          lowerBound="1"
+    <eClassifiers xsi:type="ecore:EClass" name="RelatedCharacteristics" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="characteristics" lowerBound="1"
           eType="#//characteristics/CharacteristicContainer"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="relatedEntity"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="relatedEntity" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="StoreCharacteristicContainer"
-        eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="characteristics"
-          upperBound="-1"
-          eType="#//characteristics/StoreCharacteristics"
-          containment="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="StoreCharacteristicContainer" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="characteristics" upperBound="-1"
+          eType="#//characteristics/StoreCharacteristics" containment="true"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="StoreCharacteristics"
-        eSuperTypes="#//characteristics/CharacteristicContainer">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="store"
-          lowerBound="1"
+    <eClassifiers xsi:type="ecore:EClass" name="StoreCharacteristics" eSuperTypes="#//characteristics/CharacteristicContainer">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="store" lowerBound="1"
           eType="#//repository/Store"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages
-      name="data"
-      nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/data/0.1/"
+  <eSubpackages name="data" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/data/0.1/"
       nsPrefix="data">
-    <eAnnotations
-        source="http://www.eclipse.org/emf/2002/Ecore">
-      <details
-          key="invocationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
-      <details
-          key="settingDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
-      <details
-          key="validationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     </eAnnotations>
-    <eAnnotations
-        source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details
-          key="environmentFactoryClass"
-          value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="environmentFactoryClass" value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
     </eAnnotations>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="Data"
-        abstract="true"
-        eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eOperations
-          name="determineDataType"
-          lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="null"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Data" abstract="true" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eOperations name="determineDataType" lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="null"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="type"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"
-          changeable="false"
-          volatile="true"
-          transient="true"
-          derived="true">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="derivation"
-              value="determineDataType()"/>
+          changeable="false" volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="derivation" value="determineDataType()"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="OriginalData"
-        eSuperTypes="#//data/Data">
-      <eOperations
-          name="determineDataType"
-          lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="originalType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="OriginalData" eSuperTypes="#//data/Data">
+      <eOperations name="determineDataType" lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="originalType"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="originalType"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="originalType" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="ParameterBasedData"
-        eSuperTypes="#//data/Data">
-      <eOperations
-          name="determineDataType"
-          lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="parameter.dataType__Parameter"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterBasedData" eSuperTypes="#//data/Data">
+      <eOperations name="determineDataType" lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="parameter.dataType__Parameter"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="parameter"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/Parameter"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="ResultBasedData"
-        eSuperTypes="#//data/Data">
-      <eOperations
-          name="determineDataType"
-          lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="operation.returnType__OperationSignature"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ResultBasedData" eSuperTypes="#//data/Data">
+      <eOperations name="determineDataType" lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="operation.returnType__OperationSignature"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="operation"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="operation" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationSignature"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="DerivedData"
-        eSuperTypes="#//data/Data">
-      <eOperations
-          name="determineDataType"
-          lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="resultingDataType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DerivedData" eSuperTypes="#//data/Data">
+      <eOperations name="determineDataType" lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="resultingDataType"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="sources"
-          lowerBound="1"
-          upperBound="-1"
-          eType="#//data/Data"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="resultingDataType"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sources" lowerBound="1"
+          upperBound="-1" eType="#//data/Data"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resultingDataType" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="RefinedResultBasedData"
-        eSuperTypes="#//data/ResultBasedData">
-      <eOperations
-          name="determineDataType"
-          lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="refiningDataType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RefinedResultBasedData" eSuperTypes="#//data/ResultBasedData">
+      <eOperations name="determineDataType" lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="refiningDataType"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="refiningDataType"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="refiningDataType" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="RefinedParameterBasedData"
-        eSuperTypes="#//data/ParameterBasedData">
-      <eOperations
-          name="determineDataType"
-          lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="refiningDataType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RefinedParameterBasedData" eSuperTypes="#//data/ParameterBasedData">
+      <eOperations name="determineDataType" lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="refiningDataType"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="refiningDataType"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="refiningDataType" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="CopiedData"
-        eSuperTypes="#//data/Data">
-      <eOperations
-          name="determineDataType"
-          lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="source.type"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CopiedData" eSuperTypes="#//data/Data">
+      <eOperations name="determineDataType" lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="source.type"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="source"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
           eType="#//data/Data"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages
-      name="util"
-      nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/util/0.1/"
+  <eSubpackages name="util" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/util/0.1/"
       nsPrefix="util">
-    <eAnnotations
-        source="http://www.eclipse.org/emf/2002/Ecore">
-      <details
-          key="invocationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
-      <details
-          key="settingDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
-      <details
-          key="validationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     </eAnnotations>
-    <eAnnotations
-        source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details
-          key="environmentFactoryClass"
-          value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="environmentFactoryClass" value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
     </eAnnotations>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="DataMapping"
-        eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore">
-        <details
-            key="constraints"
-            value="dataTypesMustBeTheSame"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DataMapping" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="dataTypesMustBeTheSame"/>
       </eAnnotations>
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details
-            key="dataTypesMustBeTheSame"
-            value="from.type = to.type"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="dataTypesMustBeTheSame" value="from.type = to.type"/>
       </eAnnotations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="from"
-          lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1"
           eType="#//data/Data"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="to"
-          lowerBound="1"
-          eType="#//data/Data"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" eType="#//data/Data"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages
-      name="effectspecification"
-      nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/effectspecification/0.1/"
+  <eSubpackages name="effectspecification" nsURI="http://www.palladiosimulator.org/pcm/dataprocessing/effectspecification/0.1/"
       nsPrefix="effectspecification">
-    <eAnnotations
-        source="http://www.eclipse.org/emf/2002/Ecore">
-      <details
-          key="invocationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
-      <details
-          key="settingDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
-      <details
-          key="validationDelegates"
-          value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
+      <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL"/>
     </eAnnotations>
-    <eAnnotations
-        source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-      <details
-          key="environmentFactoryClass"
-          value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+      <details key="environmentFactoryClass" value="org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DynamicDispatchEnablingEcoreEnvironmentFactory"/>
     </eAnnotations>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="ProcessingEffectSpecification"
-        eSuperTypes="#//DataSpecificationExtension">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="operationTypes"
-          upperBound="-1"
-          eType="#//effectspecification/ProcessingEffectOperationType"
-          containment="true"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="processingEffects"
-          upperBound="-1"
-          eType="#//effectspecification/ProcessingEffect"
-          containment="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ProcessingEffectSpecification" eSuperTypes="#//DataSpecificationExtension">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="operationTypes" upperBound="-1"
+          eType="#//effectspecification/ProcessingEffectOperationType" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="processingEffects" upperBound="-1"
+          eType="#//effectspecification/ProcessingEffect" containment="true"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="ProcessingEffectOperationType"
-        eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="ProcessingEffect"
-        abstract="true"
+    <eClassifiers xsi:type="ecore:EClass" name="ProcessingEffectOperationType" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ProcessingEffect" abstract="true"
         eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eOperations
-          name="isApplicableTo"
-          lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="false"/>
+      <eOperations name="isApplicableTo" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="false"/>
         </eAnnotations>
-        <eParameters
-            name="operation"
-            lowerBound="1"
-            eType="#//processing/DataOperation"/>
-        <eParameters
-            name="resultData"
-            lowerBound="1"
-            eType="#//data/Data"/>
+        <eParameters name="operation" lowerBound="1" eType="#//processing/DataOperation"/>
+        <eParameters name="resultData" lowerBound="1" eType="#//data/Data"/>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="fromDataType"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="toDataType"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="characteristicChanges"
-          upperBound="-1"
-          eType="#//effectspecification/CharacteristicChange"
-          containment="true"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="fromDataType" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="toDataType" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="characteristicChanges"
+          upperBound="-1" eType="#//effectspecification/CharacteristicChange" containment="true"
           eOpposite="#//effectspecification/CharacteristicChange/processingEffect"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="OperationTypeDataProcessingEffect"
+    <eClassifiers xsi:type="ecore:EClass" name="OperationTypeDataProcessingEffect"
         eSuperTypes="#//effectspecification/ProcessingEffect">
-      <eOperations
-          name="isApplicableTo"
-          lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="operation.oclIsKindOf(processing::ProcessingEffectOperationTypeSpecifyingOperation) and &#xA;relevantOperationTypes->includes(operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation).processingEffectOperationType) and&#xA;(toDataType.oclIsUndefined() or toDataType = resultData.type) and&#xA;(fromDataType.oclIsUndefined() or operation.incomingData.type->includes(fromDataType))"/>
+      <eOperations name="isApplicableTo" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="operation.oclIsKindOf(processing::ProcessingEffectOperationTypeSpecifyingOperation) and &#xA;relevantOperationTypes->includes(operation.oclAsType(processing::ProcessingEffectOperationTypeSpecifyingOperation).processingEffectOperationType) and&#xA;(toDataType.oclIsUndefined() or toDataType = resultData.type) and&#xA;(fromDataType.oclIsUndefined() or operation.incomingData.type->includes(fromDataType))"/>
         </eAnnotations>
-        <eParameters
-            name="operation"
-            lowerBound="1"
-            eType="#//processing/DataOperation"/>
-        <eParameters
-            name="resultData"
-            lowerBound="1"
-            eType="#//data/Data"/>
+        <eParameters name="operation" lowerBound="1" eType="#//processing/DataOperation"/>
+        <eParameters name="resultData" lowerBound="1" eType="#//data/Data"/>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="relevantOperationTypes"
-          lowerBound="1"
-          upperBound="-1"
-          eType="#//effectspecification/ProcessingEffectOperationType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="relevantOperationTypes"
+          lowerBound="1" upperBound="-1" eType="#//effectspecification/ProcessingEffectOperationType"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="DataCreationProcessingEffect"
-        eSuperTypes="#//effectspecification/ProcessingEffect">
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore">
-        <details
-            key="constraints"
-            value="fromDataTypeHasToBeUndefined"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DataCreationProcessingEffect" eSuperTypes="#//effectspecification/ProcessingEffect">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="fromDataTypeHasToBeUndefined"/>
       </eAnnotations>
-      <eAnnotations
-          source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details
-            key="fromDataTypeHasToBeUndefined"
-            value="fromDataType.oclIsUndefined()"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="fromDataTypeHasToBeUndefined" value="fromDataType.oclIsUndefined()"/>
       </eAnnotations>
-      <eOperations
-          name="isApplicableTo"
-          lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="operation.oclIsTypeOf(processing::CreateDataOperation) and&#xA;toDataType = operation.oclAsType(processing::CreateDataOperation).resultingData.type"/>
+      <eOperations name="isApplicableTo" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="operation.oclIsTypeOf(processing::CreateDataOperation) and&#xA;toDataType = operation.oclAsType(processing::CreateDataOperation).resultingData.type"/>
         </eAnnotations>
-        <eParameters
-            name="operation"
-            lowerBound="1"
-            eType="#//processing/DataOperation"/>
-        <eParameters
-            name="resultData"
-            lowerBound="1"
-            eType="#//data/Data"/>
+        <eParameters name="operation" lowerBound="1" eType="#//processing/DataOperation"/>
+        <eParameters name="resultData" lowerBound="1" eType="#//data/Data"/>
       </eOperations>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="CharacteristicChange"
-        eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eStructuralFeatures
-          xsi:type="ecore:EAttribute"
-          name="changeOperation"
-          lowerBound="1"
+    <eClassifiers xsi:type="ecore:EClass" name="CharacteristicChange" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeOperation" lowerBound="1"
           eType="#//processing/CharacteristicChangeOperation"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="characteristicSpecifications"
-          upperBound="-1"
-          eType="#//effectspecification/CharacteristicSpecification"
-          containment="true"
-          eOpposite="#//effectspecification/CharacteristicSpecification/characteristicChange"/>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="processingEffect"
-          eType="#//effectspecification/ProcessingEffect"
-          changeable="false"
-          volatile="true"
-          transient="true"
-          eOpposite="#//effectspecification/ProcessingEffect/characteristicChanges"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="characteristicSpecifications"
+          upperBound="-1" eType="#//effectspecification/CharacteristicSpecification"
+          containment="true" eOpposite="#//effectspecification/CharacteristicSpecification/characteristicChange"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="processingEffect" eType="#//effectspecification/ProcessingEffect"
+          changeable="false" volatile="true" transient="true" eOpposite="#//effectspecification/ProcessingEffect/characteristicChanges"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="CharacteristicSpecification"
-        abstract="true"
+    <eClassifiers xsi:type="ecore:EClass" name="CharacteristicSpecification" abstract="true"
         eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="characteristicChange"
-          eType="#//effectspecification/CharacteristicChange"
-          changeable="false"
-          volatile="true"
-          transient="true"
-          eOpposite="#//effectspecification/CharacteristicChange/characteristicSpecifications"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="characteristicChange"
+          eType="#//effectspecification/CharacteristicChange" changeable="false" volatile="true"
+          transient="true" eOpposite="#//effectspecification/CharacteristicChange/characteristicSpecifications"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="DirectCharacteristic"
-        eSuperTypes="#//effectspecification/CharacteristicSpecification">
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="characteristic"
-          lowerBound="1"
-          eType="#//characteristics/Characteristic"
-          containment="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DirectCharacteristic" eSuperTypes="#//effectspecification/CharacteristicSpecification">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="characteristic" lowerBound="1"
+          eType="#//characteristics/Characteristic" containment="true"/>
     </eClassifiers>
-    <eClassifiers
-        xsi:type="ecore:EClass"
-        name="ProcessingEffectProvider"
-        abstract="true"
+    <eClassifiers xsi:type="ecore:EClass" name="ProcessingEffectProvider" abstract="true"
         interface="true">
-      <eOperations
-          name="determineProcessingEffects"
-          ordered="false"
-          upperBound="-1"
+      <eOperations name="determineProcessingEffects" ordered="false" upperBound="-1"
           eType="#//effectspecification/ProcessingEffect">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="body"
-              value="self->selectByKind(dataprocessing::effectspecification::ProcessingEffect)"/>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="body" value="self->selectByKind(dataprocessing::effectspecification::ProcessingEffect)"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures
-          xsi:type="ecore:EReference"
-          name="processingEffects"
-          ordered="false"
-          upperBound="-1"
-          eType="#//effectspecification/ProcessingEffect"
-          changeable="false"
-          volatile="true"
-          transient="true"
-          derived="true">
-        <eAnnotations
-            source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-          <details
-              key="derivation"
-              value="determineProcessingEffects()"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="processingEffects" ordered="false"
+          upperBound="-1" eType="#//effectspecification/ProcessingEffect" changeable="false"
+          volatile="true" transient="true" derived="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+          <details key="derivation" value="determineProcessingEffects()"/>
         </eAnnotations>
       </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MinStaticCharacteristic" eSuperTypes="#//effectspecification/CharacteristicSpecification">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="changeOperationIsReplace" value="self.characteristicChange.changeOperation = processing::CharacteristicChangeOperation::REPLACE"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="changeOperationIsReplace"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="staticMinValue" lowerBound="1"
+          eType="#//characteristics/Characteristic" containment="true"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

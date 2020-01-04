@@ -7,6 +7,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataFilterUtils;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DefaultLabelProvider;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.ItemPropertyDescriptorWrapper;
+import org.palladiosimulator.pcm.dataprocessing.edit.icons.Activator;
 
 public class SelectionDataOperationItemProvider extends
 		org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.provider.SelectionDataOperationItemProvider {
@@ -46,4 +47,10 @@ public class SelectionDataOperationItemProvider extends
 		itemPropertyDescriptors.add(wrapper);
 	}
 
+    @Override
+    public Object getImage(Object object) {
+        Object image = Activator.getInstance().getResourceLocator().getImage("obj16/SelectionDataOperation");
+        return overlayImage(object, image);
+    }
+	
 }

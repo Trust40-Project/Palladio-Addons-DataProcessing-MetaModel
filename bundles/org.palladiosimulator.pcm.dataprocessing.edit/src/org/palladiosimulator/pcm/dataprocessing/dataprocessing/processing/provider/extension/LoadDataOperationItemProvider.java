@@ -13,6 +13,7 @@ import org.palladiosimulator.pcm.dataprocessing.dataprocessing.repository.StoreC
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataFilterUtils;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DefaultLabelProvider;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.ItemPropertyDescriptorWrapper;
+import org.palladiosimulator.pcm.dataprocessing.edit.icons.Activator;
 import org.palladiosimulator.pcm.dataprocessing.profile.api.ProfileConstants;
 import org.palladiosimulator.pcm.seff.ServiceEffectSpecification;
 
@@ -64,5 +65,11 @@ public class LoadDataOperationItemProvider extends
 		return choice.stream().filter(whitelist::contains)
 				.collect(Collectors.toList());
 	}
+	
+    @Override
+    public Object getImage(Object object) {
+        Object image = Activator.getInstance().getResourceLocator().getImage("obj16/LoadDataOperation");
+        return overlayImage(object, image);
+    }
 	
 }

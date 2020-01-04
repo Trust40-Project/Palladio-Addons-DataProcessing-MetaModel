@@ -14,6 +14,7 @@
 	<modules>
 		<module>org.palladiosimulator.pcm.dataprocessing</module>
 		<module>org.palladiosimulator.pcm.dataprocessing.edit</module>
+		<module>org.palladiosimulator.pcm.dataprocessing.edit.icons</module>
 		<module>org.palladiosimulator.pcm.dataprocessing.editor</module>
 		<module>org.palladiosimulator.pcm.dataprocessing.profile</module>
 	</modules>

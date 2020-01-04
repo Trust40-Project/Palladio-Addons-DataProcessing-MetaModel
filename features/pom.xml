@@ -12,6 +12,7 @@
 	<packaging>pom</packaging>
 	
 	<modules>
+		<module>org.palladiosimulator.pcm.dataprocessing.edit.icons.feature</module>
 		<module>org.palladiosimulator.pcm.dataprocessing.editor.feature</module>
 		<module>org.palladiosimulator.pcm.dataprocessing.model.feature</module>
 	</modules>

@@ -6,6 +6,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataFilterUtils;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.ItemPropertyDescriptorWrapper;
+import org.palladiosimulator.pcm.dataprocessing.edit.icons.Activator;
 
 public class CharacteristicChangingDataOperationItemProvider extends
 		org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.provider.CharacteristicChangingDataOperationItemProvider {
@@ -27,4 +28,10 @@ public class CharacteristicChangingDataOperationItemProvider extends
 		itemPropertyDescriptors.add(wrapper);
 	}
 
+    @Override
+    public Object getImage(Object object) {
+        Object image = Activator.getInstance().getResourceLocator().getImage("obj16/CharacteristicChangingDataOperation");
+        return overlayImage(object, image);
+    }
+	
 }

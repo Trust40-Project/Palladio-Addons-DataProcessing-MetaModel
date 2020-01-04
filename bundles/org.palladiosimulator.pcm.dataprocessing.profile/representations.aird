@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:emfprofile="http://www.modelversioning.org/emfprofile/1.1" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis xmi:id="_keDvEFn0EeiwKvx47veYig" selectedViews="_mLVJMFn0EeiwKvx47veYig" version="13.0.0.201804031646">
+  <viewpoint:DAnalysis uid="_keDvEFn0EeiwKvx47veYig" version="14.1.0.201810161215">
     <semanticResources>profile.emfprofile_diagram</semanticResources>
     <semanticResources>http://palladiosimulator.org/PalladioComponentModel/5.2</semanticResources>
     <semanticResources>http://www.palladiosimulator.org/pcm/dataprocessing/processing/0.1/</semanticResources>
@@ -8,19 +8,22 @@
     <semanticResources>http://www.palladiosimulator.org/pcm/dataprocessing/characteristics/0.1/</semanticResources>
     <semanticResources>http://www.palladiosimulator.org/pcm/dataprocessing/repository/0.1/</semanticResources>
     <semanticResources>http://www.palladiosimulator.org/pcm/dataprocessing/0.1/</semanticResources>
-    <ownedViews xmi:type="viewpoint:DView" xmi:id="_mLVJMFn0EeiwKvx47veYig">
+    <ownedViews xmi:type="viewpoint:DView" uid="_mLVJMFn0EeiwKvx47veYig">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_mPmlMFn0EeiwKvx47veYig" name="EMF Profiles" repPath="#_mLorMFn0EeiwKvx47veYig">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mPmlMFn0EeiwKvx47veYig" name="EMF Profiles" repPath="#_mPdbQFn0EeiwKvx47veYig">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']"/>
         <target xmi:type="emfprofile:Profile" href="profile.emfprofile_diagram#_iAZZ0Fn0EeiwKvx47veYig"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_0SAGwB2OEeq2dZy485jFBg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/dictionary.editor.sirius/description/dictionary.editor.sirius.odesign#//@ownedViewpoints[name='default']"/>
+    </ownedViews>
   </viewpoint:DAnalysis>
-  <diagram:DSemanticDiagram xmi:id="_mPdbQFn0EeiwKvx47veYig" name="EMF Profiles" uid="_mLorMFn0EeiwKvx47veYig">
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_mPdbQVn0EeiwKvx47veYig" source="DANNOTATION_CUSTOMIZATION_KEY">
-      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_mPdbQln0EeiwKvx47veYig"/>
+  <diagram:DSemanticDiagram uid="_mPdbQFn0EeiwKvx47veYig" name="EMF Profiles">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_mPdbQVn0EeiwKvx47veYig" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_mPdbQln0EeiwKvx47veYig"/>
     </ownedAnnotationEntries>
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_mPmlMVn0EeiwKvx47veYig" source="GMF_DIAGRAMS">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_mPmlMVn0EeiwKvx47veYig" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_mPmlMln0EeiwKvx47veYig" type="Sirius" element="_mPdbQFn0EeiwKvx47veYig" measurementUnit="Pixel">
         <children xmi:type="notation:Node" xmi:id="_Si8rwFqhEeiGTpqaWj7bwA" type="2002" element="_SiW14FqhEeiGTpqaWj7bwA">
           <children xmi:type="notation:Node" xmi:id="_SjCyYFqhEeiGTpqaWj7bwA" type="5006"/>
@@ -460,372 +463,372 @@
         </edges>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_SiW14FqhEeiGTpqaWj7bwA" name="ExternalCallAction" incomingEdges="_Ypvq4FqhEeiGTpqaWj7bwA" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_SiW14FqhEeiGTpqaWj7bwA" name="ExternalCallAction" incomingEdges="_Ypvq4FqhEeiGTpqaWj7bwA" height="1">
       <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//seff/ExternalCallAction"/>
       <semanticElements xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//seff/ExternalCallAction"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_SijDIFqhEeiGTpqaWj7bwA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_SijDIFqhEeiGTpqaWj7bwA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_Sin7oFqhEeiGTpqaWj7bwA" name="InternalAction" incomingEdges="_YGsoMFqhEeiGTpqaWj7bwA" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_Sin7oFqhEeiGTpqaWj7bwA" name="InternalAction" incomingEdges="_YGsoMFqhEeiGTpqaWj7bwA" height="1">
       <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//seff/InternalAction"/>
       <semanticElements xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//seff/InternalAction"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_SioisFqhEeiGTpqaWj7bwA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_SioisFqhEeiGTpqaWj7bwA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_VIfxsFqhEeiGTpqaWj7bwA" name="DataProcessingSpecification" outgoingEdges="_YGsoMFqhEeiGTpqaWj7bwA _Ypvq4FqhEeiGTpqaWj7bwA _5sv08FqlEeiW1d-qz7Oqsw _6LKPQFqlEeiW1d-qz7Oqsw _TezGAF_xEei61uTdrO0LWg">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_VIfxsFqhEeiGTpqaWj7bwA" name="DataProcessingSpecification" outgoingEdges="_YGsoMFqhEeiGTpqaWj7bwA _Ypvq4FqhEeiGTpqaWj7bwA _5sv08FqlEeiW1d-qz7Oqsw _6LKPQFqlEeiW1d-qz7Oqsw _TezGAF_xEei61uTdrO0LWg">
       <target xmi:type="emfprofile:Stereotype" href="profile.emfprofile_diagram#_VIZEAFqhEeiGTpqaWj7bwA"/>
       <semanticElements xmi:type="emfprofile:Stereotype" href="profile.emfprofile_diagram#_VIZEAFqhEeiGTpqaWj7bwA"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_VIfxsVqhEeiGTpqaWj7bwA" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_VIfxsVqhEeiGTpqaWj7bwA" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='Stereotype']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='Stereotype']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_YGsoMFqhEeiGTpqaWj7bwA" sourceNode="_VIfxsFqhEeiGTpqaWj7bwA" targetNode="_Sin7oFqhEeiGTpqaWj7bwA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_YGsoMFqhEeiGTpqaWj7bwA" sourceNode="_VIfxsFqhEeiGTpqaWj7bwA" targetNode="_Sin7oFqhEeiGTpqaWj7bwA">
       <target xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_YGiQIFqhEeiGTpqaWj7bwA"/>
       <semanticElements xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_YGiQIFqhEeiGTpqaWj7bwA"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_YGw5oFqhEeiGTpqaWj7bwA" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YGw5oFqhEeiGTpqaWj7bwA" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_YGw5oVqhEeiGTpqaWj7bwA"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YGw5oVqhEeiGTpqaWj7bwA"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Ypvq4FqhEeiGTpqaWj7bwA" sourceNode="_VIfxsFqhEeiGTpqaWj7bwA" targetNode="_SiW14FqhEeiGTpqaWj7bwA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Ypvq4FqhEeiGTpqaWj7bwA" sourceNode="_VIfxsFqhEeiGTpqaWj7bwA" targetNode="_SiW14FqhEeiGTpqaWj7bwA">
       <target xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_YpnIAFqhEeiGTpqaWj7bwA"/>
       <semanticElements xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_YpnIAFqhEeiGTpqaWj7bwA"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_YpwR8FqhEeiGTpqaWj7bwA" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_YpwR8FqhEeiGTpqaWj7bwA" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_YpwR8VqhEeiGTpqaWj7bwA"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_YpwR8VqhEeiGTpqaWj7bwA"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_8EnLkFqiEeiW1d-qz7Oqsw" name="RepositoryComponent" incomingEdges="_DFOHkFqjEeiW1d-qz7Oqsw _pFOT8FqjEeiW1d-qz7Oqsw" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_8EnLkFqiEeiW1d-qz7Oqsw" name="RepositoryComponent" incomingEdges="_DFOHkFqjEeiW1d-qz7Oqsw _pFOT8FqjEeiW1d-qz7Oqsw" height="1">
       <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/RepositoryComponent"/>
       <semanticElements xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/RepositoryComponent"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_8EnyoFqiEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_8EnyoFqiEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_B2VSkFqjEeiW1d-qz7Oqsw" name="Characterizable" outgoingEdges="_DFOHkFqjEeiW1d-qz7Oqsw _ImsMEFqjEeiW1d-qz7Oqsw _JBOzAFqjEeiW1d-qz7Oqsw _0QrXAF9JEei61uTdrO0LWg _17yGkL6DEeise_51G7D_6w">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_B2VSkFqjEeiW1d-qz7Oqsw" name="Characterizable" outgoingEdges="_DFOHkFqjEeiW1d-qz7Oqsw _ImsMEFqjEeiW1d-qz7Oqsw _JBOzAFqjEeiW1d-qz7Oqsw _0QrXAF9JEei61uTdrO0LWg _17yGkL6DEeise_51G7D_6w">
       <target xmi:type="emfprofile:Stereotype" href="profile.emfprofile_diagram#_B2UEcFqjEeiW1d-qz7Oqsw"/>
       <semanticElements xmi:type="emfprofile:Stereotype" href="profile.emfprofile_diagram#_B2UEcFqjEeiW1d-qz7Oqsw"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_B2VSkVqjEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_B2VSkVqjEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='Stereotype']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='Stereotype']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_DFOHkFqjEeiW1d-qz7Oqsw" sourceNode="_B2VSkFqjEeiW1d-qz7Oqsw" targetNode="_8EnLkFqiEeiW1d-qz7Oqsw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_DFOHkFqjEeiW1d-qz7Oqsw" sourceNode="_B2VSkFqjEeiW1d-qz7Oqsw" targetNode="_8EnLkFqiEeiW1d-qz7Oqsw">
       <target xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_DFGy0FqjEeiW1d-qz7Oqsw"/>
       <semanticElements xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_DFGy0FqjEeiW1d-qz7Oqsw"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_DFOuoFqjEeiW1d-qz7Oqsw" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_DFOuoFqjEeiW1d-qz7Oqsw" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_DFOuoVqjEeiW1d-qz7Oqsw"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_DFOuoVqjEeiW1d-qz7Oqsw"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_HSgnYFqjEeiW1d-qz7Oqsw" name="LinkingResource" incomingEdges="_ImsMEFqjEeiW1d-qz7Oqsw" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_HSgnYFqjEeiW1d-qz7Oqsw" name="LinkingResource" incomingEdges="_ImsMEFqjEeiW1d-qz7Oqsw" height="1">
       <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//resourceenvironment/LinkingResource"/>
       <semanticElements xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//resourceenvironment/LinkingResource"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_HSgnYVqjEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_HSgnYVqjEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_HShOcFqjEeiW1d-qz7Oqsw" name="ResourceContainer" incomingEdges="_JBOzAFqjEeiW1d-qz7Oqsw" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_HShOcFqjEeiW1d-qz7Oqsw" name="ResourceContainer" incomingEdges="_JBOzAFqjEeiW1d-qz7Oqsw" height="1">
       <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//resourceenvironment/ResourceContainer"/>
       <semanticElements xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//resourceenvironment/ResourceContainer"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_HShOcVqjEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_HShOcVqjEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ImsMEFqjEeiW1d-qz7Oqsw" sourceNode="_B2VSkFqjEeiW1d-qz7Oqsw" targetNode="_HSgnYFqjEeiW1d-qz7Oqsw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ImsMEFqjEeiW1d-qz7Oqsw" sourceNode="_B2VSkFqjEeiW1d-qz7Oqsw" targetNode="_HSgnYFqjEeiW1d-qz7Oqsw">
       <target xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_Imn6oFqjEeiW1d-qz7Oqsw"/>
       <semanticElements xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_Imn6oFqjEeiW1d-qz7Oqsw"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ImszIFqjEeiW1d-qz7Oqsw" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_ImszIFqjEeiW1d-qz7Oqsw" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ImszIVqjEeiW1d-qz7Oqsw"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_ImszIVqjEeiW1d-qz7Oqsw"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_JBOzAFqjEeiW1d-qz7Oqsw" sourceNode="_B2VSkFqjEeiW1d-qz7Oqsw" targetNode="_HShOcFqjEeiW1d-qz7Oqsw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_JBOzAFqjEeiW1d-qz7Oqsw" sourceNode="_B2VSkFqjEeiW1d-qz7Oqsw" targetNode="_HShOcFqjEeiW1d-qz7Oqsw">
       <target xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_JBEa8FqjEeiW1d-qz7Oqsw"/>
       <semanticElements xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_JBEa8FqjEeiW1d-qz7Oqsw"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_JBPaEFqjEeiW1d-qz7Oqsw" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_JBPaEFqjEeiW1d-qz7Oqsw" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_JBPaEVqjEeiW1d-qz7Oqsw"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_JBPaEVqjEeiW1d-qz7Oqsw"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_n9hFAVqjEeiW1d-qz7Oqsw" name="StoreHaving" outgoingEdges="_pFOT8FqjEeiW1d-qz7Oqsw _27eJUF9JEei61uTdrO0LWg">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_n9hFAVqjEeiW1d-qz7Oqsw" name="StoreHaving" outgoingEdges="_pFOT8FqjEeiW1d-qz7Oqsw _27eJUF9JEei61uTdrO0LWg">
       <target xmi:type="emfprofile:Stereotype" href="profile.emfprofile_diagram#_n9gd8FqjEeiW1d-qz7Oqsw"/>
       <semanticElements xmi:type="emfprofile:Stereotype" href="profile.emfprofile_diagram#_n9gd8FqjEeiW1d-qz7Oqsw"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_n9hFAlqjEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_n9hFAlqjEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='Stereotype']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='Stereotype']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_pFOT8FqjEeiW1d-qz7Oqsw" sourceNode="_n9hFAVqjEeiW1d-qz7Oqsw" targetNode="_8EnLkFqiEeiW1d-qz7Oqsw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_pFOT8FqjEeiW1d-qz7Oqsw" sourceNode="_n9hFAVqjEeiW1d-qz7Oqsw" targetNode="_8EnLkFqiEeiW1d-qz7Oqsw">
       <target xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_pFHmQFqjEeiW1d-qz7Oqsw"/>
       <semanticElements xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_pFHmQFqjEeiW1d-qz7Oqsw"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_pFOT8VqjEeiW1d-qz7Oqsw" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_pFOT8VqjEeiW1d-qz7Oqsw" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_pFOT8lqjEeiW1d-qz7Oqsw"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_pFOT8lqjEeiW1d-qz7Oqsw"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_21oIwFqjEeiW1d-qz7Oqsw" name="AssemblyContext" incomingEdges="_6E46EFqjEeiW1d-qz7Oqsw" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_21oIwFqjEeiW1d-qz7Oqsw" name="AssemblyContext" incomingEdges="_6E46EFqjEeiW1d-qz7Oqsw" height="1">
       <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//core/composition/AssemblyContext"/>
       <semanticElements xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//core/composition/AssemblyContext"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_21ov0FqjEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_21ov0FqjEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_4wlZkFqjEeiW1d-qz7Oqsw" name="StoreCharacterization" outgoingEdges="_6E46EFqjEeiW1d-qz7Oqsw _zQEEsL_XEei9d_RHz3hUBA">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_4wlZkFqjEeiW1d-qz7Oqsw" name="StoreCharacterization" outgoingEdges="_6E46EFqjEeiW1d-qz7Oqsw _zQEEsL_XEei9d_RHz3hUBA">
       <target xmi:type="emfprofile:Stereotype" href="profile.emfprofile_diagram#_4wkygFqjEeiW1d-qz7Oqsw"/>
       <semanticElements xmi:type="emfprofile:Stereotype" href="profile.emfprofile_diagram#_4wkygFqjEeiW1d-qz7Oqsw"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_4wlZkVqjEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_4wlZkVqjEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='Stereotype']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='Stereotype']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6E46EFqjEeiW1d-qz7Oqsw" sourceNode="_4wlZkFqjEeiW1d-qz7Oqsw" targetNode="_21oIwFqjEeiW1d-qz7Oqsw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_6E46EFqjEeiW1d-qz7Oqsw" sourceNode="_4wlZkFqjEeiW1d-qz7Oqsw" targetNode="_21oIwFqjEeiW1d-qz7Oqsw">
       <target xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_6E0ooFqjEeiW1d-qz7Oqsw"/>
       <semanticElements xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_6E0ooFqjEeiW1d-qz7Oqsw"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6E46EVqjEeiW1d-qz7Oqsw" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_6E46EVqjEeiW1d-qz7Oqsw" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6E46ElqjEeiW1d-qz7Oqsw"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_6E46ElqjEeiW1d-qz7Oqsw"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_2V08cFqlEeiW1d-qz7Oqsw" name="Delay" incomingEdges="_6LKPQFqlEeiW1d-qz7Oqsw" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_2V08cFqlEeiW1d-qz7Oqsw" name="Delay" incomingEdges="_6LKPQFqlEeiW1d-qz7Oqsw" height="1">
       <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//usagemodel/Delay"/>
       <semanticElements xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//usagemodel/Delay"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_2V08cVqlEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_2V08cVqlEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_2V1jgFqlEeiW1d-qz7Oqsw" name="EntryLevelSystemCall" incomingEdges="_5sv08FqlEeiW1d-qz7Oqsw" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_2V1jgFqlEeiW1d-qz7Oqsw" name="EntryLevelSystemCall" incomingEdges="_5sv08FqlEeiW1d-qz7Oqsw" height="1">
       <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//usagemodel/EntryLevelSystemCall"/>
       <semanticElements xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//usagemodel/EntryLevelSystemCall"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_2V1jgVqlEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_2V1jgVqlEeiW1d-qz7Oqsw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_5sv08FqlEeiW1d-qz7Oqsw" sourceNode="_VIfxsFqhEeiGTpqaWj7bwA" targetNode="_2V1jgFqlEeiW1d-qz7Oqsw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_5sv08FqlEeiW1d-qz7Oqsw" sourceNode="_VIfxsFqhEeiGTpqaWj7bwA" targetNode="_2V1jgFqlEeiW1d-qz7Oqsw">
       <target xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_5sn5IFqlEeiW1d-qz7Oqsw"/>
       <semanticElements xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_5sn5IFqlEeiW1d-qz7Oqsw"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_5sv08VqlEeiW1d-qz7Oqsw" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_5sv08VqlEeiW1d-qz7Oqsw" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_5swcAFqlEeiW1d-qz7Oqsw"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_5swcAFqlEeiW1d-qz7Oqsw"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_6LKPQFqlEeiW1d-qz7Oqsw" sourceNode="_VIfxsFqhEeiGTpqaWj7bwA" targetNode="_2V08cFqlEeiW1d-qz7Oqsw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_6LKPQFqlEeiW1d-qz7Oqsw" sourceNode="_VIfxsFqhEeiGTpqaWj7bwA" targetNode="_2V08cFqlEeiW1d-qz7Oqsw">
       <target xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_6LFWwFqlEeiW1d-qz7Oqsw"/>
       <semanticElements xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_6LFWwFqlEeiW1d-qz7Oqsw"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_6LKPQVqlEeiW1d-qz7Oqsw" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_6LKPQVqlEeiW1d-qz7Oqsw" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_6LKPQlqlEeiW1d-qz7Oqsw"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_6LKPQlqlEeiW1d-qz7Oqsw"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_RJA7oF9HEeiJu8Bap_lNiQ" name="CharacteristicContainer" incomingEdges="_0QrXAF9JEei61uTdrO0LWg" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_RJA7oF9HEeiJu8Bap_lNiQ" name="CharacteristicContainer" incomingEdges="_0QrXAF9JEei61uTdrO0LWg" height="1">
       <target xmi:type="ecore:EClass" href="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/#//characteristics/CharacteristicContainer"/>
       <semanticElements xmi:type="ecore:EClass" href="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/#//characteristics/CharacteristicContainer"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_RJCJwF9HEeiJu8Bap_lNiQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_RJCJwF9HEeiJu8Bap_lNiQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_0QrXAF9JEei61uTdrO0LWg" name="characteristicContainer[1..1]" sourceNode="_B2VSkFqjEeiW1d-qz7Oqsw" targetNode="_RJA7oF9HEeiJu8Bap_lNiQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_0QrXAF9JEei61uTdrO0LWg" name="characteristicContainer[1..1]" sourceNode="_B2VSkFqjEeiW1d-qz7Oqsw" targetNode="_RJA7oF9HEeiJu8Bap_lNiQ">
       <target xmi:type="ecore:EReference" href="profile.emfprofile_diagram#_0QOrEF9JEei61uTdrO0LWg"/>
       <semanticElements xmi:type="ecore:EReference" href="profile.emfprofile_diagram#_0QOrEF9JEei61uTdrO0LWg"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_0Qr-EF9JEei61uTdrO0LWg" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_0Qr-EF9JEei61uTdrO0LWg" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='EReference']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_0Qr-EV9JEei61uTdrO0LWg" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_0Qr-EV9JEei61uTdrO0LWg" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_2i8UkF9JEei61uTdrO0LWg" name="StoreContainer" incomingEdges="_27eJUF9JEei61uTdrO0LWg" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_2i8UkF9JEei61uTdrO0LWg" name="StoreContainer" incomingEdges="_27eJUF9JEei61uTdrO0LWg" height="1">
       <target xmi:type="ecore:EClass" href="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/#//repository/StoreContainer"/>
       <semanticElements xmi:type="ecore:EClass" href="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/#//repository/StoreContainer"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_2i8UkV9JEei61uTdrO0LWg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_2i8UkV9JEei61uTdrO0LWg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_27eJUF9JEei61uTdrO0LWg" name="storeContainer[1..1]" sourceNode="_n9hFAVqjEeiW1d-qz7Oqsw" targetNode="_2i8UkF9JEei61uTdrO0LWg">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_27eJUF9JEei61uTdrO0LWg" name="storeContainer[1..1]" sourceNode="_n9hFAVqjEeiW1d-qz7Oqsw" targetNode="_2i8UkF9JEei61uTdrO0LWg">
       <target xmi:type="ecore:EReference" href="profile.emfprofile_diagram#_27YCsF9JEei61uTdrO0LWg"/>
       <semanticElements xmi:type="ecore:EReference" href="profile.emfprofile_diagram#_27YCsF9JEei61uTdrO0LWg"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_27ewYF9JEei61uTdrO0LWg" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_27ewYF9JEei61uTdrO0LWg" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='EReference']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_27ewYV9JEei61uTdrO0LWg" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_27ewYV9JEei61uTdrO0LWg" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_SZwJgF_xEei61uTdrO0LWg" name="DataProcessingContainer" incomingEdges="_TezGAF_xEei61uTdrO0LWg" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_SZwJgF_xEei61uTdrO0LWg" name="DataProcessingContainer" incomingEdges="_TezGAF_xEei61uTdrO0LWg" height="1">
       <target xmi:type="ecore:EClass" href="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/#//processing/DataProcessingContainer"/>
       <semanticElements xmi:type="ecore:EClass" href="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/#//processing/DataProcessingContainer"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_SZx-sF_xEei61uTdrO0LWg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_SZx-sF_xEei61uTdrO0LWg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_TezGAF_xEei61uTdrO0LWg" name="dataProcessingContainer[1..1]" sourceNode="_VIfxsFqhEeiGTpqaWj7bwA" targetNode="_SZwJgF_xEei61uTdrO0LWg">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_TezGAF_xEei61uTdrO0LWg" name="dataProcessingContainer[1..1]" sourceNode="_VIfxsFqhEeiGTpqaWj7bwA" targetNode="_SZwJgF_xEei61uTdrO0LWg">
       <target xmi:type="ecore:EReference" href="profile.emfprofile_diagram#_TeiAQF_xEei61uTdrO0LWg"/>
       <semanticElements xmi:type="ecore:EReference" href="profile.emfprofile_diagram#_TeiAQF_xEei61uTdrO0LWg"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_TeztEF_xEei61uTdrO0LWg" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_TeztEF_xEei61uTdrO0LWg" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='EReference']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_TeztEV_xEei61uTdrO0LWg" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_TeztEV_xEei61uTdrO0LWg" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_myY1YLydEeiT-9xxrec-9Q" name="OperationSignatureDataRefinement" incomingEdges="_tS-NgrydEeiT-9xxrec-9Q" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_myY1YLydEeiT-9xxrec-9Q" name="OperationSignatureDataRefinement" incomingEdges="_tS-NgrydEeiT-9xxrec-9Q" height="1">
       <target xmi:type="ecore:EClass" href="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/#//repository/OperationSignatureDataRefinement"/>
       <semanticElements xmi:type="ecore:EClass" href="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/#//repository/OperationSignatureDataRefinement"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_myY1YbydEeiT-9xxrec-9Q" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_myY1YbydEeiT-9xxrec-9Q" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_pSRYMLydEeiT-9xxrec-9Q" name="OperationSignature" incomingEdges="_u84xoLydEeiT-9xxrec-9Q" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_pSRYMLydEeiT-9xxrec-9Q" name="OperationSignature" incomingEdges="_u84xoLydEeiT-9xxrec-9Q" height="1">
       <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/OperationSignature"/>
       <semanticElements xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//repository/OperationSignature"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_pSRYMbydEeiT-9xxrec-9Q" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_pSRYMbydEeiT-9xxrec-9Q" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_qEe4QrydEeiT-9xxrec-9Q" name="OperationSignatureDataRefinement" outgoingEdges="_tS-NgrydEeiT-9xxrec-9Q _u84xoLydEeiT-9xxrec-9Q">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_qEe4QrydEeiT-9xxrec-9Q" name="OperationSignatureDataRefinement" outgoingEdges="_tS-NgrydEeiT-9xxrec-9Q _u84xoLydEeiT-9xxrec-9Q">
       <target xmi:type="emfprofile:Stereotype" href="profile.emfprofile_diagram#_qEe4QLydEeiT-9xxrec-9Q"/>
       <semanticElements xmi:type="emfprofile:Stereotype" href="profile.emfprofile_diagram#_qEe4QLydEeiT-9xxrec-9Q"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_qEe4Q7ydEeiT-9xxrec-9Q" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qEe4Q7ydEeiT-9xxrec-9Q" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='Stereotype']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='Stereotype']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_tS-NgrydEeiT-9xxrec-9Q" name="operationSignatureDataRefinement[1..1]" sourceNode="_qEe4QrydEeiT-9xxrec-9Q" targetNode="_myY1YLydEeiT-9xxrec-9Q">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_tS-NgrydEeiT-9xxrec-9Q" name="operationSignatureDataRefinement[1..1]" sourceNode="_qEe4QrydEeiT-9xxrec-9Q" targetNode="_myY1YLydEeiT-9xxrec-9Q">
       <target xmi:type="ecore:EReference" href="profile.emfprofile_diagram#_tS-NgLydEeiT-9xxrec-9Q"/>
       <semanticElements xmi:type="ecore:EReference" href="profile.emfprofile_diagram#_tS-NgLydEeiT-9xxrec-9Q"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_tS-Ng7ydEeiT-9xxrec-9Q" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_tS-Ng7ydEeiT-9xxrec-9Q" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='EReference']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_tS-NhLydEeiT-9xxrec-9Q" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_tS-NhLydEeiT-9xxrec-9Q" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_u84xoLydEeiT-9xxrec-9Q" sourceNode="_qEe4QrydEeiT-9xxrec-9Q" targetNode="_pSRYMLydEeiT-9xxrec-9Q">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_u84xoLydEeiT-9xxrec-9Q" sourceNode="_qEe4QrydEeiT-9xxrec-9Q" targetNode="_pSRYMLydEeiT-9xxrec-9Q">
       <target xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_u8vnsLydEeiT-9xxrec-9Q"/>
       <semanticElements xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_u8vnsLydEeiT-9xxrec-9Q"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_u84xobydEeiT-9xxrec-9Q" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_u84xobydEeiT-9xxrec-9Q" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_u84xorydEeiT-9xxrec-9Q"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_u84xorydEeiT-9xxrec-9Q"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_0fLlsL6DEeise_51G7D_6w" name="ScenarioBehaviour" incomingEdges="_17yGkL6DEeise_51G7D_6w" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_0fLlsL6DEeise_51G7D_6w" name="ScenarioBehaviour" incomingEdges="_17yGkL6DEeise_51G7D_6w" height="1">
       <target xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//usagemodel/ScenarioBehaviour"/>
       <semanticElements xmi:type="ecore:EClass" href="http://palladiosimulator.org/PalladioComponentModel/5.2#//usagemodel/ScenarioBehaviour"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_0fLlsb6DEeise_51G7D_6w" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_0fLlsb6DEeise_51G7D_6w" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_17yGkL6DEeise_51G7D_6w" sourceNode="_B2VSkFqjEeiW1d-qz7Oqsw" targetNode="_0fLlsL6DEeise_51G7D_6w">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_17yGkL6DEeise_51G7D_6w" sourceNode="_B2VSkFqjEeiW1d-qz7Oqsw" targetNode="_0fLlsL6DEeise_51G7D_6w">
       <target xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_17pjsL6DEeise_51G7D_6w"/>
       <semanticElements xmi:type="emfprofile:Extension" href="profile.emfprofile_diagram#_17pjsL6DEeise_51G7D_6w"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_17yGkb6DEeise_51G7D_6w" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_17yGkb6DEeise_51G7D_6w" targetArrow="InputFillClosedArrow" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_17yGkr6DEeise_51G7D_6w"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_17yGkr6DEeise_51G7D_6w"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='Extension']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_ylD_4L_XEei9d_RHz3hUBA" name="StoreCharacteristicContainer" incomingEdges="_zQEEsL_XEei9d_RHz3hUBA" height="1">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ylD_4L_XEei9d_RHz3hUBA" name="StoreCharacteristicContainer" incomingEdges="_zQEEsL_XEei9d_RHz3hUBA" height="1">
       <target xmi:type="ecore:EClass" href="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/#//characteristics/StoreCharacteristicContainer"/>
       <semanticElements xmi:type="ecore:EClass" href="http://www.palladiosimulator.org/pcm/dataprocessing/0.1/#//characteristics/StoreCharacteristicContainer"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ylHDML_XEei9d_RHz3hUBA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_ylHDML_XEei9d_RHz3hUBA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@containerMappings[name='EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_zQEEsL_XEei9d_RHz3hUBA" name="storeCharacteristicContainer[1..1]" sourceNode="_4wlZkFqjEeiW1d-qz7Oqsw" targetNode="_ylD_4L_XEei9d_RHz3hUBA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_zQEEsL_XEei9d_RHz3hUBA" name="storeCharacteristicContainer[1..1]" sourceNode="_4wlZkFqjEeiW1d-qz7Oqsw" targetNode="_ylD_4L_XEei9d_RHz3hUBA">
       <target xmi:type="ecore:EReference" href="profile.emfprofile_diagram#_zP5FkL_XEei9d_RHz3hUBA"/>
       <semanticElements xmi:type="ecore:EReference" href="profile.emfprofile_diagram#_zP5FkL_XEei9d_RHz3hUBA"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_zQErwL_XEei9d_RHz3hUBA" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_zQErwL_XEei9d_RHz3hUBA" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='EReference']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_zQErwb_XEei9d_RHz3hUBA" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_zQErwb_XEei9d_RHz3hUBA" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer/@edgeMappings[name='EReference']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']"/>
-    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_mPdbRFn0EeiwKvx47veYig"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_mPdbRFn0EeiwKvx47veYig"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/emfprofiles.design/description/emfprofiles.odesign#//@ownedViewpoints[name='emfprofiles.viewpoint']/@ownedRepresentations[name='emfprofiles.diagram']/@defaultLayer"/>
     <target xmi:type="emfprofile:Profile" href="profile.emfprofile_diagram#_iAZZ0Fn0EeiwKvx47veYig"/>
   </diagram:DSemanticDiagram>

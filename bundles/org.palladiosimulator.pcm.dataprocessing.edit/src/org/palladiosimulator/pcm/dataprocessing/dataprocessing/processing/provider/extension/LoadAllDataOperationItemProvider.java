@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DefaultLabelProvider;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.ItemPropertyDescriptorWrapper;
+import org.palladiosimulator.pcm.dataprocessing.edit.icons.Activator;
 
 public class LoadAllDataOperationItemProvider extends
 		org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.provider.LoadAllDataOperationItemProvider {
@@ -36,4 +37,10 @@ public class LoadAllDataOperationItemProvider extends
 		itemPropertyDescriptors.add(wrapper);
 	}
 
+    @Override
+    public Object getImage(Object object) {
+        Object image = Activator.getInstance().getResourceLocator().getImage("obj16/LoadAllDataOperation");
+        return overlayImage(object, image);
+    }
+	
 }

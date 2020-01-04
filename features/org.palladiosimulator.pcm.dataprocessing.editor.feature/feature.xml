@@ -11,6 +11,10 @@
          id="org.palladiosimulator.pcm.dataprocessing.model.feature"
          version="0.0.0"/>
 
+   <includes
+         id="org.palladiosimulator.pcm.dataprocessing.edit.icons.feature"
+         version="0.0.0"/>
+
    <requires>
       <import plugin="org.palladiosimulator.branding"/>
    </requires>

@@ -8,6 +8,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataFilterUtils;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DefaultLabelProvider;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.ItemPropertyDescriptorWrapper;
+import org.palladiosimulator.pcm.dataprocessing.edit.icons.Activator;
 
 public class StoreDataOperationItemProvider extends
 		org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.provider.StoreDataOperationItemProvider {
@@ -50,4 +51,10 @@ public class StoreDataOperationItemProvider extends
 		return DefaultLabelProvider.getLabel(object, getString("_UI_StoreDataOperation_type"), super::getText);
 	}
 
+    @Override
+    public Object getImage(Object object) {
+        Object image = Activator.getInstance().getResourceLocator().getImage("obj16/StoreDataOperation");
+        return overlayImage(object, image);
+    }
+	
 }

@@ -7,6 +7,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataFilterUtils;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DefaultLabelProvider;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.ItemPropertyDescriptorWrapper;
+import org.palladiosimulator.pcm.dataprocessing.edit.icons.Activator;
 
 public class JoinDataOperationItemProvider extends
 		org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.provider.JoinDataOperationItemProvider {
@@ -33,5 +34,11 @@ public class JoinDataOperationItemProvider extends
 	public String getText(Object object) {
 		return DefaultLabelProvider.getLabel(object, getString("_UI_JoinDataOperation_type"), super::getText);
 	}
+	
+    @Override
+    public Object getImage(Object object) {
+        Object image = Activator.getInstance().getResourceLocator().getImage("obj16/JoinDataOperation");
+        return overlayImage(object, image);
+    }
 
 }

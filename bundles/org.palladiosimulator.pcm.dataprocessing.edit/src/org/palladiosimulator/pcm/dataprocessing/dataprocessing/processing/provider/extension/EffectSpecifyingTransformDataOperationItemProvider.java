@@ -7,6 +7,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DataFilterUtils;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.DefaultLabelProvider;
 import org.palladiosimulator.pcm.dataprocessing.dataprocessing.util.ItemPropertyDescriptorWrapper;
+import org.palladiosimulator.pcm.dataprocessing.edit.icons.Activator;
 
 public class EffectSpecifyingTransformDataOperationItemProvider extends
 		org.palladiosimulator.pcm.dataprocessing.dataprocessing.processing.provider.EffectSpecifyingTransformDataOperationItemProvider {
@@ -48,4 +49,10 @@ public class EffectSpecifyingTransformDataOperationItemProvider extends
 		return DefaultLabelProvider.getLabel(object, getString("_UI_EffectSpecifyingTransformDataOperation_type"), super::getText);
 	}
 	
+    @Override
+    public Object getImage(Object object) {
+        Object image = Activator.getInstance().getResourceLocator().getImage("obj16/EffectSpecifyingTransformDataOperation");
+        return overlayImage(object, image);
+    }
+    
 }
