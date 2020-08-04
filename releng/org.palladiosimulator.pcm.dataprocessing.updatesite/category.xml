@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-	<feature url="features/org.palladiosimulator.pcm.dataprocessing.editor.feature_0.1.0.qualifier.jar" id="org.palladiosimulator.pcm.dataprocessing.editor.feature" version="0.1.0.qualifier">
+	<feature url="features/org.palladiosimulator.pcm.dataprocessing.editor.feature_4.3.0.qualifier.jar" id="org.palladiosimulator.pcm.dataprocessing.editor.feature" version="4.3.0.qualifier">
 		<category name="org.palladiosimulator.addons.category"/>
 	</feature>
-	<feature url="features/org.palladiosimulator.pcm.dataprocessing.model.feature_0.1.0.qualifier.jar" id="org.palladiosimulator.pcm.dataprocessing.model.feature" version="0.1.0.qualifier">
+	<feature url="features/org.palladiosimulator.pcm.dataprocessing.model.feature_4.3.0.qualifier.jar" id="org.palladiosimulator.pcm.dataprocessing.model.feature" version="4.3.0.qualifier">
 		<category name="org.palladiosimulator.addons.category"/>
 	</feature>
-	<feature url="features/org.palladiosimulator.pcm.dataprocessing.editor.feature.source_0.1.0.qualifier.jar" id="org.palladiosimulator.pcm.dataprocessing.editor.feature.source" version="0.1.0.qualifier">
+	<feature url="features/org.palladiosimulator.pcm.dataprocessing.editor.feature.source_4.3.0.qualifier.jar" id="org.palladiosimulator.pcm.dataprocessing.editor.feature.source" version="4.3.0.qualifier">
 		<category name="org.palladiosimulator.addons.source.category"/>
 	</feature>
-	<feature url="features/org.palladiosimulator.pcm.dataprocessing.model.feature.source_0.1.0.qualifier.jar" id="org.palladiosimulator.pcm.dataprocessing.model.feature.source" version="0.1.0.qualifier">
+	<feature url="features/org.palladiosimulator.pcm.dataprocessing.model.feature.source_4.3.0.qualifier.jar" id="org.palladiosimulator.pcm.dataprocessing.model.feature.source" version="4.3.0.qualifier">
 		<category name="org.palladiosimulator.addons.source.category"/>
 	</feature>
 	<category-def name="org.palladiosimulator.addons.category" label="Palladio Bench Addons">

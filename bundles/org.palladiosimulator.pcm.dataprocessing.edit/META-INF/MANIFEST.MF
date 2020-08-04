@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.pcm.dataprocessing.edit;singleton:=true
 Automatic-Module-Name: org.palladiosimulator.pcm.dataprocessing.edit
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 4.3.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.pcm.dataprocessing.dataprocessing.provider.DataprocessingEditPlugin$Implementation
 Bundle-Vendor: %providerName
@@ -41,5 +41,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.mdsdprofiles.api;bundle-version="1.0.1";visibility:=reexport,
  org.modelversioning.emfprofile;bundle-version="1.1.0";visibility:=reexport,
  org.palladiosimulator.pcm.dataprocessing.profile;visibility:=reexport,
- org.palladiosimulator.pcm.dataprocessing.edit.icons;bundle-version="0.1.0"
+ org.palladiosimulator.pcm.dataprocessing.edit.icons;bundle-version="4.3.0"
 Bundle-ActivationPolicy: lazy

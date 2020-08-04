@@ -2,7 +2,7 @@
 <feature
       id="org.palladiosimulator.pcm.dataprocessing.edit.icons.feature"
       label="PCM Data Processing Edit Icons Feature"
-      version="0.1.0.qualifier">
+      version="4.3.0.qualifier">
 
    <license url="https://creativecommons.org/licenses/by/4.0/">
       The bundles use icons from Font Awesome (https://fontawesome.com) that are licensed unter Creative Commons Attribution 4.0 International (CC BY 4.0). We resized the icons and changed colors.
